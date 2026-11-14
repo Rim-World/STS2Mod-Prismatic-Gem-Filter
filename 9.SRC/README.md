@@ -2,6 +2,9 @@
 
 Slay the Spire 2 模组。玩家持有遗物「棱彩宝石」时，按玩家勾选的开关，把跨角色发牌中该职业专属、其他职业无法使用的卡牌排除出候选。
 
+仓库：`https://github.com/Rim-World/STS2Mod-Prismatic-Gem-Filter`
+许可：MIT
+
 ## 状态
 
 源码尚未建立。项目当前处于需求梳理阶段，文档见仓库根目录的 `1.PRD` 至 `6.SPEC`。
