@@ -45,6 +45,7 @@
 - 不依赖 BaseLib。理由与证据见 [4.ADR/006-只依赖RitsuLib作为基础库.md](../4.ADR/006-只依赖RitsuLib作为基础库.md) 与 [3.DOCS/006-R-基础库选型调研.md](../3.DOCS/006-R-基础库选型调研.md)。
 - 补丁框架 Harmony，游戏自带 `data_sts2_windows_x86_64\0Harmony.dll`。
 - 目标版本 0.107.1 与 0.111.0 的程序集不在游戏目录。参考资料库 `C:\Users\13167\Desktop\Mod\STS2-Reference` 含 0.107.1、0.111.0、0.113.1 三个版本的完整反编译（`1.STS2-107Reference`、`2.STS2-111Reference`、`4.STS2-113.1Reference`）。`3.STS2-113Reference` 对应 0.113.0，已弃用。
+- 0.113.1 的 `sts2.dll` 已留存在 `4.STS2-113.1Reference\assemblies\`，10,648,064 字节，SHA-256 `62ECBE91093E1FA862DE4329AAC865209DCB297804CAF0F0520D92D8C0B4A9C3`。自 2026-11-15 起，每次解包新版本都要留存该版本的程序集并在参考库 README 登记。0.107.1、0.111.0、0.113.0 三版没有留存程序集。
 
 ## 验收用例
 
