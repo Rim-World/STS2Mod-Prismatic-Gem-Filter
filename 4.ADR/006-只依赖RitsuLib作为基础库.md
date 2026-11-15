@@ -19,6 +19,10 @@
 
 本项目在编译期与运行期只依赖 RitsuLib，不依赖 BaseLib。RitsuLib 作为硬依赖写在 `mod_manifest.json` 中，未安装时模组不加载。
 
+## 确认记录
+
+- 2026-11-15 16:56：用户确认接受硬依赖形态，即玩家必须安装 RitsuLib。
+
 ## 备选方案
 
 **只依赖 BaseLib。** 否决。BaseLib 的主能力面是内容添加，本项目不需要。它没有面向上层模组的补丁框架与补丁降级机制，SP-011 要自己实现。它靠单一 DLL 反射回退兼容旧签名，不提供版本门控工具。它的发布包附带第二个 mod `BaseLibCompatibilityHelper`，玩家安装链从 2 个 mod 变成 3 个。
