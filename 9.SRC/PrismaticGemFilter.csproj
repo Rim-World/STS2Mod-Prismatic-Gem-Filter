@@ -1,0 +1,88 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    棱彩宝石过滤模组。
+    单一程序集、单一目录、单一清单，同时面向游戏 0.107.1 / 0.111.0 / 0.113.1。
+    依据：4.ADR/002-三版本交付形态.md、4.ADR/006-只依赖RitsuLib作为基础库.md
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <AssemblyName>PrismaticGemFilter</AssemblyName>
+    <RootNamespace>PrismaticGemFilter</RootNamespace>
+    <Version>0.0.1</Version>
+    <AssemblyVersion>0.0.1.0</AssemblyVersion>
+    <FileVersion>0.0.1.0</FileVersion>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <NoWarn>$(NoWarn);MSB3270</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- 本机路径。换机器或换盘符时用 /p:Sts2Dir=... 覆盖，不必改文件。 -->
+    <Sts2Dir Condition="'$(Sts2Dir)' == ''">C:\Game\Steam\steamapps\common\Slay the Spire 2</Sts2Dir>
+    <Sts2DataDir Condition="'$(Sts2DataDir)' == ''">$(Sts2Dir)\data_sts2_windows_x86_64</Sts2DataDir>
+
+    <!-- 游戏当前实际加载的 RitsuLib 安装目录（创意工坊变体包）。 -->
+    <RitsuLibDeployRoot Condition="'$(RitsuLibDeployRoot)' == ''">C:\Game\Steam\steamapps\workshop\content\2868840\3747602295</RitsuLibDeployRoot>
+    <!-- 变体目录名。宿主 0.113.1 由 loader 选中 0.113.0 这一支。 -->
+    <RitsuLibCompatTarget Condition="'$(RitsuLibCompatTarget)' == ''">0.113.0</RitsuLibCompatTarget>
+
+    <ModOutputDir Condition="'$(ModOutputDir)' == ''">$(Sts2Dir)\mods\PrismaticGemFilter\</ModOutputDir>
+    <CopyModOnBuild Condition="'$(CopyModOnBuild)' == ''">true</CopyModOnBuild>
+
+    <!-- RitsuLib 由创意工坊提供。禁止 NuGet 构建逻辑再部署一份，避免同 ID 双份。 -->
+    <RitsuLibAutoCopy>false</RitsuLibAutoCopy>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- 游戏主程序集与 Harmony。Private=false：不打进产物，运行时由游戏目录解析。 -->
+    <Reference Include="sts2" HintPath="$(Sts2DataDir)\sts2.dll" Private="false" />
+    <Reference Include="0Harmony" HintPath="$(Sts2DataDir)\0Harmony.dll" Private="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- 编译期绑定到运行期真正加载的那一套 RitsuLib，避免 NuGet 构建与创意工坊构建不一致。 -->
+    <Reference Include="STS2-RitsuLib" HintPath="$(RitsuLibDeployRoot)\compat\$(RitsuLibCompatTarget)\STS2-RitsuLib.dll" Private="false" />
+    <Reference Include="STS2-RitsuLib.Runtime" HintPath="$(RitsuLibDeployRoot)\compat\$(RitsuLibCompatTarget)\STS2-RitsuLib.Runtime.dll" Private="false" />
+    <Reference Include="STS2-RitsuLib.Shared" HintPath="$(RitsuLibDeployRoot)\shared\STS2-RitsuLib.Shared.dll" Private="false" />
+    <Reference Include="STS2-RitsuLib.Ui" HintPath="$(RitsuLibDeployRoot)\shared\STS2-RitsuLib.Ui.dll" Private="false" />
+    <Reference Include="STS2-RitsuLib.Settings" HintPath="$(RitsuLibDeployRoot)\shared\STS2-RitsuLib.Settings.dll" Private="false" />
+  </ItemGroup>
+
+  <Target Name="ValidateGameInstall" BeforeTargets="ResolveAssemblyReferences">
+    <Error Condition="!Exists('$(Sts2DataDir)\sts2.dll')"
+           Text="找不到 $(Sts2DataDir)\sts2.dll。用 /p:Sts2Dir=&quot;游戏目录&quot; 指定本机安装位置。" />
+    <Error Condition="!Exists('$(RitsuLibDeployRoot)\compat\$(RitsuLibCompatTarget)\STS2-RitsuLib.dll')"
+           Text="找不到 $(RitsuLibDeployRoot)\compat\$(RitsuLibCompatTarget)\STS2-RitsuLib.dll。确认 RitsuLib 已安装，或用 /p:RitsuLibDeployRoot=... 指定。" />
+  </Target>
+
+  <Target Name="CopyModToGame" AfterTargets="Build" Condition="'$(CopyModOnBuild)' != 'false'">
+    <MakeDir Directories="$(ModOutputDir)" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ModOutputDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\mod_manifest.json" DestinationFolder="$(ModOutputDir)" SkipUnchangedFiles="true" />
+    <Message Importance="high" Text="已部署到 $(ModOutputDir)" />
+  </Target>
+
+  <!-- 版本号一致性校验：程序集版本、清单 version、文件名三者必须相同。 -->
+  <Target Name="ValidateVersionConsistency" BeforeTargets="Build">
+    <PropertyGroup>
+      <_ManifestPath>$(MSBuildProjectDirectory)\mod_manifest.json</_ManifestPath>
+      <_ManifestText>$([System.IO.File]::ReadAllText('$(_ManifestPath)'))</_ManifestText>
+      <_ManifestVersionPattern>&quot;version&quot;\s*:\s*&quot;([^&quot;]+)&quot;</_ManifestVersionPattern>
+      <_ManifestVersion>$([System.Text.RegularExpressions.Regex]::Match('$(_ManifestText)', '$(_ManifestVersionPattern)').Groups[1].Value)</_ManifestVersion>
+    </PropertyGroup>
+    <Error Condition="'$(_ManifestVersion)' == ''"
+           Text="mod_manifest.json 里找不到 version 字段。" />
+    <Error Condition="'$(_ManifestVersion)' != '$(Version)'"
+           Text="版本号不一致：mod_manifest.json 是 $(_ManifestVersion)，项目是 $(Version)。两处必须相同。" />
+  </Target>
+
+</Project>

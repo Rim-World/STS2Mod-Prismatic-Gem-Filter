@@ -7,26 +7,52 @@ Slay the Spire 2 模组。玩家持有遗物「棱彩宝石」时，按玩家勾
 
 ## 状态
 
-源码尚未建立。项目当前处于需求梳理阶段，文档见仓库根目录的 `1.PRD` 至 `6.SPEC`。
+0.0.1 是最小工程。只实现「奥斯提牌」一组，一个开关恒为开，不含设置页与持久化。
+
+已勾选开关、设置页、豁免清单、其余 12 个分组在后续阶段补齐。
 
 ## 依赖
 
 - Slay the Spire 2 0.113.1（目标兼容 0.107.1、0.111.0）
-- RitsuLib 0.6.13，提供设置页与持久化
+- RitsuLib 0.6.13，提供补丁器与后续设置页
 - Harmony，游戏自带
+
+## 构建
+
+需要 .NET SDK 9 与本机游戏安装。
+
+```
+dotnet build PrismaticGemFilter.csproj -c Release
+```
+
+构建完成后自动把 `PrismaticGemFilter.dll` 与 `mod_manifest.json` 复制到游戏目录的 `mods/PrismaticGemFilter/`。
+
+本机路径写在 csproj 里，换机器时覆盖即可：
+
+| 属性 | 默认值 | 说明 |
+|---|---|---|
+| `Sts2Dir` | `C:\Game\Steam\steamapps\common\Slay the Spire 2` | 游戏安装目录 |
+| `Sts2DataDir` | `$(Sts2Dir)\data_sts2_windows_x86_64` | 托管程序集所在目录 |
+| `RitsuLibDeployRoot` | `C:\Game\Steam\steamapps\workshop\content\2868840\3747602295` | RitsuLib 创意工坊安装目录 |
+| `RitsuLibCompatTarget` | `0.113.0` | RitsuLib 变体目录名 |
+| `CopyModOnBuild` | `true` | 设为 `false` 时只产出，不部署 |
+
+```
+dotnet build PrismaticGemFilter.csproj -c Release "/p:Sts2Dir=D:\Steam\steamapps\common\Slay the Spire 2"
+```
+
+编译期绑定的是创意工坊里 RitsuLib 的 `compat/0.113.0/` 与 `shared/` 程序集，与游戏运行时实际加载的那一套一致。所有引用都是 `Private=false`，不复制进产物。
 
 ## 目录
 
-| 目录 | 内容 |
+| 路径 | 内容 |
 |---|---|
-| `1.PRD` | 需求 |
-| `2.PLANS` | 施工计划 |
-| `3.DOCS` | 调研报告与知识 |
-| `4.ADR` | 技术取舍 |
-| `5.SDD` | 设计蓝图 |
-| `6.SPEC` | 对外行为规范 |
-| `TMP` | 临时文件与反编译证据 |
+| `src/Plugin.cs` | 模组入口 |
+| `src/CardCreationPatch.cs` | 候选牌枚举处的后置补丁 |
+| `src/CardFilter.cs` | 判定规则，纯函数 |
+| `src/ExclusionTable.cs` | 排除名单 |
+| `mod_manifest.json` | 模组清单 |
 
 ## 许可
 
-未定。
+MIT。

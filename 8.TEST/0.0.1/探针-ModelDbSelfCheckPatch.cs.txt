@@ -1,0 +1,147 @@
+using System.Collections.Generic;
+using System.Linq;
+using MegaCrit.Sts2.Core.Models;
+using STS2RitsuLib.Patching.Models;
+
+namespace PrismaticGemFilter;
+
+/// <summary>
+///     【临时诊断，第 6 步删除】ModelDb 建库完成后跑一次自检。
+///     <para>要确认三件事：</para>
+///     <list type="number">
+///         <item>12 个标识字符串在运行时拼写正确。</item>
+///         <item>这些牌确实只在亡灵契约师的卡池里。</item>
+///         <item>池门控与排除判定在真实卡池数据上给出预期的数量。</item>
+///     </list>
+///     <para>
+///         同时记录 <c>CardModel.Pool</c> 的实际取值，回应「一牌多池时返回哪一个」这个未确认项。
+///     </para>
+/// </summary>
+internal sealed class ModelDbSelfCheckPatch : IPatchMethod
+{
+    private static bool _done;
+
+    public static string PatchId => "prismatic_gem_filter.debug_model_db_self_check";
+
+    public static string Description => "临时自检：核对排除名单与过滤判定";
+
+    public static bool IsCritical => false;
+
+    public static ModPatchTarget[] GetTargets() =>
+    [
+        new(typeof(ModelDb), nameof(ModelDb.Init), [typeof(Type[])], ignoreIfMissing: true),
+    ];
+
+    public static void Postfix()
+    {
+        if (_done)
+            return;
+
+        _done = true;
+
+        try
+        {
+            CheckEntries();
+            CheckFilter();
+        }
+        catch (Exception ex)
+        {
+            Plugin.Logger.Error($"[selfcheck] failed: {ex}");
+        }
+    }
+
+    private static void CheckEntries()
+    {
+        var pools = ModelDb.AllCardPools.ToList();
+        var cardByEntry = new Dictionary<string, CardModel>(StringComparer.Ordinal);
+        foreach (var card in ModelDb.AllCards)
+            cardByEntry.TryAdd(card.Id.Entry, card);
+
+        var missing = new List<string>();
+        var wrongOwner = new List<string>();
+
+        foreach (var entry in ExclusionTable.OstyAttack.OrderBy(e => e, StringComparer.Ordinal))
+        {
+            if (!cardByEntry.TryGetValue(entry, out var card))
+            {
+                missing.Add(entry);
+                continue;
+            }
+
+            var owners = pools
+                .Where(p => p.AllCardIds.Any(id => id.Entry == entry))
+                .Select(p => p.GetType().Name)
+                .ToList();
+
+            if (owners.Count != 1 || owners[0] != "NecrobinderCardPool")
+                wrongOwner.Add($"{entry}->[{string.Join(" | ", owners)}]");
+
+            Plugin.Logger.Info(
+                $"[selfcheck] {card.Id} type={card.Type} rarity={card.Rarity} " +
+                $"owners=[{string.Join(" | ", owners)}] Pool={SafePoolName(card)}");
+        }
+
+        Plugin.Logger.Info(
+            $"[selfcheck] entries={ExclusionTable.OstyAttack.Count} resolved={ExclusionTable.OstyAttack.Count - missing.Count} " +
+            $"missing={missing.Count}[{string.Join(",", missing)}] wrongOwner={wrongOwner.Count}[{string.Join(",", wrongOwner)}] " +
+            $"cardPools={pools.Count}");
+    }
+
+    private static void CheckFilter()
+    {
+        var necro = FindPool("necrobinder");
+        var ironclad = FindPool("ironclad");
+
+        if (necro is null || ironclad is null)
+        {
+            Plugin.Logger.Warn($"[selfcheck] pool lookup failed: necro={necro?.Title ?? "<null>"} ironclad={ironclad?.Title ?? "<null>"}");
+            return;
+        }
+
+        var necroEntries = necro.AllCardIds.Select(id => id.Entry).ToHashSet(StringComparer.Ordinal);
+        var ironcladEntries = ironclad.AllCardIds.Select(id => id.Entry).ToHashSet(StringComparer.Ordinal);
+        var widened = ironclad.AllCards.Concat(necro.AllCards).ToList();
+        var excluded = ExclusionTable.OstyAttack;
+
+        // 情形 A：玩家是亡灵契约师，自己职业的牌不得被排除。
+        var keptA = CardFilter.Apply(widened, necroEntries, excluded, out var statsA);
+        var okA = statsA.Removed == 0 && statsA.PoolGateSkipped == 12;
+        Plugin.Logger.Info(
+            $"[selfcheck] A own=necrobinder candidates={statsA.Candidates} removed={statsA.Removed} " +
+            $"poolGate={statsA.PoolGateSkipped} ok={okA}");
+
+        // 情形 B：玩家是铁甲战士，12 张奥斯提攻击牌必须被排除。
+        var keptB = CardFilter.Apply(widened, ironcladEntries, excluded, out var statsB);
+        var okB = statsB.Removed == 12 && statsB.PoolGateSkipped == 0 && keptB.Count == statsB.Kept;
+        Plugin.Logger.Info(
+            $"[selfcheck] B own=ironclad candidates={statsB.Candidates} removed={statsB.Removed} " +
+            $"kept={statsB.Kept} poolGate={statsB.PoolGateSkipped} ok={okB}");
+
+        // 情形 C：排除后为空时，调用方必须放弃过滤。这里只检查该条件成立。
+        var onlyOsty = widened.Where(c => excluded.Contains(c.Id.Entry)).ToList();
+        var keptC = CardFilter.Apply(onlyOsty, new HashSet<string>(), excluded, out var statsC);
+        var okC = statsC.Removed == onlyOsty.Count && keptC.Count == 0;
+        Plugin.Logger.Info(
+            $"[selfcheck] C narrowCandidates={statsC.Candidates} removed={statsC.Removed} kept={keptC.Count} ok={okC}");
+
+        Plugin.Logger.Info($"[selfcheck] summary allOk={okA && okB && okC}");
+    }
+
+    private static CardPoolModel? FindPool(string title) =>
+        ModelDb.AllCardPools.FirstOrDefault(p =>
+                            string.Equals(p.Title, title, StringComparison.OrdinalIgnoreCase))
+        ?? ModelDb.AllCardPools.FirstOrDefault(p =>
+            p.GetType().Name.StartsWith(title, StringComparison.OrdinalIgnoreCase));
+
+    private static string SafePoolName(CardModel card)
+    {
+        try
+        {
+            return card.Pool.GetType().Name;
+        }
+        catch (Exception ex)
+        {
+            return $"<{ex.GetType().Name}>";
+        }
+    }
+}

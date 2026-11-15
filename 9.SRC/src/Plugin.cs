@@ -1,0 +1,44 @@
+using System.Reflection;
+using MegaCrit.Sts2.Core.Logging;
+using MegaCrit.Sts2.Core.Modding;
+using STS2RitsuLib;
+using STS2RitsuLib.Interop;
+using STS2RitsuLib.Patching.Core;
+
+namespace PrismaticGemFilter;
+
+/// <summary>
+///     模组入口。游戏按清单 id 找到同名的 <c>PrismaticGemFilter.dll</c>，再调用这里的方法。
+///     <para>RitsuLib 自己带 <c>[ModInitializer]</c>，本模组声明了依赖，加载顺序保证它先初始化。</para>
+/// </summary>
+[ModInitializer(nameof(Initialize))]
+public static class Plugin
+{
+    /// <summary>必须与 mod_manifest.json 的 id、程序集文件名三者一致。</summary>
+    public const string ModId = "PrismaticGemFilter";
+
+    public static Logger Logger { get; private set; } = null!;
+
+    public static void Initialize()
+    {
+        Logger = RitsuLibFramework.CreateLogger(ModId);
+
+        var assembly = Assembly.GetExecutingAssembly();
+        ModTypeDiscoveryHub.RegisterModAssembly(ModId, assembly);
+
+        var patcher = RitsuLibFramework.CreatePatcher(ModId, "main", "candidate filter");
+        patcher.RegisterPatch<CardCreationPatch>();
+
+        if (!RitsuLibFramework.ApplyRequiredPatcher(patcher, DisableMod))
+            return;
+
+        Logger.Info(
+            $"ready. exclusion groups=1 entries={ExclusionTable.OstyAttackCount} " +
+            $"patches={patcher.AppliedPatchCount}/{patcher.RegisteredPatchCount}");
+    }
+
+    private static void DisableMod()
+    {
+        Logger.ErrorNoTrace("候选牌过滤补丁未能应用，本模组不生效。发牌行为与未安装时一致。");
+    }
+}
