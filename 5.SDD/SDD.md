@@ -2,8 +2,8 @@
 
 ## 状态
 
-- 项目版本：0.0.1
-- 代码状态：`9.SRC` 已建立最小工程。只实现「奥斯提牌」一组、一个开关恒为开。
+- 项目版本：0.0.4
+- 代码状态：`9.SRC` 已实现 13 个分组开关、总开关、分组豁免清单、排除索引、设置页与界面本地化。跨版本探测仍未建立。
 - 说明：SDD 的每条设计描述都对应一个源码符号。未实现的组件只登记职责，标注「未建立」。
 
 ## 上下文与范围
@@ -12,33 +12,56 @@
 
 系统边界：
 
-- 边界内：过滤规则、开关模型、设置页、跨版本探测。
-- 边界外：游戏自身的发牌流程、卡池定义、遗物实现。
+- 边界内：过滤规则、开关模型、豁免清单、设置页、界面本地化、跨版本探测。
+- 边界外：游戏自身的发牌流程、卡池定义、遗物实现、卡牌本地化文本。
 
 ## 组件分解
 
 | 组件 | 源码符号 | 负责 | 不负责 |
 |---|---|---|---|
-| 入口 | `src/Plugin.cs` 的 `Plugin.Initialize` | 建日志、注册程序集、注册补丁、失败时停用本模组 | 不实现过滤判定，不读写存档 |
-| 拦截层 | `src/CardCreationPatch.cs` 的 `CardCreationPatch.Postfix` | 在 `GetPossibleCards` 之后介入，按判定模式决定是否继续，取候选、调判定、写回结果、打日志、异常兜底 | 不解释开关含义，不做逐张判定 |
-| 判定规则 | `src/CardFilter.cs` 的 `CardFilter.Apply` | 逐张判定保留或排除，输出统计 | 不接触游戏对象以外的状态，不读玩家遗物，不消耗随机数 |
-| 排除名单 | `src/ExclusionTable.cs` 的 `ExclusionTable.OstyAttack` | 存放当前分组的卡牌标识 | 不判断卡池归属 |
-| 判定模式 | `src/ModSettings.cs` 的 `ModSettings.CurrentMode`，枚举 `src/FilterMode.cs` | 保存当前取值，注册设置页与持久化 | 不做逐张判定，不读卡池，不读遗物 |
-| 开关模型 | 未建立（P4） | 保存开关状态，提供读取接口 | 不直接接触游戏对象 |
-| 设置页 | 未建立（P4） | 渲染开关、写回开关模型 | 不执行过滤 |
-| 跨版本探测 | 未建立（P4） | 收敛版本差异，提供能力查询 | 不含业务规则 |
+| 入口 | `src/Plugin.cs` 的 `Plugin.Initialize` | 建日志、注册程序集、注册设置、注册补丁、失败时停用本模组 | 不实现过滤判定，不读写存档 |
+| 拦截层 | `src/CardCreationPatch.cs` 的 `CardCreationPatch.Postfix` | 在 `GetPossibleCards` 之后介入，按总开关与判定模式决定是否继续，取候选、调判定、写回结果、打日志、异常兜底 | 不解释开关含义，不做逐张判定，不建索引 |
+| 判定规则 | `src/CardFilter.cs` 的 `CardFilter.Apply` | 逐张判定保留或排除，输出统计 | 不接触游戏对象以外的状态，不读玩家遗物，不读设置，不消耗随机数 |
+| 分组定义 | `src/CardGroups.cs` 的 `CardGroups.All`，数据来自 `src/CardGroupTable.cs` | 登记 13 个分组的标识、职业、判定方式、默认勾选状态与成员 | 不保存勾选状态，不建索引 |
+| 固定表 | `src/ExclusionTable.cs` | 存默认豁免清单与 9 张多人限定卡放行表，拼豁免键 | 不判断卡池归属，不读设置 |
+| 排除索引 | `src/FilterIndex.cs` 的 `FilterIndex.Get` | 按当前设置算出标记集合与显式集合，设置变过则重建 | 不逐张判定，不接触 `CardModel` |
+| 设置模型 | `src/ModSettings.cs` 的 `SettingsModel`、`SettingsSnapshot` | 落盘模型、绑定、快照与写入版本号 | 不建索引，不做逐张判定 |
+| 设置页 | `src/ModSettings.cs` 的 `ConfigurePage`、`ConfigureExemptionPage` | 渲染总开关、判定模式、13 个分组开关与 13 个豁免子页，把改动写回绑定 | 不执行过滤，不建索引 |
+| 本地化 | `src/Localization.cs` | 按游戏语言取界面文案，卡名转查游戏的 `cards` 表 | 不含业务规则，不决定默认值 |
+| 跨版本探测 | 未建立（P4 剩余） | 收敛版本差异，提供能力查询 | 不含业务规则 |
 
 ## 依赖与分层
 
-允许：入口 → 拦截层 → 判定规则 → 排除名单。
+允许的依赖方向：入口 → {拦截层, 设置模型}；拦截层 → {判定规则, 排除索引, 设置模型, 分组定义}；排除索引 → {设置模型, 分组定义, 固定表}；设置页 → {设置模型, 分组定义, 固定表, 本地化}。
 
-禁止：判定规则 → 入口的日志之外的任何单例；排除名单 → 关卡池。禁止项用代码审查确认：`CardFilter.Apply` 只接收三个参数，不引用 `Player`、`ModelDb`、`Plugin`。
+禁止：判定规则 → 任何单例；分组定义与固定表 → 运行期状态；本地化 → 设置模型。
+
+检查方式：`CardFilter.Apply` 的入参只有候选、卡池成员集合与两个排除集合，签名里没有 `Player`、`ModelDb`、`Plugin`、`ModSettings`；`CardGroups` 与 `ExclusionTable` 的成员都是 `static readonly` 常量表。
 
 ## 数据设计
 
+### 落盘模型
+
+`SettingsModel` 四个成员：
+
+| 成员 | 类型 | 说明 |
+|---|---|---|
+| `Mode` | `FilterMode` | 判定模式，按数字存 |
+| `MasterEnabled` | `bool` | 总开关，缺省 `true` |
+| `Groups` | `Dictionary<string, bool>?` | 分组勾选状态，缺省 `null` |
+| `Exemptions` | `List<string>?` | 豁免清单，缺省 `null` |
+
+`null` 表示玩家从未改过。此时取代码默认值：分组按 `CardGroup.DefaultEnabled`，豁免按 `ExclusionTable.DefaultExemptionKeys`。这样新增分组与调整默认值都不需要写存档迁移。
+
+### 豁免键的形式
+
+豁免项是 `分组标识:卡牌标识`，例如 `doom:NEUROSURGE`。带分组前缀的原因：`BIG_BANG` 同属铸剑与星，两处的豁免必须能分别勾选，见 SP-013。
+
 ### 排除名单的标识形式
 
-`ExclusionTable` 存的是 `ModelId.Entry` 字符串，不是完整 `ModelId`。理由：`Entry` 等于卡牌类名转大写蛇形（`StringHelper.Slugify`），与类别 slug 的写法无关；判定时读 `card.Id.Entry`，不拼接字符串，不产生分配。
+`CardGroupTable` 存的是 `ModelId.Entry` 字符串，不是完整 `ModelId`。理由：`Entry` 等于卡牌类名转大写蛇形（`StringHelper.Slugify`），与类别 slug 的写法无关；判定时读 `card.Id.Entry`，不拼接字符串，不产生分配。
+
+该表由 `TOOLS/scripts/build-card-group-table.py` 从名单 CSV 生成，184 行、去重 177 张。
 
 ### 池门控的数据来源
 
@@ -46,30 +69,48 @@
 
 不用 `CardModel.Pool` 属性。原因：该属性对 `ModelDb.AllCardPools` 取第一个包含该牌的池，一牌多池时返回值取决于池的枚举顺序；改用「是否属于玩家职业卡池」的成员判断，结果与顺序无关，且严格更保守（多池牌一律保留）。
 
+### 两个排除集合
+
+| 集合 | 成员来源 | 后处理 |
+|---|---|---|
+| 标记集合 | 12 个 `GroupKind.Marker` 分组，逐个扣掉该组豁免项 | 减掉 `ExclusionTable.MultiplayerProtected` |
+| 显式集合 | 1 个 `GroupKind.Explicit` 分组，扣掉该组豁免项 | 无 |
+
+分成两个的原因见 [DOCS/012](../3.DOCS/012-T-分组开关与界面本地化的落地.md) 第四节。
+
 ### 设置的存放
 
 `ModSettings` 用 RitsuLib 的数据槽存一个 `SettingsModel`，键 `settings`，文件名 `settings.json`，作用域 `SaveScope.Global`，落盘在 `mod_data/PrismaticGemFilter/`。枚举按数字存，见 `FilterMode` 的成员数值注释。
 
-读取走 `ModSettingsBindings.WithDefault` 包一层默认值。未注册或读取抛异常时回落到 `PrismaticGemOnly`，只记一次日志，不把异常抛进发牌链路。
+读取走 `ModSettingsBindings.WithDefault` 包一层默认值。未注册或读取抛异常时回落到默认快照，只记一次日志，不把异常抛进发牌链路。
+
+快照 `SettingsSnapshot` 与排除索引都按 `ModSettings.Version` 缓存。写入路径统一经过 `ModSettings.Invalidate`，它既让快照失效，也调 `FilterIndex.Invalidate`。
 
 ## 关键流程
 
 一次发牌奖励的候选枚举：
 
 1. 游戏调用 `CardCreationOptions.GetPossibleCards(player)`，返回惰性序列。
-2. 后置方法先物化候选，再按判定模式决定是否继续。默认模式复刻棱彩宝石的五条早退：持有遗物、带 `IsCardReward`、不带 `NoCardPoolModifications`、卡池非空、卡池不全为无色。第二个模式只要候选出现玩家职业卡池之外的牌就继续。
-3. 取玩家职业卡池的 `Entry` 集合，调 `CardFilter.Apply` 得到保留列表与统计。
-4. `Removed == 0` 时原样返回；保留列表为空时打警告并原样返回；否则写回保留列表。
-5. 调用方（`CardFactory` 等）继续按稀有度掷骰。
+2. 后置方法先物化候选，再取设置快照。总开关关闭则直接返回（SP-020）。
+3. 按判定模式决定是否继续。默认模式复刻棱彩宝石的五条早退：持有遗物、带 `IsCardReward`、不带 `NoCardPoolModifications`、卡池非空、卡池不全为无色。第二个模式只要候选出现玩家职业卡池之外的牌就继续。
+4. `FilterIndex.Get` 取两个排除集合，两者皆空则直接返回。首次取用时按设置建索引。
+5. 取玩家职业卡池的 `Entry` 集合，调 `CardFilter.Apply` 得到保留列表与统计。
+6. `Removed == 0` 时原样返回；保留列表为空时打警告并原样返回；否则写回保留列表。
+7. 调用方（`CardFactory` 等）继续按稀有度掷骰。
 
-第 2 步的两种判据见 `4.ADR/008`。默认模式不满足时直接返回，不调 `CardFilter.Apply`，也不打 Info 日志。
+第 3 步的两种判据见 `4.ADR/008`。默认模式不满足时直接返回，不调 `CardFilter.Apply`，也不打 Info 日志。
+
+首个候选调用还会执行一次成员自检：按卡池类型核对名单里的成员是否真的在该池中，结果写日志。用途是暴露名单写错或版本缺卡。
 
 ## 失败与降级
 
 - 后置方法整体包在 `try/catch` 里。任何异常都只记日志，不写回 `__result`，发牌链路照常。
 - 候选集合过滤后为空时放弃过滤。规则见 `6.SPEC` 的 SP-002。
 - 补丁应用失败时由 `ApplyRequiredPatcher` 调用 `DisableMod`，本模组不生效，游戏行为与未安装时一致。
-- 跨版本成员缺失时，关闭依赖该成员的开关，其余开关照常工作。规则见 `6.SPEC` 的 SP-008。该机制未建立。
+- 设置注册失败时只记日志，发牌仍按默认快照工作。
+- 本地化资源加载失败时退回英语字面文本，不显示键名。规则见 SP-022。
+- 界面上某张牌在某语言下没有卡名时，显示卡牌标识本身。卡名来自游戏表，不属于本组件。
+- 跨版本成员缺失时，关闭依赖该成员的开关，其余开关照常工作。规则见 SP-008。该机制未建立。
 
 ## 资源与构建视图
 
@@ -78,6 +119,7 @@
 | 目标框架 | `net9.0` |
 | 程序集名 | `PrismaticGemFilter.dll`，必须与清单 `id` 相同 |
 | 清单 | `9.SRC/mod_manifest.json`，`has_pck` 为 false |
+| 嵌入资源 | `9.SRC/localization/{eng,zhs,zht}.json`，逻辑名 `PrismaticGemFilter.localization.<语言>.json` |
 | 编译期引用 | 游戏目录 `sts2.dll`、`0Harmony.dll`；创意工坊 RitsuLib 的 `compat/0.113.0/` 与 `shared/` |
 | 全部引用 | `Private=false`，不进产物 |
 | 部署 | 构建后复制 DLL 与清单到 `mods/PrismaticGemFilter/` |
@@ -89,11 +131,16 @@
 |---|---|
 | RQ-001 | 拦截层、判定规则 |
 | RQ-002 | 拦截层 |
-| RQ-003 | 开关模型、设置页（未建立） |
+| RQ-003 | 设置模型、设置页、排除索引 |
 | RQ-004 | 跨版本探测（未建立） |
+| RQ-006 | 设置模型、设置页 |
 | RQ-008 | 判定规则 |
-| RQ-012 | 拦截层、判定模式 |
+| RQ-009 | 固定表、排除索引、设置页 |
+| RQ-010 | 固定表、排除索引 |
+| RQ-011 | 分组定义、排除索引 |
+| RQ-012 | 拦截层、设置模型 |
 | RQ-013 | 拦截层 |
+| RQ-014 | 本地化 |
 
 ## 偏差与限制
 
@@ -101,6 +148,8 @@
 - 候选集合被物化。原实现返回惰性序列，调用方在下一句就 `.ToList()`，因此集合内容不变，只多了这次枚举。
 - 0.0.2 的拦截层没有遗物判定，只有「候选是否被加宽」，曾使万花筒、海玻璃、色彩哲学家、角色卡修正器四处来源在未持有棱彩宝石时被误删。0.0.3 已按 `4.ADR/008` 修掉，历史记录见 `3.DOCS/010-E`。
 - 设置作用域取 `SaveScope.Global`。`SaveScope.Profile` 在档案就绪前读取会抛异常，两个已找到的样例模组都用 Global。条款见 SP-018。
+- 多人限定卡用固定名单放行，不用运行期的 `MultiplayerConstraint` 属性。代价是旧版本上若某卡不再限定多人，本模组仍会放行它。属过度放行，不产生误删。
+- 模组自身的显示名与页面标题取自嵌入资源，不合并进游戏的本地化表。因此游戏模组列表里的名字仍是清单的 `name` 字段，与界面内标题可能不一致。
 
 ## 变更记录
 
@@ -110,3 +159,4 @@
 | 2026-11-15 17:57 | 回填最小工程的四个组件与源码符号，补数据设计、关键流程、构建视图与偏差 |
 | 2026-11-15 19:37 | 拦截层职责改为按模式判定；新增判定模式组件；关键流程补第 2 步；偏差登记 SP-005 违约 |
 | 2026-11-15 20:55 | 判定模式组件落地为 `ModSettings` 与 `FilterMode`。补设置存放一节。关键流程改为五条判据。偏差标记已修复 |
+| 2026-11-15 23:22 | 项目版本 0.0.4。新增分组定义、固定表、排除索引、设置页、本地化五个组件。补落盘模型、豁免键、两个排除集合、构建视图的嵌入资源。关键流程补总开关、索引与自检。追溯表补 RQ-006、RQ-009 至 RQ-011、RQ-014 |

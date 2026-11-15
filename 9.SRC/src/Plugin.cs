@@ -43,7 +43,8 @@ public static class Plugin
             return;
 
         Logger.Info(
-            $"ready. exclusion groups=1 entries={ExclusionTable.OstyAttackCount} " +
+            $"ready. groups={CardGroups.All.Length} entries={CardGroupTable.Rows.Length} " +
+            $"exemptions={ExclusionTable.DefaultExemptionKeys.Count} protected={ExclusionTable.MultiplayerProtected.Count} " +
             $"patches={patcher.AppliedPatchCount}/{patcher.RegisteredPatchCount}");
     }
 

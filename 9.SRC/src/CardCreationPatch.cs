@@ -21,6 +21,9 @@ internal sealed class CardCreationPatch : IPatchMethod
     /// <summary>玩家职业卡池的卡牌标识集合，按卡池实例缓存。卡池模型是规范单例，可以按引用做键。</summary>
     private static readonly ConditionalWeakTable<CardPoolModel, HashSet<string>> OwnPoolEntries = new();
 
+    /// <summary>已做过一次成员自检的卡池，避免每次发牌都扫名单。</summary>
+    private static readonly ConditionalWeakTable<CardPoolModel, object> VerifiedPools = new();
+
     public static string PatchId => "prismatic_gem_filter.card_reward_candidates";
 
     public static string Description => "按分组排除其他职业专属的候选牌";
@@ -54,22 +57,33 @@ internal sealed class CardCreationPatch : IPatchMethod
             if (candidates.Count == 0)
                 return;
 
-            if (!ShouldFilter(__instance, player))
+            var settings = ModSettings.Current;
+
+            // SP-020：总开关关闭时什么都不做。
+            if (!settings.MasterEnabled)
+                return;
+
+            if (!ShouldFilter(__instance, player, settings.Mode))
+                return;
+
+            FilterIndex.Get(out var markerExclusions, out var explicitExclusions);
+            if (markerExclusions.Count == 0 && explicitExclusions.Count == 0)
                 return;
 
             var ownPoolEntries = OwnPoolEntries.GetValue(
                 player.Character.CardPool,
                 static pool => pool.AllCardIds.Select(id => id.Entry).ToHashSet(StringComparer.Ordinal));
 
-            var kept = CardFilter.Apply(candidates, ownPoolEntries, ExclusionTable.OstyAttack, out var stats);
+            VerifyGroupMembership(player.Character.CardPool, ownPoolEntries);
+
+            var kept = CardFilter.Apply(
+                candidates, ownPoolEntries, markerExclusions, explicitExclusions, out var stats);
 
             if (stats.Removed == 0)
             {
                 // 候选里出现别的职业的牌，说明这次发牌被加宽过，此时「没排除任何牌」是值得记录的结论。
                 // 候选全在本职业卡池里时属于常规发牌，降到 Debug，避免刷日志。
-                var message =
-                    $"[filter] mode={ModSettings.CurrentMode} candidates={stats.Candidates} removed=0 kept={stats.Kept} " +
-                    $"poolGate={stats.PoolGateSkipped} otherPool={stats.OtherPoolCards}";
+                var message = Describe(settings.Mode, stats);
 
                 if (stats.OtherPoolCards > 0)
                     Plugin.Logger.Info(message);
@@ -88,9 +102,7 @@ internal sealed class CardCreationPatch : IPatchMethod
                 return;
             }
 
-            Plugin.Logger.Info(
-                $"[filter] mode={ModSettings.CurrentMode} candidates={stats.Candidates} removed={stats.Removed} " +
-                $"kept={stats.Kept} poolGate={stats.PoolGateSkipped} otherPool={stats.OtherPoolCards}");
+            Plugin.Logger.Info(Describe(settings.Mode, stats));
             __result = kept;
         }
         catch (Exception ex)
@@ -99,16 +111,20 @@ internal sealed class CardCreationPatch : IPatchMethod
         }
     }
 
+    private static string Describe(FilterMode mode, CardFilter.Stats stats) =>
+        $"[filter] mode={mode} groups={FilterIndex.EnabledGroups} candidates={stats.Candidates} " +
+        $"removed={stats.Removed} kept={stats.Kept} poolGate={stats.PoolGateSkipped} otherPool={stats.OtherPoolCards}";
+
     /// <summary>
     ///     按当前判定模式决定要不要继续过滤。规则见 SP-005、SP-019 与 <c>4.ADR/008</c>。
     /// </summary>
-    private static bool ShouldFilter(CardCreationOptions options, Player player)
+    private static bool ShouldFilter(CardCreationOptions options, Player player, FilterMode mode)
     {
         if (options is null)
             return false;
 
         // 第二个取值：候选是否跨界由 CardFilter 统计，这里只看模式。
-        if (ModSettings.CurrentMode == FilterMode.AnyWidenedPool)
+        if (mode == FilterMode.AnyWidenedPool)
             return true;
 
         // 默认取值：复刻原版棱彩宝石的早退集合，五条全部成立才认为它加宽了本次发牌。
@@ -142,5 +158,48 @@ internal sealed class CardCreationPatch : IPatchMethod
         }
 
         return false;
+    }
+
+    /// <summary>
+    ///     首次见到某个卡池时核对该池的名单成员是否真的存在。
+    ///     用途：名单由 CSV 生成，标识写错或版本缺卡时在这里暴露，不必等玩家发现某张牌漏筛。
+    /// </summary>
+    private static void VerifyGroupMembership(CardPoolModel pool, HashSet<string> ownPoolEntries)
+    {
+        if (VerifiedPools.TryGetValue(pool, out _))
+            return;
+
+        VerifiedPools.Add(pool, new object());
+
+        var declared = 0;
+        var missing = new List<string>();
+
+        foreach (var group in CardGroups.All)
+        {
+            if (group.Kind != GroupKind.Marker)
+                continue;
+
+            foreach (var row in CardGroupTable.Rows)
+            {
+                if (!string.Equals(row.Group, group.Id, StringComparison.Ordinal))
+                    continue;
+                if (!string.Equals(row.Pool, pool.GetType().Name, StringComparison.Ordinal))
+                    continue;
+
+                declared++;
+                if (!ownPoolEntries.Contains(row.Entry))
+                    missing.Add(row.Group + ":" + row.Entry);
+            }
+        }
+
+        if (declared == 0)
+            return;
+
+        if (missing.Count == 0)
+            Plugin.Logger.Info($"[self-check] pool={pool.GetType().Name} declared={declared} missing=0");
+        else
+            Plugin.Logger.Warn(
+                $"[self-check] pool={pool.GetType().Name} declared={declared} missing={missing.Count} " +
+                $"entries={string.Join(",", missing)}");
     }
 }

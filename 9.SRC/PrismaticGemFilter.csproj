@@ -10,9 +10,9 @@
     <TargetFramework>net9.0</TargetFramework>
     <AssemblyName>PrismaticGemFilter</AssemblyName>
     <RootNamespace>PrismaticGemFilter</RootNamespace>
-    <Version>0.0.3</Version>
-    <AssemblyVersion>0.0.3.0</AssemblyVersion>
-    <FileVersion>0.0.3.0</FileVersion>
+    <Version>0.0.4</Version>
+    <AssemblyVersion>0.0.4.0</AssemblyVersion>
+    <FileVersion>0.0.4.0</FileVersion>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -55,6 +55,14 @@
     <Reference Include="STS2-RitsuLib.Shared" HintPath="$(RitsuLibDeployRoot)\shared\STS2-RitsuLib.Shared.dll" Private="false" />
     <Reference Include="STS2-RitsuLib.Ui" HintPath="$(RitsuLibDeployRoot)\shared\STS2-RitsuLib.Ui.dll" Private="false" />
     <Reference Include="STS2-RitsuLib.Settings" HintPath="$(RitsuLibDeployRoot)\shared\STS2-RitsuLib.Settings.dll" Private="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- 界面文案。打进程序集，运行时由 RitsuLib 的 I18N 按语言取词。
+         LogicalName 必须与 src/Localization.cs 里的 ResourceFolder 一致，否则取不到。 -->
+    <EmbeddedResource Include="localization\*.json">
+      <LogicalName>PrismaticGemFilter.localization.%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
 
   <Target Name="ValidateGameInstall" BeforeTargets="ResolveAssemblyReferences">
