@@ -26,6 +26,16 @@ public static class Plugin
         var assembly = Assembly.GetExecutingAssembly();
         ModTypeDiscoveryHub.RegisterModAssembly(ModId, assembly);
 
+        try
+        {
+            ModSettings.Register();
+        }
+        catch (Exception ex)
+        {
+            // 设置失败不得阻止过滤。回落默认模式，发牌仍按默认判据工作。
+            Logger.Error($"[settings] 注册失败，本次运行使用默认判定模式: {ex}");
+        }
+
         var patcher = RitsuLibFramework.CreatePatcher(ModId, "main", "candidate filter");
         patcher.RegisterPatch<CardCreationPatch>();
 

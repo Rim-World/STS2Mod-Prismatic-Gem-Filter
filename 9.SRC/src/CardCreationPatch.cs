@@ -3,6 +3,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Models.Relics;
 using MegaCrit.Sts2.Core.Runs;
 using STS2RitsuLib.Patching.Models;
 
@@ -34,7 +35,13 @@ internal sealed class CardCreationPatch : IPatchMethod
     /// <summary>
     ///     后置过滤。整个方法体都有异常保护：出错时保持原结果，不得把异常抛进发牌链路。
     /// </summary>
-    public static void Postfix(Player player, ref IEnumerable<CardModel> __result)
+    /// <param name="__instance">被补丁的那个选项实例，Harmony 注入，用于判定棱彩宝石会不会加宽本次发牌。</param>
+    /// <param name="player">本次发牌的玩家。</param>
+    /// <param name="__result">候选集合。</param>
+    public static void Postfix(
+        CardCreationOptions __instance,
+        Player player,
+        ref IEnumerable<CardModel> __result)
     {
         try
         {
@@ -45,6 +52,9 @@ internal sealed class CardCreationPatch : IPatchMethod
 
             var candidates = __result as List<CardModel> ?? __result.ToList();
             if (candidates.Count == 0)
+                return;
+
+            if (!ShouldFilter(__instance, player))
                 return;
 
             var ownPoolEntries = OwnPoolEntries.GetValue(
@@ -58,7 +68,7 @@ internal sealed class CardCreationPatch : IPatchMethod
                 // 候选里出现别的职业的牌，说明这次发牌被加宽过，此时「没排除任何牌」是值得记录的结论。
                 // 候选全在本职业卡池里时属于常规发牌，降到 Debug，避免刷日志。
                 var message =
-                    $"[filter] candidates={stats.Candidates} removed=0 kept={stats.Kept} " +
+                    $"[filter] mode={ModSettings.CurrentMode} candidates={stats.Candidates} removed=0 kept={stats.Kept} " +
                     $"poolGate={stats.PoolGateSkipped} otherPool={stats.OtherPoolCards}";
 
                 if (stats.OtherPoolCards > 0)
@@ -79,7 +89,7 @@ internal sealed class CardCreationPatch : IPatchMethod
             }
 
             Plugin.Logger.Info(
-                $"[filter] candidates={stats.Candidates} removed={stats.Removed} " +
+                $"[filter] mode={ModSettings.CurrentMode} candidates={stats.Candidates} removed={stats.Removed} " +
                 $"kept={stats.Kept} poolGate={stats.PoolGateSkipped} otherPool={stats.OtherPoolCards}");
             __result = kept;
         }
@@ -87,5 +97,50 @@ internal sealed class CardCreationPatch : IPatchMethod
         {
             Plugin.Logger.Error($"[filter] failed, candidates left unchanged: {ex}");
         }
+    }
+
+    /// <summary>
+    ///     按当前判定模式决定要不要继续过滤。规则见 SP-005、SP-019 与 <c>4.ADR/008</c>。
+    /// </summary>
+    private static bool ShouldFilter(CardCreationOptions options, Player player)
+    {
+        if (options is null)
+            return false;
+
+        // 第二个取值：候选是否跨界由 CardFilter 统计，这里只看模式。
+        if (ModSettings.CurrentMode == FilterMode.AnyWidenedPool)
+            return true;
+
+        // 默认取值：复刻原版棱彩宝石的早退集合，五条全部成立才认为它加宽了本次发牌。
+        if (!HoldsPrismaticGem(player))
+            return false;
+
+        var flags = options.Flags;
+        if (!flags.HasFlag(CardCreationFlags.IsCardReward))
+            return false;
+        if (flags.HasFlag(CardCreationFlags.NoCardPoolModifications))
+            return false;
+
+        var pools = options.CardPools;
+        // 0.107.1 里卡池为空即用自定义卡表，棱彩宝石对那种选项早退。0.111 起该构造方式已移除。
+        if (pools.Count == 0)
+            return false;
+        if (pools.All(static pool => pool.IsColorless))
+            return false;
+
+        return true;
+    }
+
+    /// <summary>玩家是否持有棱彩宝石。按类型判定，不拼字符串标识。</summary>
+    private static bool HoldsPrismaticGem(Player player)
+    {
+        var relics = player.Relics;
+        for (var i = 0; i < relics.Count; i++)
+        {
+            if (relics[i] is PrismaticGem)
+                return true;
+        }
+
+        return false;
     }
 }
