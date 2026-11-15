@@ -343,7 +343,9 @@ internal static class ModSettings
                         $"{group.Members.Length} cards. Unchecked keeps this group unchanged."))
                 .AddSubpage(
                     "exempt_" + id,
-                    Localization.Text("pgf.exempt.row", "Exemptions"),
+                    ModSettingsText.Dynamic(() =>
+                        Localization.Resolve("pgf.exempt.row", "Exemptions") + " · " +
+                        Localization.Resolve("pgf.group." + id + ".name", id)),
                     ExemptionPageId(id),
                     Localization.Text("pgf.exempt.button", "Open"),
                     Localization.Text("pgf.exempt.row.desc",
