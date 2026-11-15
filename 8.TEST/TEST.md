@@ -26,6 +26,7 @@
 | `user-playtest-colorful-philosophers-godot.log` | 2026-11-15 22:25 | 否 | 194 | 用户实测日志。9 次战斗奖励各自排除 12 张；持宝石与卸宝石各触发一次色彩哲学家，两次都未过滤。分析见 `3.DOCS/011-E` | 是 |
 | `user-restart-mode-persisted-godot.log` | 2026-11-15 22:26 | 否 | 138 | 改设置后重启的启动日志。显示 `mode=AnyWidenedPool`，证明取值跨进程保持 | 是 |
 | `user-playtest-anywidened-godot.log` | 2026-11-15 22:42 | 否 | 153 | 第二个取值下的实测日志。色彩哲学家按颜色分别排除 3 / 6 / 1 张，水晶球 3 次奖励共 9 次调用。分析见 `3.DOCS/011-E` 情形五 | 是 |
+| `user-playtest-orrery-godot.log` | 2026-11-15 22:51 | 否 | 142 | 星系仪实测。5 次卡牌奖励共 15 次调用，每次 `removed=12`。分析见 `3.DOCS/011-E` 情形六 | 是 |
 
 ## 测试方法
 
