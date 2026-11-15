@@ -1,0 +1,692 @@
+MegaDot v4.5.1.m.14.mono.custom_build - https://godotengine.org
+
+FMOD Sound System: Successfully initialized
+[INFO] Found release_info.json at: C:\Game\Steam\steamapps\common\Slay the Spire 2\release_info.json
+[INFO] [Sentry.NET] Initialized: env=unknown, release=v0.113.1
+[INFO] Steamworks: attempting initialization...
+[INFO] Steam is running: True
+[INFO] Steamworks initialization succeeded!
+[INFO] Steam is enabled, we will write saves to steam storage. Enabled for account: True, app: False 
+[INFO] Registered 24 migrations
+[INFO] Current save versions: PrefsSave v2; ProfileSave v2; SerializableProgress v24; RunHistory v11; SerializableRun v21; SettingsSave v8
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\CalculatedGambleReplacementMod\CalculatedGambleReplacementMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\CorpseExplosionReplacementMod\CorpseExplosionReplacementMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\DarvRelicPoolMod\DarvRelicPoolMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\EvolveReplacementMod\EvolveReplacementMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\JugglingCounterMod\JugglingCounterMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\OstyDamageDetectionMod\OstyDamageDetectionMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\PhantomKillerMod\PhantomKillerMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\PrismaticGemFilter\mod_manifest.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\ReaperReplacementMod\ReaperReplacementMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RecycleReplacementMod\RecycleReplacementMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertBrightestFlame\RevertBrightestFlame.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertDiamondDiadem\RevertDiamondDiadem.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertRocketPunch\RevertRocketPunch.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertSynchronize\RevertSynchronize.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertTheSealedThrone\RevertTheSealedThrone.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\ScrawlReplacementMod\ScrawlReplacementMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3755773515 in C:\Game\Steam\steamapps\workshop\content\2868840\3755773515 (size 37217, last modified 1794657258)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3755773515\mod_manifest.json
+[INFO] Looking for mods to load from Steam Workshop mod 3839332861 in C:\Game\Steam\steamapps\workshop\content\2868840\3839332861 (size 4323777, last modified 1794724676)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3839332861\FoolMelodyReplacer.json
+[INFO] Looking for mods to load from Steam Workshop mod 3828218778 in C:\Game\Steam\steamapps\workshop\content\2868840\3828218778 (size 27399, last modified 1794668693)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3828218778\PrismaticGeneration\PrismaticGeneration.json
+[INFO] Looking for mods to load from Steam Workshop mod 3784531815 in C:\Game\Steam\steamapps\workshop\content\2868840\3784531815 (size 149983836, last modified 1794732395)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3784531815\MGRMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3838672055 in C:\Game\Steam\steamapps\workshop\content\2868840\3838672055 (size 9938, last modified 1794716183)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3838672055\Zhs113Fix\Zhs113Fix.json
+[INFO] Looking for mods to load from Steam Workshop mod 3756859747 in C:\Game\Steam\steamapps\workshop\content\2868840\3756859747 (size 6398291, last modified 1794601032)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3756859747\Loadout.json
+[INFO] Looking for mods to load from Steam Workshop mod 3810696310 in C:\Game\Steam\steamapps\workshop\content\2868840\3810696310 (size 25460541, last modified 1794549743)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3810696310\mod_manifest.json
+[INFO] Looking for mods to load from Steam Workshop mod 3816316338 in C:\Game\Steam\steamapps\workshop\content\2868840\3816316338 (size 42809862, last modified 1794549760)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3816316338\mod_manifest.json
+[INFO] Looking for mods to load from Steam Workshop mod 3821353824 in C:\Game\Steam\steamapps\workshop\content\2868840\3821353824 (size 26347816, last modified 1794549732)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3821353824\mod_manifest.json
+[INFO] Looking for mods to load from Steam Workshop mod 3748331824 in C:\Game\Steam\steamapps\workshop\content\2868840\3748331824 (size 19725178, last modified 1794680571)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3748331824\Merchant2CuteII.json
+[INFO] Looking for mods to load from Steam Workshop mod 3786286239 in C:\Game\Steam\steamapps\workshop\content\2868840\3786286239 (size 37458206, last modified 1790398793)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3786286239\KaguyaSilentRavenSkin.json
+[INFO] Looking for mods to load from Steam Workshop mod 3798368044 in C:\Game\Steam\steamapps\workshop\content\2868840\3798368044 (size 59120944, last modified 1794550830)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3798368044\mod_manifest.json
+[INFO] Looking for mods to load from Steam Workshop mod 3798006173 in C:\Game\Steam\steamapps\workshop\content\2868840\3798006173 (size 211913, last modified 1794612937)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3798006173\PixelPotions.json
+[INFO] Looking for mods to load from Steam Workshop mod 3792710066 in C:\Game\Steam\steamapps\workshop\content\2868840\3792710066 (size 133428, last modified 1788087317)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3792710066\RevertDiamondDiadem.json
+[INFO] Looking for mods to load from Steam Workshop mod 3756617122 in C:\Game\Steam\steamapps\workshop\content\2868840\3756617122 (size 31178, last modified 1783056259)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3756617122\RevertCompact.json
+[INFO] Looking for mods to load from Steam Workshop mod 3785043629 in C:\Game\Steam\steamapps\workshop\content\2868840\3785043629 (size 427874, last modified 1792251241)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3785043629\MoreStatistic.json
+[INFO] Looking for mods to load from Steam Workshop mod 3791663690 in C:\Game\Steam\steamapps\workshop\content\2868840\3791663690 (size 461722, last modified 1794596015)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3791663690\DarvRelicPoolMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3750281026 in C:\Game\Steam\steamapps\workshop\content\2868840\3750281026 (size 4679839, last modified 1794559564)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3750281026\Fake Merchant Expansion.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3750281026\Fake Merchant Expansion_config.json
+[INFO] JSON file C:\Game\Steam\steamapps\workshop\content\2868840\3750281026\Fake Merchant Expansion_config.json does not look like a mod manifest; skipping it.
+[INFO] Looking for mods to load from Steam Workshop mod 3787938439 in C:\Game\Steam\steamapps\workshop\content\2868840\3787938439 (size 197258, last modified 1794546842)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3787938439\JugglingCounterMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3787429685 in C:\Game\Steam\steamapps\workshop\content\2868840\3787429685 (size 271349, last modified 1787320346)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3787429685\RevertRocketPunch.json
+[INFO] Looking for mods to load from Steam Workshop mod 3773102248 in C:\Game\Steam\steamapps\workshop\content\2868840\3773102248 (size 51980022, last modified 1786900618)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3773102248\metadata.json
+[INFO] Looking for mods to load from Steam Workshop mod 3785110567 in C:\Game\Steam\steamapps\workshop\content\2868840\3785110567 (size 432903, last modified 1786969327)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3785110567\RevertTheSealedThrone.json
+[INFO] Looking for mods to load from Steam Workshop mod 3737336234 in C:\Game\Steam\steamapps\workshop\content\2868840\3737336234 (size 566675, last modified 1794557334)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3737336234\MintySpire2\MintySpire2.json
+[INFO] Looking for mods to load from Steam Workshop mod 3748419805 in C:\Game\Steam\steamapps\workshop\content\2868840\3748419805 (size 23708199, last modified 1787688604)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3748419805\Nekobinder.json
+[INFO] Looking for mods to load from Steam Workshop mod 3782484322 in C:\Game\Steam\steamapps\workshop\content\2868840\3782484322 (size 20657473, last modified 1792752481)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3782484322\maya_ironcladskin.json
+[INFO] Looking for mods to load from Steam Workshop mod 3784486876 in C:\Game\Steam\steamapps\workshop\content\2868840\3784486876 (size 283087, last modified 1794535668)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3784486876\RevertSynchronize.json
+[WARN] Could not get Steam Workshop item install info for item 3759748828
+[INFO] Looking for mods to load from Steam Workshop mod 3783912778 in C:\Game\Steam\steamapps\workshop\content\2868840\3783912778 (size 258728, last modified 1794533942)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3783912778\RevertBrightestFlame.json
+[INFO] Looking for mods to load from Steam Workshop mod 3783824081 in C:\Game\Steam\steamapps\workshop\content\2868840\3783824081 (size 297584, last modified 1786797627)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3783824081\OstyDamageDetectionMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3783799947 in C:\Game\Steam\steamapps\workshop\content\2868840\3783799947 (size 1601846, last modified 1786794495)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3783799947\ScrawlReplacementMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3782811642 in C:\Game\Steam\steamapps\workshop\content\2868840\3782811642 (size 885897, last modified 1786641071)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3782811642\CalculatedGambleReplacementMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3782193181 in C:\Game\Steam\steamapps\workshop\content\2868840\3782193181 (size 1153106, last modified 1786544251)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3782193181\EvolveReplacementMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3781659831 in C:\Game\Steam\steamapps\workshop\content\2868840\3781659831 (size 1092481, last modified 1794535580)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3781659831\RecycleReplacementMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3780352678 in C:\Game\Steam\steamapps\workshop\content\2868840\3780352678 (size 1856499, last modified 1794534083)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3780352678\CorpseExplosionReplacementMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3780333216 in C:\Game\Steam\steamapps\workshop\content\2868840\3780333216 (size 1405643, last modified 1794664512)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3780333216\ReaperReplacementMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3779831316 in C:\Game\Steam\steamapps\workshop\content\2868840\3779831316 (size 1236601, last modified 1787393389)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3779831316\PhantomKillerMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3748978466 in C:\Game\Steam\steamapps\workshop\content\2868840\3748978466 (size 515851, last modified 1782034031)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3748978466\Parasitophobia.json
+[INFO] Looking for mods to load from Steam Workshop mod 3748678645 in C:\Game\Steam\steamapps\workshop\content\2868840\3748678645 (size 957164, last modified 1786677089)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3748678645\mod_manifest.json
+[INFO] Looking for mods to load from Steam Workshop mod 3748983306 in C:\Game\Steam\steamapps\workshop\content\2868840\3748983306 (size 27637658, last modified 1794643242)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3748983306\CustomAscensionBalance.json
+[INFO] Looking for mods to load from Steam Workshop mod 3776811963 in C:\Game\Steam\steamapps\workshop\content\2868840\3776811963 (size 2464867, last modified 1785923260)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3776811963\TanxAnime.json
+[INFO] Looking for mods to load from Steam Workshop mod 3777276296 in C:\Game\Steam\steamapps\workshop\content\2868840\3777276296 (size 3059446, last modified 1794548794)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3777276296\BetterAnimation2.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747952763 in C:\Game\Steam\steamapps\workshop\content\2868840\3747952763 (size 22574902, last modified 1794503076)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747952763\mod_manifest.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747526116 in C:\Game\Steam\steamapps\workshop\content\2868840\3747526116 (size 21069211, last modified 1794734067)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747526116\Watcher.json
+[INFO] Looking for mods to load from Steam Workshop mod 3748814804 in C:\Game\Steam\steamapps\workshop\content\2868840\3748814804 (size 537688, last modified 1785565139)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3748814804\stats_the_spire_local\manifest.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747557762 in C:\Game\Steam\steamapps\workshop\content\2868840\3747557762 (size 903854, last modified 1794547884)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747557762\Rewind.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747557003 in C:\Game\Steam\steamapps\workshop\content\2868840\3747557003 (size 427180, last modified 1794550309)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747557003\ModConfig.json
+[INFO] Looking for mods to load from Steam Workshop mod 3770163208 in C:\Game\Steam\steamapps\workshop\content\2868840\3770163208 (size 1423576, last modified 1785832403)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3770163208\PerfectedStrikeAnime.json
+[INFO] Looking for mods to load from Steam Workshop mod 3771349866 in C:\Game\Steam\steamapps\workshop\content\2868840\3771349866 (size 782484, last modified 1785830816)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3771349866\CrashLandingAnime.json
+[INFO] Looking for mods to load from Steam Workshop mod 3775606490 in C:\Game\Steam\steamapps\workshop\content\2868840\3775606490 (size 525303, last modified 1785833387)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3775606490\OstyAnime.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747497501 in C:\Game\Steam\steamapps\workshop\content\2868840\3747497501 (size 60967148, last modified 1794536421)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747497501\RegentFX.json
+[INFO] Looking for mods to load from Steam Workshop mod 3748762011 in C:\Game\Steam\steamapps\workshop\content\2868840\3748762011 (size 931145, last modified 1794643118)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3748762011\CustomCardBalance.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747591649 in C:\Game\Steam\steamapps\workshop\content\2868840\3747591649 (size 22669000, last modified 1794636788)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747591649\silentSkin.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747566414 in C:\Game\Steam\steamapps\workshop\content\2868840\3747566414 (size 7967, last modified 1781843310)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747566414\AncientSL.json
+[INFO] Looking for mods to load from Steam Workshop mod 3749027556 in C:\Game\Steam\steamapps\workshop\content\2868840\3749027556 (size 24431, last modified 1794553249)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3749027556\CookieCursor.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747942752 in C:\Game\Steam\steamapps\workshop\content\2868840\3747942752 (size 8567843, last modified 1786714960)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747942752\Mechaneko_Defect.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747762234 in C:\Game\Steam\steamapps\workshop\content\2868840\3747762234 (size 28681758, last modified 1787940232)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747762234\KaguyaRegentMSGKSkin.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747526103 in C:\Game\Steam\steamapps\workshop\content\2868840\3747526103 (size 2519298, last modified 1794536477)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747526103\JmcModLib.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747539220 in C:\Game\Steam\steamapps\workshop\content\2868840\3747539220 (size 1143606, last modified 1785487071)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747539220\BetterMap.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747523110 in C:\Game\Steam\steamapps\workshop\content\2868840\3747523110 (size 79649, last modified 1781835573)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747523110\BetterConsole.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747531952 in C:\Game\Steam\steamapps\workshop\content\2868840\3747531952 (size 4659517, last modified 1794724420)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747531952\RandomForeseer.json
+[INFO] Looking for mods to load from Steam Workshop mod 3737335127 in C:\Game\Steam\steamapps\workshop\content\2868840\3737335127 (size 1281606, last modified 1794487315)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3737335127\BaseLib\BaseLib.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3737335127\BaseLib\BaseLibCompatibilityHelper.json
+[INFO] Looking for mods to load from Steam Workshop mod 3737322022 in C:\Game\Steam\steamapps\workshop\content\2868840\3737322022 (size 40790, last modified 1786787188)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3737322022\QuickRestart\QuickRestart.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747602295 in C:\Game\Steam\steamapps\workshop\content\2868840\3747602295 (size 45225993, last modified 1794656207)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747602295\mod_manifest.json
+[INFO] Skipping loading mod MGRMod, it is set to disabled in settings
+[INFO] Skipping loading mod MoreDefectAnimations, it is set to disabled in settings
+[INFO] Skipping loading mod MoreNecrobinderAnimations, it is set to disabled in settings
+[INFO] Skipping loading mod MoreSilentAnimations, it is set to disabled in settings
+[INFO] Skipping loading mod Merchant2CuteII, it is set to disabled in settings
+[INFO] Skipping loading mod ShieldOnly, it is set to disabled in settings
+[INFO] Skipping loading mod PixelPotions, it is set to disabled in settings
+[INFO] Skipping loading mod RevertCompact, it is set to disabled in settings
+[INFO] Skipping loading mod MoreStatistic, it is set to disabled in settings
+[INFO] Skipping loading mod Fake Merchant Expansion, it is set to disabled in settings
+[INFO] Skipping loading mod MintySpire2, it is set to disabled in settings
+[INFO] Skipping loading mod Nekobinder, it is set to disabled in settings
+[INFO] Skipping loading mod maya_ironcladskin, it is set to disabled in settings
+[INFO] Skipping loading mod Parasitophobia, it is set to disabled in settings
+[INFO] Skipping loading mod CustomAscensionBalance, it is set to disabled in settings
+[INFO] Skipping loading mod TanxAnime, it is set to disabled in settings
+[INFO] Skipping loading mod BetterAnimation2, it is set to disabled in settings
+[INFO] Skipping loading mod ATA_IronClad, it is set to disabled in settings
+[INFO] Skipping loading mod Watcher, it is set to disabled in settings
+[INFO] Skipping loading mod sts2_statsthespire_local, it is set to disabled in settings
+[INFO] Skipping loading mod Rewind, it is set to disabled in settings
+[INFO] Skipping loading mod ModConfig, it is set to disabled in settings
+[INFO] Skipping loading mod PerfectedStrikeAnime, it is set to disabled in settings
+[INFO] Skipping loading mod CrashLandingAnime, it is set to disabled in settings
+[INFO] Skipping loading mod OstyAnime, it is set to disabled in settings
+[INFO] Skipping loading mod RegentFX, it is set to disabled in settings
+[INFO] Skipping loading mod CustomCardBalance, it is set to disabled in settings
+[INFO] Skipping loading mod silentSkin, it is set to disabled in settings
+[INFO] Skipping loading mod AncientSL, it is set to disabled in settings
+[INFO] Skipping loading mod Mechaneko_Defect, it is set to disabled in settings
+[INFO] Skipping loading mod BetterMap, it is set to disabled in settings
+[INFO] Skipping loading mod BetterConsole, it is set to disabled in settings
+[WARN] Mod with ID RevertDiamondDiadem and version 1.0.0 is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID DarvRelicPoolMod and version 1.0.4 is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID JugglingCounterMod and version 1.0.1 is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID RevertRocketPunch and unknown version is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID RevertTheSealedThrone and unknown version is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID RevertSynchronize and version 1.2.2 is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID RevertBrightestFlame and version 1.1.2 is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID OstyDamageDetectionMod and unknown version is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID ScrawlReplacementMod and unknown version is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID CalculatedGambleReplacementMod and unknown version is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID EvolveReplacementMod and unknown version is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID RecycleReplacementMod and unknown version is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID CorpseExplosionReplacementMod and version 1.0.1 is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID ReaperReplacementMod and version 1.1.0 is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID PhantomKillerMod and unknown version is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[INFO] Mods have been re-sorted because we detected a change or dependency order was broken. New sorting order:
+[INFO]   0: CookieCursor (CookieCursor)
+[INFO]   1: RitsuLib (STS2-RitsuLib)
+[INFO]   2: Workshop Uploader (STS2-WorkshopUploader)
+[INFO]   3: BaseLib Compatibility Helper (BaseLibCompatibilityHelper)
+[INFO]   4: BaseLib (BaseLib)
+[INFO]   5: 铁画银钩 | 细致地优化中文字体 (StS2ZhFont)
+[INFO]   6: Quick Restart (QuickRestart)
+[INFO]   7: Loadout (Loadout)
+[INFO]   8: KaguyaSilentRavenSkin (KaguyaSilentRavenSkin)
+[INFO]   9: KaguyaRegentMSGKSkin (KaguyaRegentMSGKSkin)
+[INFO]   10: JmcModLib (JmcModLib)
+[INFO]   11: 随机数预测 (RandomForeseer) (RandomForeseer)
+[INFO]   12: 113版本汉化优化 (Zhs113Fix)
+[INFO]   13: Fool Melody Replacer (FoolMelodyReplacer)
+[INFO]   14: 棱彩生成 (PrismaticGeneration)
+[INFO]   15: SplashExclusion (SplashExclusion)
+[INFO]   16: 棱彩宝石过滤 Prismatic Gem Filter (PrismaticGemFilter)
+[INFO]   17: 回调头冠（RevertDiamondDiadem） (RevertDiamondDiadem)
+[INFO]   18: 重做达弗（Redesign Darv） (DarvRelicPoolMod)
+[INFO]   19: 杂耍计数 (Juggling Counter) (JugglingCounterMod)
+[INFO]   20: 回调火箭飞拳（RevertRocketPunch） (RevertRocketPunch)
+[INFO]   21: 回调王座（Revert The Sealed Throne） (RevertTheSealedThrone)
+[INFO]   22: 回调同步（RevertSynchronize） (RevertSynchronize)
+[INFO]   23: 回调至亮之焰（RevertBrightestFlame） (RevertBrightestFlame)
+[INFO]   24: 奥斯提受击判定修改Osty Damage Detection Modification (OstyDamageDetectionMod)
+[INFO]   25: 潦草急就 (Scrawl) (ScrawlReplacementMod)
+[INFO]   26: 计算下注 (Calculated Gamble) (CalculatedGambleReplacementMod)
+[INFO]   27: 进化 (Evolve) (EvolveReplacementMod)
+[INFO]   28: 回收 (Recycle) (RecycleReplacementMod)
+[INFO]   29: 尸爆术替换（Corpse Explosion）（beta） (CorpseExplosionReplacementMod)
+[INFO]   30: 死亡收割 (Reaper) (ReaperReplacementMod)
+[INFO]   31: 幻影杀手 (Phantasmal Killer) (PhantomKillerMod)
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3749027556\CookieCursor.dll
+[INFO] Calling initializer method of type CookieCursor.Entry for CookieCursor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[CookieCursor] Mod initialized successfully.
+[INFO] Finished mod initialization for 'CookieCursor' (CookieCursor).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3747602295\STS2-RitsuLib.dll
+[INFO] Calling initializer method of type STS2RitsuLib.Loader.Bootstrap for STS2-RitsuLib.Loader, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [RitsuLib.Loader] Host=v0.113.1; runtime=0.113.0.
+[INFO] Associated assembly STS2-RitsuLib.Shared, Version=0.6.13.0, Culture=neutral, PublicKeyToken=null with mod STS2-RitsuLib
+[INFO] Associated assembly STS2-RitsuLib.Ui, Version=0.6.13.0, Culture=neutral, PublicKeyToken=null with mod STS2-RitsuLib
+[INFO] Associated assembly STS2-RitsuLib.Settings, Version=0.6.13.0, Culture=neutral, PublicKeyToken=null with mod STS2-RitsuLib
+[INFO] Associated assembly STS2-RitsuLib.Runtime, Version=0.6.13.0, Culture=neutral, PublicKeyToken=null with mod STS2-RitsuLib
+[INFO] Associated assembly STS2-RitsuLib, Version=0.6.13.0, Culture=neutral, PublicKeyToken=null with mod STS2-RitsuLib
+[INFO] [com.ritsukage.sts2-RitsuLib] Framework ID: com.ritsukage.sts2-RitsuLib
+[INFO] [com.ritsukage.sts2-RitsuLib] Framework Name: RitsuLib
+[INFO] [com.ritsukage.sts2-RitsuLib] Version: 0.6.13 [compat branch: 0.113.0]
+[INFO] [com.ritsukage.sts2-RitsuLib] Initializing shared framework...
+[INFO] [com.ritsukage.sts2-RitsuLib] [HarmonyInitSetterCompat] Installed on 2 reflection importer entry point(s).
+[INFO] [com.ritsukage.sts2-RitsuLib] [Config] Debug compatibility master is enabled. Sub-flags (only when master on): LocTable=True, UnlockEpoch=True, AncientArchitect=True. Mod Steam cloud mirror: enabled. Config file: user://steam/76561198869461680/mod_data/com.ritsukage.sts2-RitsuLib/settings.json
+[INFO] [com.ritsukage.sts2-RitsuLib] [RitsuLib-ModSettings] Loaded translations: language='zhs', fallback='eng', entries=1663, local=1663, fallbackEntries=0, sources=2 (local=1, fallback=1)
+[INFO] [com.ritsukage.sts2-RitsuLib] [DebugLogViewer] Local debug log viewer listening at http://127.0.0.1:18742/?token=3e7c463176914b985e1d0f23083fbef5
+[INFO] [com.ritsukage.sts2-RitsuLib] [Godot] RitsuGodot node factories initialized.
+[INFO] [com.ritsukage.sts2-RitsuLib] [SmartFormat] Registered Source: STS2RitsuLib.Combat.SecondaryResources.SecondaryResourceLocStringSource (order=0).
+[INFO] [com.ritsukage.sts2-RitsuLib] [SmartFormat] Registered Formatter: STS2RitsuLib.Combat.SecondaryResources.SecondaryResourceIconsFormatter (order=0).
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - framework core] Applying 433 patches...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - framework core] Patch application complete: 433 applied, 0 ignored, 0 failed, 433 total
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - framework core] All patches applied successfully
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - settings ui] Applying 19 patches...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - settings ui] Patch application complete: 19 applied, 0 ignored, 0 failed, 19 total
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - settings ui] All patches applied successfully
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - content assets] Applying 122 patches...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - content assets] Patch application complete: 122 applied, 0 ignored, 0 failed, 122 total
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - content assets] All patches applied successfully
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - character assets] Applying 59 patches...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - character assets] Patch application complete: 59 applied, 0 ignored, 0 failed, 59 total
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - character assets] All patches applied successfully
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - content registry] Applying 31 patches...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - content registry] Patch application complete: 31 applied, 0 ignored, 0 failed, 31 total
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - content registry] All patches applied successfully
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - persistence] Applying 3 patches...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - persistence] Patch application complete: 3 applied, 0 ignored, 0 failed, 3 total
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - persistence] All patches applied successfully
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - unlocks] Applying 22 patches...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - unlocks] Patch application complete: 22 applied, 0 ignored, 0 failed, 22 total
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - unlocks] All patches applied successfully
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - framework core] Applying 3 dynamic patch(es)...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - framework core] Dynamic patch application complete: 3/3 succeeded
+[INFO] [com.ritsukage.sts2-RitsuLib] [RuntimeHotkey] Registered 'Ctrl+Shift+F9' for RitsuLib mod settings
+[INFO] [com.ritsukage.sts2-RitsuLib] [RuntimeHotkey] Registered 'Ctrl+Shift+F10' for RitsuLib developer tools
+[INFO] [com.ritsukage.sts2-RitsuLib] [RuntimeHotkey] Registered 'Ctrl+Shift+F11' for RitsuLib combat creature picker
+[INFO] [com.ritsukage.sts2-RitsuLib] [Graphics] 2D texture filter applied: linear_mipmap.
+[INFO] [com.ritsukage.sts2-RitsuLib] [SteamWorkshopUpdate] Coordinator initialized.
+[INFO] [com.ritsukage.sts2-RitsuLib] Shared framework initialization complete.
+[INFO] Finished mod initialization for 'RitsuLib' (STS2-RitsuLib).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3748678645\STS2-WorkshopUploader.dll
+[INFO] Calling initializer method of type STS2WorkshopUploader.Main for STS2-WorkshopUploader, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [STS2-WorkshopUploader] Mod ID: STS2-WorkshopUploader
+[INFO] [STS2-WorkshopUploader] Version: 0.1.18
+[INFO] [STS2-WorkshopUploader] Initializing workshop uploader mod...
+[INFO] [STS2-WorkshopUploader] [Patcher - workshop uploader ui] Applying 5 patches...
+[INFO] [STS2-WorkshopUploader] [Patcher - workshop uploader ui] Patch application complete: 5 applied, 0 ignored, 0 failed, 5 total
+[INFO] [STS2-WorkshopUploader] [Patcher - workshop uploader ui] All patches applied successfully
+[INFO] [STS2-WorkshopUploader] Workshop uploader mod initialization complete.
+[INFO] Finished mod initialization for 'Workshop Uploader' (STS2-WorkshopUploader).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3737335127\BaseLib\BaseLibCompatibilityHelper.dll
+[INFO] Calling initializer method of type BaseLibCompatibilityHelper.BaseLibCompatibilityHelperCode.MainFile for BaseLibCompatibilityHelper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] Finished mod initialization for 'BaseLib Compatibility Helper' (BaseLibCompatibilityHelper).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3737335127\BaseLib\BaseLib.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3737335127\BaseLib\BaseLib.pck
+[INFO] Calling initializer method of type BaseLib.BaseLibMain for BaseLib, Version=3.4.8.0, Culture=neutral, PublicKeyToken=null
+[INFO] [BaseLib] Created node factory for Control.
+[INFO] [BaseLib] Created node factory for NCreatureVisuals.
+[INFO] [BaseLib] Created node factory for NRestSiteCharacter.
+[INFO] [BaseLib] Created node factory for NMerchantCharacter.
+[INFO] [BaseLib] Created node factory for NEnergyCounter.
+[INFO] [BaseLib] Created node factory for NCustomTreasureRoomChest.
+[INFO] [BaseLib] Registered config for mod BaseLib
+[INFO] [BaseLib] Naive game version: v0.113.1
+[INFO] [BaseLib] Performing CustomPile Add patch for beta version
+[INFO] [BaseLib] Starting PatchAll for assembly BaseLib, Version=3.4.8.0, Culture=neutral, PublicKeyToken=null
+[INFO] [BaseLib] Reading state machine type [MegaCrit.Sts2.Core.Nodes.Combat.NCreature+<AnimDie>d__113]
+[INFO] [BaseLib] Adding new state 5 for method CustomAnimationPatch.WaitCustomAnim before Wait with result type None ()
+[INFO] [BaseLib] Reading state machine type [MegaCrit.Sts2.Core.Hooks.Hook+<AfterCardPlayed>d__19]
+[INFO] [BaseLib] Adding new state 2 for method AfterCardPlayedPatch.BeforeAfterPlayHooks before AfterCardPlayed with result type None ()
+[INFO] [BaseLib] Skipping SentryService shutdown patch; no match found.
+[INFO] [BaseLib] Reading state machine type [MegaCrit.Sts2.Core.Models.CardModel+<SpendResources>d__356]
+[INFO] [BaseLib] Adding new state 2 for method CustomResourcePatches.SpendAdditionalCosts after SpendStars with result type None ()
+[INFO] [BaseLib] Reading state machine type [MegaCrit.Sts2.Core.Hooks.Hook+<AfterEnergyReset>d__34]
+[INFO] [BaseLib] Adding new state 2 for method CustomResourcePatches.BeforeEnergyResetHook before AfterEnergyReset with result type None ()
+[INFO] [BaseLib] No valid target found, skipping old ExhaustivePatch
+[INFO] [BaseLib] No valid target found, skipping old PurgePatch
+[INFO] [BaseLib] Applied 286 patches successfully, 0 failed
+[INFO] Finished mod initialization for 'BaseLib' (BaseLib).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3773102248\StS2ZhFont.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3773102248\StS2ZhFont.pck
+[INFO] Calling initializer method of type StS2ZhFont.MainFile for StS2ZhFont, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [BaseLib] Registered config for mod StS2ZhFont
+[INFO] Finished mod initialization for '铁画银钩 | 细致地优化中文字体' (StS2ZhFont).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3737322022\QuickRestart\QuickRestart.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3737322022\QuickRestart\QuickRestart.pck
+[INFO] Calling initializer method of type QuickRestart.QuickRestartCode.MainFile for QuickRestart, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [BaseLib] Registered config for mod QuickRestart
+[INFO] Finished mod initialization for 'Quick Restart' (QuickRestart).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3756859747\Loadout.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3756859747\Loadout.pck
+[INFO] Calling initializer method of type Loadout.MainFile for Loadout, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [Loadout] [Loadout] Beginning early bootstrap.
+[INFO] [Loadout] SentryService.DisableGdExtensionIfModded not found; skipped patch.
+[INFO] [BaseLib] Skipping SentryService shutdown patch; no match found.
+[INFO] [Loadout] SentryService.SetGdExtensionUser not found; skipped patch.
+[INFO] [Loadout] SentryService.SetGdExtensionBreadcrumb not found; skipped patch.
+[INFO] [Loadout] Sentry startup crash interceptor installed: AfterGameInit, Shutdown, SetPlatformBranch, Initialize, InitializeForTesting
+[INFO] [Loadout] [Loadout] Waiting for game localization initialization.
+[INFO] Finished mod initialization for 'Loadout' (Loadout).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3786286239\KaguyaSilentRavenSkin.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3786286239\KaguyaSilentRavenSkin.pck
+[INFO] Calling initializer method of type SilentSkinMod.MainFile for SilentSkinMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] Finished mod initialization for 'KaguyaSilentRavenSkin' (KaguyaSilentRavenSkin).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3747762234\KaguyaRegentMSGKSkin.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3747762234\KaguyaRegentMSGKSkin.pck
+[INFO] Calling initializer method of type RegentSkinMod.MainFile for RegentSkinMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] Finished mod initialization for 'KaguyaRegentMSGKSkin' (KaguyaRegentMSGKSkin).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3747526103\JmcModLib.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3747526103\JmcModLib.pck
+[INFO] Calling initializer method of type JmcModLib.Bootstrap.BootstrapMain for JmcModLib.Bootstrap, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [JmcModLib.Bootstrap] Dependency resolver installed.
+[INFO] [JmcModLib.Bootstrap] Loaded runtime assembly from C:\Game\Steam\steamapps\workshop\content\2868840\3747526103\JmcModLib.Runtime.dll
+[INFO] [JmcModLib.Bootstrap] Resolved dependency Newtonsoft.Json from C:\Game\Steam\steamapps\workshop\content\2868840\3747526103\Newtonsoft.Json.dll
+[INFO] [JmcModLib v1.10.0] [18:45:07] ======================================
+[INFO] [JmcModLib v1.10.0] [18:45:07]  JmcModLib Mod 正在启动...
+[INFO] [JmcModLib v1.10.0] [18:45:07] ======================================
+[INFO] [JmcModLib v1.10.0] [18:45:07] Harmony 补丁已应用。
+[INFO] [JmcModLib.Bootstrap] Runtime loaded: JmcModLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] Finished mod initialization for 'JmcModLib' (JmcModLib).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3747531952\RandomForeseer.dll
+[INFO] Calling initializer method of type RandomForeseer.WorkshopLoader.Bootstrap for RandomForeseer.Loader, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [RandomForeseer.Loader] Host version v0.113.1; selected Mod variant 0.15.1 (minimum game version 0.113.1).
+[INFO] [com.ritsukage.sts2-RitsuLib] [ui] Loaded translations: language='zhs', fallback='eng', entries=47, local=47, fallbackEntries=0, sources=2 (local=1, fallback=1)
+[INFO] [com.ritsukage.sts2-RitsuLib] [settings] Loaded translations: language='zhs', fallback='eng', entries=152, local=152, fallbackEntries=0, sources=2 (local=1, fallback=1)
+[INFO] [com.ritsukage.sts2-RitsuLib] [Telemetry] Registered contribution 'RandomForeseer/settings_snapshot' (BasicUsage, PrivateToApplicant).
+[INFO] [com.ritsukage.sts2-RitsuLib] [Telemetry] Registered applicant 'RandomForeseer' -> https://random-foreseer-telemetry.hotwords.top/batch/ (3 request(s)).
+[INFO] [RandomForeseer] Settings loaded: {"schema_version":3,"SingleplayerPredictionEnabled":true,"MultiplayerPredictionEnabled":true,"FairModeEnabled":true,"ShowDriftWarnings":false,"PredictBaseGameCardsOnly":false,"InvokeBaseGameHookListenersOnly":false,"DeckTransformPredictionEnabled":true,"NextActPredictionEnabled":true,"BlitzMerchantPredictionEnabled":true,"EventOptionPredictionEnabled":true,"SlipperyBridgeRerollPreviewCount":5,"CrystalSphereClairvoyanceEnabled":true,"RelicPickupPredictionEnabled":true,"AncientRelicPickupPredictionEnabled":true,"MerchantRestockPredictionEnabled":true,"DriftwoodRerollPredictionEnabled":true,"DriftwoodRerollPreviewCount":3,"PaelsWingSacrificePredictionEnabled":true,"RestSitePredictionEnabled":true,"CardPlayPredictionEnabled":true,"PotionPredictionEnabled":true,"CombatTransformPredictionEnabled":true,"EndTurnPredictionEnabled":true,"EndTurnPredictionDisplayMode":"EndTurnButtonHover","EndTurnHealthBarForecastDisplayMode":"AlwaysDuringPlayerTurn","FrozenEyeEnabled":true,"ShufflePredictionEnabled":true,"CombatCardGenerationPredictionEnabled":true,"CardDrawPredictionEnabled":true,"CombatCardSelectionPredictionEnabled":true,"CombatOrbGenerationPredictionEnabled":true,"PotionCardGenerationPredictionEnabled":true,"PotionDrawPredictionEnabled":true,"PotionGenerationPredictionEnabled":true,"AutoPlayFromDrawPilePredictionEnabled":true,"InferCardOnPlayEffectsEnabled":true,"ChainedCardEffectPredictionEnabled":true,"CombatDamagePredictionEnabled":true,"OrbDamagePredictionEnabled":true,"RandomTargetAttackPredictionEnabled":true,"DamagePredictionHealthBarColor":"#E8C91A","DebugSettingsEnabled":false,"EventDebugRerollEnabled":false}
+[INFO] [RandomForeseer] RandomForeseer initialized.
+[INFO] Finished mod initialization for '随机数预测 (RandomForeseer)' (RandomForeseer).
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3838672055\Zhs113Fix\Zhs113Fix.pck
+[INFO] Finished mod initialization for '113版本汉化优化' (Zhs113Fix).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3839332861\FoolMelodyReplacer.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3839332861\FoolMelodyReplacer.pck
+[INFO] Calling initializer method of type FoolMelodyReplacer.FoolMelodyReplacerCode.MainFile for FoolMelodyReplacer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [BaseLib] Registered config for mod FoolMelodyReplacer
+[INFO] [FoolMelodyReplacer] Melody display patches installed: SmartFormat source + card title overlay (local display only).
+[INFO] Finished mod initialization for 'Fool Melody Replacer' (FoolMelodyReplacer).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3828218778\PrismaticGeneration\PrismaticGeneration.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3828218778\PrismaticGeneration\PrismaticGeneration.pck
+[INFO] Calling initializer method of type PrismaticGeneration.Main for PrismaticGeneration, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] Finished mod initialization for '棱彩生成' (PrismaticGeneration).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3755773515\SplashExclusion.dll
+[INFO] Calling initializer method of type SplashExclusion.SplashExclusionMod for SplashExclusion, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [SplashExclusion] RandomForeseer 兼容补丁已安装：19 个来源镜像。
+[INFO] Finished mod initialization for 'SplashExclusion' (SplashExclusion).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\PrismaticGemFilter\PrismaticGemFilter.dll
+[INFO] Calling initializer method of type PrismaticGemFilter.Plugin for PrismaticGemFilter, Version=0.0.2.0, Culture=neutral, PublicKeyToken=null
+[INFO] [PrismaticGemFilter] [Patcher - candidate filter] Applying 1 patches...
+[INFO] [PrismaticGemFilter] [Patcher - candidate filter] Patch application complete: 1 applied, 0 ignored, 0 failed, 1 total
+[INFO] [PrismaticGemFilter] [Patcher - candidate filter] All patches applied successfully
+[INFO] [PrismaticGemFilter] ready. exclusion groups=1 entries=12 patches=1/1
+[INFO] Finished mod initialization for '棱彩宝石过滤 Prismatic Gem Filter' (PrismaticGemFilter).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertDiamondDiadem\RevertDiamondDiadem.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertDiamondDiadem\RevertDiamondDiadem.pck
+[INFO] Calling initializer method of type RevertDiamondDiadem.ModEntry for RevertDiamondDiadem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [RevertDiamondDiadem] host shape: own AfterSideTurnStart=True, legacy power present=False
+[INFO] [RevertDiamondDiadem] [Patcher - revert_main] Applying 11 patches...
+[INFO] [RevertDiamondDiadem] [Patcher - revert_main] [Critical] reddia_half_damage_AbstractModel_ModifyDamageMultiplicative__1 - Ignored: Target method not found but patch is marked ignorable: AbstractModel.ModifyDamageMultiplicative
+[INFO] [RevertDiamondDiadem] [Patcher - revert_main] Patch application complete: 10 applied, 1 ignored, 0 failed, 11 total
+[INFO] [RevertDiamondDiadem] [Patcher - revert_main] All required patches applied; 1 optional patch target(s) were ignored
+[INFO] [RevertDiamondDiadem] initialized; diamond diadem reverted to legacy (v0.107) behavior.
+[INFO] Finished mod initialization for '回调头冠（RevertDiamondDiadem）' (RevertDiamondDiadem).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\DarvRelicPoolMod\DarvRelicPoolMod.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\DarvRelicPoolMod\DarvRelicPoolMod.pck
+[INFO] Calling initializer method of type DarvRelicPoolMod.ModEntry for DarvRelicPoolMod, Version=1.0.4.0, Culture=neutral, PublicKeyToken=null
+[INFO] DarvRelicPoolMod: settings cache loaded.
+[INFO] [com.ritsukage.sts2-RitsuLib] [settings] Loaded translations: language='zhs', fallback='eng', entries=32, local=32, fallbackEntries=0, sources=2 (local=1, fallback=1)
+[INFO] [DarvRelicPoolMod] [Patcher - darv_cosmetic] Applying 5 patches...
+[INFO] [DarvRelicPoolMod] [Patcher - darv_cosmetic] Patch application complete: 5 applied, 0 ignored, 0 failed, 5 total
+[INFO] [DarvRelicPoolMod] [Patcher - darv_cosmetic] All patches applied successfully
+[INFO] [DarvRelicPoolMod] [Patcher - darv] Applying 3 patches...
+[INFO] [DarvRelicPoolMod] [Patcher - darv] Patch application complete: 3 applied, 0 ignored, 0 failed, 3 total
+[INFO] [DarvRelicPoolMod] [Patcher - darv] All patches applied successfully
+[INFO] DarvRelicPoolMod: initialized.
+[INFO] Finished mod initialization for '重做达弗（Redesign Darv）' (DarvRelicPoolMod).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\JugglingCounterMod\JugglingCounterMod.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\JugglingCounterMod\JugglingCounterMod.pck
+[INFO] Calling initializer method of type JugglingCounterMod.ModEntry for JugglingCounterMod, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null
+[INFO] JugglingCounterMod: loading...
+[INFO] JugglingCounterMod: Harmony patches applied (Juggling attack counter UI)
+[INFO] Finished mod initialization for '杂耍计数 (Juggling Counter)' (JugglingCounterMod).
+[WARN] Mod RevertRocketPunch declares version 1.0 which is not a valid Semantic Version
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertRocketPunch\RevertRocketPunch.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertRocketPunch\RevertRocketPunch.pck
+[INFO] Calling initializer method of type RevertRocketPunch.ModEntry for RevertRocketPunch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] RevertRocketPunch: loading...
+[INFO] RevertRocketPunch: Harmony patches applied (Rocket Punch -> pre-v0.110 behavior)
+[INFO] Finished mod initialization for '回调火箭飞拳（RevertRocketPunch）' (RevertRocketPunch).
+[WARN] Mod RevertTheSealedThrone declares version 1.0 which is not a valid Semantic Version
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertTheSealedThrone\RevertTheSealedThrone.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertTheSealedThrone\RevertTheSealedThrone.pck
+[INFO] Calling initializer method of type RevertTheSealedThrone.ModEntry for RevertTheSealedThrone, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] RevertTheSealedThrone: loading...
+[INFO] RevertTheSealedThrone: Harmony patches applied (The Sealed Throne upgrade -> Innate)
+[INFO] Finished mod initialization for '回调王座（Revert The Sealed Throne）' (RevertTheSealedThrone).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertSynchronize\RevertSynchronize.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertSynchronize\RevertSynchronize.pck
+[INFO] Calling initializer method of type RevertSynchronize.ModEntry for RevertSynchronize, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] RevertSynchronize: loading...
+[INFO] RevertSynchronize: Harmony patches applied (Synchronize -> v0.110 behavior); conditional: CanonicalKeywords(107)=False, ResultPile(107)=False
+[INFO] Finished mod initialization for '回调同步（RevertSynchronize）' (RevertSynchronize).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertBrightestFlame\RevertBrightestFlame.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertBrightestFlame\RevertBrightestFlame.pck
+[INFO] Calling initializer method of type RevertBrightestFlame.ModEntry for RevertBrightestFlame, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] RevertBrightestFlame: loading...
+[INFO] RevertBrightestFlame: Harmony patches applied (Brightest Flame fully reverted to pre-0.111.0 behavior)
+[INFO] Finished mod initialization for '回调至亮之焰（RevertBrightestFlame）' (RevertBrightestFlame).
+[WARN] Mod OstyDamageDetectionMod declares version 1.0 which is not a valid Semantic Version
+[WARN] Mod OstyDamageDetectionMod does not declare min game version. Assuming that it is supported.
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\OstyDamageDetectionMod\OstyDamageDetectionMod.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\OstyDamageDetectionMod\OstyDamageDetectionMod.pck
+[INFO] Calling initializer method of type OstyDamageDetectionMod.ModEntry for OstyDamageDetectionMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] OstyDamageDetectionMod: loading...
+[INFO] OstyDamageDetectionMod: SuckPower.AfterAttack patched
+[INFO] OstyDamageDetectionMod: ImbalancedPower.AfterDamageGiven patched
+[INFO] OstyDamageDetectionMod: applied 2/2 patches
+[INFO] Finished mod initialization for '奥斯提受击判定修改Osty Damage Detection Modification' (OstyDamageDetectionMod).
+[WARN] Mod ScrawlReplacementMod declares version 1.0 which is not a valid Semantic Version
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\ScrawlReplacementMod\ScrawlReplacementMod.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\ScrawlReplacementMod\ScrawlReplacementMod.pck
+[INFO] Calling initializer method of type ScrawlReplacementMod.ModEntry for ScrawlReplacementMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] ScrawlReplacementMod: loading...
+[INFO] ScrawlReplacementMod: Harmony patches applied (Scrawl -> StS1 style)
+[INFO] Finished mod initialization for '潦草急就 (Scrawl)' (ScrawlReplacementMod).
+[WARN] Mod CalculatedGambleReplacementMod declares version 1.0 which is not a valid Semantic Version
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\CalculatedGambleReplacementMod\CalculatedGambleReplacementMod.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\CalculatedGambleReplacementMod\CalculatedGambleReplacementMod.pck
+[INFO] Calling initializer method of type CalculatedGambleReplacementMod.ModEntry for CalculatedGambleReplacementMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] CalculatedGambleReplacementMod: loading...
+[INFO] CalculatedGambleReplacementMod: Harmony patches applied (Calculated Gamble -> StS1 style)
+[INFO] Finished mod initialization for '计算下注 (Calculated Gamble)' (CalculatedGambleReplacementMod).
+[WARN] Mod EvolveReplacementMod declares version 1.0 which is not a valid Semantic Version
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\EvolveReplacementMod\EvolveReplacementMod.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\EvolveReplacementMod\EvolveReplacementMod.pck
+[INFO] Calling initializer method of type EvolveReplacementMod.ModEntry for EvolveReplacementMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] EvolveReplacementMod: loading...
+[INFO] EvolveReplacementMod: Harmony patches applied (Iteration -> Evolve)
+[INFO] Finished mod initialization for '进化 (Evolve)' (EvolveReplacementMod).
+[WARN] Mod RecycleReplacementMod declares version 1.1 which is not a valid Semantic Version
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RecycleReplacementMod\RecycleReplacementMod.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RecycleReplacementMod\RecycleReplacementMod.pck
+[INFO] Calling initializer method of type RecycleReplacementMod.ModEntry for RecycleReplacementMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] RecycleReplacementMod: loading...
+[INFO] RecycleReplacementMod: Harmony patches applied (Scavenge -> Recycle)
+[INFO] Finished mod initialization for '回收 (Recycle)' (RecycleReplacementMod).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\CorpseExplosionReplacementMod\CorpseExplosionReplacementMod.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\CorpseExplosionReplacementMod\CorpseExplosionReplacementMod.pck
+[INFO] Calling initializer method of type CorpseExplosionReplacementMod.ModEntry for CorpseExplosionReplacementMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] CorpseExplosionReplacementMod: loading...
+[INFO] CorpseExplosionReplacementMod: Harmony patches applied (Outbreak -> Corpse Explosion)
+[INFO] CorpseExplosionReplacementMod: AbstractModel.AfterDeath hook applied
+[INFO] Finished mod initialization for '尸爆术替换（Corpse Explosion）（beta）' (CorpseExplosionReplacementMod).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\ReaperReplacementMod\ReaperReplacementMod.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\ReaperReplacementMod\ReaperReplacementMod.pck
+[INFO] Calling initializer method of type ReaperReplacementMod.ModEntry for ReaperReplacementMod, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] ReaperReplacementMod: loading...
+[INFO] ReaperReplacementMod: Harmony patches applied (NotYet -> Reaper)
+[INFO] Finished mod initialization for '死亡收割 (Reaper)' (ReaperReplacementMod).
+[WARN] Mod PhantomKillerMod declares version 1.0 which is not a valid Semantic Version
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\PhantomKillerMod\PhantomKillerMod.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\PhantomKillerMod\PhantomKillerMod.pck
+[INFO] Calling initializer method of type PhantomKillerMod.ModEntry for PhantomKillerMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] PhantomKillerMod: loading...
+[INFO] PhantomKillerMod: Harmony patches applied (ShadowStep -> Phantasmal Killer)
+[INFO] Finished mod initialization for '幻影杀手 (Phantasmal Killer)' (PhantomKillerMod).
+[INFO] [com.ritsukage.sts2-RitsuLib] 
+=== RitsuLib Mod Debug Information ===
+Host Version: v0.113.1
+RitsuLib Version: 0.6.13 [compat branch: 0.113.0]
+BaseLib: v3.4.8
+Loaded Mods: 32
+Registered Mods: 79
+Mod List:
+  * CookieCursor (0.7.0) workshopId=3749027556
+  * RitsuLib [STS2-RitsuLib] (0.6.13) workshopId=3747602295
+  * Workshop Uploader [STS2-WorkshopUploader] (0.1.18) workshopId=3748678645
+  * BaseLib Compatibility Helper [BaseLibCompatibilityHelper] (v0.0.0) workshopId=3737335127
+  * BaseLib (v3.4.8) workshopId=3737335127
+  * 铁画银钩 | 细致地优化中文字体 [StS2ZhFont] (v1.1.2) workshopId=3773102248
+  * Quick Restart [QuickRestart] (v2.0.0) workshopId=3737322022
+  * Loadout (v0.6.1) workshopId=3756859747
+  * KaguyaSilentRavenSkin (v0.1.7) workshopId=3786286239
+  * KaguyaRegentMSGKSkin (v0.2.5) workshopId=3747762234
+  * JmcModLib (1.10.0) workshopId=3747526103
+  * 随机数预测 (RandomForeseer) [RandomForeseer] (0.15.1) workshopId=3747531952
+  * 113版本汉化优化 [Zhs113Fix] (0.1.9) workshopId=3838672055
+  * Fool Melody Replacer [FoolMelodyReplacer] (v0.2.1) workshopId=3839332861
+  * 棱彩生成 [PrismaticGeneration] (1.2.0) workshopId=3828218778
+  * SplashExclusion (1.2.0) workshopId=3755773515
+  * 棱彩宝石过滤 Prismatic Gem Filter [PrismaticGemFilter] (0.0.2)
+  * 回调头冠（RevertDiamondDiadem） [RevertDiamondDiadem] (1.0.0)
+  * 重做达弗（Redesign Darv） [DarvRelicPoolMod] (1.0.4)
+  * 杂耍计数 (Juggling Counter) [JugglingCounterMod] (1.0.1)
+  * 回调火箭飞拳（RevertRocketPunch） [RevertRocketPunch] (1.0)
+  * 回调王座（Revert The Sealed Throne） [RevertTheSealedThrone] (1.0)
+  * 回调同步（RevertSynchronize） [RevertSynchronize] (1.2.2)
+  * 回调至亮之焰（RevertBrightestFlame） [RevertBrightestFlame] (1.1.2)
+  * 奥斯提受击判定修改Osty Damage Detection Modification [OstyDamageDetectionMod] (1.0)
+  * 潦草急就 (Scrawl) [ScrawlReplacementMod] (1.0)
+  * 计算下注 (Calculated Gamble) [CalculatedGambleReplacementMod] (1.0)
+  * 进化 (Evolve) [EvolveReplacementMod] (1.0)
+  * 回收 (Recycle) [RecycleReplacementMod] (1.1)
+  * 尸爆术替换（Corpse Explosion）（beta） [CorpseExplosionReplacementMod] (1.0.1)
+  * 死亡收割 (Reaper) [ReaperReplacementMod] (1.1.0)
+  * 幻影杀手 (Phantasmal Killer) [PhantomKillerMod] (1.0)
+
+[INFO]  --- RUNNING MODDED! --- Loaded 32 mods (79 total)
+[WARN] Asset not cached: res://scenes/debug/dev_console.tscn
+[INFO] OVERWRITING cloud saves with local saves.
+[WARN] Asset not cached: res://scenes/cards/card.tscn
+[WARN] Asset not cached: res://scenes/cards/holders/grid_card_holder.tscn
+[INFO] [com.ritsukage.sts2-RitsuLib] [UpdateCheck] Automatic scheduler started: essential initialization starting.
+[INFO] [com.ritsukage.sts2-RitsuLib] [SteamWorkshopUpdate] Auto check requested.
+[INFO] [com.ritsukage.sts2-RitsuLib] [SteamWorkshopUpdate] Starting Auto check. SteamInitialized=True.
+[INFO] [com.ritsukage.sts2-RitsuLib] [SteamWorkshopUpdate] Steamworks Workshop binding initialized.
+[INFO] AtlasManager: Loaded ui_atlas with 113 sprites
+[INFO] AtlasManager: Loaded compressed_atlas with 56 sprites
+[INFO] [com.ritsukage.sts2-RitsuLib] [SteamWorkshopUpdate] Scanning subscribed Workshop items. Reported=63, Returned=63.
+[INFO] Associated assembly RandomForeseer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null with mod RandomForeseer
+[INFO] [DarvRelicPoolMod] [Content] Registered shared relic pool: DarvModRelicPool (id=DARV_RELIC_POOL_MOD_RELIC_POOL_DARV_MOD_RELIC_POOL)
+[INFO] [DarvRelicPoolMod] [Content] Registered relic: AncientBigHat (id=DARV_RELIC_POOL_MOD_RELIC_ANCIENT_BIG_HAT) -> DarvModRelicPool
+[INFO] [DarvRelicPoolMod] [Content] Registered relic: AncientBookmark (id=DARV_RELIC_POOL_MOD_RELIC_ANCIENT_BOOKMARK) -> DarvModRelicPool
+[INFO] [DarvRelicPoolMod] [Content] Registered relic: AncientIvoryTile (id=DARV_RELIC_POOL_MOD_RELIC_ANCIENT_IVORY_TILE) -> DarvModRelicPool
+[INFO] [DarvRelicPoolMod] [Content] Registered relic: AncientLunarPastry (id=DARV_RELIC_POOL_MOD_RELIC_ANCIENT_LUNAR_PASTRY) -> DarvModRelicPool
+[INFO] [DarvRelicPoolMod] [Content] Registered relic: AncientMiniRegent (id=DARV_RELIC_POOL_MOD_RELIC_ANCIENT_MINI_REGENT) -> DarvModRelicPool
+[INFO] [DarvRelicPoolMod] [Content] Registered relic: AncientOrangeDough (id=DARV_RELIC_POOL_MOD_RELIC_ANCIENT_ORANGE_DOUGH) -> DarvModRelicPool
+[INFO] [DarvRelicPoolMod] [Content] Registered relic: HoveringKite (id=DARV_RELIC_POOL_MOD_RELIC_HOVERING_KITE) -> DarvModRelicPool
+[INFO] [DarvRelicPoolMod] [Content] Registered relic: Inserter (id=DARV_RELIC_POOL_MOD_RELIC_INSERTER) -> DarvModRelicPool
+[INFO] [DarvRelicPoolMod] [Content] Registered relic: MarkOfPain (id=DARV_RELIC_POOL_MOD_RELIC_MARK_OF_PAIN) -> DarvModRelicPool
+[INFO] [DarvRelicPoolMod] [Content] Registered relic: NuclearBattery (id=DARV_RELIC_POOL_MOD_RELIC_NUCLEAR_BATTERY) -> DarvModRelicPool
+[INFO] [DarvRelicPoolMod] [Content] Registered relic: RunicCube (id=DARV_RELIC_POOL_MOD_RELIC_RUNIC_CUBE) -> DarvModRelicPool
+[INFO] [DarvRelicPoolMod] [Content] Registered relic: WristBlade (id=DARV_RELIC_POOL_MOD_RELIC_WRIST_BLADE) -> DarvModRelicPool
+[INFO] [com.ritsukage.sts2-RitsuLib] [AutoRegister] Processed assembly 'DarvRelicPoolMod': 13 operation(s), 13 succeeded, 0 failed.
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - framework core] Applying 1 dynamic patch(es)...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - framework core] Dynamic patch application complete: 1/1 succeeded
+[INFO] [BaseLib] Performing early post-mod init
+[INFO] [BaseLib] Mod Loadout that modifies gameplay has BaseLib dependency; gameplay modification enabled.
+[INFO] [BaseLib] Patching act types for custom encounters and events | DeprecatedAct | Glory | Hive | Overgrowth | Underdocks
+[INFO] [BaseLib] Generating interop methods and properties
+[INFO] Loading locale path=res://localization/eng
+[INFO] Found loc table from mod: eng afflictions.json. Merging with base loc table
+[INFO] Found loc table from mod: eng afflictions.json. Merging with base loc table
+[INFO] Found loc table from mod: eng ancients.json. Merging with base loc table
+[INFO] Found loc table from mod: eng ascension.json. Merging with base loc table
+[INFO] Found loc table from mod: eng card_keywords.json. Merging with base loc table
+[INFO] Found loc table from mod: eng card_keywords.json. Merging with base loc table
+[INFO] Found loc table from mod: eng card_selection.json. Merging with base loc table
+[INFO] Found loc table from mod: eng cards.json. Merging with base loc table
+[INFO] Found loc table from mod: eng cards.json. Merging with base loc table
+[INFO] Found loc table from mod: eng cards.json. Merging with base loc table
+[INFO] Found loc table from mod: eng cards.json. Merging with base loc table
+[INFO] Found loc table from mod: eng cards.json. Merging with base loc table
+[INFO] Found loc table from mod: eng cards.json. Merging with base loc table
+[INFO] Found loc table from mod: eng cards.json. Merging with base loc table
+[INFO] Found loc table from mod: eng cards.json. Merging with base loc table
+[INFO] Found loc table from mod: eng cards.json. Merging with base loc table
+[INFO] Found loc table from mod: eng cards.json. Merging with base loc table
+[INFO] Found loc table from mod: eng cards.json. Merging with base loc table
+[INFO] Found loc table from mod: eng cards.json. Merging with base loc table
+[INFO] Found loc table from mod: eng credits.json. Merging with base loc table
+[INFO] Found loc table from mod: eng epochs.json. Merging with base loc table
+[INFO] Found loc table from mod: eng events.json. Merging with base loc table
+[INFO] Found loc table from mod: eng gameplay_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: eng gameplay_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: eng main_menu_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: eng main_menu_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: eng merchant_room.json. Merging with base loc table
+[INFO] Found loc table from mod: eng potions.json. Merging with base loc table
+[INFO] Found loc table from mod: eng powers.json. Merging with base loc table
+[INFO] Found loc table from mod: eng powers.json. Merging with base loc table
+[INFO] Found loc table from mod: eng powers.json. Merging with base loc table
+[INFO] Found loc table from mod: eng powers.json. Merging with base loc table
+[INFO] Found loc table from mod: eng powers.json. Merging with base loc table
+[INFO] Found loc table from mod: eng powers.json. Merging with base loc table
+[INFO] Found loc table from mod: eng powers.json. Merging with base loc table
+[INFO] Found loc table from mod: eng powers.json. Merging with base loc table
+[INFO] Found loc table from mod: eng relics.json. Merging with base loc table
+[INFO] Found loc table from mod: eng relics.json. Merging with base loc table
+[INFO] Found loc table from mod: eng relics.json. Merging with base loc table
+[INFO] Found loc table from mod: eng relics.json. Merging with base loc table
+[INFO] Found loc table from mod: eng rest_site_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: eng settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: eng settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: eng settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: eng settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: eng settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: eng settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: eng static_hover_tips.json. Merging with base loc table
+[INFO] Found loc table from mod: eng static_hover_tips.json. Merging with base loc table
+[INFO] Found loc table from mod: eng static_hover_tips.json. Merging with base loc table
+[INFO] Loading locale path=res://localization/zhs
+[INFO] Found loc table from mod: zhs afflictions.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs afflictions.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs ancients.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs ascension.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs card_keywords.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs card_keywords.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs card_selection.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs cards.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs cards.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs cards.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs cards.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs cards.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs cards.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs cards.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs cards.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs cards.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs cards.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs cards.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs cards.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs epochs.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs events.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs gameplay_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs gameplay_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs main_menu_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs main_menu_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs merchant_room.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs potions.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs powers.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs powers.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs powers.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs powers.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs powers.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs powers.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs powers.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs powers.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs relics.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs relics.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs relics.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs relics.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs rest_site_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs static_hover_tips.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs static_hover_tips.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs static_hover_tips.json. Merging with base loc table
+[StS2ZhFont] Loaded prebaked font resource: res://StS2ZhFont/fonts/prebaked/ZhenKai_GBK-Regular.fontdata
+[StS2ZhFont] Loaded prebaked font resource: res://StS2ZhFont/fonts/prebaked/TsangerJinKai02-W05.fontdata
+[StS2ZhFont] Loaded prebaked font resource: res://StS2ZhFont/fonts/prebaked/SweiSpringCJKsc-SemiBold-GB2312.fontdata
