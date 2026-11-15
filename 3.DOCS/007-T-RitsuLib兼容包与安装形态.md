@@ -138,16 +138,28 @@ if (mod2 == null || mod2.state != ModLoadState.Loaded)
 
 字段名是 `min_version` 而不是 `minVersion`。游戏侧的 `ModDependency` 用 `[JsonPropertyName("min_version")]` 映射到 C# 字段 `minVersion`，见 `game_full/sts2.decompiled.cs:168363-168375`。
 
-2. **编译期引用**按构建目标选包。构建 0.107.1 版时引用 `STS2.RitsuLib.Compat.0.107.1`，构建 0.111.0 版时引用 `STS2.RitsuLib.Compat.0.111.0`，构建 0.113.1 版时引用 `STS2.RitsuLib`。
+2. **编译期引用**按编译基线选包。本项目的交付形态是一个整合包（[ADR-002](../4.ADR/002-三版本交付形态.md)），编译基线是本机的 0.113.1 程序集，因此引用 `STS2.RitsuLib`（最新包），不引用 `STS2.RitsuLib.Compat.*`。
 
-3. **程序集标识不变。** 所有模块的版本号都取自 `STS2-RitsuLib.csproj` 的 `<Version>`，当前为 0.6.13。兼容目标只以 `AssemblyMetadata("Sts2ApiCompat", ...)` 的形式记录，不参与程序集标识（`build/RitsuLib.Module.props`）。这意味着我们的 DLL 无论用哪一份兼容包编译，引用的都是同一个 `STS2-RitsuLib, Version=0.6.13.0`。
+不要反过来做：拿 `STS2.RitsuLib.Compat.0.107.1` 去配 0.113.1 的 `sts2.dll`。兼容包内附的框架程序集是针对旧 API 编译的，与新版游戏类型混用会引入无谓的风险。
 
-4. 由上一条推论：**本模组可能只需要一个 DLL 通吃三个版本**，前提是它用到的 RitsuLib 成员在三份兼容包里都存在。这一点未验证，需要构建后实测。
+运行期不必担心选错变体。所有模块的程序集标识都是 `STS2-RitsuLib, Version=0.6.13.0`，加载器按玩家安装的变体提供同名同版本的模块，绑定即可成立。真正的风险是「我们调用了某一变体里不存在的成员」，见本节第 4 条。
+
+3. **程序集标识不变**，这是单包可行的机制基础。所有模块的版本号都取自 `STS2-RitsuLib.csproj` 的 `<Version>`，当前为 0.6.13。兼容目标只以 `AssemblyMetadata("Sts2ApiCompat", ...)` 的形式记录，不参与程序集标识（`build/RitsuLib.Module.props`）。
+
+4. **本项目已定稿为一个 DLL 通吃三个版本**（[ADR-002](../4.ADR/002-三版本交付形态.md)）。前提是用到的 RitsuLib 成员在三份变体里都存在。已核对三个入口：
+
+| 入口 | 文件 | 条件编译 |
+|---|---|---|
+| `RitsuLibFramework` | `src/RitsuLibFramework.cs` | 仅 1 处，在 `Initialize()` 内部（433-435 行），不改变公开成员 |
+| `ModDataStore` | `src/Data/ModDataStore.cs` | 无 |
+| 设置与界面模块 | `components/settings`、`components/shared` | 无，且只编译一份供各变体共用 |
+
+其余成员未逐一核对。若后续要用到新的 RitsuLib 入口，先按同样方法查一遍条件编译，再写代码。
 
 ## 七、未验证
 
 - 未验证：创意工坊条目的分支范围元数据。`workshop.py` 只负责把变体包写进内容目录，分支可见性由上传时的 Steam 元数据决定，本次没有查到其取值。
-- 未验证：本模组单 DLL 跨三版本的可行性。确认方法：按 0.107.1 兼容包编译一份，分别在三版本游戏内加载并读 `[RitsuLib.Loader]` 日志。
+- 未验证：本模组单 DLL 在 0.107.1 与 0.111.0 上的运行行为。可行性已由 [DOCS/008-E](008-E-三版本API对照.md) 的 API 对照与本文第 6 节第 4 条支持，运行层面未实测。确认方法：在三版本游戏内加载，读 `[RitsuLib.Loader]` 日志与补丁成功日志。
 - 未验证：0.113.1 游戏运行 0.113.0 兼容模块的实际行为。代码层面匹配成立，运行层面未实测。
 
 ## 八、证据路径
