@@ -20,6 +20,7 @@
 """
 
 import csv
+import json
 import re
 import sys
 from pathlib import Path
@@ -28,6 +29,12 @@ ROOT = Path(__file__).resolve().parents[2]
 LIST_DIR = ROOT / "TMP" / "0.0.1" / "卡牌名单"
 SOURCES = [LIST_DIR / "卡牌分组名单.csv", LIST_DIR / "多人卡牌组.csv"]
 OUTPUT = ROOT / "9.SRC" / "src" / "CardGroupTable.cs"
+
+# 卡名核对用的参考文件。只用来验证「类名转标识」这一步没转错，不参与生成。
+# 找不到时脚本给出提示并跳过，不阻断生成。
+REF_CARDS = Path(
+    r"C:\Users\13167\Desktop\Mod\STS2-Reference\4.STS2-113.1Reference\localization\eng\cards.json"
+)
 
 # CSV 里的中文分组名 -> 落盘用的分组标识。标识一旦发布不得更改。
 GROUP_IDS = {
@@ -125,9 +132,29 @@ def render(rows):
     return "\n".join(lines)
 
 
+def verify_card_titles(rows):
+    """核对每个卡牌标识在游戏的 cards 表里都有 <标识>.title。
+
+    该表是模组运行时取卡名的地方，也是「类名转标识」这一步的正确性证据。
+    参考文件不在本机时只提示，不算失败。
+    """
+    if not REF_CARDS.exists():
+        print(f"跳过卡名核对：找不到 {REF_CARDS}")
+        return
+
+    data = json.loads(REF_CARDS.read_text(encoding="utf-8"))
+    titles = {key[: -len(".title")] for key in data if key.endswith(".title")}
+    missing = sorted({row["entry"] for row in rows} - titles)
+    if missing:
+        sys.exit("下列标识在 cards 表里没有对应卡名，类名转换或名单有误：" + ", ".join(missing))
+
+    print(f"卡名核对通过：{len({row['entry'] for row in rows})} 个标识全部有对应卡名。")
+
+
 def main():
     rows = load_rows()
     text = render(rows)
+    verify_card_titles(rows)
 
     duplicates = {}
     for row in rows:
