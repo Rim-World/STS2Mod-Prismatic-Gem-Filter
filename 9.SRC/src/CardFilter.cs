@@ -9,7 +9,17 @@ namespace PrismaticGemFilter;
 internal static class CardFilter
 {
     /// <summary>一次过滤的统计。字段含义与日志里的键名一致。</summary>
-    public readonly record struct Stats(int Candidates, int Removed, int Kept, int PoolGateSkipped);
+    /// <param name="Candidates">候选总数。</param>
+    /// <param name="Removed">被排除的张数。</param>
+    /// <param name="Kept">保留的张数。</param>
+    /// <param name="PoolGateSkipped">命中名单但属于玩家职业卡池、因而放行的张数。</param>
+    /// <param name="OtherPoolCards">候选里不属于玩家职业卡池的张数。大于 0 说明这次发牌被加宽过。</param>
+    public readonly record struct Stats(
+        int Candidates,
+        int Removed,
+        int Kept,
+        int PoolGateSkipped,
+        int OtherPoolCards);
 
     /// <summary>
     ///     逐张判定并返回保留的牌。
@@ -28,10 +38,15 @@ internal static class CardFilter
         var kept = new List<CardModel>(candidates.Count);
         var removed = 0;
         var poolGateSkipped = 0;
+        var otherPoolCards = 0;
 
         foreach (var card in candidates)
         {
             var entry = card.Id.Entry;
+            var inOwnPool = ownPoolEntries.Contains(entry);
+
+            if (!inOwnPool)
+                otherPoolCards++;
 
             if (!excludedEntries.Contains(entry))
             {
@@ -39,7 +54,7 @@ internal static class CardFilter
                 continue;
             }
 
-            if (ownPoolEntries.Contains(entry))
+            if (inOwnPool)
             {
                 poolGateSkipped++;
                 kept.Add(card);
@@ -49,7 +64,7 @@ internal static class CardFilter
             removed++;
         }
 
-        stats = new Stats(candidates.Count, removed, kept.Count, poolGateSkipped);
+        stats = new Stats(candidates.Count, removed, kept.Count, poolGateSkipped, otherPoolCards);
         return kept;
     }
 }

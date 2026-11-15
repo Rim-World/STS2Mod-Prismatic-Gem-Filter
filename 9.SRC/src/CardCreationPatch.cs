@@ -55,8 +55,17 @@ internal sealed class CardCreationPatch : IPatchMethod
 
             if (stats.Removed == 0)
             {
-                Plugin.Logger.Debug(
-                    $"[filter] candidates={stats.Candidates} removed=0 poolGate={stats.PoolGateSkipped} (no change)");
+                // 候选里出现别的职业的牌，说明这次发牌被加宽过，此时「没排除任何牌」是值得记录的结论。
+                // 候选全在本职业卡池里时属于常规发牌，降到 Debug，避免刷日志。
+                var message =
+                    $"[filter] candidates={stats.Candidates} removed=0 kept={stats.Kept} " +
+                    $"poolGate={stats.PoolGateSkipped} otherPool={stats.OtherPoolCards}";
+
+                if (stats.OtherPoolCards > 0)
+                    Plugin.Logger.Info(message);
+                else
+                    Plugin.Logger.Debug(message);
+
                 __result = candidates;
                 return;
             }
@@ -71,7 +80,7 @@ internal sealed class CardCreationPatch : IPatchMethod
 
             Plugin.Logger.Info(
                 $"[filter] candidates={stats.Candidates} removed={stats.Removed} " +
-                $"kept={stats.Kept} poolGate={stats.PoolGateSkipped}");
+                $"kept={stats.Kept} poolGate={stats.PoolGateSkipped} otherPool={stats.OtherPoolCards}");
             __result = kept;
         }
         catch (Exception ex)

@@ -10,9 +10,9 @@
     <TargetFramework>net9.0</TargetFramework>
     <AssemblyName>PrismaticGemFilter</AssemblyName>
     <RootNamespace>PrismaticGemFilter</RootNamespace>
-    <Version>0.0.1</Version>
-    <AssemblyVersion>0.0.1.0</AssemblyVersion>
-    <FileVersion>0.0.1.0</FileVersion>
+    <Version>0.0.2</Version>
+    <AssemblyVersion>0.0.2.0</AssemblyVersion>
+    <FileVersion>0.0.2.0</FileVersion>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -66,9 +66,14 @@
 
   <Target Name="CopyModToGame" AfterTargets="Build" Condition="'$(CopyModOnBuild)' != 'false'">
     <MakeDir Directories="$(ModOutputDir)" />
-    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ModOutputDir)" SkipUnchangedFiles="true" />
-    <Copy SourceFiles="$(MSBuildProjectDirectory)\mod_manifest.json" DestinationFolder="$(ModOutputDir)" SkipUnchangedFiles="true" />
-    <Message Importance="high" Text="已部署到 $(ModOutputDir)" />
+    <!-- 游戏正在运行时会锁住 DLL。此时只警告，不中断构建：编译产物仍然有效，关掉游戏再构建一次即可部署。 -->
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ModOutputDir)" SkipUnchangedFiles="true"
+          ContinueOnError="WarnAndContinue" />
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\mod_manifest.json" DestinationFolder="$(ModOutputDir)" SkipUnchangedFiles="true"
+          ContinueOnError="WarnAndContinue" />
+    <Warning Condition="'$(MSBuildLastTaskResult)' == 'false'"
+             Text="部署未完成：目标文件被占用。关掉游戏后重新构建即可。" />
+    <Message Importance="high" Text="已尝试部署到 $(ModOutputDir)" />
   </Target>
 
   <!-- 版本号一致性校验：程序集版本、清单 version、文件名三者必须相同。 -->
