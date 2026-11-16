@@ -26,7 +26,7 @@ $utf8 = New-Object System.Text.UTF8Encoding($false)
 $pre = @"
 #!/bin/sh
 # 由 8.TEST/CI-CD/install-hooks.ps1 安装，$stamp
-# 门禁：每次提交必须带来至少一条新的用户 prompt。规则见 1.PRD/用户prompt/ 与 8.TEST/TEST.md。
+# 门禁规则与分类表见 8.TEST/TEST.md 的「本地门禁」一节。此处不复述，避免随规则漂移。
 command -v python >/dev/null 2>&1 || { echo "[门禁] 找不到 python，本次跳过 prompt 门禁。" >&2; exit 0; }
 exec python 8.TEST/CI-CD/check-user-prompt.py --mode pre
 "@ -replace "`r`n", "`n"
