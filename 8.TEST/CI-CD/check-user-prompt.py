@@ -1,8 +1,18 @@
 # -*- coding: utf-8 -*-
-"""提交门禁：每次提交必须带来至少一条新的用户 prompt。
+"""提交门禁：改动源码或配置的提交，必须带来至少一条新的用户 prompt。
 
-为什么不看 git 的暂存区：`1.PRD/用户prompt/` 在 `.gitignore` 里，git 看不到这些文件。
-门禁只能读文件系统，并把「已被提交消费过的文件名」记在 `.git` 目录下，不进入版本库。
+规则：
+    1. 暂存区里有「非文档」路径（源码、项目文件、文案 JSON、脚本、清单、配置）时，
+       必须出现一个新的用户 prompt 文件，否则拒绝提交。
+    2. 暂存区里全是文档与测试日志（`.md`、`8.TEST` 下的 `.log`）时，放行，不消耗 prompt。
+       文档回填、版本日志补记、测试日志登记都属于这一类。
+    3. 只改提交信息的 amend 放行，不看 prompt。
+
+为什么不看 git 的暂存区里的 prompt 文件：`1.PRD/用户prompt/` 在 `.gitignore` 里，git 看不到。
+因此 prompt 侧只能读文件系统，并把「已被提交消费过的文件名」记在 `.git` 目录下，不进入版本库。
+
+文档与代码的判定见 `is_documentation`。原则是宁可误拦不可漏放：
+只有明确属于文档或测试产物的路径才算文档，其余一律按代码处理。
 
 用法（由钩子调用，也可以手动跑）：
 
@@ -28,6 +38,9 @@ PROMPT_DIR_REL = "1.PRD/用户prompt"
 STATE_NAME = "user-prompt-gate.json"
 SKIP_NAME = "user-prompt-gate.skip"
 LOG_NAME = "user-prompt-gate.log"
+
+# 源码目录里只认这两个文档文件，其余一律按代码处理。
+SRC_DOC_FILES = ("9.SRC/README.md", "9.SRC/CHANGELOG.md")
 
 
 def repo_root() -> Path:
@@ -55,6 +68,34 @@ def git_dir(root: Path) -> Path:
         return root / ".git"
 
 
+def is_documentation(path: str) -> bool:
+    """这条路径是否属于「改了也不改行为」的文档或测试产物。
+
+    判定顺序有意如此，宁可误拦：
+        - 门禁自身所在目录先排除，脚本改动必须带 prompt。
+        - `9.SRC/` 是源码目录，只认 README 与 CHANGELOG。
+        - `TOOLS/` 下的脚本不算文档，只有 `.md` 说明算。
+        - 其余位置只有 `.md` 算文档。
+        - `8.TEST/` 下的 `.log` 属于测试产物，算文档。
+    """
+    p = path.replace("\\", "/")
+    if p.startswith("./"):
+        p = p[2:]
+    if p in SRC_DOC_FILES:
+        return True
+    if p.startswith("8.TEST/CI-CD/"):
+        return False
+    if p.startswith("9.SRC/"):
+        return False
+    if p.startswith("TOOLS/"):
+        return p.endswith(".md")
+    if p.endswith(".md"):
+        return True
+    if p.startswith("8.TEST/") and p.endswith(".log"):
+        return True
+    return False
+
+
 def prompt_files(root: Path) -> list:
     folder = root / PROMPT_DIR_REL
     if not folder.is_dir():
@@ -78,6 +119,19 @@ def save_state(path: Path, consumed, present) -> None:
     alive = sorted({name for name in consumed if name in present})
     payload = {"consumed": alive, "updated": datetime.now().strftime("%Y-%m-%d %H:%M")}
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def staged_paths(root: Path):
+    """暂存区相对 HEAD 的路径。没有改动时返回空列表，读不到时返回 None。"""
+    try:
+        result = subprocess.run(
+            ["git", "diff", "--cached", "--name-only", "HEAD"],
+            cwd=root, capture_output=True, text=True, encoding="utf-8")
+        if result.returncode != 0:
+            return None
+        return [line.strip() for line in result.stdout.splitlines() if line.strip()]
+    except OSError:
+        return None
 
 
 def has_staged_change(root: Path) -> bool:
@@ -146,6 +200,15 @@ def number_hint(present) -> str:
     return f"提示：最新一条的文件名「{present[-1]}」不是四位递增编号，按规范应为 {len(present):04d}.md。"
 
 
+def describe_paths(paths, limit: int = 6) -> str:
+    """把路径列表压成一行，用于提示信息。"""
+    shown = paths[:limit]
+    text = "、".join(shown)
+    if len(paths) > limit:
+        text += f" 等 {len(paths)} 个"
+    return text
+
+
 def main() -> int:
     mode = "pre"
     if "--mode" in sys.argv:
@@ -171,10 +234,18 @@ def main() -> int:
     if mode == "show":
         consumed = set(state or [])
         pending = [name for name in present if name not in consumed]
+        paths = staged_paths(root) or []
+        code = [p for p in paths if not is_documentation(p)]
         print(f"目录：{PROMPT_DIR_REL}")
         print(f"总条数：{len(present)}，最新：{present[-1]}")
         print(f"状态文件：{state_path}")
         print("未消费：" + ("、".join(pending) if pending else "无（下次提交会被拦下）"))
+        if not paths:
+            print("暂存区：空")
+        elif code:
+            print(f"暂存区：{len(paths)} 个路径，其中 {len(code)} 个要 prompt：{describe_paths(code)}")
+        else:
+            print(f"暂存区：{len(paths)} 个路径，全部是文档或测试日志，不需要 prompt")
         return 0
 
     if state is None:
@@ -210,6 +281,15 @@ def main() -> int:
         print("[门禁] 暂存区相对 HEAD 没有改动（只改提交信息），放行。")
         return 0
 
+    paths = staged_paths(root)
+    if paths is None:
+        print("[门禁] 读不到暂存区路径，按需要 prompt 处理。", file=sys.stderr)
+    else:
+        code = [p for p in paths if not is_documentation(p)]
+        if not code:
+            print(f"[门禁] 本次提交只改文档与测试日志（{len(paths)} 个路径），不需要新的用户 prompt。")
+            return 0
+
     if skip_path.exists():
         reason = ""
         try:
@@ -227,12 +307,16 @@ def main() -> int:
         print(f"[门禁] 已使用一次性豁免并记入日志：「{reason}」")
         return 0
 
+    code = [p for p in (paths or []) if not is_documentation(p)]
     print("", file=sys.stderr)
-    print("[门禁] 本次提交没有新增用户 prompt，拒绝提交。", file=sys.stderr)
+    print("[门禁] 本次提交改动了源码或配置，但没有新增用户 prompt，拒绝提交。", file=sys.stderr)
     print("", file=sys.stderr)
+    if code:
+        print(f"  涉及：{describe_paths(code)}", file=sys.stderr)
     print(f"  要求：{PROMPT_DIR_REL}/ 下必须出现一个新的 .md，一轮一条，四位递增编号。", file=sys.stderr)
     print(f"  现状：已登记 {len(present)} 条，最新 {present[-1]}，它们都已随此前的提交入库。", file=sys.stderr)
     print(f"  下一步：把本轮用户的原话写进 {PROMPT_DIR_REL}/{len(present) + 1:04d}.md 再提交。", file=sys.stderr)
+    print("  只改文档与测试日志的提交不需要 prompt，可以直接提交。", file=sys.stderr)
     print(f"  确需跳过：在 {skip_path} 写一行理由，门禁会放行一次并记入日志。", file=sys.stderr)
     print("", file=sys.stderr)
     return 1
