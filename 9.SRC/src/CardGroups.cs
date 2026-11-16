@@ -18,27 +18,29 @@ internal enum GroupKind
 
 /// <summary>一个分组开关的全部静态信息。</summary>
 /// <param name="Id">落盘与界面用的标识。发布后不得改动，否则玩家存档里的键会失效。</param>
-/// <param name="Character">所属职业，用于界面分节与文案键。</param>
+/// <param name="Section">所属界面分节。多数分节对应一个职业，<c>cross</c> 与 <c>other</c> 不对应具体职业。</param>
 /// <param name="Kind">判定方式。</param>
 /// <param name="DefaultEnabled">首次启动时的默认勾选状态，见 SP-012。</param>
+/// <param name="MultiplayerOnly">成员是否全部为多人模式限定卡。只有这一项为真的组会在豁免页标明。</param>
 /// <param name="Members">卡牌标识，顺序与名单文件一致。</param>
 internal sealed record CardGroup(
     string Id,
-    string Character,
+    string Section,
     GroupKind Kind,
     bool DefaultEnabled,
+    bool MultiplayerOnly,
     string[] Members);
 
 /// <summary>
-///     13 个分组开关的静态定义。成员来自 <see cref="CardGroupTable" />，该表由名单 CSV 生成。
-///     <para>默认值依据 SP-012：9 项勾选、4 项不勾。</para>
+///     14 个分组开关的静态定义。成员来自 <see cref="CardGroupTable" />，该表由名单 CSV 生成。
+///     <para>默认值依据 SP-012：10 项勾选、4 项不勾。</para>
 /// </summary>
 internal static class CardGroups
 {
-    /// <summary>全部职业在界面上的排列顺序。</summary>
-    public static readonly string[] Characters =
+    /// <summary>界面分节的排列顺序。前六节对应职业，末节收纳不按职业归类的组。</summary>
+    public static readonly string[] Sections =
     [
-        "necrobinder", "defect", "silent", "regent", "fool", "cross",
+        "necrobinder", "defect", "silent", "regent", "fool", "cross", "other",
     ];
 
     /// <summary>全部分组，顺序即界面上的排列顺序。</summary>
@@ -51,28 +53,29 @@ internal static class CardGroups
 
     public static bool TryGet(string id, out CardGroup group) => ById.TryGetValue(id, out group!);
 
-    /// <summary>某职业名下的分组，按 <see cref="All" /> 的顺序。</summary>
-    public static IEnumerable<CardGroup> OfCharacter(string character) =>
-        All.Where(group => group.Character == character);
+    /// <summary>某分节名下的分组，按 <see cref="All" /> 的顺序。</summary>
+    public static IEnumerable<CardGroup> OfSection(string section) =>
+        All.Where(group => group.Section == section);
 
     private static CardGroup[] Build()
     {
-        // 定义表：标识、职业、判定方式、默认勾选。成员从生成表里按标识取。
-        (string Id, string Character, GroupKind Kind, bool Default)[] definitions =
+        // 定义表：标识、分节、判定方式、默认勾选、是否多人专属。成员从生成表里按标识取。
+        (string Id, string Section, GroupKind Kind, bool Default, bool MultiplayerOnly)[] definitions =
         [
-            ("osty", "necrobinder", GroupKind.Marker, true),
-            ("summon", "necrobinder", GroupKind.Marker, true),
-            ("doom", "necrobinder", GroupKind.Marker, true),
-            ("orb", "defect", GroupKind.Marker, true),
-            ("focus", "defect", GroupKind.Marker, true),
-            ("sly", "silent", GroupKind.Marker, true),
-            ("shiv", "silent", GroupKind.Marker, false),
-            ("poison", "silent", GroupKind.Marker, false),
-            ("forge", "regent", GroupKind.Marker, true),
-            ("star", "regent", GroupKind.Marker, true),
-            ("arrow", "fool", GroupKind.Marker, false),
-            ("impale", "fool", GroupKind.Marker, true),
-            ("multiplayer", "cross", GroupKind.Explicit, false),
+            ("osty", "necrobinder", GroupKind.Marker, true, false),
+            ("summon", "necrobinder", GroupKind.Marker, true, false),
+            ("doom", "necrobinder", GroupKind.Marker, true, false),
+            ("orb", "defect", GroupKind.Marker, true, false),
+            ("focus", "defect", GroupKind.Marker, true, false),
+            ("sly", "silent", GroupKind.Marker, true, false),
+            ("shiv", "silent", GroupKind.Marker, false, false),
+            ("poison", "silent", GroupKind.Marker, false, false),
+            ("forge", "regent", GroupKind.Marker, true, false),
+            ("star", "regent", GroupKind.Marker, true, false),
+            ("arrow", "fool", GroupKind.Marker, false, false),
+            ("impale", "fool", GroupKind.Marker, true, false),
+            ("multiplayer", "cross", GroupKind.Explicit, false, true),
+            ("bugged", "other", GroupKind.Explicit, true, false),
         ];
 
         var membersById = CardGroupTable.Rows
@@ -85,9 +88,10 @@ internal static class CardGroups
         return definitions
             .Select(definition => new CardGroup(
                 definition.Id,
-                definition.Character,
+                definition.Section,
                 definition.Kind,
                 definition.Default,
+                definition.MultiplayerOnly,
                 membersById.TryGetValue(definition.Id, out var members) ? members : []))
             .ToArray();
     }

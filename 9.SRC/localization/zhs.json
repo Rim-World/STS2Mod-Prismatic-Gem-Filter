@@ -17,6 +17,7 @@
   "pgf.char.regent": "储君",
   "pgf.char.fool": "愚者",
   "pgf.char.cross": "跨职业",
+  "pgf.char.other": "其他",
 
   "pgf.section.necrobinder": "奥斯提、召唤、灾厄属于亡灵契约师。",
   "pgf.section.defect": "充能球、集中属于故障机器人。",
@@ -24,9 +25,11 @@
   "pgf.section.regent": "铸造、辉星属于储君。",
   "pgf.section.fool": "箭矢、扎穿属于愚者。",
   "pgf.section.cross": "这些牌只在多人模式中出现。",
+  "pgf.section.other": "不属于上面这些分类的牌。",
 
   "pgf.exclude.prefix": "排除",
   "pgf.count": "{0} 张",
+  "pgf.count.one": "{0} 张",
 
   "pgf.group.osty.name": "奥斯提牌",
   "pgf.group.osty.desc": "靠奥斯提战斗",
@@ -54,6 +57,8 @@
   "pgf.group.impale.desc": "施加或消耗扎穿",
   "pgf.group.multiplayer.name": "多人专属牌",
   "pgf.group.multiplayer.desc": "只在多人模式中出现",
+  "pgf.group.bugged.name": "现版本有 bug 的牌",
+  "pgf.group.bugged.desc": "别的职业拿到它时生成不出箭矢",
 
   "pgf.exempt.row": "豁免清单",
   "pgf.exempt.button": "打开",

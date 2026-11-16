@@ -166,10 +166,9 @@ internal static class CardGroupTable
         ("star", "SOLAR_STRIKE", "RegentCardPool"),
         ("star", "THE_SMITH", "RegentCardPool"),
 
-        // arrow：14 张
+        // arrow：13 张
         ("arrow", "ARROW_STAB", "FoolCardPool"),
         ("arrow", "BLOSSOM_SHOT", "FoolCardPool"),
-        ("arrow", "BLOT_OUT_THE_SKY", "FoolCardPool"),
         ("arrow", "FLORESCENCE", "FoolCardPool"),
         ("arrow", "HEAVY_SHOT", "FoolCardPool"),
         ("arrow", "HOBBLING_SHOT", "FoolCardPool"),
@@ -205,5 +204,8 @@ internal static class CardGroupTable
         ("multiplayer", "CONSTELLATION", "RegentCardPool"),
         ("multiplayer", "HAMMER_TIME", "RegentCardPool"),
         ("multiplayer", "COVERING_FIRE", "FoolCardPool"),
+
+        // bugged：1 张
+        ("bugged", "BLOT_OUT_THE_SKY", "FoolCardPool"),
     ];
 }

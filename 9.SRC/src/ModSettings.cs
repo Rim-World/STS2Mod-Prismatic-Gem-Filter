@@ -360,14 +360,14 @@ internal static class ModSettings
                 "The lists below group the cards that other classes almost never use."))
             .AddSection("effect_scope", AddEffectScopeSection);
 
-        foreach (var character in CardGroups.Characters)
+        foreach (var section in CardGroups.Sections)
         {
-            var characterId = character;
-            var groups = CardGroups.OfCharacter(characterId).ToArray();
+            var sectionId = section;
+            var groups = CardGroups.OfSection(sectionId).ToArray();
             if (groups.Length == 0)
                 continue;
 
-            page.AddSection("groups_" + characterId, section => AddCharacterSection(section, characterId, groups));
+            page.AddSection("groups_" + sectionId, builder => AddGroupSection(builder, sectionId, groups));
         }
     }
 
@@ -390,13 +390,17 @@ internal static class ModSettings
                 ModSettingsChoicePresentation.Dropdown);
     }
 
-    private static void AddCharacterSection(
+    /// <summary>
+    ///     一个界面分节：标题、一句该节的归属说明，下挂本节的若干分组开关。
+    ///     <para>分节名多数就是职业标识，<c>cross</c> 与 <c>other</c> 不对应职业，文案键同形。</para>
+    /// </summary>
+    private static void AddGroupSection(
         ModSettingsSectionBuilder section,
-        string character,
+        string sectionId,
         CardGroup[] groups)
     {
-        section.WithTitle(Localization.Text("pgf.char." + character, character))
-            .WithDescription(Localization.Text("pgf.section." + character, character));
+        section.WithTitle(Localization.Text("pgf.char." + sectionId, sectionId))
+            .WithDescription(Localization.Text("pgf.section." + sectionId, sectionId));
 
         foreach (var group in groups)
         {
@@ -426,11 +430,17 @@ internal static class ModSettings
     /// <summary>
     ///     分组开关的说明：一句短定义加本组成员张数。
     ///     <para>张数由名单算出，不写死在文案里，名单变动时说明自动跟着变。</para>
+    ///     <para>英语的张数分单复数两种写法，其余语言共用一条。见 SP-028 的注记。</para>
     /// </summary>
     private static ModSettingsText GroupDescription(CardGroup group) =>
         ModSettingsText.Dynamic(() =>
-            Localization.Resolve("pgf.group." + group.Id + ".desc", group.Id) + " · " +
-            string.Format(Localization.Resolve("pgf.count", "{0} cards"), group.Members.Length));
+        {
+            var count = group.Members.Length;
+            var countKey = count == 1 ? "pgf.count.one" : "pgf.count";
+            var countText = string.Format(Localization.Resolve(countKey, "{0} cards"), count);
+
+            return Localization.Resolve("pgf.group." + group.Id + ".desc", group.Id) + " · " + countText;
+        });
 
     private static void ConfigureExemptionPage(ModSettingsPageBuilder page, CardGroup group)
     {
@@ -467,8 +477,9 @@ internal static class ModSettings
             .Select(static other => other.Id)
             .ToArray();
 
-        // 显式名单组按定义只收多人限定卡，见 SP-016。
-        var isMultiplayerOnly = group.Kind == GroupKind.Explicit;
+        // 成员全是多人限定卡的组才加这条提示。判定按组的静态标记，不按判定方式推断：
+        // 0.0.7 起显式名单组不止一个，不能再用 Kind 代表「多人专属」。
+        var isMultiplayerOnly = group.MultiplayerOnly;
 
         if (others.Length == 0 && !isMultiplayerOnly)
             return null;

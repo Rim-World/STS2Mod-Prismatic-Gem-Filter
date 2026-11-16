@@ -17,6 +17,7 @@
   "pgf.char.regent": "儲君",
   "pgf.char.fool": "愚者",
   "pgf.char.cross": "跨職業",
+  "pgf.char.other": "其他",
 
   "pgf.section.necrobinder": "奧斯提、召喚、惡兆屬於縛亡者。",
   "pgf.section.defect": "充能球、集中屬於故障機器人。",
@@ -24,9 +25,11 @@
   "pgf.section.regent": "鑄造、輝星屬於儲君。",
   "pgf.section.fool": "箭矢、貫穿屬於愚者。",
   "pgf.section.cross": "這些牌只在多人遊戲中出現。",
+  "pgf.section.other": "不屬於上面這些分類的牌。",
 
   "pgf.exclude.prefix": "排除",
   "pgf.count": "{0} 張",
+  "pgf.count.one": "{0} 張",
 
   "pgf.group.osty.name": "奧斯提牌",
   "pgf.group.osty.desc": "靠奧斯提戰鬥",
@@ -54,6 +57,8 @@
   "pgf.group.impale.desc": "施加或消耗貫穿",
   "pgf.group.multiplayer.name": "多人專屬牌",
   "pgf.group.multiplayer.desc": "只在多人遊戲中出現",
+  "pgf.group.bugged.name": "現版本有 bug 的牌",
+  "pgf.group.bugged.desc": "別的職業拿到它時產生不出箭矢",
 
   "pgf.exempt.row": "豁免清單",
   "pgf.exempt.button": "開啟",

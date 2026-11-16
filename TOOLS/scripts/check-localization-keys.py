@@ -8,7 +8,7 @@
     1. 三份文件都是合法 JSON，且值是字符串。
     2. 三份文件的键集合完全相同。缺键时玩家会看到英文回退，本项把这种偏差挡在构建前。
     3. 脚本从源码里提取写死的 pgf.* 键，逐一确认存在。
-    4. 从 CardGroupTable.cs 提取分组标识、从 CardGroups.cs 提取职业标识，
+    4. 从 CardGroupTable.cs 提取分组标识、从 CardGroups.cs 提取界面分节标识，
        展开动态拼出的键，逐一确认存在。
 
 退出码非零表示有问题。本脚本只读，不改任何文件。
@@ -51,11 +51,11 @@ def group_ids():
     return sorted(set(re.findall(r'^\s*\("([a-z_]+)",', text, re.MULTILINE)))
 
 
-def character_ids():
+def section_ids():
     text = (SRC / "CardGroups.cs").read_text(encoding="utf-8")
-    block = re.search(r"Characters\s*=\s*\[(.*?)\];", text, re.S)
+    block = re.search(r"Sections\s*=\s*\[(.*?)\];", text, re.S)
     if not block:
-        sys.exit("CardGroups.cs 里找不到 Characters 数组。")
+        sys.exit("CardGroups.cs 里找不到 Sections 数组。")
     return sorted(set(re.findall(r'"([a-z_]+)"', block.group(1))))
 
 
@@ -82,10 +82,10 @@ def main():
         referenced.add(f"pgf.group.{group}.name")
         referenced.add(f"pgf.group.{group}.desc")
 
-    for character in character_ids():
-        referenced.add(f"pgf.char.{character}")
-        # 每个职业节有一句机制归属说明，键由职业标识拼成。
-        referenced.add(f"pgf.section.{character}")
+    for section in section_ids():
+        referenced.add(f"pgf.char.{section}")
+        # 每个界面分节有一句归属说明，键由分节标识拼成。
+        referenced.add(f"pgf.section.{section}")
 
     unknown = sorted(referenced - base)
     if unknown:

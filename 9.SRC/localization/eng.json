@@ -17,6 +17,7 @@
   "pgf.char.regent": "Regent",
   "pgf.char.fool": "Fool",
   "pgf.char.cross": "Cross-class",
+  "pgf.char.other": "Other",
 
   "pgf.section.necrobinder": "Osty, Summon, and Doom are Necrobinder mechanics.",
   "pgf.section.defect": "Orbs and Focus are Defect mechanics.",
@@ -24,9 +25,11 @@
   "pgf.section.regent": "Forge and Stars are Regent mechanics.",
   "pgf.section.fool": "Arrows and Impale are Fool mechanics.",
   "pgf.section.cross": "These cards appear only in multiplayer.",
+  "pgf.section.other": "Cards that fit none of the sections above.",
 
   "pgf.exclude.prefix": "Exclude ",
   "pgf.count": "{0} cards",
+  "pgf.count.one": "{0} card",
 
   "pgf.group.osty.name": "Osty cards",
   "pgf.group.osty.desc": "Cards that fight through Osty",
@@ -54,6 +57,8 @@
   "pgf.group.impale.desc": "Cards that apply or consume Impale",
   "pgf.group.multiplayer.name": "Multiplayer-only cards",
   "pgf.group.multiplayer.desc": "Cards that appear only in multiplayer",
+  "pgf.group.bugged.name": "cards with bugs in this version",
+  "pgf.group.bugged.desc": "Generates no arrows when another class gets it",
 
   "pgf.exempt.row": "Exempt cards",
   "pgf.exempt.button": "Open",
