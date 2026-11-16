@@ -127,16 +127,15 @@ python 8.TEST/CI-CD/check-user-prompt.py --mode show
 
 ## 测试方法
 
-启动游戏时设置环境变量 `SteamAppId=2868840`，并加 `--headless`，即可无窗口跑完加载流程并写出日志。日志路径：`%APPDATA%\SlayTheSpire2\logs\godot.log`。
+方法、判据、结束进程与失败对照见 `3.DOCS/015-T-无头启动测试方法.md`。本节只留最短流程。
 
 ```
-$env:SteamAppId="2868840"
-& "<游戏目录>\SlayTheSpire2.exe" --headless
+SteamAppId=2868840 "<游戏目录>/SlayTheSpire2.exe" --headless
 ```
 
-不加 `SteamAppId` 时 Steamworks 初始化失败，游戏在加载模组之前就停住。
+日志路径 `%APPDATA%\SlayTheSpire2\logs\godot.log`。日志每次启动轮转覆盖，所以等到 `ready.` 行后先复制到本目录的版本子文件夹，再结束进程。
 
-游戏会把 `Debug` 级别的日志整个丢掉。2026-11-15 18:37 的日志里，`[INFO]` 1459 行、`[WARN]` 191 行、`[ERROR]` 1 行、`[DEBUG]` 0 行。因此要用日志判定行为时，不能只打 `Debug`。`CardCreationPatch` 因此在「候选被加宽但没排除任何牌」这一支上改打 `Info`。
+游戏会把 `Debug` 级别的日志整个丢掉，判据要打在 `Info` 或更高等级。
 
 ## 计划
 
