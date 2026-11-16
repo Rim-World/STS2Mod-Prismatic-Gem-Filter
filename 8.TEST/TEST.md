@@ -4,6 +4,52 @@
 
 `9.SRC` 已建立 0.0.5。构建、部署、补丁应用、设置注册、简体中文取词、名单四道门禁与配置重置已验证。界面渲染与对局内的发牌行为尚未实测。
 
+## 本地门禁
+
+`CI-CD/` 放本机跑的门禁，不随版本清理。
+
+| 文件名 | 放入时间 | 用途 | 依赖 |
+|---|---|---|---|
+| `CI-CD/check-user-prompt.py` | 2026-11-16 20:10 | 提交门禁：要求每次提交至少带入一条新的用户 prompt | Python 3.8 以上，无第三方库 |
+| `CI-CD/install-hooks.ps1` | 2026-11-16 20:12 | 把上面那个脚本装成 `.git/hooks/pre-commit` 与 `post-commit`，已有同名钩子先备份 | PowerShell 5.1 以上 |
+
+安装：
+
+```
+powershell -ExecutionPolicy Bypass -File 8.TEST/CI-CD/install-hooks.ps1
+```
+
+手动查询状态：
+
+```
+python 8.TEST/CI-CD/check-user-prompt.py --mode show
+```
+
+## check-user-prompt.py
+
+**为什么不用 git 判断**：`1.PRD/用户prompt/` 在 `.gitignore` 里，git 看不到这些文件，暂存区里永远没有 prompt。门禁只能读文件系统。
+
+**怎么记状态**：`.git/user-prompt-gate.json` 记录「已被某次提交消费过的 prompt 文件名」。这个文件在 `.git` 下面，不入库。提交前比对目录里的文件与这份名单，没有新文件就拒绝；提交成功后由 `post-commit` 把新文件写进名单。
+
+**首次启用**：以 HEAD 的提交时间为界。比 HEAD 早的文件记为已消费，比 HEAD 晚的算作本次带入。这样装门禁不会把历史 prompt 误判成待消费，也不会白送一次放行。
+
+**放行的三种情形**：
+
+| 情形 | 处理 |
+|---|---|
+| 目录里有未消费的 prompt | 放行，并打印带入了哪几条 |
+| 暂存区相对 HEAD 没有改动（只改提交信息） | 放行，提示这是 amend |
+| `.git/user-prompt-gate.skip` 里写了理由 | 放行一次，理由记入 `.git/user-prompt-gate.log`，随后删除该文件 |
+
+**拒绝时**：退出码 1，`pre-commit` 随之中止提交。提示里给出下一步应写的文件名。不得用 `git commit --no-verify` 绕过，那是全局失效，不是一次豁免。
+
+**已知限制**：
+
+- 找不到 `python` 时钩子直接放行并告警，装了但没生效会无声无息。确认方法是手动跑一次 `--mode show`。
+- 只校验「有没有新文件」，不校验内容是否真的是用户原话。
+- 文件名不是四位递增编号时只提示，不拦。编号规则靠人和 `--mode show` 的输出维护。
+- 状态文件删掉后会按「首次启用」重建基线，等于重置门禁。
+
 ## 版本登记表
 
 ### 0.0.1
