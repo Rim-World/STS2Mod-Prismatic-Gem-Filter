@@ -6,7 +6,10 @@ namespace PrismaticGemFilter;
 /// <summary>分组按什么判定成员。</summary>
 internal enum GroupKind
 {
-    /// <summary>按卡牌标记判定。成员名单只是缓存，来源是 <c>3.DOCS/002-E</c> 的检索结果。</summary>
+    /// <summary>
+    ///     按卡牌标记判定。成员名单只是缓存，来源是 <c>3.DOCS/002-E</c> 的检索结果。
+    ///     <para>0.0.5 起这类组不含多人限定卡，见 SP-014 与 ADR-009。</para>
+    /// </summary>
     Marker,
 
     /// <summary>按类名枚举。成员名单就是定义本身，见 SP-016。</summary>
@@ -28,7 +31,7 @@ internal sealed record CardGroup(
 
 /// <summary>
 ///     13 个分组开关的静态定义。成员来自 <see cref="CardGroupTable" />，该表由名单 CSV 生成。
-///     <para>默认值依据 SP-012：7 项勾选、6 项不勾。</para>
+///     <para>默认值依据 SP-012：9 项勾选、4 项不勾。</para>
 /// </summary>
 internal static class CardGroups
 {
@@ -65,8 +68,8 @@ internal static class CardGroups
             ("sly", "silent", GroupKind.Marker, true),
             ("shiv", "silent", GroupKind.Marker, false),
             ("poison", "silent", GroupKind.Marker, false),
-            ("forge", "regent", GroupKind.Marker, false),
-            ("star", "regent", GroupKind.Marker, false),
+            ("forge", "regent", GroupKind.Marker, true),
+            ("star", "regent", GroupKind.Marker, true),
             ("arrow", "fool", GroupKind.Marker, false),
             ("impale", "fool", GroupKind.Marker, true),
             ("multiplayer", "cross", GroupKind.Explicit, false),

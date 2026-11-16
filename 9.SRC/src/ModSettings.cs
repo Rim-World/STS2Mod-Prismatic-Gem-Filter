@@ -14,9 +14,16 @@ namespace PrismaticGemFilter;
 ///         <see cref="Groups" /> 与 <see cref="Exemptions" /> 为 <c>null</c> 表示该组设置从未被玩家改过，
 ///         此时取代码里的默认值。这样加新分组、改默认值都不需要迁移旧存档。
 ///     </para>
+///     <para>
+///         <see cref="SchemaVersion" /> 是架构版本。它与模组当前的架构版本不一致时，启动会整体重置为默认值，
+///         见 SP-024。旧版本的文件没有这个字段，读出来是 0，因此这里不设初始值：
+///         新建数据的版本号由注册时的 <c>defaultFactory</c> 写入。
+///     </para>
 /// </summary>
 internal sealed class SettingsModel
 {
+    public int SchemaVersion { get; set; }
+
     public FilterMode Mode { get; set; } = FilterMode.PrismaticGemOnly;
 
     public bool MasterEnabled { get; set; } = true;
@@ -52,6 +59,11 @@ internal sealed class SettingsSnapshot
 internal static class ModSettings
 {
     public const string DataKey = "settings";
+
+    /// <summary>
+    ///     当前设置架构版本。改动默认值、改名单、改落盘结构时递增，旧档会在启动时被重置为默认值。见 SP-024。
+    /// </summary>
+    public const int CurrentSchema = 1;
 
     private const string FileName = "settings.json";
 
@@ -141,11 +153,12 @@ internal static class ModSettings
                 DataKey,
                 FileName,
                 SaveScope.Global,
-                defaultFactory: () => new SettingsModel(),
+                defaultFactory: static () => new SettingsModel { SchemaVersion = CurrentSchema },
                 autoCreateIfMissing: true);
         }
 
         BuildBindings();
+        ResetIfOutdated();
 
         RitsuLibFramework.RegisterModSettings(Plugin.ModId, ConfigurePage);
 
@@ -171,6 +184,57 @@ internal static class ModSettings
     {
         _version++;
         FilterIndex.Invalidate();
+    }
+
+    /// <summary>
+    ///     架构版本不一致时把全部设置改写为当前默认值。见 SP-024。
+    ///     <para>
+    ///         写入是一次 <c>Modify</c> 加一次 <c>Save</c>，只落一次盘。架构版本号放在最后写，
+    ///         中途崩掉时下次启动会重新走一遍，不会留下「标了新版本但值还是旧的」的档。
+    ///     </para>
+    /// </summary>
+    private static void ResetIfOutdated()
+    {
+        int stored;
+        try
+        {
+            stored = Store.Get<SettingsModel>(DataKey).SchemaVersion;
+        }
+        catch (Exception ex)
+        {
+            Plugin.Logger.Warn($"[settings] 读取架构版本失败，跳过重置检查: {ex.Message}");
+            return;
+        }
+
+        if (stored == CurrentSchema)
+            return;
+
+        try
+        {
+            Store.Modify<SettingsModel>(DataKey, model =>
+            {
+                model.Mode = FilterMode.PrismaticGemOnly;
+                model.MasterEnabled = true;
+                model.Groups = CardGroups.All.ToDictionary(
+                    static group => group.Id,
+                    static group => group.DefaultEnabled,
+                    StringComparer.Ordinal);
+                model.Exemptions = new List<string>(ExclusionTable.DefaultExemptionKeys);
+                model.SchemaVersion = CurrentSchema;
+            });
+            Store.Save(DataKey);
+
+            Invalidate();
+
+            Plugin.Logger.Info(
+                $"[settings] reset. schema {stored} -> {CurrentSchema}, groups=" +
+                $"{CardGroups.All.Count(static group => group.DefaultEnabled)}/{CardGroups.All.Length} " +
+                $"exemptions={ExclusionTable.DefaultExemptionKeys.Count}");
+        }
+        catch (Exception ex)
+        {
+            Plugin.Logger.Error($"[settings] 重置设置失败，本次运行沿用存档里的值: {ex}");
+        }
     }
 
     private static SettingsSnapshot Build()
@@ -388,19 +452,19 @@ internal static class ModSettings
             .Select(static other => other.Id)
             .ToArray();
 
-        var protectedByMarkerRule =
-            group.Kind == GroupKind.Marker && ExclusionTable.MultiplayerProtected.Contains(entry);
+        // 显式名单组按定义只收多人限定卡，见 SP-016。
+        var isMultiplayerOnly = group.Kind == GroupKind.Explicit;
 
-        if (others.Length == 0 && !protectedByMarkerRule)
+        if (others.Length == 0 && !isMultiplayerOnly)
             return null;
 
         return ModSettingsText.Dynamic(() =>
         {
             var parts = new List<string>(2);
 
-            if (protectedByMarkerRule)
+            if (isMultiplayerOnly)
                 parts.Add(Localization.Resolve("pgf.hint.multiplayer",
-                    "Multiplayer-only card: marker-based groups never exclude it."));
+                    "Multiplayer-only card: it only appears in online runs."));
 
             if (others.Length > 0)
             {

@@ -66,8 +66,8 @@ internal sealed class CardCreationPatch : IPatchMethod
             if (!ShouldFilter(__instance, player, settings.Mode))
                 return;
 
-            FilterIndex.Get(out var markerExclusions, out var explicitExclusions);
-            if (markerExclusions.Count == 0 && explicitExclusions.Count == 0)
+            var exclusions = FilterIndex.Get();
+            if (exclusions.Count == 0)
                 return;
 
             var ownPoolEntries = OwnPoolEntries.GetValue(
@@ -77,7 +77,7 @@ internal sealed class CardCreationPatch : IPatchMethod
             VerifyGroupMembership(player.Character.CardPool, ownPoolEntries);
 
             var kept = CardFilter.Apply(
-                candidates, ownPoolEntries, markerExclusions, explicitExclusions, out var stats);
+                candidates, ownPoolEntries, exclusions, out var stats);
 
             if (stats.Removed == 0)
             {
@@ -163,6 +163,7 @@ internal sealed class CardCreationPatch : IPatchMethod
     /// <summary>
     ///     首次见到某个卡池时核对该池的名单成员是否真的存在。
     ///     用途：名单由 CSV 生成，标识写错或版本缺卡时在这里暴露，不必等玩家发现某张牌漏筛。
+    ///     <para>0.0.5 起显式名单组也参与核对：它的成员同样分布在各个职业卡池里。</para>
     /// </summary>
     private static void VerifyGroupMembership(CardPoolModel pool, HashSet<string> ownPoolEntries)
     {
@@ -174,22 +175,14 @@ internal sealed class CardCreationPatch : IPatchMethod
         var declared = 0;
         var missing = new List<string>();
 
-        foreach (var group in CardGroups.All)
+        foreach (var row in CardGroupTable.Rows)
         {
-            if (group.Kind != GroupKind.Marker)
+            if (!string.Equals(row.Pool, pool.GetType().Name, StringComparison.Ordinal))
                 continue;
 
-            foreach (var row in CardGroupTable.Rows)
-            {
-                if (!string.Equals(row.Group, group.Id, StringComparison.Ordinal))
-                    continue;
-                if (!string.Equals(row.Pool, pool.GetType().Name, StringComparison.Ordinal))
-                    continue;
-
-                declared++;
-                if (!ownPoolEntries.Contains(row.Entry))
-                    missing.Add(row.Group + ":" + row.Entry);
-            }
+            declared++;
+            if (!ownPoolEntries.Contains(row.Entry))
+                missing.Add(row.Group + ":" + row.Entry);
         }
 
         if (declared == 0)

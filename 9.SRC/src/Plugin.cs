@@ -44,7 +44,7 @@ public static class Plugin
 
         Logger.Info(
             $"ready. groups={CardGroups.All.Length} entries={CardGroupTable.Rows.Length} " +
-            $"exemptions={ExclusionTable.DefaultExemptionKeys.Count} protected={ExclusionTable.MultiplayerProtected.Count} " +
+            $"exemptions={ExclusionTable.DefaultExemptionKeys.Count} schema={ModSettings.CurrentSchema} " +
             $"patches={patcher.AppliedPatchCount}/{patcher.RegisteredPatchCount}");
     }
 

@@ -14,33 +14,29 @@ internal static class CardGroupTable
     /// <summary>全部行。顺序与 <see cref="CardGroups.All" /> 的分组顺序一致。</summary>
     public static readonly (string Group, string Entry, string Pool)[] Rows =
     [
-        // osty：12 张
+        // osty：10 张
         ("osty", "BONE_SHARDS", "NecrobinderCardPool"),
         ("osty", "FETCH", "NecrobinderCardPool"),
         ("osty", "FLATTEN", "NecrobinderCardPool"),
         ("osty", "HIGH_FIVE", "NecrobinderCardPool"),
         ("osty", "POKE", "NecrobinderCardPool"),
-        ("osty", "PROTECTOR", "NecrobinderCardPool"),
         ("osty", "RATTLE", "NecrobinderCardPool"),
         ("osty", "RIGHT_HAND_HAND", "NecrobinderCardPool"),
         ("osty", "SIC_EM", "NecrobinderCardPool"),
         ("osty", "SNAP", "NecrobinderCardPool"),
         ("osty", "SQUEEZE", "NecrobinderCardPool"),
-        ("osty", "UNLEASH", "NecrobinderCardPool"),
 
-        // summon：10 张
+        // summon：8 张
         ("summon", "AFTERLIFE", "NecrobinderCardPool"),
-        ("summon", "BODYGUARD", "NecrobinderCardPool"),
         ("summon", "CLEANSE", "NecrobinderCardPool"),
         ("summon", "DIRGE", "NecrobinderCardPool"),
         ("summon", "INVOKE", "NecrobinderCardPool"),
-        ("summon", "LEGION_OF_BONE", "NecrobinderCardPool"),
         ("summon", "NECRO_MASTERY", "NecrobinderCardPool"),
         ("summon", "PULL_AGGRO", "NecrobinderCardPool"),
         ("summon", "REANIMATE", "NecrobinderCardPool"),
         ("summon", "SPUR", "NecrobinderCardPool"),
 
-        // doom：14 张
+        // doom：13 张
         ("doom", "BLIGHT_STRIKE", "NecrobinderCardPool"),
         ("doom", "COUNTDOWN", "NecrobinderCardPool"),
         ("doom", "DEATHBRINGER", "NecrobinderCardPool"),
@@ -54,9 +50,8 @@ internal static class CardGroupTable
         ("doom", "SCOURGE", "NecrobinderCardPool"),
         ("doom", "SHROUD", "NecrobinderCardPool"),
         ("doom", "TIMES_UP", "NecrobinderCardPool"),
-        ("doom", "UNDERWORLD", "NecrobinderCardPool"),
 
-        // orb：30 张
+        // orb：25 张
         ("orb", "BALL_LIGHTNING", "DefectCardPool"),
         ("orb", "BULK_UP", "DefectCardPool"),
         ("orb", "CAPACITOR", "DefectCardPool"),
@@ -66,18 +61,14 @@ internal static class CardGroupTable
         ("orb", "CONSUMING_SHADOW", "DefectCardPool"),
         ("orb", "COOLHEADED", "DefectCardPool"),
         ("orb", "DARKNESS", "DefectCardPool"),
-        ("orb", "DUALCAST", "DefectCardPool"),
         ("orb", "FUSION", "DefectCardPool"),
         ("orb", "GLACIER", "DefectCardPool"),
         ("orb", "GLASSWORK", "DefectCardPool"),
-        ("orb", "HIBERNATE", "DefectCardPool"),
         ("orb", "ICE_LANCE", "DefectCardPool"),
-        ("orb", "IGNITION", "DefectCardPool"),
         ("orb", "METEOR_STRIKE", "DefectCardPool"),
         ("orb", "MODDED", "DefectCardPool"),
         ("orb", "MULTI_CAST", "DefectCardPool"),
         ("orb", "NULL", "DefectCardPool"),
-        ("orb", "QUADCAST", "DefectCardPool"),
         ("orb", "RAINBOW", "DefectCardPool"),
         ("orb", "REFRACT", "DefectCardPool"),
         ("orb", "SHADOW_SHIELD", "DefectCardPool"),
@@ -86,17 +77,15 @@ internal static class CardGroupTable
         ("orb", "TEMPEST", "DefectCardPool"),
         ("orb", "TESLA_COIL", "DefectCardPool"),
         ("orb", "VOLTAIC", "DefectCardPool"),
-        ("orb", "ZAP", "DefectCardPool"),
 
-        // focus：6 张
-        ("focus", "BIASED_COGNITION", "DefectCardPool"),
+        // focus：5 张
         ("focus", "DEFRAGMENT", "DefectCardPool"),
         ("focus", "FOCUSED_STRIKE", "DefectCardPool"),
         ("focus", "HOTFIX", "DefectCardPool"),
         ("focus", "HYPERBEAM", "DefectCardPool"),
         ("focus", "SYNCHRONIZE", "DefectCardPool"),
 
-        // sly：10 张
+        // sly：9 张
         ("sly", "ABRASIVE", "SilentCardPool"),
         ("sly", "FLICK_FLACK", "SilentCardPool"),
         ("sly", "HAND_TRICK", "SilentCardPool"),
@@ -104,15 +93,13 @@ internal static class CardGroupTable
         ("sly", "MEMENTO_MORI", "SilentCardPool"),
         ("sly", "REFLEX", "SilentCardPool"),
         ("sly", "RICOCHET", "SilentCardPool"),
-        ("sly", "SNEAKY", "SilentCardPool"),
         ("sly", "TACTICIAN", "SilentCardPool"),
         ("sly", "UNTOUCHABLE", "SilentCardPool"),
 
-        // shiv：13 张
+        // shiv：12 张
         ("shiv", "ACCURACY", "SilentCardPool"),
         ("shiv", "BLADE_DANCE", "SilentCardPool"),
         ("shiv", "BLADE_OF_INK", "SilentCardPool"),
-        ("shiv", "BLADE_SYMPHONY", "SilentCardPool"),
         ("shiv", "CLOAK_AND_DAGGER", "SilentCardPool"),
         ("shiv", "FAN_OF_KNIVES", "SilentCardPool"),
         ("shiv", "HIDDEN_DAGGERS", "SilentCardPool"),
@@ -123,11 +110,10 @@ internal static class CardGroupTable
         ("shiv", "STORM_OF_STEEL", "SilentCardPool"),
         ("shiv", "UP_MY_SLEEVE", "SilentCardPool"),
 
-        // poison：13 张
+        // poison：12 张
         ("poison", "ACCELERANT", "SilentCardPool"),
         ("poison", "BOUNCING_FLASK", "SilentCardPool"),
         ("poison", "BUBBLE_BUBBLE", "SilentCardPool"),
-        ("poison", "CONCOCT", "SilentCardPool"),
         ("poison", "CORROSIVE_WAVE", "SilentCardPool"),
         ("poison", "DEADLY_POISON", "SilentCardPool"),
         ("poison", "ENVENOM", "SilentCardPool"),
@@ -138,13 +124,12 @@ internal static class CardGroupTable
         ("poison", "POISONED_STAB", "SilentCardPool"),
         ("poison", "SNAKEBITE", "SilentCardPool"),
 
-        // forge：12 张
+        // forge：11 张
         ("forge", "BEAT_INTO_SHAPE", "RegentCardPool"),
         ("forge", "BIG_BANG", "RegentCardPool"),
         ("forge", "BULWARK", "RegentCardPool"),
         ("forge", "CONQUEROR", "RegentCardPool"),
         ("forge", "FURNACE", "RegentCardPool"),
-        ("forge", "HAMMER_TIME", "RegentCardPool"),
         ("forge", "REFINE_BLADE", "RegentCardPool"),
         ("forge", "SEEKING_EDGE", "RegentCardPool"),
         ("forge", "SPOILS_OF_BATTLE", "RegentCardPool"),
@@ -152,26 +137,23 @@ internal static class CardGroupTable
         ("forge", "THE_SMITH", "RegentCardPool"),
         ("forge", "WROUGHT_IN_WAR", "RegentCardPool"),
 
-        // star：32 张
+        // star：27 张
         ("star", "ALIGNMENT", "RegentCardPool"),
         ("star", "ASTRAL_PULSE", "RegentCardPool"),
         ("star", "BIG_BANG", "RegentCardPool"),
         ("star", "CLOAK_OF_STARS", "RegentCardPool"),
         ("star", "COMET", "RegentCardPool"),
-        ("star", "CONSTELLATION", "RegentCardPool"),
         ("star", "CONVERGENCE", "RegentCardPool"),
         ("star", "CRESCENT_SPEAR", "RegentCardPool"),
         ("star", "DECISIONS_DECISIONS", "RegentCardPool"),
         ("star", "DEVASTATE", "RegentCardPool"),
         ("star", "DYING_STAR", "RegentCardPool"),
-        ("star", "FALLING_STAR", "RegentCardPool"),
         ("star", "GAMMA_BLAST", "RegentCardPool"),
         ("star", "GATHER_LIGHT", "RegentCardPool"),
         ("star", "GLOW", "RegentCardPool"),
         ("star", "GUIDING_STAR", "RegentCardPool"),
         ("star", "HIDDEN_CACHE", "RegentCardPool"),
         ("star", "KNOCKOUT_BLOW", "RegentCardPool"),
-        ("star", "METEOR_SHOWER", "RegentCardPool"),
         ("star", "NEUTRON_AEGIS", "RegentCardPool"),
         ("star", "PARTICLE_WALL", "RegentCardPool"),
         ("star", "QUASAR", "RegentCardPool"),
@@ -182,17 +164,13 @@ internal static class CardGroupTable
         ("star", "SEVEN_STARS", "RegentCardPool"),
         ("star", "SHINING_STRIKE", "RegentCardPool"),
         ("star", "SOLAR_STRIKE", "RegentCardPool"),
-        ("star", "THE_SEALED_THRONE", "RegentCardPool"),
         ("star", "THE_SMITH", "RegentCardPool"),
-        ("star", "VENERATE", "RegentCardPool"),
 
-        // arrow：16 张
+        // arrow：14 张
         ("arrow", "ARROW_STAB", "FoolCardPool"),
         ("arrow", "BLOSSOM_SHOT", "FoolCardPool"),
         ("arrow", "BLOT_OUT_THE_SKY", "FoolCardPool"),
-        ("arrow", "DIVINE_SHOT", "FoolCardPool"),
         ("arrow", "FLORESCENCE", "FoolCardPool"),
-        ("arrow", "FOOLISH_SHOT", "FoolCardPool"),
         ("arrow", "HEAVY_SHOT", "FoolCardPool"),
         ("arrow", "HOBBLING_SHOT", "FoolCardPool"),
         ("arrow", "LOCKED_IN", "FoolCardPool"),
@@ -216,12 +194,16 @@ internal static class CardGroupTable
         ("impale", "WAH_HAMMER", "FoolCardPool"),
         ("impale", "WREST", "FoolCardPool"),
 
-        // multiplayer：6 张
+        // multiplayer：10 张
+        ("multiplayer", "LEGION_OF_BONE", "NecrobinderCardPool"),
+        ("multiplayer", "UNDERWORLD", "NecrobinderCardPool"),
+        ("multiplayer", "HIBERNATE", "DefectCardPool"),
+        ("multiplayer", "IGNITION", "DefectCardPool"),
         ("multiplayer", "BLADE_SYMPHONY", "SilentCardPool"),
         ("multiplayer", "CONCOCT", "SilentCardPool"),
-        ("multiplayer", "HIBERNATE", "DefectCardPool"),
+        ("multiplayer", "SNEAKY", "SilentCardPool"),
+        ("multiplayer", "CONSTELLATION", "RegentCardPool"),
         ("multiplayer", "HAMMER_TIME", "RegentCardPool"),
-        ("multiplayer", "LEGION_OF_BONE", "NecrobinderCardPool"),
         ("multiplayer", "COVERING_FIRE", "FoolCardPool"),
     ];
 }

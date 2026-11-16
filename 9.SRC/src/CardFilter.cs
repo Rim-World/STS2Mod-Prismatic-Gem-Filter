@@ -25,20 +25,18 @@ internal static class CardFilter
     /// <summary>
     ///     逐张判定并返回保留的牌。
     ///     <para>
-    ///         判定顺序：不在任一排除集合内 → 保留；在集合内但属于玩家职业卡池 → 保留；其余 → 排除。
-    ///         池门控对应 SP-004，两个集合的划分对应 SP-014。
+    ///         判定顺序：不在排除集合内 → 保留；在集合内但属于玩家职业卡池 → 保留；其余 → 排除。
+    ///         池门控对应 SP-004。
     ///     </para>
     /// </summary>
     /// <param name="candidates">待过滤的候选牌。</param>
     /// <param name="ownPoolEntries">玩家职业卡池全部卡牌的 <c>ModelId.Entry</c> 集合，即池门控的放行范围。</param>
-    /// <param name="markerExclusions">按标记判定的组的排除集合，已扣掉豁免与多人限定卡。</param>
-    /// <param name="explicitExclusions">显式名单组的排除集合，已扣掉该组豁免。</param>
+    /// <param name="exclusions">排除集合，已扣掉各组的豁免。</param>
     /// <param name="stats">输出统计。</param>
     public static List<CardModel> Apply(
         IReadOnlyList<CardModel> candidates,
         ISet<string> ownPoolEntries,
-        IReadOnlySet<string> markerExclusions,
-        IReadOnlySet<string> explicitExclusions,
+        IReadOnlySet<string> exclusions,
         out Stats stats)
     {
         var kept = new List<CardModel>(candidates.Count);
@@ -54,7 +52,7 @@ internal static class CardFilter
             if (!inOwnPool)
                 otherPoolCards++;
 
-            if (!explicitExclusions.Contains(entry) && !markerExclusions.Contains(entry))
+            if (!exclusions.Contains(entry))
             {
                 kept.Add(card);
                 continue;

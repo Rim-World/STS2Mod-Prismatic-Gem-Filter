@@ -52,7 +52,7 @@
   "pgf.exempt.page.desc": "A ticked card is never excluded by this group alone. Another checked group can still exclude it.",
   "pgf.exempt.section": "Cards in this group",
 
-  "pgf.hint.multiplayer": "Multiplayer-only card: marker-based groups never exclude it.",
+  "pgf.hint.multiplayer": "Multiplayer-only card: it only appears in online runs.",
   "pgf.hint.alsoIn": "Also in another group: {0}",
   "pgf.list.sep": ", "
 }

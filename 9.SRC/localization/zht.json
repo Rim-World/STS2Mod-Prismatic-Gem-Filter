@@ -52,7 +52,7 @@
   "pgf.exempt.page.desc": "勾選的牌不會只被本組排除。其他已勾選的分組仍然可以排除它。",
   "pgf.exempt.section": "本組的牌",
 
-  "pgf.hint.multiplayer": "多人限定卡：按標記判定的分組不會排除它。",
+  "pgf.hint.multiplayer": "多人限定卡：只在連線對局中出現。",
   "pgf.hint.alsoIn": "同屬其他分組：{0}",
   "pgf.list.sep": "、"
 }
