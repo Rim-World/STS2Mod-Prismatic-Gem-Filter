@@ -2,8 +2,8 @@
 
 ## 状态
 
-- 项目版本：0.0.7
-- 代码状态：`9.SRC` 已实现 14 个分组开关、总开关、分组豁免清单、单集合排除索引、设置页、界面本地化与配置重置。跨版本探测仍未建立。
+- 项目版本：0.0.8
+- 代码状态：`9.SRC` 已实现 15 个分组开关、总开关、分组豁免清单、单集合排除索引、设置页、界面本地化与配置重置。跨版本探测仍未建立。
 - 说明：SDD 的每条设计描述都对应一个源码符号。未实现的组件只登记职责，标注「未建立」。
 
 ## 上下文与范围
@@ -22,11 +22,11 @@
 | 入口 | `src/Plugin.cs` 的 `Plugin.Initialize` | 建日志、注册程序集、注册设置、注册补丁、失败时停用本模组 | 不实现过滤判定，不读写存档 |
 | 拦截层 | `src/CardCreationPatch.cs` 的 `CardCreationPatch.Postfix` | 在 `GetPossibleCards` 之后介入，按总开关与判定模式决定是否继续，取候选、调判定、写回结果、打日志、异常兜底 | 不解释开关含义，不做逐张判定，不建索引 |
 | 判定规则 | `src/CardFilter.cs` 的 `CardFilter.Apply` | 逐张判定保留或排除，输出统计 | 不接触游戏对象以外的状态，不读玩家遗物，不读设置，不消耗随机数 |
-| 分组定义 | `src/CardGroups.cs` 的 `CardGroups.All`，数据来自 `src/CardGroupTable.cs` | 登记 14 个分组的标识、所属分节、判定方式、默认勾选状态、是否多人专属与成员；另维护界面分节顺序 `Sections` | 不保存勾选状态，不建索引 |
+| 分组定义 | `src/CardGroups.cs` 的 `CardGroups.All`，数据来自 `src/CardGroupTable.cs` | 登记 15 个分组的标识、所属分节、判定方式、默认勾选状态、是否多人专属与成员；另维护界面分节顺序 `Sections` | 不保存勾选状态，不建索引 |
 | 固定表 | `src/ExclusionTable.cs` | 存默认豁免清单，拼豁免键 | 不判断卡池归属，不读设置，不参与判定 |
 | 排除索引 | `src/FilterIndex.cs` 的 `FilterIndex.Get` | 按当前设置算出排除集合，设置变过则重建 | 不逐张判定，不接触 `CardModel` |
 | 设置模型 | `src/ModSettings.cs` 的 `SettingsModel`、`SettingsSnapshot` | 落盘模型、绑定、快照与写入版本号；启动时按架构版本决定是否重置为默认值 | 不建索引，不做逐张判定 |
-| 设置页 | `src/ModSettings.cs` 的 `ConfigurePage`、`AddGroupSection`、`ConfigureExemptionPage` | 渲染总开关、判定模式、14 个分组开关与 14 个豁免子页，按 `Sections` 分节，拼装开关标题与说明，把改动写回绑定 | 不执行过滤，不建索引 |
+| 设置页 | `src/ModSettings.cs` 的 `ConfigurePage`、`AddGroupSection`、`ConfigureExemptionPage` | 渲染总开关、判定模式、15 个分组开关与 15 个豁免子页，按 `Sections` 分节，拼装开关标题与说明，把改动写回绑定 | 不执行过滤，不建索引 |
 | 本地化 | `src/Localization.cs` | 按游戏语言取界面文案，卡名转查游戏的 `cards` 表 | 不含业务规则，不决定默认值 |
 | 跨版本探测 | 未建立（P4 剩余） | 收敛版本差异，提供能力查询 | 不含业务规则 |
 
@@ -56,6 +56,8 @@
 
 新增分组的键在旧档里不存在，`ReadGroup` 会回落到 `CardGroup.DefaultEnabled`。因此加组、改组默认值都不必递增架构版本号。0.0.7 新增第 14 组时未递增，实测见 `8.TEST/0.0.7/自检-0.0.7加载与名单-godot.log` 第 445 行的 `groups=10/14`。
 
+0.0.8 递增到 2。原因与「加组」不同：默认豁免清单也变了。豁免清单按全量快照落盘，老档里没有新条目时不会自动补默认值，只能整份重置，见 `2.PLANS/008-S-悲伤牌分组.md` 第四节。实测日志 `8.TEST/0.0.8/自检-0.0.8重置与名单-godot.log` 第 444 行：`[settings] reset. schema 1 -> 2, groups=11/15 exemptions=8`。
+
 ### 分组与分节
 
 `CardGroup` 是位置记录，六个字段：`Id`、`Section`、`Kind`、`DefaultEnabled`、`MultiplayerOnly`、`Members`。`Section` 决定分组挂在哪一节，取值为 `CardGroups.Sections` 的元素。`MultiplayerOnly` 只供豁免页加提示，判定不看它。
@@ -72,7 +74,7 @@
 
 `CardGroupTable` 存的是 `ModelId.Entry` 字符串，不是完整 `ModelId`。理由：`Entry` 等于卡牌类名转大写蛇形（`StringHelper.Slugify`），与类别 slug 的写法无关；判定时读 `card.Id.Entry`，不拼接字符串，不产生分配。
 
-该表由 `TOOLS/scripts/build-card-group-table.py` 从名单 CSV 生成，166 行、去重 164 张。脚本在生成前跑四道核对：卡名存在性、稀有度不在禁止集合、多人限定卡只在多人卡牌组、跨组重复只有双组卡。任一条不过就非零退出、不写盘，规则见 SP-014 与 SP-023。
+该表由 `TOOLS/scripts/build-card-group-table.py` 从名单 CSV 生成，178 行、去重 176 张、15 个分组。脚本在生成前跑四道核对：卡名存在性、稀有度不在禁止集合、多人限定卡只在多人卡牌组、跨组重复只有双组卡。任一条不过就非零退出、不写盘，规则见 SP-014 与 SP-023。
 
 ### 池门控的数据来源
 
@@ -171,6 +173,7 @@ excluded = ⋃ 已开启的分组（成员 − 该组豁免）
 | RQ-017 | 分组定义 |
 | RQ-018 | 设置页、本地化 |
 | RQ-019 | 分组定义、设置页、本地化 |
+| RQ-020 | 分组定义、固定表、设置页、本地化 |
 
 ## 偏差与限制
 
@@ -194,3 +197,4 @@ excluded = ⋃ 已开启的分组（成员 − 该组豁免）
 | 2026-11-16 19:30 | 项目版本 0.0.5。排除索引合并为一个集合，两个排除集合一节改写为排除集合。固定表去掉多人限定卡放行表。落盘模型补 `SchemaVersion` 与重置行为。名单规模改为 166 行 164 张并登记四道门禁。追溯表补 RQ-015、RQ-016。偏差改写多人限定的代价 |
 | 2026-11-16 21:00 | 项目版本 0.0.6。设置页职责补文案拼装。新增界面文案的拼装一节，登记三个拼装方法与 `ModSettingsText.Dynamic` 的刷新方式。追溯表补 RQ-018 |
 | 2026-11-16 22:44 | 项目版本 0.0.7。新增第 14 组「现版本有 bug 的牌」与第七个分节 `other`。`Characters`、`Character` 改名为 `Sections`、`Section`，`CardGroup` 增加 `MultiplayerOnly` 字段。补「分组与分节」一节。文案拼装表补单复数。追溯表补 RQ-019。修正头部仍写 0.0.5 的滞后 |
+| 2026-11-17 01:55 | 项目版本 0.0.8。分组数改为 15，名单规模改为 178 行 176 张。落盘一节补架构版本升到 2 的原因（默认豁免变化与加组的区别）。追溯表补 RQ-020 |

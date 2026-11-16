@@ -6,7 +6,7 @@
     python TOOLS/scripts/build-card-group-table.py --check     # 只比对，不写盘
 
 输入：
-    TMP/0.0.1/卡牌名单/卡牌分组名单.csv   12 个按标记判定的组 + 第 14 组「有bug的牌」
+    TMP/0.0.1/卡牌名单/卡牌分组名单.csv   12 个按标记判定的组 + 第 14 组「有bug的牌」与第 15 组「悲伤牌」
     TMP/0.0.1/卡牌名单/多人卡牌组.csv     第 13 组，显式名单
 
 输出：
@@ -76,6 +76,7 @@ GROUP_IDS = {
     "星牌": "star",
     "多人卡牌": "multiplayer",
     "有bug的牌": "bugged",
+    "悲伤牌": "sadness",
 }
 
 # 输出顺序。按职业排，便于设置页按职业分节。
@@ -85,7 +86,7 @@ GROUP_ORDER = [
     "sly", "shiv", "poison",
     "forge", "star",
     "arrow", "impale",
-    "multiplayer", "bugged",
+    "multiplayer", "bugged", "sadness",
 ]
 
 

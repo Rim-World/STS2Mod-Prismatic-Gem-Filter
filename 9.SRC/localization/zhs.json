@@ -23,7 +23,7 @@
   "pgf.section.defect": "充能球、集中属于故障机器人。",
   "pgf.section.silent": "奇巧、小刀、中毒属于静默猎手。",
   "pgf.section.regent": "铸造、辉星属于储君。",
-  "pgf.section.fool": "箭矢、扎穿属于愚者。",
+  "pgf.section.fool": "箭矢、扎穿、悲伤属于愚者。",
   "pgf.section.cross": "这些牌只在多人模式中出现。",
   "pgf.section.other": "不属于上面这些分类的牌。",
 
@@ -55,6 +55,8 @@
   "pgf.group.arrow.desc": "发射箭矢",
   "pgf.group.impale.name": "扎穿牌",
   "pgf.group.impale.desc": "施加或消耗扎穿",
+  "pgf.group.sadness.name": "悲伤相关牌",
+  "pgf.group.sadness.desc": "生成、消耗或转化悲伤",
   "pgf.group.multiplayer.name": "多人专属牌",
   "pgf.group.multiplayer.desc": "只在多人模式中出现",
   "pgf.group.bugged.name": "现版本有 bug 的牌",

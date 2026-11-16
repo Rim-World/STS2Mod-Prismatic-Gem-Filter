@@ -23,7 +23,7 @@
   "pgf.section.defect": "Orbs and Focus are Defect mechanics.",
   "pgf.section.silent": "Sly, Shiv, and Poison are Silent mechanics.",
   "pgf.section.regent": "Forge and Stars are Regent mechanics.",
-  "pgf.section.fool": "Arrows and Impale are Fool mechanics.",
+  "pgf.section.fool": "Arrows, Impale, and Sadness are Fool mechanics.",
   "pgf.section.cross": "These cards appear only in multiplayer.",
   "pgf.section.other": "Cards that fit none of the sections above.",
 
@@ -55,6 +55,8 @@
   "pgf.group.arrow.desc": "Cards that shoot arrows",
   "pgf.group.impale.name": "Impale cards",
   "pgf.group.impale.desc": "Cards that apply or consume Impale",
+  "pgf.group.sadness.name": "Sadness cards",
+  "pgf.group.sadness.desc": "Cards that create, consume, or convert Sadness",
   "pgf.group.multiplayer.name": "Multiplayer-only cards",
   "pgf.group.multiplayer.desc": "Cards that appear only in multiplayer",
   "pgf.group.bugged.name": "cards with bugs in this version",

@@ -23,7 +23,7 @@
   "pgf.section.defect": "充能球、集中屬於故障機器人。",
   "pgf.section.silent": "奇巧、小刀、中毒屬於寂靜獵手。",
   "pgf.section.regent": "鑄造、輝星屬於儲君。",
-  "pgf.section.fool": "箭矢、貫穿屬於愚者。",
+  "pgf.section.fool": "箭矢、貫穿、悲傷屬於愚者。",
   "pgf.section.cross": "這些牌只在多人遊戲中出現。",
   "pgf.section.other": "不屬於上面這些分類的牌。",
 
@@ -55,6 +55,8 @@
   "pgf.group.arrow.desc": "發射箭矢",
   "pgf.group.impale.name": "貫穿牌",
   "pgf.group.impale.desc": "施加或消耗貫穿",
+  "pgf.group.sadness.name": "悲傷相關牌",
+  "pgf.group.sadness.desc": "產生、消耗或變化悲傷",
   "pgf.group.multiplayer.name": "多人專屬牌",
   "pgf.group.multiplayer.desc": "只在多人遊戲中出現",
   "pgf.group.bugged.name": "現版本有 bug 的牌",

@@ -32,8 +32,8 @@ internal sealed record CardGroup(
     string[] Members);
 
 /// <summary>
-///     14 个分组开关的静态定义。成员来自 <see cref="CardGroupTable" />，该表由名单 CSV 生成。
-///     <para>默认值依据 SP-012：10 项勾选、4 项不勾。</para>
+///     15 个分组开关的静态定义。成员来自 <see cref="CardGroupTable" />，该表由名单 CSV 生成。
+///     <para>默认值依据 SP-012：11 项勾选、4 项不勾。</para>
 /// </summary>
 internal static class CardGroups
 {
@@ -74,6 +74,7 @@ internal static class CardGroups
             ("star", "regent", GroupKind.Marker, true, false),
             ("arrow", "fool", GroupKind.Marker, false, false),
             ("impale", "fool", GroupKind.Marker, true, false),
+            ("sadness", "fool", GroupKind.Explicit, true, false),
             ("multiplayer", "cross", GroupKind.Explicit, false, true),
             ("bugged", "other", GroupKind.Explicit, true, false),
         ];

@@ -62,8 +62,11 @@ internal static class ModSettings
 
     /// <summary>
     ///     当前设置架构版本。改动默认值、改名单、改落盘结构时递增，旧档会在启动时被重置为默认值。见 SP-024。
+    ///     <para>
+    ///         0.0.8 升到 2：默认豁免清单多了一条。存档里的豁免清单是全量快照，不重置的话老玩家拿不到新默认值。
+    ///     </para>
     /// </summary>
-    public const int CurrentSchema = 1;
+    public const int CurrentSchema = 2;
 
     private const string FileName = "settings.json";
 

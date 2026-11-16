@@ -34,6 +34,9 @@ internal static class ExclusionTable
 
         // 集中牌组：超能光束。它带集中关键词却降低集中，用户 2026-11-16 19:30 点名。
         "focus:HYPERBEAM",
+
+        // 悲伤牌组：活跃气氛。它同时给悲伤与喜悦，用户 2026-11-17 01:42 点名默认不过滤。
+        "sadness:BRIGHTEN_UP",
     ];
 
     /// <summary>默认豁免清单，元素是 <c>分组标识:卡牌标识</c>。见 SP-021。</summary>

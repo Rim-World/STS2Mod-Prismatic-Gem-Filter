@@ -207,5 +207,19 @@ internal static class CardGroupTable
 
         // bugged：1 张
         ("bugged", "BLOT_OUT_THE_SKY", "FoolCardPool"),
+
+        // sadness：12 张
+        ("sadness", "ALL_IS_WELL", "FoolCardPool"),
+        ("sadness", "ANGUISH", "FoolCardPool"),
+        ("sadness", "BRIGHTEN_UP", "FoolCardPool"),
+        ("sadness", "ECSTASY", "FoolCardPool"),
+        ("sadness", "ENNUI", "FoolCardPool"),
+        ("sadness", "GROWTH", "FoolCardPool"),
+        ("sadness", "JEST", "FoolCardPool"),
+        ("sadness", "MOURNING_BLOW", "FoolCardPool"),
+        ("sadness", "PUNCH_OF_JOY", "FoolCardPool"),
+        ("sadness", "RUMMAGE", "FoolCardPool"),
+        ("sadness", "SORROWFUL_STRIKE", "FoolCardPool"),
+        ("sadness", "VITRIOL", "FoolCardPool"),
     ];
 }
