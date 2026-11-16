@@ -84,6 +84,8 @@ def main():
 
     for character in character_ids():
         referenced.add(f"pgf.char.{character}")
+        # 每个职业节有一句机制归属说明，键由职业标识拼成。
+        referenced.add(f"pgf.section.{character}")
 
     unknown = sorted(referenced - base)
     if unknown:

@@ -26,7 +26,7 @@
 | 固定表 | `src/ExclusionTable.cs` | 存默认豁免清单，拼豁免键 | 不判断卡池归属，不读设置，不参与判定 |
 | 排除索引 | `src/FilterIndex.cs` 的 `FilterIndex.Get` | 按当前设置算出排除集合，设置变过则重建 | 不逐张判定，不接触 `CardModel` |
 | 设置模型 | `src/ModSettings.cs` 的 `SettingsModel`、`SettingsSnapshot` | 落盘模型、绑定、快照与写入版本号；启动时按架构版本决定是否重置为默认值 | 不建索引，不做逐张判定 |
-| 设置页 | `src/ModSettings.cs` 的 `ConfigurePage`、`ConfigureExemptionPage` | 渲染总开关、判定模式、13 个分组开关与 13 个豁免子页，把改动写回绑定 | 不执行过滤，不建索引 |
+| 设置页 | `src/ModSettings.cs` 的 `ConfigurePage`、`ConfigureExemptionPage` | 渲染总开关、判定模式、13 个分组开关与 13 个豁免子页，拼装开关标题与说明，把改动写回绑定 | 不执行过滤，不建索引 |
 | 本地化 | `src/Localization.cs` | 按游戏语言取界面文案，卡名转查游戏的 `cards` 表 | 不含业务规则，不决定默认值 |
 | 跨版本探测 | 未建立（P4 剩余） | 收敛版本差异，提供能力查询 | 不含业务规则 |
 
@@ -90,6 +90,18 @@ excluded = ⋃ 已开启的分组（成员 − 该组豁免）
 
 快照 `SettingsSnapshot` 与排除索引都按 `ModSettings.Version` 缓存。写入路径统一经过 `ModSettings.Invalidate`，它既让快照失效，也调 `FilterIndex.Invalidate`。
 
+### 界面文案的拼装
+
+三处文案不是从 JSON 直接取的，由 `ModSettings` 里的三个方法在渲染时拼出。
+
+| 方法 | 拼法 | 依据 |
+|---|---|---|
+| `ExcludeLabel` | `pgf.exclude.prefix` + `pgf.group.<id>.name` | SP-026 |
+| `GroupDescription` | `pgf.group.<id>.desc` + `" · "` + `pgf.count` 填入 `group.Members.Length` | SP-028 |
+| 豁免子页标题与行标题 | `pgf.exempt.page.title` 或 `pgf.exempt.row` + `" · "` + 组名 | SP-016 |
+
+三者都用 `ModSettingsText.Dynamic` 包一层闭包。闭包在每次刷新时重新取词，因此切换游戏语言后整行跟着变，不需要重建页面。张数取自 `CardGroups.All` 的成员数组，名单更新时文案自动跟着变。
+
 ## 关键流程
 
 一次发牌奖励的候选枚举：
@@ -149,6 +161,7 @@ excluded = ⋃ 已开启的分组（成员 − 该组豁免）
 | RQ-015 | 分组定义、固定表 |
 | RQ-016 | 设置模型 |
 | RQ-017 | 分组定义 |
+| RQ-018 | 设置页、本地化 |
 
 ## 偏差与限制
 
@@ -170,3 +183,4 @@ excluded = ⋃ 已开启的分组（成员 − 该组豁免）
 | 2026-11-15 20:55 | 判定模式组件落地为 `ModSettings` 与 `FilterMode`。补设置存放一节。关键流程改为五条判据。偏差标记已修复 |
 | 2026-11-15 23:22 | 项目版本 0.0.4。新增分组定义、固定表、排除索引、设置页、本地化五个组件。补落盘模型、豁免键、两个排除集合、构建视图的嵌入资源。关键流程补总开关、索引与自检。追溯表补 RQ-006、RQ-009 至 RQ-011、RQ-014 |
 | 2026-11-16 19:30 | 项目版本 0.0.5。排除索引合并为一个集合，两个排除集合一节改写为排除集合。固定表去掉多人限定卡放行表。落盘模型补 `SchemaVersion` 与重置行为。名单规模改为 166 行 164 张并登记四道门禁。追溯表补 RQ-015、RQ-016。偏差改写多人限定的代价 |
+| 2026-11-16 21:00 | 项目版本 0.0.6。设置页职责补文案拼装。新增界面文案的拼装一节，登记三个拼装方法与 `ModSettingsText.Dynamic` 的刷新方式。追溯表补 RQ-018 |

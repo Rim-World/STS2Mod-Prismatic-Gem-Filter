@@ -355,7 +355,9 @@ internal static class ModSettings
     {
         page.WithModDisplayName(Localization.Text("pgf.mod.name", "Prismatic Gem Filter"))
             .WithTitle(Localization.Text("pgf.page.title", "Prismatic Gem Filter"))
-            .WithDescription(Localization.Text("pgf.page.desc", "Choose which other-class cards a card reward can offer."))
+            .WithDescription(Localization.Text("pgf.page.desc",
+                "Prismatic Gem lets card rewards offer cards from other classes. " +
+                "The lists below group the cards that other classes almost never use."))
             .AddSection("effect_scope", AddEffectScopeSection);
 
         foreach (var character in CardGroups.Characters)
@@ -371,21 +373,20 @@ internal static class ModSettings
 
     private static void AddEffectScopeSection(ModSettingsSectionBuilder section)
     {
-        section.WithTitle(Localization.Text("pgf.section.scope", "Scope"))
+        section.WithTitle(Localization.Text("pgf.section.scope", "Master switch"))
             .AddToggle(
                 "master",
                 Localization.Text("pgf.master.name", "Enable filtering"),
                 MasterBinding,
-                Localization.Text("pgf.master.desc", "Off leaves every card reward unchanged."))
+                Localization.Text("pgf.master.desc", "Off makes this mod do nothing."))
             .AddEnumChoice<FilterMode>(
                 "mode_choice",
-                Localization.Text("pgf.mode.name", "When it applies"),
+                Localization.Text("pgf.mode.name", "When to filter"),
                 ModeBinding,
                 static value => value == FilterMode.PrismaticGemOnly
-                    ? Localization.Text("pgf.mode.gem", "Only when Prismatic Gem widens this reward")
+                    ? Localization.Text("pgf.mode.gem", "Only while Prismatic Gem applies")
                     : Localization.Text("pgf.mode.any", "Whenever another class's card appears"),
-                Localization.Text("pgf.mode.desc",
-                    "The default matches what the vanilla relic itself affects."),
+                Localization.Text("pgf.mode.desc", "Keep the default value if you are not sure."),
                 ModSettingsChoicePresentation.Dropdown);
     }
 
@@ -394,28 +395,42 @@ internal static class ModSettings
         string character,
         CardGroup[] groups)
     {
-        section.WithTitle(Localization.Text("pgf.char." + character, character));
+        section.WithTitle(Localization.Text("pgf.char." + character, character))
+            .WithDescription(Localization.Text("pgf.section." + character, character));
 
         foreach (var group in groups)
         {
             var id = group.Id;
-            section.AddToggle(
-                    "group_" + id,
-                    Localization.Text("pgf.group." + id + ".name", id),
-                    GroupBindings[id],
-                    Localization.Text("pgf.group." + id + ".desc",
-                        $"{group.Members.Length} cards. Unchecked keeps this group unchanged."))
+            section.AddToggle("group_" + id, ExcludeLabel(id), GroupBindings[id], GroupDescription(group))
                 .AddSubpage(
                     "exempt_" + id,
                     ModSettingsText.Dynamic(() =>
-                        Localization.Resolve("pgf.exempt.row", "Exemptions") + " · " +
+                        Localization.Resolve("pgf.exempt.row", "Exempt cards") + " · " +
                         Localization.Resolve("pgf.group." + id + ".name", id)),
                     ExemptionPageId(id),
                     Localization.Text("pgf.exempt.button", "Open"),
-                    Localization.Text("pgf.exempt.row.desc",
-                        "Tick the cards this group must not exclude."));
+                    Localization.Text("pgf.exempt.row.desc", "Keep the cards you select in this group."));
         }
     }
+
+    /// <summary>
+    ///     分组开关的标题。开关的含义是「排除本组的牌」，标题因此由前缀加组名拼成：
+    ///     中文是「排除」加「奥斯提牌」，英文是 <c>Exclude </c> 加 <c>Osty cards</c>。
+    ///     <para>两段都取本地化文案，切换语言时整行跟着变，不需要每种语言各写一份标题。</para>
+    /// </summary>
+    private static ModSettingsText ExcludeLabel(string groupId) =>
+        ModSettingsText.Dynamic(() =>
+            Localization.Resolve("pgf.exclude.prefix", "Exclude ") +
+            Localization.Resolve("pgf.group." + groupId + ".name", groupId));
+
+    /// <summary>
+    ///     分组开关的说明：一句短定义加本组成员张数。
+    ///     <para>张数由名单算出，不写死在文案里，名单变动时说明自动跟着变。</para>
+    /// </summary>
+    private static ModSettingsText GroupDescription(CardGroup group) =>
+        ModSettingsText.Dynamic(() =>
+            Localization.Resolve("pgf.group." + group.Id + ".desc", group.Id) + " · " +
+            string.Format(Localization.Resolve("pgf.count", "{0} cards"), group.Members.Length));
 
     private static void ConfigureExemptionPage(ModSettingsPageBuilder page, CardGroup group)
     {
@@ -424,10 +439,10 @@ internal static class ModSettings
         page.AsChildOf(Plugin.ModId)
             .WithSidebarVisibleOnlyWhenActive()
             .WithTitle(ModSettingsText.Dynamic(() =>
-                Localization.Resolve("pgf.exempt.page.title", "Exemptions") + " · " +
+                Localization.Resolve("pgf.exempt.page.title", "Exempt cards") + " · " +
                 Localization.Resolve("pgf.group." + id + ".name", id)))
             .WithDescription(Localization.Text("pgf.exempt.page.desc",
-                "A ticked card is never excluded by this group alone. Another checked group can still exclude it."))
+                "A selected card stays. If the card is also in another group, that group can still exclude it."))
             .AddSection("cards", section =>
             {
                 section.WithTitle(Localization.Text("pgf.exempt.section", "Cards in this group"));
@@ -464,7 +479,7 @@ internal static class ModSettings
 
             if (isMultiplayerOnly)
                 parts.Add(Localization.Resolve("pgf.hint.multiplayer",
-                    "Multiplayer-only card: it only appears in online runs."));
+                    "Appears only in multiplayer."));
 
             if (others.Length > 0)
             {
@@ -473,7 +488,7 @@ internal static class ModSettings
                     separator,
                     others.Select(other => Localization.Resolve("pgf.group." + other + ".name", other)));
                 parts.Add(string.Format(
-                    Localization.Resolve("pgf.hint.alsoIn", "Also in another group: {0}"),
+                    Localization.Resolve("pgf.hint.alsoIn", "Also in: {0}"),
                     names));
             }
 

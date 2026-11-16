@@ -91,6 +91,14 @@ python 8.TEST/CI-CD/check-user-prompt.py --mode show
 
 第一版实现（19:41 那次启动）没有触发重置，当时的日志已被后续启动轮转覆盖，未留档。失败现象、原因与修法记在 `3.DOCS/013-T-名单门禁与配置重置.md` 第三节。
 
+### 0.0.6
+
+| 文件名 | 创建时间 | 是否清理 | 文件大小（KB） | 用途 | 引用和复用 |
+|---|---|---|---|---|---|
+| `自检-0.0.6加载与文案-godot.log` | 2026-11-16 20:56 | 否 | 116 | Release 构建的无头启动日志。关键证据两处：`[PrismaticGemFilter.texts] ... entries=59, local=59, fallbackEntries=0` 证明三语文案全量加载且简体无缺键；`ready. groups=13 entries=166 exemptions=7 schema=1` 证明名单与设置未受影响。全文 0 行 `[ERROR]` | 是 |
+
+本轮的界面观感（三语排版、字号、开关排布）无头模式看不到，属未验证项。
+
 ## 测试方法
 
 启动游戏时设置环境变量 `SteamAppId=2868840`，并加 `--headless`，即可无窗口跑完加载流程并写出日志。日志路径：`%APPDATA%\SlayTheSpire2\logs\godot.log`。
