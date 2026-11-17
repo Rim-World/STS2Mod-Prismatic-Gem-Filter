@@ -1,0 +1,35 @@
+# 场景：验证遗物发牌等非战斗奖励入口也被过滤。
+# 角色固定铁甲战士，设置取默认（总开关开、11 组开、8 条豁免）。
+# 期望：每一处新增奖励都出现 [filter] 行；万花筒类手工名单不出现过滤。
+
+relic PRISMATIC_GEM
+wait 1
+
+# 1 拾起即发牌的遗物：星系仪 5 次奖励、遗失宝箱 1 次奖励
+relic ORRERY
+wait 3
+relic LOST_COFFER
+wait 3
+
+# 2 海玻璃：同职业卡池、按稀有度给 5 次奖励
+relic GLASS_EYE
+wait 3
+
+# 3 普通房间的额外奖励（祈祷轮）
+relic PRAYER_WHEEL
+fight CULTISTS_NORMAL
+wait combat-started
+kill all
+wait 3
+
+# 4 精英房间的额外奖励（白星）
+relic WHITE_STAR
+room ELITE
+wait combat-started
+kill all
+wait 12
+
+# 5 休息处回血奖励（梦境捕手）：用测试命令执行一次休息处回血
+relic DREAM_CATCHER
+gaterestheal
+wait 5

@@ -137,3 +137,30 @@ SteamAppId=2868840 ./SlayTheSpire2.exe --headless \
 - 界面渲染、豁免页、三种语言。无头模式不画界面。
 - 0.111.0 上的同一脚本。本机没有 0.111.0 安装。
 - AutoSlayer 完整跑一局（`--autoslay`）。本轮只用场景脚本，没有跑全自动整局。
+
+## 九、遗物发牌补测（2026-11-17 20:21）
+
+脚本 `8.TEST/0.0.10/场景-遗物发牌过滤.txt`，种子 `ELITE1`，一次跑完，退出码 0。证据 `8.TEST/0.0.10/自动测试-场景-遗物发牌-godot.log`。
+
+| 入口 | 触发方式 | 奖励次数 | `[filter]` 调用 | 候选 / 移除 / 保留 | 发牌示例 |
+|---|---|---|---|---|---|
+| 星系仪 `ORRERY` | `relic ORRERY` | 5 | 15 | 599 / 122 / 477 | `HOLOGRAM,NOCK,PIERCING_WAIL` |
+| 遗失宝箱 `LOST_COFFER` | `relic LOST_COFFER` | 1 | 3 | 599 / 122 / 477 | `CHO_READY,REAP,COMPILE_DRIVER` |
+| 玻璃眼 `GLASS_EYE` | `relic GLASS_EYE` | 5 | 15 | 140/35、245/56、174/31 | `DODGE_AND_ROLL,CHO_FIRM,SCULPTING_STRIKE` |
+| 祈祷轮 `PRAYER_WHEEL` | 普通房间胜利 | 2 | 6 | 599 / 122 / 477 | `LEADING_STRIKE,CRUSH_UNDER,DAGGER_THROW` |
+| 白星 `WHITE_STAR` | 精英房间胜利 | 2 | 6 | 599 / 122 / 477 | `FLECHETTES,SWEEPING_BEAM,RAPID_SHOT` |
+| 梦境捕手 `DREAM_CATCHER` | 休息处回血 | 1 | 3 | 599 / 122 / 477 | `PIERCING_WAIL,TIMBER,MOLTEN_FIST` |
+
+说明：
+
+- 六个入口的移除数都等于默认设置的 122。玻璃眼的候选按稀有度分三组，所以数值不同：common 140、uncommon 245、rare 174，分别移除 35、56、31，即 122 在各稀有度子集里的交集。
+- 祈祷轮与白星都是在基础奖励之外各加 1 次奖励，因此是 2 次奖励、6 次调用。
+- 玻璃眼的候选里有 120、210、149 张其他职业的牌，说明棱彩宝石确实加宽了这个入口。玻璃眼与棱彩宝石同属欧罗巴斯选项，正常一局只能拿一件；本场是测试命令同时给的。
+- 梦境捕手要玩家在休息处选回血才发奖励，场景没有点击能力。门模组因此加了一条测试命令 `gaterestheal`，直接调用游戏自己的 `HealRestSiteOption.ExecuteRestSiteHeal`，走同一条奖励钩子。
+
+踩到的坑：
+
+- 精英房间的奖励生成比普通房间慢。等 4 秒不够，8 秒左右才出现 `[filter]`；改成 12 秒后稳定。
+- 同一套脚本在 `RELIC1` 种子下抽到的精英是 `PHROG_PARASITE_ELITE`，击杀后 12 秒内不结算奖励；换成 `ELITE1` 种子的 `BYGONE_EFFIGY_ELITE` 就正常。原因未确认，可能是该精英的死亡处理与结算时机不同。
+
+未覆盖：万花筒（手工名单，带 `NoCardPoolModifications`，按 SP-005 不该过滤）、海玻璃（自带他职业池，不经过棱彩宝石加宽）、猎杀（要打出这张牌才有奖励）、水晶球与试炼（事件小游戏）、Blitz 模式。

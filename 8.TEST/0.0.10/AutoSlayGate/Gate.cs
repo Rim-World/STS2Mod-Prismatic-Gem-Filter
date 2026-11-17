@@ -2,9 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using HarmonyLib;
+using MegaCrit.Sts2.Core.DevConsole;
+using MegaCrit.Sts2.Core.DevConsole.ConsoleCommands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
+using MegaCrit.Sts2.Core.Entities.RestSite;
 using MegaCrit.Sts2.Core.Factories;
+using MegaCrit.Sts2.Core.Helpers;
 using MegaCrit.Sts2.Core.Logging;
 using MegaCrit.Sts2.Core.Modding;
 using MegaCrit.Sts2.Core.Models;
@@ -89,5 +93,32 @@ internal static class RewardProbePatch
         {
             Log.Error($"[reward] failed: {ex.GetType().Name}: {ex.Message}");
         }
+    }
+}
+
+/// <summary>
+///     测试专用控制台命令：执行一次休息处回血。走的是游戏自己的
+///     <c>HealRestSiteOption.ExecuteRestSiteHeal</c>，因此会触发休息处奖励钩子（梦境捕手）。
+/// </summary>
+public sealed class GateRestHealCmd : AbstractConsoleCmd
+{
+    public override string CmdName => "gaterestheal";
+
+    public override string Args => "";
+
+    public override string Description => "测试用：执行一次休息处回血，触发休息处奖励";
+
+    public override bool IsNetworked => false;
+
+    public override CmdResult Process(Player? issuingPlayer, string[] args)
+    {
+        if (issuingPlayer is null)
+        {
+            return new CmdResult(false, "没有正在进行的对局。");
+        }
+
+        // 不把 Task 交给场景等待：OfferCustom 会停在奖励界面等人操作，等下去只会超时。
+        TaskHelper.RunSafely(HealRestSiteOption.ExecuteRestSiteHeal(issuingPlayer, isMimicked: false));
+        return new CmdResult(true, "已执行休息处回血（不等奖励界面）");
     }
 }
