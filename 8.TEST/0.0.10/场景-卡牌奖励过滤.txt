@@ -1,0 +1,9 @@
+# 场景：验证持棱彩宝石时，战斗奖励候选集合被本模组过滤。
+# 角色固定铁甲战士（ScenarioRunner 写死），15 个分组开关取默认值（11 组开、8 条豁免）。
+# 期望：日志出现 [filter] 行，且 [probe] 行的候选里没有充能球、毒、小刀、铸造、辉星、奥斯提、召唤、灾厄、悲伤等默认排除组的牌。
+
+relic PRISMATIC_GEM
+fight CULTISTS_NORMAL
+wait combat-started
+kill all
+wait 3

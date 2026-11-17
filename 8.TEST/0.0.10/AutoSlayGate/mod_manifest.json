@@ -1,0 +1,10 @@
+{
+  "id": "AutoSlayGate",
+  "name": "AutoSlay 测试门",
+  "author": "Rim-World",
+  "description": "仅用于本地自动测试：翻转发行版判定，并在候选牌枚举处打印候选标识。",
+  "version": "0.0.1",
+  "has_pck": false,
+  "has_dll": true,
+  "affects_gameplay": false
+}
