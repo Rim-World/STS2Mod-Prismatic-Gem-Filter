@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    跨版本测试门模组（面向游戏 0.111.x）。
+    用途：
+      ① 把 NGame.IsReleaseGame 的返回值改成 false，让 autoslay 启动参数生效；
+      ② 对局开始后自动注入棱彩宝石，保证发牌时确实持有宝石；
+      ③ 在 CardCreationOptions.GetPossibleCards 之后打印候选牌标识清单。
+
+    0.111.1 没有 ScenarioRunner，因此用 autoslay 启动参数让机器人跑一局代替场景脚本。
+    它不是项目成品的一部分，测试完成后必须从游戏目录移除。
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <AssemblyName>AutoSlayGate</AssemblyName>
+    <RootNamespace>AutoSlayGate</RootNamespace>
+    <Version>0.0.2</Version>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Sts2Dir Condition="'$(Sts2Dir)' == ''">C:\Game\Steam\steamapps\common\Slay the Spire 2</Sts2Dir>
+    <Sts2DataDir Condition="'$(Sts2DataDir)' == ''">$(Sts2Dir)\data_sts2_windows_x86_64</Sts2DataDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="sts2" HintPath="$(Sts2DataDir)\sts2.dll" Private="false" />
+    <Reference Include="0Harmony" HintPath="$(Sts2DataDir)\0Harmony.dll" Private="false" />
+    <Reference Include="GodotSharp" HintPath="$(Sts2DataDir)\GodotSharp.dll" Private="false" />
+  </ItemGroup>
+
+</Project>
