@@ -2,17 +2,17 @@
 
   <!--
     棱彩宝石过滤模组。
-    单一程序集、单一目录、单一清单，同时面向游戏 0.107.1 / 0.111.0 / 0.113.1。
-    依据：4.ADR/002-三版本交付形态.md、4.ADR/006-只依赖RitsuLib作为基础库.md
+    单一程序集、单一目录、单一清单，同时面向游戏 0.111.0 / 0.113.1。0.107.1 自 2026-11-17 起不再支持。
+    依据：4.ADR/006-只依赖RitsuLib作为基础库.md、4.ADR/011-支持版本收窄为111与113.md
   -->
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <AssemblyName>PrismaticGemFilter</AssemblyName>
     <RootNamespace>PrismaticGemFilter</RootNamespace>
-    <Version>0.0.9</Version>
-    <AssemblyVersion>0.0.9.0</AssemblyVersion>
-    <FileVersion>0.0.9.0</FileVersion>
+    <Version>0.0.10</Version>
+    <AssemblyVersion>0.0.10.0</AssemblyVersion>
+    <FileVersion>0.0.10.0</FileVersion>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>

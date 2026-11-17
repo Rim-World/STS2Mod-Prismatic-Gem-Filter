@@ -1,0 +1,1576 @@
+MegaDot v4.5.1.m.14.mono.custom_build - https://godotengine.org
+
+FMOD Sound System: Successfully initialized
+[INFO] Found release_info.json at: C:\Game\Steam\steamapps\common\Slay the Spire 2\release_info.json
+[INFO] [Sentry.NET] Initialized: env=unknown, release=v0.113.1
+[INFO] Steamworks: attempting initialization...
+[INFO] Steam is running: True
+[INFO] Steamworks initialization succeeded!
+[INFO] Steam is enabled, we will write saves to steam storage. Enabled for account: True, app: False 
+[INFO] Registered 24 migrations
+[INFO] Current save versions: PrefsSave v2; ProfileSave v2; SerializableProgress v24; RunHistory v11; SerializableRun v21; SettingsSave v8
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\CalculatedGambleReplacementMod\CalculatedGambleReplacementMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\CharacterModIsolation\mod_manifest.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\CorpseExplosionReplacementMod\CorpseExplosionReplacementMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\DarvRelicPoolMod\DarvRelicPoolMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\EvolveReplacementMod\EvolveReplacementMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\JugglingCounterMod\JugglingCounterMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\OstyDamageDetectionMod\OstyDamageDetectionMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\PhantomKillerMod\PhantomKillerMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\PrismaticGemFilter\mod_manifest.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\ReaperReplacementMod\ReaperReplacementMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RecycleReplacementMod\RecycleReplacementMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertBrightestFlame\RevertBrightestFlame.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertDiamondDiadem\RevertDiamondDiadem.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertRocketPunch\RevertRocketPunch.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertSynchronize\RevertSynchronize.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertTheSealedThrone\RevertTheSealedThrone.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\ScrawlReplacementMod\ScrawlReplacementMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3840050168 in C:\Game\Steam\steamapps\workshop\content\2868840\3840050168 (size 8930090, last modified 1794908758)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3840050168\FoolMotion.json
+[INFO] Looking for mods to load from Steam Workshop mod 3828218778 in C:\Game\Steam\steamapps\workshop\content\2868840\3828218778 (size 27399, last modified 1794668693)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3828218778\PrismaticGeneration\PrismaticGeneration.json
+[INFO] Looking for mods to load from Steam Workshop mod 3755773515 in C:\Game\Steam\steamapps\workshop\content\2868840\3755773515 (size 37217, last modified 1794657258)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3755773515\mod_manifest.json
+[INFO] Looking for mods to load from Steam Workshop mod 3839332861 in C:\Game\Steam\steamapps\workshop\content\2868840\3839332861 (size 4328385, last modified 1794799967)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3839332861\FoolMelodyReplacer.json
+[INFO] Looking for mods to load from Steam Workshop mod 3784531815 in C:\Game\Steam\steamapps\workshop\content\2868840\3784531815 (size 149987420, last modified 1794838557)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3784531815\MGRMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3838672055 in C:\Game\Steam\steamapps\workshop\content\2868840\3838672055 (size 9938, last modified 1794716183)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3838672055\Zhs113Fix\Zhs113Fix.json
+[INFO] Looking for mods to load from Steam Workshop mod 3756859747 in C:\Game\Steam\steamapps\workshop\content\2868840\3756859747 (size 6415871, last modified 1794771768)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3756859747\Loadout.json
+[INFO] Looking for mods to load from Steam Workshop mod 3810696310 in C:\Game\Steam\steamapps\workshop\content\2868840\3810696310 (size 25463099, last modified 1794750687)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3810696310\mod_manifest.json
+[INFO] Looking for mods to load from Steam Workshop mod 3816316338 in C:\Game\Steam\steamapps\workshop\content\2868840\3816316338 (size 42809862, last modified 1794750584)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3816316338\mod_manifest.json
+[INFO] Looking for mods to load from Steam Workshop mod 3821353824 in C:\Game\Steam\steamapps\workshop\content\2868840\3821353824 (size 26347816, last modified 1794549732)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3821353824\mod_manifest.json
+[INFO] Looking for mods to load from Steam Workshop mod 3748331824 in C:\Game\Steam\steamapps\workshop\content\2868840\3748331824 (size 19725178, last modified 1794680571)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3748331824\Merchant2CuteII.json
+[INFO] Looking for mods to load from Steam Workshop mod 3786286239 in C:\Game\Steam\steamapps\workshop\content\2868840\3786286239 (size 37458206, last modified 1790398793)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3786286239\KaguyaSilentRavenSkin.json
+[INFO] Looking for mods to load from Steam Workshop mod 3798368044 in C:\Game\Steam\steamapps\workshop\content\2868840\3798368044 (size 59120944, last modified 1794550830)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3798368044\mod_manifest.json
+[INFO] Looking for mods to load from Steam Workshop mod 3798006173 in C:\Game\Steam\steamapps\workshop\content\2868840\3798006173 (size 211913, last modified 1794612937)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3798006173\PixelPotions.json
+[INFO] Looking for mods to load from Steam Workshop mod 3792710066 in C:\Game\Steam\steamapps\workshop\content\2868840\3792710066 (size 133428, last modified 1788087317)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3792710066\RevertDiamondDiadem.json
+[INFO] Looking for mods to load from Steam Workshop mod 3756617122 in C:\Game\Steam\steamapps\workshop\content\2868840\3756617122 (size 31178, last modified 1783056259)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3756617122\RevertCompact.json
+[INFO] Looking for mods to load from Steam Workshop mod 3785043629 in C:\Game\Steam\steamapps\workshop\content\2868840\3785043629 (size 474978, last modified 1794744306)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3785043629\MoreStatistic.json
+[INFO] Looking for mods to load from Steam Workshop mod 3791663690 in C:\Game\Steam\steamapps\workshop\content\2868840\3791663690 (size 461722, last modified 1794596015)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3791663690\DarvRelicPoolMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3750281026 in C:\Game\Steam\steamapps\workshop\content\2868840\3750281026 (size 4679839, last modified 1794559564)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3750281026\Fake Merchant Expansion.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3750281026\Fake Merchant Expansion_config.json
+[INFO] JSON file C:\Game\Steam\steamapps\workshop\content\2868840\3750281026\Fake Merchant Expansion_config.json does not look like a mod manifest; skipping it.
+[INFO] Looking for mods to load from Steam Workshop mod 3787938439 in C:\Game\Steam\steamapps\workshop\content\2868840\3787938439 (size 197258, last modified 1794546842)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3787938439\JugglingCounterMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3787429685 in C:\Game\Steam\steamapps\workshop\content\2868840\3787429685 (size 271349, last modified 1787320346)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3787429685\RevertRocketPunch.json
+[INFO] Looking for mods to load from Steam Workshop mod 3773102248 in C:\Game\Steam\steamapps\workshop\content\2868840\3773102248 (size 51980022, last modified 1786900618)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3773102248\metadata.json
+[INFO] Looking for mods to load from Steam Workshop mod 3785110567 in C:\Game\Steam\steamapps\workshop\content\2868840\3785110567 (size 432903, last modified 1786969327)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3785110567\RevertTheSealedThrone.json
+[INFO] Looking for mods to load from Steam Workshop mod 3737336234 in C:\Game\Steam\steamapps\workshop\content\2868840\3737336234 (size 650983, last modified 1794754585)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3737336234\MintySpire2\MintySpire2.json
+[INFO] Looking for mods to load from Steam Workshop mod 3748419805 in C:\Game\Steam\steamapps\workshop\content\2868840\3748419805 (size 23708199, last modified 1787688604)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3748419805\Nekobinder.json
+[INFO] Looking for mods to load from Steam Workshop mod 3782484322 in C:\Game\Steam\steamapps\workshop\content\2868840\3782484322 (size 20657473, last modified 1792752481)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3782484322\maya_ironcladskin.json
+[INFO] Looking for mods to load from Steam Workshop mod 3784486876 in C:\Game\Steam\steamapps\workshop\content\2868840\3784486876 (size 283087, last modified 1794535668)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3784486876\RevertSynchronize.json
+[WARN] Could not get Steam Workshop item install info for item 3759748828
+[INFO] Looking for mods to load from Steam Workshop mod 3783912778 in C:\Game\Steam\steamapps\workshop\content\2868840\3783912778 (size 258728, last modified 1794533942)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3783912778\RevertBrightestFlame.json
+[INFO] Looking for mods to load from Steam Workshop mod 3783824081 in C:\Game\Steam\steamapps\workshop\content\2868840\3783824081 (size 297584, last modified 1786797627)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3783824081\OstyDamageDetectionMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3783799947 in C:\Game\Steam\steamapps\workshop\content\2868840\3783799947 (size 1601846, last modified 1786794495)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3783799947\ScrawlReplacementMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3782811642 in C:\Game\Steam\steamapps\workshop\content\2868840\3782811642 (size 885897, last modified 1786641071)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3782811642\CalculatedGambleReplacementMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3782193181 in C:\Game\Steam\steamapps\workshop\content\2868840\3782193181 (size 1153106, last modified 1786544251)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3782193181\EvolveReplacementMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3781659831 in C:\Game\Steam\steamapps\workshop\content\2868840\3781659831 (size 1092481, last modified 1794535580)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3781659831\RecycleReplacementMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3780352678 in C:\Game\Steam\steamapps\workshop\content\2868840\3780352678 (size 1856499, last modified 1794534083)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3780352678\CorpseExplosionReplacementMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3780333216 in C:\Game\Steam\steamapps\workshop\content\2868840\3780333216 (size 1405643, last modified 1794664512)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3780333216\ReaperReplacementMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3779831316 in C:\Game\Steam\steamapps\workshop\content\2868840\3779831316 (size 1236601, last modified 1787393389)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3779831316\PhantomKillerMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3748978466 in C:\Game\Steam\steamapps\workshop\content\2868840\3748978466 (size 515851, last modified 1782034031)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3748978466\Parasitophobia.json
+[INFO] Looking for mods to load from Steam Workshop mod 3748678645 in C:\Game\Steam\steamapps\workshop\content\2868840\3748678645 (size 957164, last modified 1786677089)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3748678645\mod_manifest.json
+[INFO] Looking for mods to load from Steam Workshop mod 3748983306 in C:\Game\Steam\steamapps\workshop\content\2868840\3748983306 (size 27637658, last modified 1794643242)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3748983306\CustomAscensionBalance.json
+[INFO] Looking for mods to load from Steam Workshop mod 3776811963 in C:\Game\Steam\steamapps\workshop\content\2868840\3776811963 (size 2464867, last modified 1785923260)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3776811963\TanxAnime.json
+[INFO] Looking for mods to load from Steam Workshop mod 3777276296 in C:\Game\Steam\steamapps\workshop\content\2868840\3777276296 (size 3059446, last modified 1794548794)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3777276296\BetterAnimation2.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747952763 in C:\Game\Steam\steamapps\workshop\content\2868840\3747952763 (size 22574902, last modified 1794503076)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747952763\mod_manifest.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747526116 in C:\Game\Steam\steamapps\workshop\content\2868840\3747526116 (size 21074331, last modified 1794843510)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747526116\Watcher.json
+[INFO] Looking for mods to load from Steam Workshop mod 3748814804 in C:\Game\Steam\steamapps\workshop\content\2868840\3748814804 (size 537688, last modified 1785565139)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3748814804\stats_the_spire_local\manifest.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747557762 in C:\Game\Steam\steamapps\workshop\content\2868840\3747557762 (size 903854, last modified 1794547884)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747557762\Rewind.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747557003 in C:\Game\Steam\steamapps\workshop\content\2868840\3747557003 (size 427180, last modified 1794550309)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747557003\ModConfig.json
+[INFO] Looking for mods to load from Steam Workshop mod 3770163208 in C:\Game\Steam\steamapps\workshop\content\2868840\3770163208 (size 1423576, last modified 1785832403)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3770163208\PerfectedStrikeAnime.json
+[INFO] Looking for mods to load from Steam Workshop mod 3771349866 in C:\Game\Steam\steamapps\workshop\content\2868840\3771349866 (size 782484, last modified 1785830816)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3771349866\CrashLandingAnime.json
+[INFO] Looking for mods to load from Steam Workshop mod 3775606490 in C:\Game\Steam\steamapps\workshop\content\2868840\3775606490 (size 525303, last modified 1785833387)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3775606490\OstyAnime.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747497501 in C:\Game\Steam\steamapps\workshop\content\2868840\3747497501 (size 60967148, last modified 1794536421)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747497501\RegentFX.json
+[INFO] Looking for mods to load from Steam Workshop mod 3748762011 in C:\Game\Steam\steamapps\workshop\content\2868840\3748762011 (size 931159, last modified 1794837277)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3748762011\CustomCardBalance.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747591649 in C:\Game\Steam\steamapps\workshop\content\2868840\3747591649 (size 22669000, last modified 1794636788)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747591649\silentSkin.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747566414 in C:\Game\Steam\steamapps\workshop\content\2868840\3747566414 (size 7967, last modified 1781843310)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747566414\AncientSL.json
+[INFO] Looking for mods to load from Steam Workshop mod 3749027556 in C:\Game\Steam\steamapps\workshop\content\2868840\3749027556 (size 24431, last modified 1794553249)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3749027556\CookieCursor.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747942752 in C:\Game\Steam\steamapps\workshop\content\2868840\3747942752 (size 8567843, last modified 1786714960)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747942752\Mechaneko_Defect.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747762234 in C:\Game\Steam\steamapps\workshop\content\2868840\3747762234 (size 28681758, last modified 1787940232)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747762234\KaguyaRegentMSGKSkin.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747526103 in C:\Game\Steam\steamapps\workshop\content\2868840\3747526103 (size 2519298, last modified 1794536477)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747526103\JmcModLib.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747539220 in C:\Game\Steam\steamapps\workshop\content\2868840\3747539220 (size 1143606, last modified 1785487071)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747539220\BetterMap.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747523110 in C:\Game\Steam\steamapps\workshop\content\2868840\3747523110 (size 79649, last modified 1781835573)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747523110\BetterConsole.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747531952 in C:\Game\Steam\steamapps\workshop\content\2868840\3747531952 (size 3228393, last modified 1794897118)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747531952\RandomForeseer.json
+[INFO] Looking for mods to load from Steam Workshop mod 3737335127 in C:\Game\Steam\steamapps\workshop\content\2868840\3737335127 (size 1281606, last modified 1794487315)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3737335127\BaseLib\BaseLib.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3737335127\BaseLib\BaseLibCompatibilityHelper.json
+[INFO] Looking for mods to load from Steam Workshop mod 3737322022 in C:\Game\Steam\steamapps\workshop\content\2868840\3737322022 (size 40790, last modified 1786787188)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3737322022\QuickRestart\QuickRestart.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747602295 in C:\Game\Steam\steamapps\workshop\content\2868840\3747602295 (size 45242553, last modified 1794763392)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747602295\mod_manifest.json
+[INFO] === Godot OS Debug Information ===
+Timestamp: 11/17/2026 19:31:32
+OS: Windows
+OS Version: 10.0.26300
+Distribution Name: Windows
+Device Model: HP Pavilion Gaming Laptop 15-cx0xxx
+Is Debug Build: False
+Is Sandboxed: False
+Executable Path: C:/Game/Steam/steamapps/common/Slay the Spire 2/SlayTheSpire2.exe
+Data Directory: C:/Users/13167/AppData/Roaming
+User Data Directory: C:/Users/13167/AppData/Roaming/SlayTheSpire2
+Command Line Args: 
+User Command Line Args: 
+OS Locale: zh_CN
+OS Language: zh
+Game Locale: zh_CN
+Is UserFS Persistent: True
+Is Stdout Verbose: False
+Is Low Processor Usage Mode: False
+Architecture: x86_64
+Engine Version: 4.5.1-m.14 (custom_build)
+Is Editor: False
+Release Version: v0.113.1
+Release Commit: d09d48e5
+Release Date: 11/14/2026 02:31:11
+Processor Count: 12
+Processor Name: Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz
+Main assembly hash: 358281912
+Rendering device name: N/A (headless)
+  Graphics adapter 0: NVIDIA GeForce GTX 1050 Ti
+  version: 32.0.15.0
+  Graphics adapter 1: Intel(R) UHD Graphics 630
+  version: 26.20.100.20
+  Graphics adapter 2: Microsoft Basic Render Driver
+  version: 10.0.26100.0
+Screen info (primary 0):
+Video Memory Used: 0.0B
+Memory Info:
+  physical: 15.9GB
+  free: 5.9GB
+  available: 25.4GB
+  stack: 8.0MB
+  Static Memory Usage: 0.0B
+  Static Memory Peak Usage: 0.0B
+Disk Info:
+  Index 0: Name: C:\ Type: Fixed Format: NTFS Available: 148.4GB Total Free: 148.4GB Total Size: 0.9TB
+  Index 1: Name: D:\ Type: Fixed Format: NTFS Available: 59.0GB Total Free: 59.0GB Total Size: 125.0GB
+  Index 2: Name: E:\ Type: Fixed Format: NTFS Available: 16.0GB Total Free: 16.0GB Total Size: 19.5GB
+  Index 3: Name: F:\ Type: Fixed Format: NTFS Available: 11.2GB Total Free: 11.2GB Total Size: 125.9GB
+  Index 4: Name: G:\ Type: Fixed Format: NTFS Available: 56.5GB Total Free: 56.5GB Total Size: 195.3GB
+  Index 5: Name: H:\ Type: Fixed Format: NTFS Available: 74.0GB Total Free: 74.0GB Total Size: 0.9TB
+Important Environment Variables:
+  PATH: C:\Program Files\Git\ucrt64\bin;C:\Program Files\Git\usr\bin;%USERPROFILE%\bin;C:\Program Files\Rio\;C:\Program Files\coreutils\bin;C:\DevTools\jdk-25.0.5+8\bin;C:\Windows\System32\HWAudioDriverLibs;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\dotnet\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Bandizip\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Basic&The Most Common\Hugo;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;%USERPROFILE%\AppData\Local\Python;C:\DevTools\android-sdk\platform-tools;C:\DevTools\android-sdk\cmdline-tools\latest\bin;C:\DevTools\bin;C:\Program Files\Go\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\WezTerm;C:\Program Files\otty\bin;C:\Program Files\WSL\;C:\Program Files\PowerShell\7\;%USERPROFILE%\AppData\Local\Programs\Python\Launcher\;%USERPROFILE%\.local\bin;%USERPROFILE%\.kimi-code\bin;%USERPROFILE%\AppData\Local\Python\bin;%USERPROFILE%\venvs\py314-global\Scripts;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;D:\Android&Win搞机工具\ADB;%USERPROFILE%\AppData\Local\Programs\Microsoft VS Code\bin;%USERPROFILE%\AppData\Local\PowerToys\DSCModules\;%USERPROFILE%\.dotnet\tools;%USERPROFILE%\AppData\Local\Python;%USERPROFILE%\AppData\Local\Microsoft\WinGet\Links;C:\Program Files\LibreOffice\program;%USERPROFILE%\AppData\Local\Programs\GitHubCLI\bin;%USERPROFILE%\.bun\bin;%USERPROFILE%\go\bin;%USERPROFILE%\AppData\Local\Microsoft\WinGet\Packages\JohnMacFarlane.Pandoc_Microsoft.Winget.Source_8wekyb3d8bbwe\pandoc-3.13;%USERPROFILE%\AppData\Roaming\npm;C:\Program Files\Alacritty;%USERPROFILE%\AppData\Local\PowerToys\bin\
+  GODOT_ROOT_DIR: 
+  HOME: %USERPROFILE%
+  DYLD_LIBRARY_PATH: 
+  LD_LIBRARY_PATH: 
+
+[INFO] Skipping loading mod PrismaticGeneration, it is set to disabled in settings
+[INFO] Skipping loading mod MoreDefectAnimations, it is set to disabled in settings
+[INFO] Skipping loading mod MoreNecrobinderAnimations, it is set to disabled in settings
+[INFO] Skipping loading mod MoreSilentAnimations, it is set to disabled in settings
+[INFO] Skipping loading mod ShieldOnly, it is set to disabled in settings
+[INFO] Skipping loading mod RevertCompact, it is set to disabled in settings
+[INFO] Skipping loading mod MoreStatistic, it is set to disabled in settings
+[INFO] Skipping loading mod Fake Merchant Expansion, it is set to disabled in settings
+[INFO] Skipping loading mod MintySpire2, it is set to disabled in settings
+[INFO] Skipping loading mod Nekobinder, it is set to disabled in settings
+[INFO] Skipping loading mod maya_ironcladskin, it is set to disabled in settings
+[INFO] Skipping loading mod Parasitophobia, it is set to disabled in settings
+[INFO] Skipping loading mod CustomAscensionBalance, it is set to disabled in settings
+[INFO] Skipping loading mod TanxAnime, it is set to disabled in settings
+[INFO] Skipping loading mod BetterAnimation2, it is set to disabled in settings
+[INFO] Skipping loading mod ATA_IronClad, it is set to disabled in settings
+[INFO] Skipping loading mod Watcher, it is set to disabled in settings
+[INFO] Skipping loading mod sts2_statsthespire_local, it is set to disabled in settings
+[INFO] Skipping loading mod PerfectedStrikeAnime, it is set to disabled in settings
+[INFO] Skipping loading mod CrashLandingAnime, it is set to disabled in settings
+[INFO] Skipping loading mod OstyAnime, it is set to disabled in settings
+[INFO] Skipping loading mod CustomCardBalance, it is set to disabled in settings
+[INFO] Skipping loading mod silentSkin, it is set to disabled in settings
+[INFO] Skipping loading mod AncientSL, it is set to disabled in settings
+[INFO] Skipping loading mod Mechaneko_Defect, it is set to disabled in settings
+[INFO] Skipping loading mod BetterMap, it is set to disabled in settings
+[INFO] Skipping loading mod BetterConsole, it is set to disabled in settings
+[WARN] Mod with ID RevertDiamondDiadem and version 1.0.0 is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID DarvRelicPoolMod and version 1.0.4 is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID JugglingCounterMod and version 1.0.1 is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID RevertRocketPunch and unknown version is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID RevertTheSealedThrone and unknown version is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID RevertSynchronize and version 1.2.2 is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID RevertBrightestFlame and version 1.1.2 is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID OstyDamageDetectionMod and unknown version is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID ScrawlReplacementMod and unknown version is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID CalculatedGambleReplacementMod and unknown version is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID EvolveReplacementMod and unknown version is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID RecycleReplacementMod and unknown version is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID CorpseExplosionReplacementMod and version 1.0.1 is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID ReaperReplacementMod and version 1.1.0 is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID PhantomKillerMod and unknown version is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[INFO] Mods have been re-sorted because we detected a change or dependency order was broken. New sorting order:
+[INFO]   0: CookieCursor (CookieCursor)
+[INFO]   1: RitsuLib (STS2-RitsuLib)
+[INFO]   2: Workshop Uploader (STS2-WorkshopUploader)
+[INFO]   3: BaseLib Compatibility Helper (BaseLibCompatibilityHelper)
+[INFO]   4: BaseLib (BaseLib)
+[INFO]   5: 铁画银钩 | 细致地优化中文字体 (StS2ZhFont)
+[INFO]   6: Quick Restart (QuickRestart)
+[INFO]   7: Loadout (Loadout)
+[INFO]   8: KaguyaSilentRavenSkin (KaguyaSilentRavenSkin)
+[INFO]   9: KaguyaRegentMSGKSkin (KaguyaRegentMSGKSkin)
+[INFO]   10: JmcModLib (JmcModLib)
+[INFO]   11: 随机数预测 (RandomForeseer) (RandomForeseer)
+[INFO]   12: 113版本汉化优化 (Zhs113Fix)
+[INFO]   13: 棱彩宝石过滤 Prismatic Gem Filter (PrismaticGemFilter)
+[INFO]   14: Fool Melody Replacer (FoolMelodyReplacer)
+[INFO]   15: SplashExclusion (SplashExclusion)
+[INFO]   16: 愚者 · 全卡动作特效 The Fool: Full Deck in Motion (FoolMotion)
+[INFO]   17: Merchant2CuteII (Merchant2CuteII)
+[INFO]   18: PixelPotions (PixelPotions)
+[INFO]   19: 皮皮倒带: Rewind (Rewind)
+[INFO]   20: 皮皮配置: ModConfig (ModConfig)
+[INFO]   21: 万象辉星[RegentFX] (RegentFX)
+[INFO]   22: 角色模组隔离 / Character Mod Isolation (CharacterModIsolation)
+[INFO]   23: MGR (MGRMod)
+[INFO]   24: 回调头冠（RevertDiamondDiadem） (RevertDiamondDiadem)
+[INFO]   25: 重做达弗（Redesign Darv） (DarvRelicPoolMod)
+[INFO]   26: 杂耍计数 (Juggling Counter) (JugglingCounterMod)
+[INFO]   27: 回调火箭飞拳（RevertRocketPunch） (RevertRocketPunch)
+[INFO]   28: 回调王座（Revert The Sealed Throne） (RevertTheSealedThrone)
+[INFO]   29: 回调同步（RevertSynchronize） (RevertSynchronize)
+[INFO]   30: 回调至亮之焰（RevertBrightestFlame） (RevertBrightestFlame)
+[INFO]   31: 奥斯提受击判定修改Osty Damage Detection Modification (OstyDamageDetectionMod)
+[INFO]   32: 潦草急就 (Scrawl) (ScrawlReplacementMod)
+[INFO]   33: 计算下注 (Calculated Gamble) (CalculatedGambleReplacementMod)
+[INFO]   34: 进化 (Evolve) (EvolveReplacementMod)
+[INFO]   35: 回收 (Recycle) (RecycleReplacementMod)
+[INFO]   36: 尸爆术替换（Corpse Explosion）（beta） (CorpseExplosionReplacementMod)
+[INFO]   37: 死亡收割 (Reaper) (ReaperReplacementMod)
+[INFO]   38: 幻影杀手 (Phantasmal Killer) (PhantomKillerMod)
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3749027556\CookieCursor.dll
+[INFO] Calling initializer method of type CookieCursor.Entry for CookieCursor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[CookieCursor] Mod initialized successfully.
+[INFO] Finished mod initialization for 'CookieCursor' (CookieCursor).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3747602295\STS2-RitsuLib.dll
+[INFO] Calling initializer method of type STS2RitsuLib.Loader.Bootstrap for STS2-RitsuLib.Loader, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [RitsuLib.Loader] Host=v0.113.1; runtime=0.113.0.
+[INFO] Associated assembly STS2-RitsuLib.Shared, Version=0.6.14.0, Culture=neutral, PublicKeyToken=null with mod STS2-RitsuLib
+[INFO] Associated assembly STS2-RitsuLib.Ui, Version=0.6.14.0, Culture=neutral, PublicKeyToken=null with mod STS2-RitsuLib
+[INFO] Associated assembly STS2-RitsuLib.Settings, Version=0.6.14.0, Culture=neutral, PublicKeyToken=null with mod STS2-RitsuLib
+[INFO] Associated assembly STS2-RitsuLib.Runtime, Version=0.6.14.0, Culture=neutral, PublicKeyToken=null with mod STS2-RitsuLib
+[INFO] Associated assembly STS2-RitsuLib, Version=0.6.14.0, Culture=neutral, PublicKeyToken=null with mod STS2-RitsuLib
+[INFO] [com.ritsukage.sts2-RitsuLib] Framework ID: com.ritsukage.sts2-RitsuLib
+[INFO] [com.ritsukage.sts2-RitsuLib] Framework Name: RitsuLib
+[INFO] [com.ritsukage.sts2-RitsuLib] Version: 0.6.14 [compat branch: 0.113.0]
+[INFO] [com.ritsukage.sts2-RitsuLib] Initializing shared framework...
+[INFO] [com.ritsukage.sts2-RitsuLib] [HarmonyInitSetterCompat] Installed on 2 reflection importer entry point(s).
+[INFO] [com.ritsukage.sts2-RitsuLib] [Config] Debug compatibility master is enabled. Sub-flags (only when master on): LocTable=True, UnlockEpoch=True, AncientArchitect=True. Mod Steam cloud mirror: enabled. Config file: user://steam/76561198869461680/mod_data/com.ritsukage.sts2-RitsuLib/settings.json
+[INFO] [com.ritsukage.sts2-RitsuLib] [RitsuLib-ModSettings] Loaded translations: language='zhs', fallback='eng', entries=1663, local=1663, fallbackEntries=0, sources=2 (local=1, fallback=1)
+[INFO] [com.ritsukage.sts2-RitsuLib] [DebugLogViewer] Local debug log viewer listening at http://127.0.0.1:18742/?token=3e7c463176914b985e1d0f23083fbef5
+[INFO] [com.ritsukage.sts2-RitsuLib] [Godot] RitsuGodot node factories initialized.
+[INFO] [com.ritsukage.sts2-RitsuLib] [SmartFormat] Registered Source: STS2RitsuLib.Combat.SecondaryResources.SecondaryResourceLocStringSource (order=0).
+[INFO] [com.ritsukage.sts2-RitsuLib] [SmartFormat] Registered Formatter: STS2RitsuLib.Combat.SecondaryResources.SecondaryResourceIconsFormatter (order=0).
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - framework core] Applying 436 patches...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - framework core] Patch application complete: 436 applied, 0 ignored, 0 failed, 436 total
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - framework core] All patches applied successfully
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - settings ui] Applying 19 patches...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - settings ui] Patch application complete: 19 applied, 0 ignored, 0 failed, 19 total
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - settings ui] All patches applied successfully
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - content assets] Applying 122 patches...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - content assets] Patch application complete: 122 applied, 0 ignored, 0 failed, 122 total
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - content assets] All patches applied successfully
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - character assets] Applying 59 patches...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - character assets] Patch application complete: 59 applied, 0 ignored, 0 failed, 59 total
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - character assets] All patches applied successfully
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - content registry] Applying 31 patches...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - content registry] Patch application complete: 31 applied, 0 ignored, 0 failed, 31 total
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - content registry] All patches applied successfully
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - persistence] Applying 3 patches...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - persistence] Patch application complete: 3 applied, 0 ignored, 0 failed, 3 total
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - persistence] All patches applied successfully
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - unlocks] Applying 22 patches...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - unlocks] Patch application complete: 22 applied, 0 ignored, 0 failed, 22 total
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - unlocks] All patches applied successfully
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - framework core] Applying 3 dynamic patch(es)...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - framework core] Dynamic patch application complete: 3/3 succeeded
+[INFO] [com.ritsukage.sts2-RitsuLib] [RuntimeHotkey] Registered 'Ctrl+Shift+F9' for RitsuLib mod settings
+[INFO] [com.ritsukage.sts2-RitsuLib] [RuntimeHotkey] Registered 'Ctrl+Shift+F10' for RitsuLib developer tools
+[INFO] [com.ritsukage.sts2-RitsuLib] [RuntimeHotkey] Registered 'Ctrl+Shift+F11' for RitsuLib combat creature picker
+[INFO] [com.ritsukage.sts2-RitsuLib] [Graphics] 2D texture filter applied: linear_mipmap.
+[INFO] [com.ritsukage.sts2-RitsuLib] [SteamWorkshopUpdate] Coordinator initialized.
+[INFO] [com.ritsukage.sts2-RitsuLib] Shared framework initialization complete.
+[INFO] Finished mod initialization for 'RitsuLib' (STS2-RitsuLib).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3748678645\STS2-WorkshopUploader.dll
+[INFO] Calling initializer method of type STS2WorkshopUploader.Main for STS2-WorkshopUploader, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [STS2-WorkshopUploader] Mod ID: STS2-WorkshopUploader
+[INFO] [STS2-WorkshopUploader] Version: 0.1.18
+[INFO] [STS2-WorkshopUploader] Initializing workshop uploader mod...
+[INFO] [STS2-WorkshopUploader] [Patcher - workshop uploader ui] Applying 5 patches...
+[INFO] [STS2-WorkshopUploader] [Patcher - workshop uploader ui] Patch application complete: 5 applied, 0 ignored, 0 failed, 5 total
+[INFO] [STS2-WorkshopUploader] [Patcher - workshop uploader ui] All patches applied successfully
+[INFO] [STS2-WorkshopUploader] Workshop uploader mod initialization complete.
+[INFO] Finished mod initialization for 'Workshop Uploader' (STS2-WorkshopUploader).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3737335127\BaseLib\BaseLibCompatibilityHelper.dll
+[INFO] Calling initializer method of type BaseLibCompatibilityHelper.BaseLibCompatibilityHelperCode.MainFile for BaseLibCompatibilityHelper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] Finished mod initialization for 'BaseLib Compatibility Helper' (BaseLibCompatibilityHelper).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3737335127\BaseLib\BaseLib.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3737335127\BaseLib\BaseLib.pck
+[INFO] Calling initializer method of type BaseLib.BaseLibMain for BaseLib, Version=3.4.8.0, Culture=neutral, PublicKeyToken=null
+[INFO] [BaseLib] Created node factory for Control.
+[INFO] [BaseLib] Created node factory for NCreatureVisuals.
+[INFO] [BaseLib] Created node factory for NRestSiteCharacter.
+[INFO] [BaseLib] Created node factory for NMerchantCharacter.
+[INFO] [BaseLib] Created node factory for NEnergyCounter.
+[INFO] [BaseLib] Created node factory for NCustomTreasureRoomChest.
+[INFO] [BaseLib] Registered config for mod BaseLib
+[INFO] [BaseLib] Naive game version: v0.113.1
+[INFO] [BaseLib] Performing CustomPile Add patch for beta version
+[INFO] [BaseLib] Starting PatchAll for assembly BaseLib, Version=3.4.8.0, Culture=neutral, PublicKeyToken=null
+[INFO] [BaseLib] Reading state machine type [MegaCrit.Sts2.Core.Nodes.Combat.NCreature+<AnimDie>d__113]
+[INFO] [BaseLib] Adding new state 5 for method CustomAnimationPatch.WaitCustomAnim before Wait with result type None ()
+[INFO] [BaseLib] Reading state machine type [MegaCrit.Sts2.Core.Hooks.Hook+<AfterCardPlayed>d__19]
+[INFO] [BaseLib] Adding new state 2 for method AfterCardPlayedPatch.BeforeAfterPlayHooks before AfterCardPlayed with result type None ()
+[INFO] [BaseLib] Skipping SentryService shutdown patch; no match found.
+[INFO] [BaseLib] Reading state machine type [MegaCrit.Sts2.Core.Models.CardModel+<SpendResources>d__356]
+[INFO] [BaseLib] Adding new state 2 for method CustomResourcePatches.SpendAdditionalCosts after SpendStars with result type None ()
+[INFO] [BaseLib] Reading state machine type [MegaCrit.Sts2.Core.Hooks.Hook+<AfterEnergyReset>d__34]
+[INFO] [BaseLib] Adding new state 2 for method CustomResourcePatches.BeforeEnergyResetHook before AfterEnergyReset with result type None ()
+[INFO] [BaseLib] No valid target found, skipping old ExhaustivePatch
+[INFO] [BaseLib] No valid target found, skipping old PurgePatch
+[INFO] [BaseLib] Applied 286 patches successfully, 0 failed
+[INFO] Finished mod initialization for 'BaseLib' (BaseLib).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3773102248\StS2ZhFont.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3773102248\StS2ZhFont.pck
+[INFO] Calling initializer method of type StS2ZhFont.MainFile for StS2ZhFont, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [BaseLib] Registered config for mod StS2ZhFont
+[INFO] Finished mod initialization for '铁画银钩 | 细致地优化中文字体' (StS2ZhFont).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3737322022\QuickRestart\QuickRestart.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3737322022\QuickRestart\QuickRestart.pck
+[INFO] Calling initializer method of type QuickRestart.QuickRestartCode.MainFile for QuickRestart, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [BaseLib] Registered config for mod QuickRestart
+[INFO] Finished mod initialization for 'Quick Restart' (QuickRestart).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3756859747\Loadout.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3756859747\Loadout.pck
+[INFO] Calling initializer method of type Loadout.MainFile for Loadout, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [Loadout] [Loadout] Beginning early bootstrap.
+[INFO] [Loadout] SentryService.DisableGdExtensionIfModded not found; skipped patch.
+[INFO] [BaseLib] Skipping SentryService shutdown patch; no match found.
+[INFO] [Loadout] SentryService.SetGdExtensionUser not found; skipped patch.
+[INFO] [Loadout] SentryService.SetGdExtensionBreadcrumb not found; skipped patch.
+[INFO] [Loadout] Sentry startup crash interceptor installed: AfterGameInit, Shutdown, SetPlatformBranch, Initialize, InitializeForTesting
+[INFO] [Loadout] [Loadout] Waiting for game localization initialization.
+[INFO] Finished mod initialization for 'Loadout' (Loadout).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3786286239\KaguyaSilentRavenSkin.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3786286239\KaguyaSilentRavenSkin.pck
+[INFO] Calling initializer method of type SilentSkinMod.MainFile for SilentSkinMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] Finished mod initialization for 'KaguyaSilentRavenSkin' (KaguyaSilentRavenSkin).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3747762234\KaguyaRegentMSGKSkin.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3747762234\KaguyaRegentMSGKSkin.pck
+[INFO] Calling initializer method of type RegentSkinMod.MainFile for RegentSkinMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] Finished mod initialization for 'KaguyaRegentMSGKSkin' (KaguyaRegentMSGKSkin).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3747526103\JmcModLib.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3747526103\JmcModLib.pck
+[INFO] Calling initializer method of type JmcModLib.Bootstrap.BootstrapMain for JmcModLib.Bootstrap, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [JmcModLib.Bootstrap] Dependency resolver installed.
+[INFO] [JmcModLib.Bootstrap] Loaded runtime assembly from C:\Game\Steam\steamapps\workshop\content\2868840\3747526103\JmcModLib.Runtime.dll
+[INFO] [JmcModLib.Bootstrap] Resolved dependency Newtonsoft.Json from C:\Game\Steam\steamapps\workshop\content\2868840\3747526103\Newtonsoft.Json.dll
+[INFO] [JmcModLib v1.10.0] [19:31:43] ======================================
+[INFO] [JmcModLib v1.10.0] [19:31:43]  JmcModLib Mod 正在启动...
+[INFO] [JmcModLib v1.10.0] [19:31:43] ======================================
+[INFO] [JmcModLib v1.10.0] [19:31:43] Harmony 补丁已应用。
+[INFO] [JmcModLib.Bootstrap] Runtime loaded: JmcModLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] Finished mod initialization for 'JmcModLib' (JmcModLib).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3747531952\RandomForeseer.dll
+[INFO] Calling initializer method of type RandomForeseer.WorkshopLoader.Bootstrap for RandomForeseer.Loader, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [RandomForeseer.Loader] Host version v0.113.1; selected Mod variant 0.15.3 (minimum game version 0.113.1).
+[INFO] [com.ritsukage.sts2-RitsuLib] [ui] Loaded translations: language='zhs', fallback='eng', entries=47, local=47, fallbackEntries=0, sources=2 (local=1, fallback=1)
+[INFO] [com.ritsukage.sts2-RitsuLib] [settings] Loaded translations: language='zhs', fallback='eng', entries=161, local=161, fallbackEntries=0, sources=2 (local=1, fallback=1)
+[INFO] [com.ritsukage.sts2-RitsuLib] [Telemetry] Registered contribution 'RandomForeseer/settings_snapshot' (ModInventory, PrivateToApplicant).
+[INFO] [com.ritsukage.sts2-RitsuLib] [Telemetry] Registered applicant 'RandomForeseer' -> https://random-foreseer-telemetry.hotwords.top/batch/ (2 request(s)).
+[INFO] [RandomForeseer] Settings loaded: {"schema_version":3,"SingleplayerPredictionEnabled":true,"MultiplayerPredictionEnabled":true,"FairModeEnabled":true,"ShowDriftWarnings":false,"PredictionTextHoverTipOrder":"BeforeVanilla","PredictionCardHoverTipOrder":"BeforeVanilla","PredictBaseGameCardsOnly":false,"InvokeBaseGameHookListenersOnly":false,"DeckTransformPredictionEnabled":true,"NextActPredictionEnabled":true,"BlitzMerchantPredictionEnabled":true,"EventOptionPredictionEnabled":true,"SlipperyBridgeRerollPreviewCount":5,"CrystalSphereClairvoyanceEnabled":true,"RelicPickupPredictionEnabled":true,"AncientRelicPickupPredictionEnabled":true,"MerchantRestockPredictionEnabled":true,"DriftwoodRerollPredictionEnabled":true,"DriftwoodRerollPreviewCount":3,"PaelsWingSacrificePredictionEnabled":true,"RestSitePredictionEnabled":true,"CardPlayPredictionEnabled":true,"PotionPredictionEnabled":true,"CombatTransformPredictionEnabled":true,"EndTurnPredictionEnabled":true,"EndTurnPredictionDisplayMode":"EndTurnButtonHover","EndTurnHealthBarForecastDisplayMode":"AlwaysDuringPlayerTurn","FrozenEyeEnabled":true,"ShufflePredictionEnabled":true,"CombatCardGenerationPredictionEnabled":true,"CardDrawPredictionEnabled":true,"CombatCardSelectionPredictionEnabled":true,"CombatOrbGenerationPredictionEnabled":true,"PotionCardGenerationPredictionEnabled":true,"PotionDrawPredictionEnabled":true,"PotionGenerationPredictionEnabled":true,"AutoPlayFromDrawPilePredictionEnabled":true,"InferCardOnPlayEffectsEnabled":true,"ChainedCardEffectPredictionEnabled":true,"CombatDamagePredictionEnabled":true,"OrbDamagePredictionEnabled":true,"RandomTargetAttackPredictionEnabled":true,"DamagePredictionHealthBarColor":"#E8C91A","DebugSettingsEnabled":false,"EventDebugRerollEnabled":false}
+[INFO] [RandomForeseer] RandomForeseer initialized.
+[INFO] Finished mod initialization for '随机数预测 (RandomForeseer)' (RandomForeseer).
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3838672055\Zhs113Fix\Zhs113Fix.pck
+[INFO] Finished mod initialization for '113版本汉化优化' (Zhs113Fix).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\PrismaticGemFilter\PrismaticGemFilter.dll
+[INFO] Calling initializer method of type PrismaticGemFilter.Plugin for PrismaticGemFilter, Version=0.0.10.0, Culture=neutral, PublicKeyToken=null
+[INFO] [com.ritsukage.sts2-RitsuLib] [PrismaticGemFilter.texts] Loaded translations: language='zhs', fallback='eng', entries=66, local=66, fallbackEntries=0, sources=2 (local=1, fallback=1)
+[INFO] [PrismaticGemFilter] [settings] registered. mode=PrismaticGemOnly master=True groups=11/15 exemptions=8 pages=16
+[INFO] [PrismaticGemFilter] [Patcher - candidate filter] Applying 1 patches...
+[INFO] [PrismaticGemFilter] [Patcher - candidate filter] Patch application complete: 1 applied, 0 ignored, 0 failed, 1 total
+[INFO] [PrismaticGemFilter] [Patcher - candidate filter] All patches applied successfully
+[INFO] [PrismaticGemFilter] ready. groups=15 entries=178 exemptions=8 schema=2 patches=1/1
+[INFO] Finished mod initialization for '棱彩宝石过滤 Prismatic Gem Filter' (PrismaticGemFilter).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3839332861\FoolMelodyReplacer.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3839332861\FoolMelodyReplacer.pck
+[INFO] Calling initializer method of type FoolMelodyReplacer.FoolMelodyReplacerCode.MainFile for FoolMelodyReplacer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [BaseLib] Registered config for mod FoolMelodyReplacer
+[INFO] Finished mod initialization for 'Fool Melody Replacer' (FoolMelodyReplacer).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3755773515\SplashExclusion.dll
+[INFO] Calling initializer method of type SplashExclusion.SplashExclusionMod for SplashExclusion, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [SplashExclusion] RandomForeseer 兼容补丁已安装：19 个来源镜像。
+[INFO] Finished mod initialization for 'SplashExclusion' (SplashExclusion).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3840050168\FoolMotion.dll
+[INFO] Calling initializer method of type FoolMotion.FoolMotionMod for FoolMotion, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [FoolMotion] loaded: DivineShot, WahSymphony, RainShot, HeavyShot, RapidShot, RepeatShot, MelodicShot, BlossomShot, SkyShot, WahHammer, WahBlast, ChoChorus, HarmonicShield, LostLute, MythicForm, Quietus, Florescence, WahChoKi, Coda, BlotOutTheSky, Brace, ChoKi, ChoLimbs, Enrapture, Growth, KiRest, LockedIn, Rummage, Uproot, Wrest, Vitriol, WhistlingArrows, Yoga, Anguish, DislikeYou, EpicRetrieval, PunchOfJoy, RhythmStrike, SteadyCadence, Timber, HobblingShot, TrickShot, WahCho, WahKi, AllIsWell, Archery, Compost, HiddenRoots, Motif, SerratedArrows, SongPath, Tune, ViolentChord, Encore, Ensemble, ExplosiveArrows, CoveringFire, Quiver, Ecstasy, Ennui, Honing, Lullaby, Simpleton, Yah, Bounce, BrightenUp, SelfDeprecate, ShowOff, KiVerse, Nail, TheFool, TheMagician, TheHighPriestess, TheEmpress, TheEmperor, TheHierophant, TheLovers, TheChariot, Strength, TheHermit, WheelOfFortune, Justice, TheHangedMan, Death, Temperance, TheDevil, TheTower, TheStar, TheMoon, TheSun, Judgement, TheWorld, StrikeFool, MourningBlow, SorrowfulStrike, BowSmack, ArrowStab, KiHop, KiWhip, WahTouch, WahSweep, FoolishShot, TheShot, Joy, QuickShot, DefendFool, ChoFirm, ChoReady, ChoBarbs, DeepStretch, Jest, KiChant, Nock, Recall
+[INFO] Finished mod initialization for '愚者 · 全卡动作特效 The Fool: Full Deck in Motion' (FoolMotion).
+[WARN] Mod Merchant2CuteII does not declare min game version. Assuming that it is supported.
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3748331824\Merchant2CuteII.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3748331824\Merchant2CuteII.pck
+[INFO] Calling initializer method of type Merchant2CuteII.Merchant2CuteIIMod for Merchant2CuteII, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null
+[Merchant2CuteII] game=v0.113.1, legacyAnimSig=no, legacyVisualLookup=no
+[Merchant2CuteII] config: reading from user://merchant2cute_config.json
+[Merchant2CuteII] Legacy config (schema 1) detected and migrated to schema 2.
+[Merchant2CuteII] Harmony patches: applied=12, failed=0
+[Merchant2CuteII] Preloaded: res://animations/customs/merchant/leg.png
+[Merchant2CuteII] Preloaded audio resource: res://debug_audio/jp/welcome.mp3
+[Merchant2CuteII] Preloaded audio resource: res://debug_audio/jp/thanks.mp3
+[Merchant2CuteII] Ready. real[body=own, handSet=own, hand=hand, leg=on] fake[body=own, handSet=own, hand=hand] voice[lang=jp, db=0]
+[INFO] Finished mod initialization for 'Merchant2CuteII' (Merchant2CuteII).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3798006173\PixelPotions.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3798006173\PixelPotions.pck
+[INFO] Calling initializer method of type PixelPotions.PixelPotionsCode.MainFile for PixelPotions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] Finished mod initialization for 'PixelPotions' (PixelPotions).
+[WARN] Mod Rewind does not declare min game version. Assuming that it is supported.
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3747557762\Rewind.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3747557762\Rewind.pck
+[INFO] Calling initializer method of type Rewind.MainFile for Rewind, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [sts2.piyixiajiuhenfen.rewind] I18n loaded: zhs (104 keys)
+[INFO] [sts2.piyixiajiuhenfen.rewind] Encrypted stats loaded: 138 wins, 95 clean wins
+[INFO] [sts2.piyixiajiuhenfen.rewind] Rewind v0.26.20 initialized! F4=Rewind, F8=CopySeed, F9=Checkpoint, Reroll=None
+[INFO] Finished mod initialization for '皮皮倒带: Rewind' (Rewind).
+[WARN] Mod ModConfig does not declare min game version. Assuming that it is supported.
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3747557003\ModConfig.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3747557003\ModConfig.pck
+[INFO] Calling initializer method of type ModConfig.MainFile for ModConfig, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [sts2.piyixiajiuhenfen.modconfig] LocManager.Instance is null at init, will use lazy detection
+[INFO] [sts2.piyixiajiuhenfen.modconfig] ModConfig v0.2.4 initialized! (zero Harmony, cross-platform)
+[INFO] Finished mod initialization for '皮皮配置: ModConfig' (ModConfig).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3747497501\RegentFX.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3747497501\RegentFX.pck
+[INFO] Calling initializer method of type RegentFX.Scripts.Entry for RegentFX, Version=0.5.2.0, Culture=neutral, PublicKeyToken=null
+[INFO] [RegentFX] Preloading 32 RegentFX assets synchronously
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [35] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [36] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [37] void System.Threading.Tasks.Task.RunContinuations(object)
+       [38] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [39] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [40] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [41] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [35] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [36] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [37] void System.Threading.Tasks.Task.RunContinuations(object)
+       [38] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [39] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [40] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [41] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [35] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [36] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [37] void System.Threading.Tasks.Task.RunContinuations(object)
+       [38] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [39] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [40] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [41] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [35] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [36] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [37] void System.Threading.Tasks.Task.RunContinuations(object)
+       [38] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [39] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [40] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [41] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [35] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [36] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [37] void System.Threading.Tasks.Task.RunContinuations(object)
+       [38] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [39] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [40] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [41] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [35] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [36] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [37] void System.Threading.Tasks.Task.RunContinuations(object)
+       [38] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [39] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [40] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [41] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [35] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [36] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [37] void System.Threading.Tasks.Task.RunContinuations(object)
+       [38] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [39] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [40] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [41] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [35] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [36] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [37] void System.Threading.Tasks.Task.RunContinuations(object)
+       [38] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [39] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [40] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [41] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [35] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [36] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [37] void System.Threading.Tasks.Task.RunContinuations(object)
+       [38] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [39] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [40] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [41] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [35] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [36] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [37] void System.Threading.Tasks.Task.RunContinuations(object)
+       [38] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [39] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [40] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [41] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [35] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [36] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [37] void System.Threading.Tasks.Task.RunContinuations(object)
+       [38] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [39] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [40] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [41] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [35] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [36] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [37] void System.Threading.Tasks.Task.RunContinuations(object)
+       [38] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [39] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [40] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [41] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [35] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [36] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [37] void System.Threading.Tasks.Task.RunContinuations(object)
+       [38] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [39] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [40] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [41] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)
+[INFO] [RegentFX] Preloading complete: 32 succeeded, 0 failed
+[INFO] RegentFX Omnistar 0.5.2 Load Complete![万象辉星]加载成功!
+[INFO] Finished mod initialization for '万象辉星[RegentFX]' (RegentFX).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\CharacterModIsolation\CharacterModIsolation.dll
+[INFO] Calling initializer method of type CharacterModIsolation.Plugin for CharacterModIsolation, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [CharacterModIsolation] [init] CharacterModIsolation 0.1.0.0
+[INFO] Finished mod initialization for '角色模组隔离 / Character Mod Isolation' (CharacterModIsolation).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3784531815\MGRMod.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3784531815\MGRMod.pck
+[INFO] Calling initializer method of type MGRMod.Loader.Bootstrap for MGRMod.Loader, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] Associated assembly MGRMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null with mod MGRMod
+[INFO] [MGRMod] Registered deferred MGR FMOD bank 'res://MGRMod/audio/MGR.bank' and GUID mappings 'res://MGRMod/audio/GUIDs.txt'.
+[INFO] [MGRMod] [Patcher - runtime integration] Applying 19 patches...
+[INFO] [MGRMod] [Patcher - runtime integration] Patch application complete: 19 applied, 0 ignored, 0 failed, 19 total
+[INFO] [MGRMod] [Patcher - runtime integration] All patches applied successfully
+[INFO] [com.ritsukage.sts2-RitsuLib] [Telemetry] Registered applicant 'MGRMod' -> https://us.i.posthog.com/batch/ (1 request(s)).
+[INFO] [MGRMod] MGR telemetry will exclude only runs that actually invoke a Loadout mutation.
+[INFO] [MGRMod] MGRMod initialized.
+[MGRMod.Loader] Loaded native 0.113.0 payload for host v0.113.1.
+[INFO] Finished mod initialization for 'MGR' (MGRMod).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertDiamondDiadem\RevertDiamondDiadem.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertDiamondDiadem\RevertDiamondDiadem.pck
+[INFO] Calling initializer method of type RevertDiamondDiadem.ModEntry for RevertDiamondDiadem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [RevertDiamondDiadem] host shape: own AfterSideTurnStart=True, legacy power present=False
+[INFO] [RevertDiamondDiadem] [Patcher - revert_main] Applying 11 patches...
+[INFO] [RevertDiamondDiadem] [Patcher - revert_main] [Critical] reddia_half_damage_AbstractModel_ModifyDamageMultiplicative__1 - Ignored: Target method not found but patch is marked ignorable: AbstractModel.ModifyDamageMultiplicative
+[INFO] [RevertDiamondDiadem] [Patcher - revert_main] Patch application complete: 10 applied, 1 ignored, 0 failed, 11 total
+[INFO] [RevertDiamondDiadem] [Patcher - revert_main] All required patches applied; 1 optional patch target(s) were ignored
+[INFO] [RevertDiamondDiadem] initialized; diamond diadem reverted to legacy (v0.107) behavior.
+[INFO] Finished mod initialization for '回调头冠（RevertDiamondDiadem）' (RevertDiamondDiadem).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\DarvRelicPoolMod\DarvRelicPoolMod.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\DarvRelicPoolMod\DarvRelicPoolMod.pck
+[INFO] Calling initializer method of type DarvRelicPoolMod.ModEntry for DarvRelicPoolMod, Version=1.0.4.0, Culture=neutral, PublicKeyToken=null
+[INFO] DarvRelicPoolMod: settings cache loaded.
+[INFO] [com.ritsukage.sts2-RitsuLib] [settings] Loaded translations: language='zhs', fallback='eng', entries=32, local=32, fallbackEntries=0, sources=2 (local=1, fallback=1)
+[INFO] [DarvRelicPoolMod] [Patcher - darv_cosmetic] Applying 5 patches...
+[INFO] [DarvRelicPoolMod] [Patcher - darv_cosmetic] Patch application complete: 5 applied, 0 ignored, 0 failed, 5 total
+[INFO] [DarvRelicPoolMod] [Patcher - darv_cosmetic] All patches applied successfully
+[INFO] [DarvRelicPoolMod] [Patcher - darv] Applying 3 patches...
+[INFO] [DarvRelicPoolMod] [Patcher - darv] Patch application complete: 3 applied, 0 ignored, 0 failed, 3 total
+[INFO] [DarvRelicPoolMod] [Patcher - darv] All patches applied successfully
+[INFO] DarvRelicPoolMod: initialized.
+[INFO] Finished mod initialization for '重做达弗（Redesign Darv）' (DarvRelicPoolMod).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\JugglingCounterMod\JugglingCounterMod.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\JugglingCounterMod\JugglingCounterMod.pck
+[INFO] Calling initializer method of type JugglingCounterMod.ModEntry for JugglingCounterMod, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null
+[INFO] JugglingCounterMod: loading...
+[INFO] JugglingCounterMod: Harmony patches applied (Juggling attack counter UI)
+[INFO] Finished mod initialization for '杂耍计数 (Juggling Counter)' (JugglingCounterMod).
+[WARN] Mod RevertRocketPunch declares version 1.0 which is not a valid Semantic Version
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertRocketPunch\RevertRocketPunch.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertRocketPunch\RevertRocketPunch.pck
+[INFO] Calling initializer method of type RevertRocketPunch.ModEntry for RevertRocketPunch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] RevertRocketPunch: loading...
+[INFO] RevertRocketPunch: Harmony patches applied (Rocket Punch -> pre-v0.110 behavior)
+[INFO] Finished mod initialization for '回调火箭飞拳（RevertRocketPunch）' (RevertRocketPunch).
+[WARN] Mod RevertTheSealedThrone declares version 1.0 which is not a valid Semantic Version
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertTheSealedThrone\RevertTheSealedThrone.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertTheSealedThrone\RevertTheSealedThrone.pck
+[INFO] Calling initializer method of type RevertTheSealedThrone.ModEntry for RevertTheSealedThrone, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] RevertTheSealedThrone: loading...
+[INFO] RevertTheSealedThrone: Harmony patches applied (The Sealed Throne upgrade -> Innate)
+[INFO] Finished mod initialization for '回调王座（Revert The Sealed Throne）' (RevertTheSealedThrone).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertSynchronize\RevertSynchronize.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertSynchronize\RevertSynchronize.pck
+[INFO] Calling initializer method of type RevertSynchronize.ModEntry for RevertSynchronize, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] RevertSynchronize: loading...
+[INFO] RevertSynchronize: Harmony patches applied (Synchronize -> v0.110 behavior); conditional: CanonicalKeywords(107)=False, ResultPile(107)=False
+[INFO] Finished mod initialization for '回调同步（RevertSynchronize）' (RevertSynchronize).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertBrightestFlame\RevertBrightestFlame.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertBrightestFlame\RevertBrightestFlame.pck
+[INFO] Calling initializer method of type RevertBrightestFlame.ModEntry for RevertBrightestFlame, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] RevertBrightestFlame: loading...
+[INFO] RevertBrightestFlame: Harmony patches applied (Brightest Flame fully reverted to pre-0.111.0 behavior)
+[INFO] Finished mod initialization for '回调至亮之焰（RevertBrightestFlame）' (RevertBrightestFlame).
+[WARN] Mod OstyDamageDetectionMod declares version 1.0 which is not a valid Semantic Version
+[WARN] Mod OstyDamageDetectionMod does not declare min game version. Assuming that it is supported.
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\OstyDamageDetectionMod\OstyDamageDetectionMod.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\OstyDamageDetectionMod\OstyDamageDetectionMod.pck
+[INFO] Calling initializer method of type OstyDamageDetectionMod.ModEntry for OstyDamageDetectionMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] OstyDamageDetectionMod: loading...
+[INFO] OstyDamageDetectionMod: SuckPower.AfterAttack patched
+[INFO] OstyDamageDetectionMod: ImbalancedPower.AfterDamageGiven patched
+[INFO] OstyDamageDetectionMod: applied 2/2 patches
+[INFO] Finished mod initialization for '奥斯提受击判定修改Osty Damage Detection Modification' (OstyDamageDetectionMod).
+[WARN] Mod ScrawlReplacementMod declares version 1.0 which is not a valid Semantic Version
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\ScrawlReplacementMod\ScrawlReplacementMod.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\ScrawlReplacementMod\ScrawlReplacementMod.pck
+[INFO] Calling initializer method of type ScrawlReplacementMod.ModEntry for ScrawlReplacementMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] ScrawlReplacementMod: loading...
+[INFO] ScrawlReplacementMod: Harmony patches applied (Scrawl -> StS1 style)
+[INFO] Finished mod initialization for '潦草急就 (Scrawl)' (ScrawlReplacementMod).
+[WARN] Mod CalculatedGambleReplacementMod declares version 1.0 which is not a valid Semantic Version
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\CalculatedGambleReplacementMod\CalculatedGambleReplacementMod.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\CalculatedGambleReplacementMod\CalculatedGambleReplacementMod.pck
+[INFO] Calling initializer method of type CalculatedGambleReplacementMod.ModEntry for CalculatedGambleReplacementMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] CalculatedGambleReplacementMod: loading...
+[INFO] CalculatedGambleReplacementMod: Harmony patches applied (Calculated Gamble -> StS1 style)
+[INFO] Finished mod initialization for '计算下注 (Calculated Gamble)' (CalculatedGambleReplacementMod).
+[WARN] Mod EvolveReplacementMod declares version 1.0 which is not a valid Semantic Version
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\EvolveReplacementMod\EvolveReplacementMod.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\EvolveReplacementMod\EvolveReplacementMod.pck
+[INFO] Calling initializer method of type EvolveReplacementMod.ModEntry for EvolveReplacementMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] EvolveReplacementMod: loading...
+[INFO] EvolveReplacementMod: Harmony patches applied (Iteration -> Evolve)
+[INFO] Finished mod initialization for '进化 (Evolve)' (EvolveReplacementMod).
+[WARN] Mod RecycleReplacementMod declares version 1.1 which is not a valid Semantic Version
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RecycleReplacementMod\RecycleReplacementMod.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RecycleReplacementMod\RecycleReplacementMod.pck
+[INFO] Calling initializer method of type RecycleReplacementMod.ModEntry for RecycleReplacementMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] RecycleReplacementMod: loading...
+[INFO] RecycleReplacementMod: Harmony patches applied (Scavenge -> Recycle)
+[INFO] Finished mod initialization for '回收 (Recycle)' (RecycleReplacementMod).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\CorpseExplosionReplacementMod\CorpseExplosionReplacementMod.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\CorpseExplosionReplacementMod\CorpseExplosionReplacementMod.pck
+[INFO] Calling initializer method of type CorpseExplosionReplacementMod.ModEntry for CorpseExplosionReplacementMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] CorpseExplosionReplacementMod: loading...
+[INFO] CorpseExplosionReplacementMod: Harmony patches applied (Outbreak -> Corpse Explosion)
+[INFO] CorpseExplosionReplacementMod: AbstractModel.AfterDeath hook applied
+[INFO] Finished mod initialization for '尸爆术替换（Corpse Explosion）（beta）' (CorpseExplosionReplacementMod).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\ReaperReplacementMod\ReaperReplacementMod.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\ReaperReplacementMod\ReaperReplacementMod.pck
+[INFO] Calling initializer method of type ReaperReplacementMod.ModEntry for ReaperReplacementMod, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] ReaperReplacementMod: loading...
+[INFO] ReaperReplacementMod: Harmony patches applied (NotYet -> Reaper)
+[INFO] Finished mod initialization for '死亡收割 (Reaper)' (ReaperReplacementMod).
+[WARN] Mod PhantomKillerMod declares version 1.0 which is not a valid Semantic Version
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\PhantomKillerMod\PhantomKillerMod.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\PhantomKillerMod\PhantomKillerMod.pck
+[INFO] Calling initializer method of type PhantomKillerMod.ModEntry for PhantomKillerMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] PhantomKillerMod: loading...
+[INFO] PhantomKillerMod: Harmony patches applied (ShadowStep -> Phantasmal Killer)
+[INFO] Finished mod initialization for '幻影杀手 (Phantasmal Killer)' (PhantomKillerMod).
+[INFO] [com.ritsukage.sts2-RitsuLib] 
+=== RitsuLib Mod Debug Information ===
+Host Version: v0.113.1
+RitsuLib Version: 0.6.14 [compat branch: 0.113.0]
+BaseLib: v3.4.8
+Loaded Mods: 39
+Registered Mods: 81
+Mod List:
+  * CookieCursor (0.7.0) workshopId=3749027556
+  * RitsuLib [STS2-RitsuLib] (0.6.14) workshopId=3747602295
+  * Workshop Uploader [STS2-WorkshopUploader] (0.1.18) workshopId=3748678645
+  * BaseLib Compatibility Helper [BaseLibCompatibilityHelper] (v0.0.0) workshopId=3737335127
+  * BaseLib (v3.4.8) workshopId=3737335127
+  * 铁画银钩 | 细致地优化中文字体 [StS2ZhFont] (v1.1.2) workshopId=3773102248
+  * Quick Restart [QuickRestart] (v2.0.0) workshopId=3737322022
+  * Loadout (v0.6.2) workshopId=3756859747
+  * KaguyaSilentRavenSkin (v0.1.7) workshopId=3786286239
+  * KaguyaRegentMSGKSkin (v0.2.5) workshopId=3747762234
+  * JmcModLib (1.10.0) workshopId=3747526103
+  * 随机数预测 (RandomForeseer) [RandomForeseer] (0.15.3) workshopId=3747531952
+  * 113版本汉化优化 [Zhs113Fix] (0.1.9) workshopId=3838672055
+  * 棱彩宝石过滤 Prismatic Gem Filter [PrismaticGemFilter] (0.0.10)
+  * Fool Melody Replacer [FoolMelodyReplacer] (v0.3.1) workshopId=3839332861
+  * SplashExclusion (1.2.0) workshopId=3755773515
+  * 愚者 · 全卡动作特效 The Fool: Full Deck in Motion [FoolMotion] (1.2.1) workshopId=3840050168
+  * Merchant2CuteII (v2.0.0) workshopId=3748331824
+  * PixelPotions (v1.0.0) workshopId=3798006173
+  * 皮皮倒带: Rewind [Rewind] (0.26.20) workshopId=3747557762
+  * 皮皮配置: ModConfig [ModConfig] (0.2.4) workshopId=3747557003
+  * 万象辉星[RegentFX] [RegentFX] (0.5.2) workshopId=3747497501
+  * 角色模组隔离 / Character Mod Isolation [CharacterModIsolation] (0.1.0)
+  * MGR [MGRMod] (0.8.1) workshopId=3784531815
+  * 回调头冠（RevertDiamondDiadem） [RevertDiamondDiadem] (1.0.0)
+  * 重做达弗（Redesign Darv） [DarvRelicPoolMod] (1.0.4)
+  * 杂耍计数 (Juggling Counter) [JugglingCounterMod] (1.0.1)
+  * 回调火箭飞拳（RevertRocketPunch） [RevertRocketPunch] (1.0)
+  * 回调王座（Revert The Sealed Throne） [RevertTheSealedThrone] (1.0)
+  * 回调同步（RevertSynchronize） [RevertSynchronize] (1.2.2)
+  * 回调至亮之焰（RevertBrightestFlame） [RevertBrightestFlame] (1.1.2)
+  * 奥斯提受击判定修改Osty Damage Detection Modification [OstyDamageDetectionMod] (1.0)
+  * 潦草急就 (Scrawl) [ScrawlReplacementMod] (1.0)
+  * 计算下注 (Calculated Gamble) [CalculatedGambleReplacementMod] (1.0)
+  * 进化 (Evolve) [EvolveReplacementMod] (1.0)
+  * 回收 (Recycle) [RecycleReplacementMod] (1.1)
+  * 尸爆术替换（Corpse Explosion）（beta） [CorpseExplosionReplacementMod] (1.0.1)
+  * 死亡收割 (Reaper) [ReaperReplacementMod] (1.1.0)
+  * 幻影杀手 (Phantasmal Killer) [PhantomKillerMod] (1.0)
+
+[INFO]  --- RUNNING MODDED! --- Loaded 39 mods (81 total)
+[WARN] Asset not cached: res://scenes/debug/dev_console.tscn
+[INFO] OVERWRITING cloud saves with local saves.
+[WARN] Asset not cached: res://scenes/cards/card.tscn
+[WARN] Asset not cached: res://scenes/cards/holders/grid_card_holder.tscn
+[INFO] [com.ritsukage.sts2-RitsuLib] [UpdateCheck] Automatic scheduler started: essential initialization starting.
+[INFO] [com.ritsukage.sts2-RitsuLib] [SteamWorkshopUpdate] Auto check requested.
+[INFO] [com.ritsukage.sts2-RitsuLib] [SteamWorkshopUpdate] Starting Auto check. SteamInitialized=True.
+[INFO] [com.ritsukage.sts2-RitsuLib] [SteamWorkshopUpdate] Steamworks Workshop binding initialized.
+[INFO] AtlasManager: Loaded ui_atlas with 113 sprites
+[INFO] AtlasManager: Loaded compressed_atlas with 56 sprites
+[INFO] [com.ritsukage.sts2-RitsuLib] [SteamWorkshopUpdate] Scanning subscribed Workshop items. Reported=64, Returned=64.
+[INFO] Associated assembly RandomForeseer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null with mod RandomForeseer
+[INFO] [DarvRelicPoolMod] [Content] Registered shared relic pool: DarvModRelicPool (id=DARV_RELIC_POOL_MOD_RELIC_POOL_DARV_MOD_RELIC_POOL)
+[INFO] [DarvRelicPoolMod] [Content] Registered relic: AncientBigHat (id=DARV_RELIC_POOL_MOD_RELIC_ANCIENT_BIG_HAT) -> DarvModRelicPool
+[INFO] [DarvRelicPoolMod] [Content] Registered relic: AncientBookmark (id=DARV_RELIC_POOL_MOD_RELIC_ANCIENT_BOOKMARK) -> DarvModRelicPool
+[INFO] [DarvRelicPoolMod] [Content] Registered relic: AncientIvoryTile (id=DARV_RELIC_POOL_MOD_RELIC_ANCIENT_IVORY_TILE) -> DarvModRelicPool
+[INFO] [DarvRelicPoolMod] [Content] Registered relic: AncientLunarPastry (id=DARV_RELIC_POOL_MOD_RELIC_ANCIENT_LUNAR_PASTRY) -> DarvModRelicPool
+[INFO] [DarvRelicPoolMod] [Content] Registered relic: AncientMiniRegent (id=DARV_RELIC_POOL_MOD_RELIC_ANCIENT_MINI_REGENT) -> DarvModRelicPool
+[INFO] [DarvRelicPoolMod] [Content] Registered relic: AncientOrangeDough (id=DARV_RELIC_POOL_MOD_RELIC_ANCIENT_ORANGE_DOUGH) -> DarvModRelicPool
+[INFO] [DarvRelicPoolMod] [Content] Registered relic: HoveringKite (id=DARV_RELIC_POOL_MOD_RELIC_HOVERING_KITE) -> DarvModRelicPool
+[INFO] [DarvRelicPoolMod] [Content] Registered relic: Inserter (id=DARV_RELIC_POOL_MOD_RELIC_INSERTER) -> DarvModRelicPool
+[INFO] [DarvRelicPoolMod] [Content] Registered relic: MarkOfPain (id=DARV_RELIC_POOL_MOD_RELIC_MARK_OF_PAIN) -> DarvModRelicPool
+[INFO] [DarvRelicPoolMod] [Content] Registered relic: NuclearBattery (id=DARV_RELIC_POOL_MOD_RELIC_NUCLEAR_BATTERY) -> DarvModRelicPool
+[INFO] [DarvRelicPoolMod] [Content] Registered relic: RunicCube (id=DARV_RELIC_POOL_MOD_RELIC_RUNIC_CUBE) -> DarvModRelicPool
+[INFO] [DarvRelicPoolMod] [Content] Registered relic: WristBlade (id=DARV_RELIC_POOL_MOD_RELIC_WRIST_BLADE) -> DarvModRelicPool
+[INFO] [com.ritsukage.sts2-RitsuLib] [AutoRegister] Processed assembly 'DarvRelicPoolMod': 13 operation(s), 13 succeeded, 0 failed.
+[INFO] [MGRMod] [Content] Registered card: Adios (id=MGR_MOD_CARD_ADIOS) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: Bird (id=MGR_MOD_CARD_BIRD) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: ByakkoyaGirl (id=MGR_MOD_CARD_BYAKKOYA_GIRL) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: CanonForm (id=MGR_MOD_CARD_CANON_FORM) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: ChaosMagic (id=MGR_MOD_CARD_CHAOS_MAGIC) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: FlawedGirl0 (id=MGR_MOD_CARD_FLAWED_GIRL_0) -> TokenCardPool
+[INFO] [MGRMod] [Content] Registered card: FlawedGirl1 (id=MGR_MOD_CARD_FLAWED_GIRL_1) -> TokenCardPool
+[INFO] [MGRMod] [Content] Registered card: Chorus (id=MGR_MOD_CARD_CHORUS) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: CosmoSpice (id=MGR_MOD_CARD_COSMO_SPICE) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: CowardRocket (id=MGR_MOD_CARD_COWARD_ROCKET) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: CrimeAndPunishment (id=MGR_MOD_CARD_CRIME_AND_PUNISHMENT) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: CubicPrism (id=MGR_MOD_CARD_CUBIC_PRISM) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: CumulonimbusGraffiti (id=MGR_MOD_CARD_CUMULONIMBUS_GRAFFITI) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: DaybreakFrontline (id=MGR_MOD_CARD_DAYBREAK_FRONTLINE) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: Dazzling (id=MGR_MOD_CARD_DAZZLING) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: DelusionSketch (id=MGR_MOD_CARD_DELUSION_SKETCH) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: DonutHole (id=MGR_MOD_CARD_DONUT_HOLE) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: DualLovers (id=MGR_MOD_CARD_DUAL_LOVERS) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: EastOfTimeline (id=MGR_MOD_CARD_EAST_OF_TIMELINE) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: ElectricAngel (id=MGR_MOD_CARD_ELECTRIC_ANGEL) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: Encore (id=MGR_MOD_CARD_ENCORE) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: EverydayMiracles (id=MGR_MOD_CARD_EVERYDAY_MIRACLES) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: Fade (id=MGR_MOD_CARD_FADE) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: FinalShot (id=MGR_MOD_CARD_FINAL_SHOT) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: FlawedGirl (id=MGR_MOD_CARD_FLAWED_GIRL) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: FlowerFuneral (id=MGR_MOD_CARD_FLOWER_FUNERAL) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: Frenzy (id=MGR_MOD_CARD_FRENZY) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: Futariboshi (id=MGR_MOD_CARD_FUTARIBOSHI) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: GalaxyLamp (id=MGR_MOD_CARD_GALAXY_LAMP) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: GhostRule (id=MGR_MOD_CARD_GHOST_RULE) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: GiveItToYou (id=MGR_MOD_CARD_GIVE_IT_TO_YOU) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: GuidingStars (id=MGR_MOD_CARD_GUIDING_STARS) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: HeatAbnormal (id=MGR_MOD_CARD_HEAT_ABNORMAL) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: Higan (id=MGR_MOD_CARD_HIGAN) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: HyakkiYagyo (id=MGR_MOD_CARD_HYAKKI_YAGYO) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: HyperdimensionalSong (id=MGR_MOD_CARD_HYPERDIMENSIONAL_SONG) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: ImagineCreate (id=MGR_MOD_CARD_IMAGINE_CREATE) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: Improvise (id=MGR_MOD_CARD_IMPROVISE) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: LeaveItToMe (id=MGR_MOD_CARD_LEAVE_IT_TO_ME) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: LightSong (id=MGR_MOD_CARD_LIGHT_SONG) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: LightUp (id=MGR_MOD_CARD_LIGHT_UP) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: LittleParade (id=MGR_MOD_CARD_LITTLE_PARADE) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: LivingDream (id=MGR_MOD_CARD_LIVING_DREAM) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: LonelyUniverse (id=MGR_MOD_CARD_LONELY_UNIVERSE) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: LongDream (id=MGR_MOD_CARD_LONG_DREAM) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: Lullaby (id=MGR_MOD_CARD_LULLABY) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: MaguroAssault (id=MGR_MOD_CARD_MAGURO_ASSAULT) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: MaguroBash (id=MGR_MOD_CARD_MAGURO_BASH) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: MaguroCleave (id=MGR_MOD_CARD_MAGURO_CLEAVE) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: MaguroDash (id=MGR_MOD_CARD_MAGURO_DASH) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: MaguroReversal (id=MGR_MOD_CARD_MAGURO_REVERSAL) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: MaguroStrike (id=MGR_MOD_CARD_MAGURO_STRIKE) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: Manimani (id=MGR_MOD_CARD_MANIMANI) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: Masterful (id=MGR_MOD_CARD_MASTERFUL) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: MelodicStrike (id=MGR_MOD_CARD_MELODIC_STRIKE) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: MeteorAftermath (id=MGR_MOD_CARD_METEOR_AFTERMATH) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: MeteorShower (id=MGR_MOD_CARD_METEOR_SHOWER) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: MgrDefend (id=MGR_MOD_CARD_MGR_DEFEND) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: MgrStrike (id=MGR_MOD_CARD_MGR_STRIKE) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: MindMirage (id=MGR_MOD_CARD_MIND_MIRAGE) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: NeoNeon (id=MGR_MOD_CARD_NEO_NEON) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: NightWalker (id=MGR_MOD_CARD_NIGHT_WALKER) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: NoteMagic (id=MGR_MOD_CARD_NOTE_MAGIC) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: OdeToUltramarine (id=MGR_MOD_CARD_ODE_TO_ULTRAMARINE) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: OfAllBeings (id=MGR_MOD_CARD_OF_ALL_BEINGS) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: Omnia (id=MGR_MOD_CARD_OMNIA) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: OtomeDissection (id=MGR_MOD_CARD_OTOME_DISSECTION) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: Pale (id=MGR_MOD_CARD_PALE) -> TokenCardPool
+[INFO] [MGRMod] [Content] Registered card: PaleDread (id=MGR_MOD_CARD_PALE_DREAD) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: ParanoiaGirl (id=MGR_MOD_CARD_PARANOIA_GIRL) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: PleasingGhosts (id=MGR_MOD_CARD_PLEASING_GHOSTS) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: Prismatic (id=MGR_MOD_CARD_PRISMATIC) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: ProbablityHill (id=MGR_MOD_CARD_PROBABLITY_HILL) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: Procrastination (id=MGR_MOD_CARD_PROCRASTINATION) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: PuppetClown (id=MGR_MOD_CARD_PUPPET_CLOWN) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: RainbowScale (id=MGR_MOD_CARD_RAINBOW_SCALE) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: Regulus (id=MGR_MOD_CARD_REGULUS) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: Rehearsal (id=MGR_MOD_CARD_REHEARSAL) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: Resonate (id=MGR_MOD_CARD_RESONATE) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: Sacrifice (id=MGR_MOD_CARD_SACRIFICE) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: Samsara (id=MGR_MOD_CARD_SAMSARA) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: SatelliteGirl (id=MGR_MOD_CARD_SATELLITE_GIRL) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: SixthSense (id=MGR_MOD_CARD_SIXTH_SENSE) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: SongOfSiren (id=MGR_MOD_CARD_SONG_OF_SIREN) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: SpringStorm (id=MGR_MOD_CARD_SPRING_STORM) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: StainedNocturne (id=MGR_MOD_CARD_STAINED_NOCTURNE) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: StarfallSea (id=MGR_MOD_CARD_STARFALL_SEA) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: SweetMagic (id=MGR_MOD_CARD_SWEET_MAGIC) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: TinyStarImpact (id=MGR_MOD_CARD_TINY_STAR_IMPACT) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: UniverseOf88Keys (id=MGR_MOD_CARD_UNIVERSE_OF_88_KEYS) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: WarmUp (id=MGR_MOD_CARD_WARM_UP) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: WatchingU (id=MGR_MOD_CARD_WATCHING_U) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: WhiteSouthWind (id=MGR_MOD_CARD_WHITE_SOUTH_WIND) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered card: Yaaaaaa (id=MGR_MOD_CARD_YAAAAAA) -> MgrCardPool
+[INFO] [MGRMod] [Content] Registered character: MgrCharacter (id=MGR_MOD_CHARACTER_MGR_CHARACTER)
+[INFO] [MGRMod] [Content] Registered run model: MgrNoteSystem (id=MGR_MOD_RUN_MGR_NOTE_SYSTEM)
+[INFO] [MGRMod] [Content] Registered potion: BottledNotes (id=MGR_MOD_POTION_BOTTLED_NOTES) -> MgrPotionPool
+[INFO] [MGRMod] [Content] Registered potion: Lozenge (id=MGR_MOD_POTION_LOZENGE) -> MgrPotionPool
+[INFO] [MGRMod] [Content] Registered potion: SoulOfStage (id=MGR_MOD_POTION_SOUL_OF_STAGE) -> MgrPotionPool
+[INFO] [MGRMod] [Content] Registered power: CanonFormPower (id=MGR_MOD_POWER_CANON_FORM_POWER)
+[INFO] [MGRMod] [Content] Registered power: ChaosMagicPower (id=MGR_MOD_POWER_CHAOS_MAGIC_POWER)
+[INFO] [MGRMod] [Content] Registered power: CrimeAndPunishmentPower (id=MGR_MOD_POWER_CRIME_AND_PUNISHMENT_POWER)
+[INFO] [MGRMod] [Content] Registered power: CumulonimbusGraffitiPower (id=MGR_MOD_POWER_CUMULONIMBUS_GRAFFITI_POWER)
+[INFO] [MGRMod] [Content] Registered power: DoubleNotesPower (id=MGR_MOD_POWER_DOUBLE_NOTES_POWER)
+[INFO] [MGRMod] [Content] Registered power: DualLoversPower (id=MGR_MOD_POWER_DUAL_LOVERS_POWER)
+[INFO] [MGRMod] [Content] Registered power: ElectricAngelPower (id=MGR_MOD_POWER_ELECTRIC_ANGEL_POWER)
+[INFO] [MGRMod] [Content] Registered power: FortePower (id=MGR_MOD_POWER_FORTE_POWER)
+[INFO] [MGRMod] [Content] Registered power: FrenzyPower (id=MGR_MOD_POWER_FRENZY_POWER)
+[INFO] [MGRMod] [Content] Registered power: GiveItToYouPower (id=MGR_MOD_POWER_GIVE_IT_TO_YOU_POWER)
+[INFO] [MGRMod] [Content] Registered power: HyperSpeedDebtPower (id=MGR_MOD_POWER_HYPER_SPEED_DEBT_POWER)
+[INFO] [MGRMod] [Content] Registered power: ImagineCreatePower (id=MGR_MOD_POWER_IMAGINE_CREATE_POWER)
+[INFO] [MGRMod] [Content] Registered power: LongDreamPower (id=MGR_MOD_POWER_LONG_DREAM_POWER)
+[INFO] [MGRMod] [Content] Registered power: MindMiragePower (id=MGR_MOD_POWER_MIND_MIRAGE_POWER)
+[INFO] [MGRMod] [Content] Registered power: PrismaticPower (id=MGR_MOD_POWER_PRISMATIC_POWER)
+[INFO] [MGRMod] [Content] Registered power: ProbablityHillPower (id=MGR_MOD_POWER_PROBABLITY_HILL_POWER)
+[INFO] [MGRMod] [Content] Registered power: SamsaraPower (id=MGR_MOD_POWER_SAMSARA_POWER)
+[INFO] [MGRMod] [Content] Registered power: SatelliteGirlPower (id=MGR_MOD_POWER_SATELLITE_GIRL_POWER)
+[INFO] [MGRMod] [Content] Registered power: SixthSensePower (id=MGR_MOD_POWER_SIXTH_SENSE_POWER)
+[INFO] [MGRMod] [Content] Registered power: StainedNocturnePower (id=MGR_MOD_POWER_STAINED_NOCTURNE_POWER)
+[INFO] [MGRMod] [Content] Registered power: StarfallSeaPower (id=MGR_MOD_POWER_STARFALL_SEA_POWER)
+[INFO] [MGRMod] [Content] Registered power: TemporaryFortePower (id=MGR_MOD_POWER_TEMPORARY_FORTE_POWER)
+[INFO] [MGRMod] [Content] Registered power: UniverseOf88KeysPower (id=MGR_MOD_POWER_UNIVERSE_OF88_KEYS_POWER)
+[INFO] [MGRMod] [Content] Registered power: WatchingUMarkPower (id=MGR_MOD_POWER_WATCHING_U_MARK_POWER)
+[INFO] [MGRMod] [Content] Registered power: WatchingUPower (id=MGR_MOD_POWER_WATCHING_U_POWER)
+[INFO] [MGRMod] [Content] Registered relic: BlackGoldRecord (id=MGR_MOD_RELIC_BLACK_GOLD_RECORD) -> MgrRelicPool
+[INFO] [MGRMod] [Content] Registered relic: BookOfGrudges (id=MGR_MOD_RELIC_BOOK_OF_GRUDGES) -> MgrRelicPool
+[INFO] [MGRMod] [Content] Registered relic: ClickTrack (id=MGR_MOD_RELIC_CLICK_TRACK) -> MgrRelicPool
+[INFO] [MGRMod] [Content] Registered relic: GuitarPick (id=MGR_MOD_RELIC_GUITAR_PICK) -> MgrRelicPool
+[INFO] [MGRMod] [Content] Registered relic: JourneyWithMe (id=MGR_MOD_RELIC_JOURNEY_WITH_ME) -> MgrRelicPool
+[INFO] [MGRMod] [Content] Registered relic: LittleAngel (id=MGR_MOD_RELIC_LITTLE_ANGEL) -> MgrRelicPool
+[INFO] [MGRMod] [Content] Registered relic: Maguroyaki (id=MGR_MOD_RELIC_MAGUROYAKI) -> MgrRelicPool
+[INFO] [MGRMod] [Content] Registered relic: MgrFumo (id=MGR_MOD_RELIC_MGR_FUMO) -> MgrRelicPool
+[INFO] [MGRMod] [Content] Registered relic: MyFriend (id=MGR_MOD_RELIC_MY_FRIEND) -> MgrRelicPool
+[INFO] [MGRMod] [Content] Registered relic: PaleFlower (id=MGR_MOD_RELIC_PALE_FLOWER) -> MgrRelicPool
+[INFO] [MGRMod] [Content] Registered relic: YourStage (id=MGR_MOD_RELIC_YOUR_STAGE) -> MgrRelicPool
+[INFO] [MGRMod] [Content] Registered starter relic: MyFriend (id=MGR_MOD_RELIC_MY_FRIEND) x1 -> MgrCharacter
+[INFO] [MGRMod] [Content] Registered starter card: MgrStrike (id=MGR_MOD_CARD_MGR_STRIKE) x4 -> MgrCharacter
+[INFO] [MGRMod] [Content] Registered starter card: MgrDefend (id=MGR_MOD_CARD_MGR_DEFEND) x4 -> MgrCharacter
+[INFO] [MGRMod] [Content] Registered starter card: LittleParade (id=MGR_MOD_CARD_LITTLE_PARADE) x1 -> MgrCharacter
+[INFO] [MGRMod] [Content] Registered starter card: Lullaby (id=MGR_MOD_CARD_LULLABY) x1 -> MgrCharacter
+[INFO] [MGRMod] [Keywords] Registered keyword: MGR_MOD_KEYWORD_ATTACK_NOTE (CardKeyword=0x57A79B37)
+[INFO] [MGRMod] [Keywords] Registered keyword: MGR_MOD_KEYWORD_BASIC_NOTES (CardKeyword=0x6B18663B)
+[INFO] [MGRMod] [Keywords] Registered keyword: MGR_MOD_KEYWORD_CHORD (CardKeyword=0x6C6CBC85)
+[INFO] [MGRMod] [Keywords] Registered keyword: MGR_MOD_KEYWORD_CURSE_NOTE (CardKeyword=0x696479AE)
+[INFO] [MGRMod] [Keywords] Registered keyword: MGR_MOD_KEYWORD_EMPTY_NOTE_SLOT (CardKeyword=0x4C99B0BE)
+[INFO] [MGRMod] [Keywords] Registered keyword: MGR_MOD_KEYWORD_FORTE (CardKeyword=0x6C1116C1)
+[INFO] [MGRMod] [Keywords] Registered keyword: MGR_MOD_KEYWORD_GHOST_NOTE (CardKeyword=0x4865F791)
+[INFO] [MGRMod] [Keywords] Registered keyword: MGR_MOD_KEYWORD_OMNIA_NOTE (CardKeyword=0x6016E2AF)
+[INFO] [MGRMod] [Keywords] Registered keyword: MGR_MOD_KEYWORD_PERFORMANCE (CardKeyword=0x5F935FB7)
+[INFO] [MGRMod] [Keywords] Registered keyword: MGR_MOD_KEYWORD_PHRASE_END (CardKeyword=0x5FFDA6C6)
+[INFO] [MGRMod] [Keywords] Registered keyword: MGR_MOD_KEYWORD_PHRASE_START (CardKeyword=0x6575B756)
+[INFO] [MGRMod] [Keywords] Registered keyword: MGR_MOD_KEYWORD_POWER_NOTE (CardKeyword=0x527519B8)
+[INFO] [MGRMod] [Keywords] Registered keyword: MGR_MOD_KEYWORD_SKILL_NOTE (CardKeyword=0x47A5B5BA)
+[INFO] [MGRMod] [Keywords] Registered keyword: MGR_MOD_KEYWORD_STARRY (CardKeyword=0x4CED1409)
+[INFO] [MGRMod] [Keywords] Registered keyword: MGR_MOD_KEYWORD_STARRY_NOTE (CardKeyword=0x53F09CB2)
+[INFO] [MGRMod] [Keywords] Registered keyword: MGR_MOD_KEYWORD_STATUS_NOTE (CardKeyword=0x7CA74EB4)
+[INFO] [com.ritsukage.sts2-RitsuLib] [AutoRegister] Processed assembly 'MGRMod': 159 operation(s), 159 succeeded, 0 failed.
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - framework core] Applying 1 dynamic patch(es)...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - framework core] Dynamic patch application complete: 1/1 succeeded
+[INFO] [BaseLib] Performing early post-mod init
+[INFO] [BaseLib] Mod Loadout that modifies gameplay has BaseLib dependency; gameplay modification enabled.
+[INFO] [BaseLib] Patching act types for custom encounters and events | DeprecatedAct | Glory | Hive | Overgrowth | Underdocks
+[INFO] [BaseLib] Generating interop methods and properties
+[INFO] Loading locale path=res://localization/eng
+[INFO] Found loc table from mod: eng afflictions.json. Merging with base loc table
+[INFO] Found loc table from mod: eng afflictions.json. Merging with base loc table
+[INFO] Found loc table from mod: eng ancients.json. Merging with base loc table
+[INFO] Found loc table from mod: eng ascension.json. Merging with base loc table
+[INFO] Found loc table from mod: eng card_keywords.json. Merging with base loc table
+[INFO] Found loc table from mod: eng card_keywords.json. Merging with base loc table
+[INFO] Found loc table from mod: eng card_keywords.json. Merging with base loc table
+[INFO] Found loc table from mod: eng card_selection.json. Merging with base loc table
+[INFO] Found loc table from mod: eng cards.json. Merging with base loc table
+[INFO] Found loc table from mod: eng cards.json. Merging with base loc table
+[INFO] Found loc table from mod: eng cards.json. Merging with base loc table
+[INFO] Found loc table from mod: eng cards.json. Merging with base loc table
+[INFO] Found loc table from mod: eng cards.json. Merging with base loc table
+[INFO] Found loc table from mod: eng cards.json. Merging with base loc table
+[INFO] Found loc table from mod: eng cards.json. Merging with base loc table
+[INFO] Found loc table from mod: eng cards.json. Merging with base loc table
+[INFO] Found loc table from mod: eng cards.json. Merging with base loc table
+[INFO] Found loc table from mod: eng cards.json. Merging with base loc table
+[INFO] Found loc table from mod: eng cards.json. Merging with base loc table
+[INFO] Found loc table from mod: eng cards.json. Merging with base loc table
+[INFO] Found loc table from mod: eng cards.json. Merging with base loc table
+[INFO] Found loc table from mod: eng characters.json. Merging with base loc table
+[INFO] Found loc table from mod: eng credits.json. Merging with base loc table
+[INFO] Found loc table from mod: eng epochs.json. Merging with base loc table
+[INFO] Found loc table from mod: eng events.json. Merging with base loc table
+[INFO] Found loc table from mod: eng gameplay_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: eng gameplay_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: eng main_menu_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: eng main_menu_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: eng merchant_room.json. Merging with base loc table
+[INFO] Found loc table from mod: eng potions.json. Merging with base loc table
+[INFO] Found loc table from mod: eng potions.json. Merging with base loc table
+[INFO] Found loc table from mod: eng powers.json. Merging with base loc table
+[INFO] Found loc table from mod: eng powers.json. Merging with base loc table
+[INFO] Found loc table from mod: eng powers.json. Merging with base loc table
+[INFO] Found loc table from mod: eng powers.json. Merging with base loc table
+[INFO] Found loc table from mod: eng powers.json. Merging with base loc table
+[INFO] Found loc table from mod: eng powers.json. Merging with base loc table
+[INFO] Found loc table from mod: eng powers.json. Merging with base loc table
+[INFO] Found loc table from mod: eng powers.json. Merging with base loc table
+[INFO] Found loc table from mod: eng powers.json. Merging with base loc table
+[INFO] Found loc table from mod: eng relics.json. Merging with base loc table
+[INFO] Found loc table from mod: eng relics.json. Merging with base loc table
+[INFO] Found loc table from mod: eng relics.json. Merging with base loc table
+[INFO] Found loc table from mod: eng relics.json. Merging with base loc table
+[INFO] Found loc table from mod: eng relics.json. Merging with base loc table
+[INFO] Found loc table from mod: eng rest_site_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: eng settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: eng settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: eng settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: eng settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: eng settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: eng settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: eng settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: eng static_hover_tips.json. Merging with base loc table
+[INFO] Found loc table from mod: eng static_hover_tips.json. Merging with base loc table
+[INFO] Found loc table from mod: eng static_hover_tips.json. Merging with base loc table
+[INFO] Found loc table from mod: eng static_hover_tips.json. Merging with base loc table
+[INFO] Loading locale path=res://localization/zhs
+[INFO] Found loc table from mod: zhs afflictions.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs afflictions.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs ancients.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs ascension.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs card_keywords.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs card_keywords.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs card_keywords.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs card_selection.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs cards.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs cards.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs cards.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs cards.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs cards.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs cards.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs cards.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs cards.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs cards.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs cards.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs cards.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs cards.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs cards.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs characters.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs epochs.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs events.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs gameplay_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs gameplay_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs main_menu_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs main_menu_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs merchant_room.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs potions.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs potions.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs powers.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs powers.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs powers.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs powers.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs powers.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs powers.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs powers.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs powers.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs powers.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs relics.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs relics.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs relics.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs relics.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs relics.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs rest_site_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs settings_ui.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs static_hover_tips.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs static_hover_tips.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs static_hover_tips.json. Merging with base loc table
+[INFO] Found loc table from mod: zhs static_hover_tips.json. Merging with base loc table
+[StS2ZhFont] Loaded prebaked font resource: res://StS2ZhFont/fonts/prebaked/ZhenKai_GBK-Regular.fontdata
+[StS2ZhFont] Loaded prebaked font resource: res://StS2ZhFont/fonts/prebaked/TsangerJinKai02-W05.fontdata

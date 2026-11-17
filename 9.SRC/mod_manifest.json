@@ -3,11 +3,11 @@
   "name": "棱彩宝石过滤 Prismatic Gem Filter",
   "author": "Rim-World",
   "description": "持有棱彩宝石时，按玩家勾选的开关，把跨角色发牌中该职业专属、其他职业无法使用的卡牌排除出候选。",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "has_pck": false,
   "has_dll": true,
   "affects_gameplay": true,
-  "min_game_version": "0.107.1",
+  "min_game_version": "0.111.0",
   "dependencies": [
     {
       "id": "STS2-RitsuLib",

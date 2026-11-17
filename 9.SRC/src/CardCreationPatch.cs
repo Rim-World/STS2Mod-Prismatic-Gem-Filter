@@ -12,7 +12,7 @@ namespace PrismaticGemFilter;
 /// <summary>
 ///     在 <see cref="CardCreationOptions.GetPossibleCards" /> 之后过滤候选牌。
 ///     <para>
-///         目标方法三版签名一致：<c>public IEnumerable&lt;CardModel&gt; GetPossibleCards(Player player)</c>。
+///         目标方法在两个受支持版本上签名一致：<c>public IEnumerable&lt;CardModel&gt; GetPossibleCards(Player player)</c>。
 ///         它是所有发牌链路的公共入口，见 <c>4.ADR/001-在候选牌枚举处统一过滤.md</c>。
 ///     </para>
 /// </summary>
@@ -138,9 +138,8 @@ internal sealed class CardCreationPatch : IPatchMethod
             return false;
 
         var pools = options.CardPools;
-        // 0.107.1 里卡池为空即用自定义卡表，棱彩宝石对那种选项早退。0.111 起该构造方式已移除。
-        if (pools.Count == 0)
-            return false;
+        // 0.107.1 的「卡池为空即跳过」已随该版本停支持删除。卡池为空时 GetPossibleCards 返回空集合，
+        // 后置补丁在候选计数处已经返回，该条在 0.111.0 与 0.113.1 上都不可达。见 4.ADR/011。
         if (pools.All(static pool => pool.IsColorless))
             return false;
 
