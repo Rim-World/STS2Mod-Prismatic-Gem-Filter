@@ -74,7 +74,7 @@ SteamAppId=2868840 ./SlayTheSpire2.exe --headless \
 
 ### 5.1 总开关开启（默认设置）
 
-日志第 2059 至 2060 行：
+日志第 2150 至 2151 行：
 
 ```
 [index] rebuilt. version=1 groups=11 excluded=122
