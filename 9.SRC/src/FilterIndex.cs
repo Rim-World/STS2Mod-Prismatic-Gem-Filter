@@ -65,7 +65,7 @@ internal static class FilterIndex
         var excluded = new HashSet<string>(StringComparer.Ordinal);
         var enabled = 0;
 
-        foreach (var group in CardGroups.All)
+        foreach (var group in CardGroups.Visible)
         {
             if (!snapshot.EnabledGroups.Contains(group.Id))
                 continue;

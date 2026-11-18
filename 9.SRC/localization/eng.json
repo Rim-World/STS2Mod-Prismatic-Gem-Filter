@@ -8,8 +8,8 @@
   "pgf.master.desc": "Off makes this mod do nothing.",
   "pgf.mode.name": "When to filter",
   "pgf.mode.desc": "Keep the default value if you are not sure.",
-  "pgf.mode.gem": "Only while Prismatic Gem applies",
-  "pgf.mode.any": "Whenever another class's card appears",
+  "pgf.mode.gem": "Same timing as Prismatic Gem",
+  "pgf.mode.any": "When rewards contain another class's cards",
 
   "pgf.char.necrobinder": "Necrobinder",
   "pgf.char.defect": "Defect",
@@ -31,8 +31,8 @@
   "pgf.count": "{0} cards",
   "pgf.count.one": "{0} card",
 
-  "pgf.group.osty.name": "Osty cards",
-  "pgf.group.osty.desc": "Cards that fight through Osty",
+  "pgf.group.osty.name": "Osty attack cards",
+  "pgf.group.osty.desc": "No effect without Osty",
   "pgf.group.summon.name": "Summon cards",
   "pgf.group.summon.desc": "Cards that summon or strengthen Osty",
   "pgf.group.doom.name": "Doom cards",
@@ -59,8 +59,8 @@
   "pgf.group.sadness.desc": "Cards that create, consume, or convert Sadness",
   "pgf.group.multiplayer.name": "Multiplayer-only cards",
   "pgf.group.multiplayer.desc": "Cards that appear only in multiplayer",
-  "pgf.group.bugged.name": "cards with bugs in this version",
-  "pgf.group.bugged.desc": "Generates no arrows when another class gets it",
+  "pgf.group.bugged.name": "Cards with bugs in this version",
+  "pgf.group.bugged.desc": "Misbehaves when another class obtains it",
 
   "pgf.exempt.row": "Exempt cards",
   "pgf.exempt.button": "Open",

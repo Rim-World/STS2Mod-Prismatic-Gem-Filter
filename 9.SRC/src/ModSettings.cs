@@ -65,8 +65,12 @@ internal static class ModSettings
     ///     <para>
     ///         0.0.8 升到 2：默认豁免清单多了一条。存档里的豁免清单是全量快照，不重置的话老玩家拿不到新默认值。
     ///     </para>
+    ///     <para>
+    ///         0.0.11 升到 3：默认豁免新增洁净、唤起、血肉戏法，暴涨由球牌组移到集中牌组。
+    ///         旧的 <c>orb:BULK_UP</c> 已无效，新的 <c>focus:BULK_UP</c> 又不在老档里，必须整份重置。
+    ///     </para>
     /// </summary>
-    public const int CurrentSchema = 2;
+    public const int CurrentSchema = 3;
 
     private const string FileName = "settings.json";
 
@@ -165,8 +169,8 @@ internal static class ModSettings
 
         RitsuLibFramework.RegisterModSettings(Plugin.ModId, ConfigurePage);
 
-        // 每个分组一个豁免子页。父页先注册，子页用 AsChildOf 挂在它下面。
-        foreach (var group in CardGroups.All)
+        // 每个可见分组一个豁免子页。当前版本不存在的组整组隐藏，不注册页面，见 SP-030。
+        foreach (var group in CardGroups.Visible)
             RitsuLibFramework.RegisterModSettings(
                 Plugin.ModId,
                 page => ConfigureExemptionPage(page, group),
@@ -176,10 +180,11 @@ internal static class ModSettings
         Invalidate();
 
         var snapshot = Current;
+        var visibleEnabled = CardGroups.Visible.Count(group => snapshot.EnabledGroups.Contains(group.Id));
         Plugin.Logger.Info(
             $"[settings] registered. mode={snapshot.Mode} master={snapshot.MasterEnabled} " +
-            $"groups={snapshot.EnabledGroups.Count}/{CardGroups.All.Length} exemptions={snapshot.ExemptionKeys.Count} " +
-            $"pages={1 + CardGroups.All.Length}");
+            $"groups={visibleEnabled}/{CardGroups.Visible.Length} exemptions={snapshot.ExemptionKeys.Count} " +
+            $"pages={1 + CardGroups.Visible.Length}");
     }
 
     /// <summary>让快照与排除索引失效。所有写入路径都必须经过这里。</summary>
@@ -475,7 +480,7 @@ internal static class ModSettings
     /// </summary>
     private static ModSettingsText? BuildCardHint(CardGroup group, string entry)
     {
-        var others = CardGroups.All
+        var others = CardGroups.Visible
             .Where(other => !ReferenceEquals(other, group) && Array.IndexOf(other.Members, entry) >= 0)
             .Select(static other => other.Id)
             .ToArray();

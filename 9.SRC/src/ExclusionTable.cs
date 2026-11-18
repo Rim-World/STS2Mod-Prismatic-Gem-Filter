@@ -21,9 +21,15 @@ internal static class ExclusionTable
         // 灾厄牌组：精神过载。用户 2026-11-15 07:00 点名。
         "doom:NEUROSURGE",
 
-        // 球牌组（含激发、球位）：聚变、暴涨。
+        // 灾厄牌组：血肉戏法。用户 2026-11-18 点名加入本组并默认豁免。
+        "doom:SLEIGHT_OF_FLESH",
+
+        // 召唤牌组：洁净、唤起。用户 2026-11-18 点名默认豁免。
+        "summon:CLEANSE",
+        "summon:INVOKE",
+
+        // 球牌组（含激发、球位）：聚变。
         "orb:FUSION",
-        "orb:BULK_UP",
 
         // 铸剑牌组与星牌组：大爆炸在两组各记一条，见 SP-013。
         "forge:BIG_BANG",
@@ -34,6 +40,9 @@ internal static class ExclusionTable
 
         // 集中牌组：超能光束。它带集中关键词却降低集中，用户 2026-11-16 19:30 点名。
         "focus:HYPERBEAM",
+
+        // 集中牌组：暴涨。0.0.11 从球牌组移入，用户要求仍默认豁免。
+        "focus:BULK_UP",
 
         // 悲伤牌组：活跃气氛。它同时给悲伤与喜悦，用户 2026-11-17 01:42 点名默认不过滤。
         "sadness:BRIGHTEN_UP",

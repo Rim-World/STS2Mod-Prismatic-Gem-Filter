@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>visibility-check</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PrismaticGemFilter" HintPath="..\..\..\9.SRC\bin\Release\PrismaticGemFilter.dll" Private="true" />
+    <Reference Include="sts2" HintPath="C:\Users\13167\Desktop\Mod\STS2-Reference\2.STS2-111Reference\assemblies\sts2.dll" Private="true" />
+    <Reference Include="GodotSharp" HintPath="C:\Game\Steam\steamapps\common\Slay the Spire 2\data_sts2_windows_x86_64\GodotSharp.dll" Private="true" />
+    <Reference Include="0Harmony" HintPath="C:\Game\Steam\steamapps\common\Slay the Spire 2\data_sts2_windows_x86_64\0Harmony.dll" Private="true" />
+    <Reference Include="SmartFormat" HintPath="C:\Game\Steam\steamapps\common\Slay the Spire 2\data_sts2_windows_x86_64\SmartFormat.dll" Private="true" />
+    <Reference Include="Sentry" HintPath="C:\Game\Steam\steamapps\common\Slay the Spire 2\data_sts2_windows_x86_64\Sentry.dll" Private="true" />
+    <Reference Include="Sentry.Godot" HintPath="C:\Game\Steam\steamapps\common\Slay the Spire 2\data_sts2_windows_x86_64\Sentry.Godot.dll" Private="true" />
+  </ItemGroup>
+</Project>

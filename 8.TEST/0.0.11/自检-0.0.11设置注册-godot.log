@@ -1,0 +1,1195 @@
+MegaDot v4.5.1.m.14.mono.custom_build - https://godotengine.org
+
+FMOD Sound System: Successfully initialized
+[INFO] Found release_info.json at: C:\Game\Steam\steamapps\common\Slay the Spire 2\release_info.json
+[INFO] [Sentry.NET] Initialized: env=unknown, release=v0.113.1
+[INFO] Steamworks: attempting initialization...
+[INFO] Steam is running: True
+[INFO] Steamworks initialization succeeded!
+[INFO] Steam is enabled, we will write saves to steam storage. Enabled for account: True, app: False 
+[INFO] Registered 24 migrations
+[INFO] Current save versions: PrefsSave v2; ProfileSave v2; SerializableProgress v24; RunHistory v11; SerializableRun v21; SettingsSave v8
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\CalculatedGambleReplacementMod\CalculatedGambleReplacementMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\CharacterModIsolation\mod_manifest.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\CorpseExplosionReplacementMod\CorpseExplosionReplacementMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\DarvRelicPoolMod\DarvRelicPoolMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\EvolveReplacementMod\EvolveReplacementMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\JugglingCounterMod\JugglingCounterMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\OstyDamageDetectionMod\OstyDamageDetectionMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\PhantomKillerMod\PhantomKillerMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\PrismaticGemFilter\mod_manifest.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\ReaperReplacementMod\ReaperReplacementMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RecycleReplacementMod\RecycleReplacementMod.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertBrightestFlame\RevertBrightestFlame.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertDiamondDiadem\RevertDiamondDiadem.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertRocketPunch\RevertRocketPunch.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertSynchronize\RevertSynchronize.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\RevertTheSealedThrone\RevertTheSealedThrone.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\ScrawlReplacementMod\ScrawlReplacementMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3840050168 in C:\Game\Steam\steamapps\workshop\content\2868840\3840050168 (size 10975018, last modified 1794978305)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3840050168\FoolMotion.json
+[INFO] Looking for mods to load from Steam Workshop mod 3828218778 in C:\Game\Steam\steamapps\workshop\content\2868840\3828218778 (size 27399, last modified 1794668693)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3828218778\PrismaticGeneration\PrismaticGeneration.json
+[INFO] Looking for mods to load from Steam Workshop mod 3755773515 in C:\Game\Steam\steamapps\workshop\content\2868840\3755773515 (size 37217, last modified 1794657258)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3755773515\mod_manifest.json
+[INFO] Looking for mods to load from Steam Workshop mod 3839332861 in C:\Game\Steam\steamapps\workshop\content\2868840\3839332861 (size 4329585, last modified 1794937644)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3839332861\FoolMelodyReplacer.json
+[INFO] Looking for mods to load from Steam Workshop mod 3784531815 in C:\Game\Steam\steamapps\workshop\content\2868840\3784531815 (size 149996532, last modified 1794927373)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3784531815\MGRMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3838672055 in C:\Game\Steam\steamapps\workshop\content\2868840\3838672055 (size 9938, last modified 1794716183)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3838672055\Zhs113Fix\Zhs113Fix.json
+[INFO] Looking for mods to load from Steam Workshop mod 3756859747 in C:\Game\Steam\steamapps\workshop\content\2868840\3756859747 (size 6415871, last modified 1794771768)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3756859747\Loadout.json
+[INFO] Looking for mods to load from Steam Workshop mod 3810696310 in C:\Game\Steam\steamapps\workshop\content\2868840\3810696310 (size 25463099, last modified 1794750687)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3810696310\mod_manifest.json
+[INFO] Looking for mods to load from Steam Workshop mod 3816316338 in C:\Game\Steam\steamapps\workshop\content\2868840\3816316338 (size 42809862, last modified 1794750584)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3816316338\mod_manifest.json
+[INFO] Looking for mods to load from Steam Workshop mod 3821353824 in C:\Game\Steam\steamapps\workshop\content\2868840\3821353824 (size 26347816, last modified 1794549732)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3821353824\mod_manifest.json
+[INFO] Looking for mods to load from Steam Workshop mod 3748331824 in C:\Game\Steam\steamapps\workshop\content\2868840\3748331824 (size 19732346, last modified 1794930765)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3748331824\Merchant2CuteII.json
+[INFO] Looking for mods to load from Steam Workshop mod 3786286239 in C:\Game\Steam\steamapps\workshop\content\2868840\3786286239 (size 37458206, last modified 1790398793)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3786286239\KaguyaSilentRavenSkin.json
+[INFO] Looking for mods to load from Steam Workshop mod 3798368044 in C:\Game\Steam\steamapps\workshop\content\2868840\3798368044 (size 59120944, last modified 1794550830)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3798368044\mod_manifest.json
+[INFO] Looking for mods to load from Steam Workshop mod 3798006173 in C:\Game\Steam\steamapps\workshop\content\2868840\3798006173 (size 211913, last modified 1794612937)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3798006173\PixelPotions.json
+[INFO] Looking for mods to load from Steam Workshop mod 3792710066 in C:\Game\Steam\steamapps\workshop\content\2868840\3792710066 (size 133428, last modified 1788087317)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3792710066\RevertDiamondDiadem.json
+[INFO] Looking for mods to load from Steam Workshop mod 3756617122 in C:\Game\Steam\steamapps\workshop\content\2868840\3756617122 (size 31178, last modified 1783056259)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3756617122\RevertCompact.json
+[INFO] Looking for mods to load from Steam Workshop mod 3785043629 in C:\Game\Steam\steamapps\workshop\content\2868840\3785043629 (size 474978, last modified 1794744306)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3785043629\MoreStatistic.json
+[INFO] Looking for mods to load from Steam Workshop mod 3791663690 in C:\Game\Steam\steamapps\workshop\content\2868840\3791663690 (size 461722, last modified 1794596015)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3791663690\DarvRelicPoolMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3750281026 in C:\Game\Steam\steamapps\workshop\content\2868840\3750281026 (size 4679839, last modified 1794559564)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3750281026\Fake Merchant Expansion.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3750281026\Fake Merchant Expansion_config.json
+[INFO] JSON file C:\Game\Steam\steamapps\workshop\content\2868840\3750281026\Fake Merchant Expansion_config.json does not look like a mod manifest; skipping it.
+[INFO] Looking for mods to load from Steam Workshop mod 3787938439 in C:\Game\Steam\steamapps\workshop\content\2868840\3787938439 (size 197258, last modified 1794546842)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3787938439\JugglingCounterMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3787429685 in C:\Game\Steam\steamapps\workshop\content\2868840\3787429685 (size 271349, last modified 1787320346)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3787429685\RevertRocketPunch.json
+[INFO] Looking for mods to load from Steam Workshop mod 3773102248 in C:\Game\Steam\steamapps\workshop\content\2868840\3773102248 (size 51980022, last modified 1786900618)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3773102248\metadata.json
+[INFO] Looking for mods to load from Steam Workshop mod 3785110567 in C:\Game\Steam\steamapps\workshop\content\2868840\3785110567 (size 432903, last modified 1786969327)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3785110567\RevertTheSealedThrone.json
+[INFO] Looking for mods to load from Steam Workshop mod 3737336234 in C:\Game\Steam\steamapps\workshop\content\2868840\3737336234 (size 650983, last modified 1794754585)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3737336234\MintySpire2\MintySpire2.json
+[INFO] Looking for mods to load from Steam Workshop mod 3748419805 in C:\Game\Steam\steamapps\workshop\content\2868840\3748419805 (size 23708199, last modified 1787688604)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3748419805\Nekobinder.json
+[INFO] Looking for mods to load from Steam Workshop mod 3782484322 in C:\Game\Steam\steamapps\workshop\content\2868840\3782484322 (size 20657473, last modified 1792752481)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3782484322\maya_ironcladskin.json
+[INFO] Looking for mods to load from Steam Workshop mod 3784486876 in C:\Game\Steam\steamapps\workshop\content\2868840\3784486876 (size 283087, last modified 1794535668)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3784486876\RevertSynchronize.json
+[WARN] Could not get Steam Workshop item install info for item 3759748828
+[INFO] Looking for mods to load from Steam Workshop mod 3783912778 in C:\Game\Steam\steamapps\workshop\content\2868840\3783912778 (size 258728, last modified 1794533942)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3783912778\RevertBrightestFlame.json
+[INFO] Looking for mods to load from Steam Workshop mod 3783824081 in C:\Game\Steam\steamapps\workshop\content\2868840\3783824081 (size 297584, last modified 1786797627)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3783824081\OstyDamageDetectionMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3783799947 in C:\Game\Steam\steamapps\workshop\content\2868840\3783799947 (size 1601846, last modified 1786794495)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3783799947\ScrawlReplacementMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3782811642 in C:\Game\Steam\steamapps\workshop\content\2868840\3782811642 (size 885897, last modified 1786641071)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3782811642\CalculatedGambleReplacementMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3782193181 in C:\Game\Steam\steamapps\workshop\content\2868840\3782193181 (size 1153106, last modified 1786544251)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3782193181\EvolveReplacementMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3781659831 in C:\Game\Steam\steamapps\workshop\content\2868840\3781659831 (size 1092481, last modified 1794535580)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3781659831\RecycleReplacementMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3780352678 in C:\Game\Steam\steamapps\workshop\content\2868840\3780352678 (size 1856499, last modified 1794534083)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3780352678\CorpseExplosionReplacementMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3780333216 in C:\Game\Steam\steamapps\workshop\content\2868840\3780333216 (size 1405643, last modified 1794664512)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3780333216\ReaperReplacementMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3779831316 in C:\Game\Steam\steamapps\workshop\content\2868840\3779831316 (size 1236601, last modified 1787393389)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3779831316\PhantomKillerMod.json
+[INFO] Looking for mods to load from Steam Workshop mod 3748978466 in C:\Game\Steam\steamapps\workshop\content\2868840\3748978466 (size 515851, last modified 1782034031)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3748978466\Parasitophobia.json
+[INFO] Looking for mods to load from Steam Workshop mod 3748678645 in C:\Game\Steam\steamapps\workshop\content\2868840\3748678645 (size 957164, last modified 1786677089)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3748678645\mod_manifest.json
+[INFO] Looking for mods to load from Steam Workshop mod 3748983306 in C:\Game\Steam\steamapps\workshop\content\2868840\3748983306 (size 27637658, last modified 1794643242)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3748983306\CustomAscensionBalance.json
+[INFO] Looking for mods to load from Steam Workshop mod 3776811963 in C:\Game\Steam\steamapps\workshop\content\2868840\3776811963 (size 2464867, last modified 1785923260)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3776811963\TanxAnime.json
+[INFO] Looking for mods to load from Steam Workshop mod 3777276296 in C:\Game\Steam\steamapps\workshop\content\2868840\3777276296 (size 3059446, last modified 1794548794)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3777276296\BetterAnimation2.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747952763 in C:\Game\Steam\steamapps\workshop\content\2868840\3747952763 (size 22574902, last modified 1794503076)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747952763\mod_manifest.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747526116 in C:\Game\Steam\steamapps\workshop\content\2868840\3747526116 (size 21081499, last modified 1794980454)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747526116\Watcher.json
+[INFO] Looking for mods to load from Steam Workshop mod 3748814804 in C:\Game\Steam\steamapps\workshop\content\2868840\3748814804 (size 537688, last modified 1785565139)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3748814804\stats_the_spire_local\manifest.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747557762 in C:\Game\Steam\steamapps\workshop\content\2868840\3747557762 (size 903854, last modified 1794547884)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747557762\Rewind.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747557003 in C:\Game\Steam\steamapps\workshop\content\2868840\3747557003 (size 427180, last modified 1794550309)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747557003\ModConfig.json
+[INFO] Looking for mods to load from Steam Workshop mod 3770163208 in C:\Game\Steam\steamapps\workshop\content\2868840\3770163208 (size 1423576, last modified 1785832403)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3770163208\PerfectedStrikeAnime.json
+[INFO] Looking for mods to load from Steam Workshop mod 3771349866 in C:\Game\Steam\steamapps\workshop\content\2868840\3771349866 (size 782484, last modified 1785830816)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3771349866\CrashLandingAnime.json
+[INFO] Looking for mods to load from Steam Workshop mod 3775606490 in C:\Game\Steam\steamapps\workshop\content\2868840\3775606490 (size 525303, last modified 1785833387)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3775606490\OstyAnime.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747497501 in C:\Game\Steam\steamapps\workshop\content\2868840\3747497501 (size 60967148, last modified 1794536421)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747497501\RegentFX.json
+[INFO] Looking for mods to load from Steam Workshop mod 3748762011 in C:\Game\Steam\steamapps\workshop\content\2868840\3748762011 (size 931159, last modified 1794837277)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3748762011\CustomCardBalance.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747591649 in C:\Game\Steam\steamapps\workshop\content\2868840\3747591649 (size 22669000, last modified 1794636788)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747591649\silentSkin.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747566414 in C:\Game\Steam\steamapps\workshop\content\2868840\3747566414 (size 7967, last modified 1781843310)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747566414\AncientSL.json
+[INFO] Looking for mods to load from Steam Workshop mod 3749027556 in C:\Game\Steam\steamapps\workshop\content\2868840\3749027556 (size 24431, last modified 1794553249)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3749027556\CookieCursor.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747942752 in C:\Game\Steam\steamapps\workshop\content\2868840\3747942752 (size 8567843, last modified 1786714960)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747942752\Mechaneko_Defect.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747762234 in C:\Game\Steam\steamapps\workshop\content\2868840\3747762234 (size 28681758, last modified 1787940232)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747762234\KaguyaRegentMSGKSkin.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747526103 in C:\Game\Steam\steamapps\workshop\content\2868840\3747526103 (size 2519298, last modified 1794536477)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747526103\JmcModLib.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747539220 in C:\Game\Steam\steamapps\workshop\content\2868840\3747539220 (size 1143606, last modified 1785487071)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747539220\BetterMap.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747523110 in C:\Game\Steam\steamapps\workshop\content\2868840\3747523110 (size 79649, last modified 1781835573)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747523110\BetterConsole.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747531952 in C:\Game\Steam\steamapps\workshop\content\2868840\3747531952 (size 3228393, last modified 1794897118)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747531952\RandomForeseer.json
+[INFO] Looking for mods to load from Steam Workshop mod 3737335127 in C:\Game\Steam\steamapps\workshop\content\2868840\3737335127 (size 1281606, last modified 1794487315)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3737335127\BaseLib\BaseLib.json
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3737335127\BaseLib\BaseLibCompatibilityHelper.json
+[INFO] Looking for mods to load from Steam Workshop mod 3737322022 in C:\Game\Steam\steamapps\workshop\content\2868840\3737322022 (size 40790, last modified 1786787188)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3737322022\QuickRestart\QuickRestart.json
+[INFO] Looking for mods to load from Steam Workshop mod 3747602295 in C:\Game\Steam\steamapps\workshop\content\2868840\3747602295 (size 45242553, last modified 1794763392)
+[INFO] Found mod manifest file C:\Game\Steam\steamapps\workshop\content\2868840\3747602295\mod_manifest.json
+[INFO] === Godot OS Debug Information ===
+Timestamp: 11/18/2026 19:24:37
+OS: Windows
+OS Version: 10.0.26300
+Distribution Name: Windows
+Device Model: HP Pavilion Gaming Laptop 15-cx0xxx
+Is Debug Build: False
+Is Sandboxed: False
+Executable Path: C:/Game/Steam/steamapps/common/Slay the Spire 2/SlayTheSpire2.exe
+Data Directory: C:/Users/13167/AppData/Roaming
+User Data Directory: C:/Users/13167/AppData/Roaming/SlayTheSpire2
+Command Line Args: 
+User Command Line Args: 
+OS Locale: zh_CN
+OS Language: zh
+Game Locale: zh_CN
+Is UserFS Persistent: True
+Is Stdout Verbose: False
+Is Low Processor Usage Mode: False
+Architecture: x86_64
+Engine Version: 4.5.1-m.14 (custom_build)
+Is Editor: False
+Release Version: v0.113.1
+Release Commit: d09d48e5
+Release Date: 11/14/2026 02:31:11
+Processor Count: 12
+Processor Name: Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz
+Main assembly hash: 358281912
+Rendering device name: N/A (headless)
+  Graphics adapter 0: NVIDIA GeForce GTX 1050 Ti
+  version: 32.0.15.0
+  Graphics adapter 1: Intel(R) UHD Graphics 630
+  version: 26.20.100.20
+  Graphics adapter 2: Microsoft Basic Render Driver
+  version: 10.0.26100.0
+Screen info (primary 0):
+Video Memory Used: 0.0B
+Memory Info:
+  physical: 15.9GB
+  free: 6.8GB
+  available: 25.9GB
+  stack: 8.0MB
+  Static Memory Usage: 0.0B
+  Static Memory Peak Usage: 0.0B
+Disk Info:
+  Index 0: Name: C:\ Type: Fixed Format: NTFS Available: 145.3GB Total Free: 145.3GB Total Size: 0.9TB
+  Index 1: Name: D:\ Type: Fixed Format: NTFS Available: 59.0GB Total Free: 59.0GB Total Size: 125.0GB
+  Index 2: Name: E:\ Type: Fixed Format: NTFS Available: 16.0GB Total Free: 16.0GB Total Size: 19.5GB
+  Index 3: Name: F:\ Type: Fixed Format: NTFS Available: 11.2GB Total Free: 11.2GB Total Size: 125.9GB
+  Index 4: Name: G:\ Type: Fixed Format: NTFS Available: 56.5GB Total Free: 56.5GB Total Size: 195.3GB
+  Index 5: Name: H:\ Type: Fixed Format: NTFS Available: 74.0GB Total Free: 74.0GB Total Size: 0.9TB
+Important Environment Variables:
+  PATH: C:\Program Files\Rio\;C:\Program Files\coreutils\bin;C:\DevTools\jdk-25.0.5+8\bin;C:\Windows\System32\HWAudioDriverLibs;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\dotnet\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Bandizip\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\Basic&The Most Common\Hugo;%USERPROFILE%\AppData\Local\Python;C:\DevTools\android-sdk\platform-tools;C:\DevTools\android-sdk\cmdline-tools\latest\bin;C:\DevTools\bin;C:\Program Files\Go\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\WezTerm;C:\Program Files\otty\bin;C:\Program Files\WSL\;C:\Program Files\PowerShell\7\;%USERPROFILE%\AppData\Local\Programs\Python\Launcher\;%USERPROFILE%\.local\bin;%USERPROFILE%\.kimi-code\bin;%USERPROFILE%\AppData\Local\Python\bin;%USERPROFILE%\venvs\py314-global\Scripts;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;D:\Android&Win搞机工具\ADB;%USERPROFILE%\AppData\Local\Programs\Microsoft VS Code\bin;%USERPROFILE%\AppData\Local\PowerToys\DSCModules\;%USERPROFILE%\.dotnet\tools;%USERPROFILE%\AppData\Local\Microsoft\WinGet\Links;C:\Program Files\LibreOffice\program;%USERPROFILE%\AppData\Local\Programs\GitHubCLI\bin;%USERPROFILE%\.bun\bin;%USERPROFILE%\go\bin;%USERPROFILE%\AppData\Local\Microsoft\WinGet\Packages\JohnMacFarlane.Pandoc_Microsoft.Winget.Source_8wekyb3d8bbwe\pandoc-3.13;%USERPROFILE%\AppData\Roaming\npm;C:\Program Files\Alacritty;%USERPROFILE%\AppData\Local\PowerToys\bin\;C:\Program Files\Git\bin;C:\Program Files\Git\usr\bin
+  GODOT_ROOT_DIR: 
+  HOME: 
+  DYLD_LIBRARY_PATH: 
+  LD_LIBRARY_PATH: 
+
+[INFO] Skipping loading mod RevertBrightestFlame, it is set to disabled in settings
+[INFO] Skipping loading mod PrismaticGeneration, it is set to disabled in settings
+[INFO] Skipping loading mod MGRMod, it is set to disabled in settings
+[INFO] Skipping loading mod MoreDefectAnimations, it is set to disabled in settings
+[INFO] Skipping loading mod MoreNecrobinderAnimations, it is set to disabled in settings
+[INFO] Skipping loading mod MoreSilentAnimations, it is set to disabled in settings
+[INFO] Skipping loading mod ShieldOnly, it is set to disabled in settings
+[INFO] Skipping loading mod RevertCompact, it is set to disabled in settings
+[INFO] Skipping loading mod MoreStatistic, it is set to disabled in settings
+[INFO] Skipping loading mod Fake Merchant Expansion, it is set to disabled in settings
+[INFO] Skipping loading mod MintySpire2, it is set to disabled in settings
+[INFO] Skipping loading mod Nekobinder, it is set to disabled in settings
+[INFO] Skipping loading mod maya_ironcladskin, it is set to disabled in settings
+[INFO] Skipping loading mod RevertBrightestFlame, it is set to disabled in settings
+[INFO] Skipping loading mod Parasitophobia, it is set to disabled in settings
+[INFO] Skipping loading mod CustomAscensionBalance, it is set to disabled in settings
+[INFO] Skipping loading mod TanxAnime, it is set to disabled in settings
+[INFO] Skipping loading mod BetterAnimation2, it is set to disabled in settings
+[INFO] Skipping loading mod ATA_IronClad, it is set to disabled in settings
+[INFO] Skipping loading mod Watcher, it is set to disabled in settings
+[INFO] Skipping loading mod sts2_statsthespire_local, it is set to disabled in settings
+[INFO] Skipping loading mod PerfectedStrikeAnime, it is set to disabled in settings
+[INFO] Skipping loading mod CrashLandingAnime, it is set to disabled in settings
+[INFO] Skipping loading mod OstyAnime, it is set to disabled in settings
+[INFO] Skipping loading mod CustomCardBalance, it is set to disabled in settings
+[INFO] Skipping loading mod silentSkin, it is set to disabled in settings
+[INFO] Skipping loading mod AncientSL, it is set to disabled in settings
+[INFO] Skipping loading mod Mechaneko_Defect, it is set to disabled in settings
+[INFO] Skipping loading mod BetterMap, it is set to disabled in settings
+[INFO] Skipping loading mod BetterConsole, it is set to disabled in settings
+[WARN] Mod with ID RevertDiamondDiadem and version 1.0.0 is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID DarvRelicPoolMod and version 1.0.4 is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID JugglingCounterMod and version 1.0.1 is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID RevertRocketPunch and unknown version is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID RevertTheSealedThrone and unknown version is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID RevertSynchronize and version 1.2.2 is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID OstyDamageDetectionMod and unknown version is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID ScrawlReplacementMod and unknown version is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID CalculatedGambleReplacementMod and unknown version is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID EvolveReplacementMod and unknown version is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID RecycleReplacementMod and unknown version is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID CorpseExplosionReplacementMod is loaded both via Steam and local mods directory. Local version (v1.1.0) is greater than steam version (v1.0.1), so we are disabling the Steam workshop version.
+[WARN] Mod with ID ReaperReplacementMod and version 1.1.0 is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[WARN] Mod with ID PhantomKillerMod and unknown version is loaded both via Steam and local mods directory. Disabling the Steam workshop version.
+[INFO] Mods have been re-sorted because we detected a change or dependency order was broken. New sorting order:
+[INFO]   0: CookieCursor (CookieCursor)
+[INFO]   1: RitsuLib (STS2-RitsuLib)
+[INFO]   2: BaseLib Compatibility Helper (BaseLibCompatibilityHelper)
+[INFO]   3: BaseLib (BaseLib)
+[INFO]   4: 铁画银钩 | 细致地优化中文字体 (StS2ZhFont)
+[INFO]   5: Quick Restart (QuickRestart)
+[INFO]   6: Loadout (Loadout)
+[INFO]   7: KaguyaSilentRavenSkin (KaguyaSilentRavenSkin)
+[INFO]   8: KaguyaRegentMSGKSkin (KaguyaRegentMSGKSkin)
+[INFO]   9: JmcModLib (JmcModLib)
+[INFO]   10: 随机数预测 (RandomForeseer) (RandomForeseer)
+[INFO]   11: 113版本汉化优化 (Zhs113Fix)
+[INFO]   12: 棱彩宝石过滤 Prismatic Gem Filter (PrismaticGemFilter)
+[INFO]   13: Fool Melody Replacer (FoolMelodyReplacer)
+[INFO]   14: SplashExclusion (SplashExclusion)
+[INFO]   15: 愚者 · 全卡动作特效 The Fool: Full Deck in Motion (FoolMotion)
+[INFO]   16: Merchant2CuteII (Merchant2CuteII)
+[INFO]   17: PixelPotions (PixelPotions)
+[INFO]   18: 皮皮倒带: Rewind (Rewind)
+[INFO]   19: 皮皮配置: ModConfig (ModConfig)
+[INFO]   20: 万象辉星[RegentFX] (RegentFX)
+[INFO]   21: 角色模组隔离 / Character Mod Isolation (CharacterModIsolation)
+[INFO]   22: Workshop Uploader (STS2-WorkshopUploader)
+[INFO]   23: 回调头冠（RevertDiamondDiadem） (RevertDiamondDiadem)
+[INFO]   24: 重做达弗（Redesign Darv） (DarvRelicPoolMod)
+[INFO]   25: 杂耍计数 (Juggling Counter) (JugglingCounterMod)
+[INFO]   26: 回调火箭飞拳（RevertRocketPunch） (RevertRocketPunch)
+[INFO]   27: 回调王座（Revert The Sealed Throne） (RevertTheSealedThrone)
+[INFO]   28: 回调同步（RevertSynchronize） (RevertSynchronize)
+[INFO]   29: 奥斯提受击判定修改Osty Damage Detection Modification (OstyDamageDetectionMod)
+[INFO]   30: 潦草急就 (Scrawl) (ScrawlReplacementMod)
+[INFO]   31: 计算下注 (Calculated Gamble) (CalculatedGambleReplacementMod)
+[INFO]   32: 进化 (Evolve) (EvolveReplacementMod)
+[INFO]   33: 回收 (Recycle) (RecycleReplacementMod)
+[INFO]   34: 尸爆术替换（Corpse Explosion）（beta） (CorpseExplosionReplacementMod)
+[INFO]   35: 死亡收割 (Reaper) (ReaperReplacementMod)
+[INFO]   36: 幻影杀手 (Phantasmal Killer) (PhantomKillerMod)
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3749027556\CookieCursor.dll
+[INFO] Calling initializer method of type CookieCursor.Entry for CookieCursor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[CookieCursor] Mod initialized successfully.
+[INFO] Finished mod initialization for 'CookieCursor' (CookieCursor).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3747602295\STS2-RitsuLib.dll
+[INFO] Calling initializer method of type STS2RitsuLib.Loader.Bootstrap for STS2-RitsuLib.Loader, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [RitsuLib.Loader] Host=v0.113.1; runtime=0.113.0.
+[INFO] Associated assembly STS2-RitsuLib.Shared, Version=0.6.14.0, Culture=neutral, PublicKeyToken=null with mod STS2-RitsuLib
+[INFO] Associated assembly STS2-RitsuLib.Ui, Version=0.6.14.0, Culture=neutral, PublicKeyToken=null with mod STS2-RitsuLib
+[INFO] Associated assembly STS2-RitsuLib.Settings, Version=0.6.14.0, Culture=neutral, PublicKeyToken=null with mod STS2-RitsuLib
+[INFO] Associated assembly STS2-RitsuLib.Runtime, Version=0.6.14.0, Culture=neutral, PublicKeyToken=null with mod STS2-RitsuLib
+[INFO] Associated assembly STS2-RitsuLib, Version=0.6.14.0, Culture=neutral, PublicKeyToken=null with mod STS2-RitsuLib
+[INFO] [com.ritsukage.sts2-RitsuLib] Framework ID: com.ritsukage.sts2-RitsuLib
+[INFO] [com.ritsukage.sts2-RitsuLib] Framework Name: RitsuLib
+[INFO] [com.ritsukage.sts2-RitsuLib] Version: 0.6.14 [compat branch: 0.113.0]
+[INFO] [com.ritsukage.sts2-RitsuLib] Initializing shared framework...
+[INFO] [com.ritsukage.sts2-RitsuLib] [HarmonyInitSetterCompat] Installed on 2 reflection importer entry point(s).
+[INFO] [com.ritsukage.sts2-RitsuLib] [Config] Debug compatibility master is enabled. Sub-flags (only when master on): LocTable=True, UnlockEpoch=True, AncientArchitect=True. Mod Steam cloud mirror: enabled. Config file: user://steam/76561198869461680/mod_data/com.ritsukage.sts2-RitsuLib/settings.json
+[INFO] [com.ritsukage.sts2-RitsuLib] [RitsuLib-ModSettings] Loaded translations: language='zhs', fallback='eng', entries=1663, local=1663, fallbackEntries=0, sources=2 (local=1, fallback=1)
+[INFO] [com.ritsukage.sts2-RitsuLib] [DebugLogViewer] Local debug log viewer listening at http://127.0.0.1:18742/?token=3e7c463176914b985e1d0f23083fbef5
+[INFO] [com.ritsukage.sts2-RitsuLib] [Godot] RitsuGodot node factories initialized.
+[INFO] [com.ritsukage.sts2-RitsuLib] [SmartFormat] Registered Source: STS2RitsuLib.Combat.SecondaryResources.SecondaryResourceLocStringSource (order=0).
+[INFO] [com.ritsukage.sts2-RitsuLib] [SmartFormat] Registered Formatter: STS2RitsuLib.Combat.SecondaryResources.SecondaryResourceIconsFormatter (order=0).
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - framework core] Applying 436 patches...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - framework core] Patch application complete: 436 applied, 0 ignored, 0 failed, 436 total
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - framework core] All patches applied successfully
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - settings ui] Applying 19 patches...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - settings ui] Patch application complete: 19 applied, 0 ignored, 0 failed, 19 total
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - settings ui] All patches applied successfully
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - content assets] Applying 122 patches...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - content assets] Patch application complete: 122 applied, 0 ignored, 0 failed, 122 total
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - content assets] All patches applied successfully
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - character assets] Applying 59 patches...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - character assets] Patch application complete: 59 applied, 0 ignored, 0 failed, 59 total
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - character assets] All patches applied successfully
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - content registry] Applying 31 patches...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - content registry] Patch application complete: 31 applied, 0 ignored, 0 failed, 31 total
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - content registry] All patches applied successfully
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - persistence] Applying 3 patches...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - persistence] Patch application complete: 3 applied, 0 ignored, 0 failed, 3 total
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - persistence] All patches applied successfully
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - unlocks] Applying 22 patches...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - unlocks] Patch application complete: 22 applied, 0 ignored, 0 failed, 22 total
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - unlocks] All patches applied successfully
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - framework core] Applying 3 dynamic patch(es)...
+[INFO] [com.ritsukage.sts2-RitsuLib] [Patcher - framework core] Dynamic patch application complete: 3/3 succeeded
+[INFO] [com.ritsukage.sts2-RitsuLib] [RuntimeHotkey] Registered 'Ctrl+Shift+F9' for RitsuLib mod settings
+[INFO] [com.ritsukage.sts2-RitsuLib] [RuntimeHotkey] Registered 'Ctrl+Shift+F10' for RitsuLib developer tools
+[INFO] [com.ritsukage.sts2-RitsuLib] [RuntimeHotkey] Registered 'Ctrl+Shift+F11' for RitsuLib combat creature picker
+[INFO] [com.ritsukage.sts2-RitsuLib] [Graphics] 2D texture filter applied: linear_mipmap.
+[INFO] [com.ritsukage.sts2-RitsuLib] [SteamWorkshopUpdate] Coordinator initialized.
+[INFO] [com.ritsukage.sts2-RitsuLib] Shared framework initialization complete.
+[INFO] Finished mod initialization for 'RitsuLib' (STS2-RitsuLib).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3737335127\BaseLib\BaseLibCompatibilityHelper.dll
+[INFO] Calling initializer method of type BaseLibCompatibilityHelper.BaseLibCompatibilityHelperCode.MainFile for BaseLibCompatibilityHelper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] Finished mod initialization for 'BaseLib Compatibility Helper' (BaseLibCompatibilityHelper).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3737335127\BaseLib\BaseLib.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3737335127\BaseLib\BaseLib.pck
+[INFO] Calling initializer method of type BaseLib.BaseLibMain for BaseLib, Version=3.4.8.0, Culture=neutral, PublicKeyToken=null
+[INFO] [BaseLib] Created node factory for Control.
+[INFO] [BaseLib] Created node factory for NCreatureVisuals.
+[INFO] [BaseLib] Created node factory for NRestSiteCharacter.
+[INFO] [BaseLib] Created node factory for NMerchantCharacter.
+[INFO] [BaseLib] Created node factory for NEnergyCounter.
+[INFO] [BaseLib] Created node factory for NCustomTreasureRoomChest.
+[INFO] [BaseLib] Registered config for mod BaseLib
+[INFO] [BaseLib] Naive game version: v0.113.1
+[INFO] [BaseLib] Performing CustomPile Add patch for beta version
+[INFO] [BaseLib] Starting PatchAll for assembly BaseLib, Version=3.4.8.0, Culture=neutral, PublicKeyToken=null
+[INFO] [BaseLib] Reading state machine type [MegaCrit.Sts2.Core.Nodes.Combat.NCreature+<AnimDie>d__113]
+[INFO] [BaseLib] Adding new state 5 for method CustomAnimationPatch.WaitCustomAnim before Wait with result type None ()
+[INFO] [BaseLib] Reading state machine type [MegaCrit.Sts2.Core.Hooks.Hook+<AfterCardPlayed>d__19]
+[INFO] [BaseLib] Adding new state 2 for method AfterCardPlayedPatch.BeforeAfterPlayHooks before AfterCardPlayed with result type None ()
+[INFO] [BaseLib] Skipping SentryService shutdown patch; no match found.
+[INFO] [BaseLib] Reading state machine type [MegaCrit.Sts2.Core.Models.CardModel+<SpendResources>d__356]
+[INFO] [BaseLib] Adding new state 2 for method CustomResourcePatches.SpendAdditionalCosts after SpendStars with result type None ()
+[INFO] [BaseLib] Reading state machine type [MegaCrit.Sts2.Core.Hooks.Hook+<AfterEnergyReset>d__34]
+[INFO] [BaseLib] Adding new state 2 for method CustomResourcePatches.BeforeEnergyResetHook before AfterEnergyReset with result type None ()
+[INFO] [BaseLib] No valid target found, skipping old ExhaustivePatch
+[INFO] [BaseLib] No valid target found, skipping old PurgePatch
+[INFO] [BaseLib] Applied 286 patches successfully, 0 failed
+[INFO] Finished mod initialization for 'BaseLib' (BaseLib).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3773102248\StS2ZhFont.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3773102248\StS2ZhFont.pck
+[INFO] Calling initializer method of type StS2ZhFont.MainFile for StS2ZhFont, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [BaseLib] Registered config for mod StS2ZhFont
+[INFO] Finished mod initialization for '铁画银钩 | 细致地优化中文字体' (StS2ZhFont).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3737322022\QuickRestart\QuickRestart.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3737322022\QuickRestart\QuickRestart.pck
+[INFO] Calling initializer method of type QuickRestart.QuickRestartCode.MainFile for QuickRestart, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [BaseLib] Registered config for mod QuickRestart
+[INFO] Finished mod initialization for 'Quick Restart' (QuickRestart).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3756859747\Loadout.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3756859747\Loadout.pck
+[INFO] Calling initializer method of type Loadout.MainFile for Loadout, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [Loadout] [Loadout] Beginning early bootstrap.
+[INFO] [Loadout] SentryService.DisableGdExtensionIfModded not found; skipped patch.
+[INFO] [BaseLib] Skipping SentryService shutdown patch; no match found.
+[INFO] [Loadout] SentryService.SetGdExtensionUser not found; skipped patch.
+[INFO] [Loadout] SentryService.SetGdExtensionBreadcrumb not found; skipped patch.
+[INFO] [Loadout] Sentry startup crash interceptor installed: AfterGameInit, Shutdown, SetPlatformBranch, Initialize, InitializeForTesting
+[INFO] [Loadout] [Loadout] Waiting for game localization initialization.
+[INFO] Finished mod initialization for 'Loadout' (Loadout).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3786286239\KaguyaSilentRavenSkin.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3786286239\KaguyaSilentRavenSkin.pck
+[INFO] Calling initializer method of type SilentSkinMod.MainFile for SilentSkinMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] Finished mod initialization for 'KaguyaSilentRavenSkin' (KaguyaSilentRavenSkin).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3747762234\KaguyaRegentMSGKSkin.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3747762234\KaguyaRegentMSGKSkin.pck
+[INFO] Calling initializer method of type RegentSkinMod.MainFile for RegentSkinMod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] Finished mod initialization for 'KaguyaRegentMSGKSkin' (KaguyaRegentMSGKSkin).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3747526103\JmcModLib.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3747526103\JmcModLib.pck
+[INFO] Calling initializer method of type JmcModLib.Bootstrap.BootstrapMain for JmcModLib.Bootstrap, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [JmcModLib.Bootstrap] Dependency resolver installed.
+[INFO] [JmcModLib.Bootstrap] Loaded runtime assembly from C:\Game\Steam\steamapps\workshop\content\2868840\3747526103\JmcModLib.Runtime.dll
+[INFO] [JmcModLib.Bootstrap] Resolved dependency Newtonsoft.Json from C:\Game\Steam\steamapps\workshop\content\2868840\3747526103\Newtonsoft.Json.dll
+[INFO] [JmcModLib v1.10.0] [19:24:49] ======================================
+[INFO] [JmcModLib v1.10.0] [19:24:49]  JmcModLib Mod 正在启动...
+[INFO] [JmcModLib v1.10.0] [19:24:49] ======================================
+[INFO] [JmcModLib v1.10.0] [19:24:49] Harmony 补丁已应用。
+[INFO] [JmcModLib.Bootstrap] Runtime loaded: JmcModLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] Finished mod initialization for 'JmcModLib' (JmcModLib).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3747531952\RandomForeseer.dll
+[INFO] Calling initializer method of type RandomForeseer.WorkshopLoader.Bootstrap for RandomForeseer.Loader, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [RandomForeseer.Loader] Host version v0.113.1; selected Mod variant 0.15.3 (minimum game version 0.113.1).
+[INFO] [com.ritsukage.sts2-RitsuLib] [ui] Loaded translations: language='zhs', fallback='eng', entries=47, local=47, fallbackEntries=0, sources=2 (local=1, fallback=1)
+[INFO] [com.ritsukage.sts2-RitsuLib] [settings] Loaded translations: language='zhs', fallback='eng', entries=161, local=161, fallbackEntries=0, sources=2 (local=1, fallback=1)
+[INFO] [com.ritsukage.sts2-RitsuLib] [Telemetry] Registered contribution 'RandomForeseer/settings_snapshot' (ModInventory, PrivateToApplicant).
+[INFO] [com.ritsukage.sts2-RitsuLib] [Telemetry] Registered applicant 'RandomForeseer' -> https://random-foreseer-telemetry.hotwords.top/batch/ (2 request(s)).
+[INFO] [RandomForeseer] Settings loaded: {"schema_version":3,"SingleplayerPredictionEnabled":true,"MultiplayerPredictionEnabled":true,"FairModeEnabled":true,"ShowDriftWarnings":false,"PredictionTextHoverTipOrder":"BeforeVanilla","PredictionCardHoverTipOrder":"BeforeVanilla","PredictBaseGameCardsOnly":false,"InvokeBaseGameHookListenersOnly":false,"DeckTransformPredictionEnabled":true,"NextActPredictionEnabled":true,"BlitzMerchantPredictionEnabled":true,"EventOptionPredictionEnabled":true,"SlipperyBridgeRerollPreviewCount":5,"CrystalSphereClairvoyanceEnabled":true,"RelicPickupPredictionEnabled":true,"AncientRelicPickupPredictionEnabled":true,"MerchantRestockPredictionEnabled":true,"DriftwoodRerollPredictionEnabled":true,"DriftwoodRerollPreviewCount":3,"PaelsWingSacrificePredictionEnabled":true,"RestSitePredictionEnabled":true,"CardPlayPredictionEnabled":true,"PotionPredictionEnabled":true,"CombatTransformPredictionEnabled":true,"EndTurnPredictionEnabled":true,"EndTurnPredictionDisplayMode":"EndTurnButtonHover","EndTurnHealthBarForecastDisplayMode":"AlwaysDuringPlayerTurn","FrozenEyeEnabled":true,"ShufflePredictionEnabled":true,"CombatCardGenerationPredictionEnabled":true,"CardDrawPredictionEnabled":true,"CombatCardSelectionPredictionEnabled":true,"CombatOrbGenerationPredictionEnabled":true,"PotionCardGenerationPredictionEnabled":true,"PotionDrawPredictionEnabled":true,"PotionGenerationPredictionEnabled":true,"AutoPlayFromDrawPilePredictionEnabled":true,"InferCardOnPlayEffectsEnabled":true,"ChainedCardEffectPredictionEnabled":true,"CombatDamagePredictionEnabled":true,"OrbDamagePredictionEnabled":true,"RandomTargetAttackPredictionEnabled":true,"DamagePredictionHealthBarColor":"#E8C91A","DebugSettingsEnabled":false,"EventDebugRerollEnabled":false}
+[INFO] [RandomForeseer] RandomForeseer initialized.
+[INFO] Finished mod initialization for '随机数预测 (RandomForeseer)' (RandomForeseer).
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3838672055\Zhs113Fix\Zhs113Fix.pck
+[INFO] Finished mod initialization for '113版本汉化优化' (Zhs113Fix).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\common\Slay the Spire 2\mods\PrismaticGemFilter\PrismaticGemFilter.dll
+[INFO] Calling initializer method of type PrismaticGemFilter.Plugin for PrismaticGemFilter, Version=0.0.11.0, Culture=neutral, PublicKeyToken=null
+[INFO] [PrismaticGemFilter] [compat] game=0.113.1 fool=True source=release_info
+[INFO] [PrismaticGemFilter] [settings] reset. schema 2 -> 3, groups=11/15 exemptions=11
+[INFO] [com.ritsukage.sts2-RitsuLib] [PrismaticGemFilter.texts] Loaded translations: language='zhs', fallback='eng', entries=66, local=66, fallbackEntries=0, sources=2 (local=1, fallback=1)
+[INFO] [PrismaticGemFilter] [settings] registered. mode=PrismaticGemOnly master=True groups=11/15 exemptions=11 pages=16
+[INFO] [PrismaticGemFilter] [Patcher - candidate filter] Applying 1 patches...
+[INFO] [PrismaticGemFilter] [Patcher - candidate filter] Patch application complete: 1 applied, 0 ignored, 0 failed, 1 total
+[INFO] [PrismaticGemFilter] [Patcher - candidate filter] All patches applied successfully
+[INFO] [PrismaticGemFilter] ready. groups=15 entries=180 exemptions=11 schema=3 patches=1/1
+[INFO] Finished mod initialization for '棱彩宝石过滤 Prismatic Gem Filter' (PrismaticGemFilter).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3839332861\FoolMelodyReplacer.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3839332861\FoolMelodyReplacer.pck
+[INFO] Calling initializer method of type FoolMelodyReplacer.FoolMelodyReplacerCode.MainFile for FoolMelodyReplacer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [BaseLib] Registered config for mod FoolMelodyReplacer
+[INFO] Finished mod initialization for 'Fool Melody Replacer' (FoolMelodyReplacer).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3755773515\SplashExclusion.dll
+[INFO] Calling initializer method of type SplashExclusion.SplashExclusionMod for SplashExclusion, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [SplashExclusion] RandomForeseer 兼容补丁已安装：19 个来源镜像。
+[INFO] Finished mod initialization for 'SplashExclusion' (SplashExclusion).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3840050168\FoolMotion.dll
+[INFO] Calling initializer method of type FoolMotion.FoolMotionMod for FoolMotion, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [FoolMotion] loaded: DivineShot, WahSymphony, RainShot, HeavyShot, RapidShot, RepeatShot, MelodicShot, BlossomShot, SkyShot, WahHammer, WahBlast, ChoChorus, HarmonicShield, LostLute, MythicForm, Quietus, Florescence, WahChoKi, Coda, BlotOutTheSky, Brace, ChoKi, ChoLimbs, Enrapture, Growth, KiRest, LockedIn, Rummage, Uproot, Wrest, Vitriol, WhistlingArrows, Yoga, Anguish, DislikeYou, EpicRetrieval, PunchOfJoy, RhythmStrike, SteadyCadence, Timber, HobblingShot, TrickShot, WahCho, WahKi, AllIsWell, Archery, Compost, HiddenRoots, Motif, SerratedArrows, SongPath, Tune, ViolentChord, Encore, Ensemble, ExplosiveArrows, CoveringFire, Quiver, Ecstasy, Ennui, Honing, Lullaby, Simpleton, Yah, Bounce, BrightenUp, SelfDeprecate, ShowOff, KiVerse, Nail, TheFool, TheMagician, TheHighPriestess, TheEmpress, TheEmperor, TheHierophant, TheLovers, TheChariot, Strength, TheHermit, WheelOfFortune, Justice, TheHangedMan, Death, Temperance, TheDevil, TheTower, TheStar, TheMoon, TheSun, Judgement, TheWorld, StrikeFool, MourningBlow, SorrowfulStrike, BowSmack, ArrowStab, KiHop, KiWhip, WahTouch, WahSweep, FoolishShot, TheShot, Joy, QuickShot, DefendFool, ChoFirm, ChoReady, ChoBarbs, DeepStretch, Jest, KiChant, Nock, Recall
+[INFO] Finished mod initialization for '愚者 · 全卡动作特效 The Fool: Full Deck in Motion' (FoolMotion).
+[WARN] Mod Merchant2CuteII does not declare min game version. Assuming that it is supported.
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3748331824\Merchant2CuteII.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3748331824\Merchant2CuteII.pck
+[INFO] Calling initializer method of type Merchant2CuteII.Merchant2CuteIIMod for Merchant2CuteII, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+[Merchant2CuteII] game=v0.113.1, legacyAnimSig=no, legacyVisualLookup=no, skinChangerCooperation=yes
+[Merchant2CuteII] config: reading from user://merchant2cute_config.json
+[Merchant2CuteII] Legacy config (schema 1) detected and migrated to schema 2.
+[Merchant2CuteII] Harmony patches: applied=14, failed=0
+[Merchant2CuteII] Preloaded: res://animations/customs/merchant/leg.png
+[Merchant2CuteII] Preloaded audio resource: res://debug_audio/jp/welcome.mp3
+[Merchant2CuteII] Preloaded audio resource: res://debug_audio/jp/thanks.mp3
+[Merchant2CuteII] Ready. real[body=own, handSet=own, hand=hand, leg=on] fake[body=own, handSet=own, hand=hand] voice[lang=jp, db=0]
+[INFO] Finished mod initialization for 'Merchant2CuteII' (Merchant2CuteII).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3798006173\PixelPotions.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3798006173\PixelPotions.pck
+[INFO] Calling initializer method of type PixelPotions.PixelPotionsCode.MainFile for PixelPotions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] Finished mod initialization for 'PixelPotions' (PixelPotions).
+[WARN] Mod Rewind does not declare min game version. Assuming that it is supported.
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3747557762\Rewind.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3747557762\Rewind.pck
+[INFO] Calling initializer method of type Rewind.MainFile for Rewind, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [sts2.piyixiajiuhenfen.rewind] I18n loaded: zhs (104 keys)
+[INFO] [sts2.piyixiajiuhenfen.rewind] Encrypted stats loaded: 141 wins, 98 clean wins
+[INFO] [sts2.piyixiajiuhenfen.rewind] Rewind v0.26.20 initialized! F4=Rewind, F8=CopySeed, F9=Checkpoint, Reroll=None
+[INFO] Finished mod initialization for '皮皮倒带: Rewind' (Rewind).
+[WARN] Mod ModConfig does not declare min game version. Assuming that it is supported.
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3747557003\ModConfig.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3747557003\ModConfig.pck
+[INFO] Calling initializer method of type ModConfig.MainFile for ModConfig, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+[INFO] [sts2.piyixiajiuhenfen.modconfig] LocManager.Instance is null at init, will use lazy detection
+[INFO] [sts2.piyixiajiuhenfen.modconfig] ModConfig v0.2.4 initialized! (zero Harmony, cross-platform)
+[INFO] Finished mod initialization for '皮皮配置: ModConfig' (ModConfig).
+[INFO] Loading assembly DLL C:\Game\Steam\steamapps\workshop\content\2868840\3747497501\RegentFX.dll
+[INFO] Loading Godot PCK C:\Game\Steam\steamapps\workshop\content\2868840\3747497501\RegentFX.pck
+[INFO] Calling initializer method of type RegentFX.Scripts.Entry for RegentFX, Version=0.5.2.0, Culture=neutral, PublicKeyToken=null
+[INFO] [RegentFX] Preloading 32 RegentFX assets synchronously
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void Steamworks.SteamAPI.RunCallbacks()
+       [35] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [36] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [37] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [38] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [39] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [40] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [41] void System.Threading.Tasks.Task.RunContinuations(object)
+       [42] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [43] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [44] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetResult(TResult)
+       [45] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [46] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [47] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [48] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [49] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [50] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void Steamworks.SteamAPI.RunCallbacks()
+       [35] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [36] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [37] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [38] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [39] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [40] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [41] void System.Threading.Tasks.Task.RunContinuations(object)
+       [42] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [43] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [44] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetResult(TResult)
+       [45] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [46] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [47] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [48] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [49] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [50] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void Steamworks.SteamAPI.RunCallbacks()
+       [35] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [36] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [37] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [38] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [39] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [40] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [41] void System.Threading.Tasks.Task.RunContinuations(object)
+       [42] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [43] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [44] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetResult(TResult)
+       [45] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [46] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [47] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [48] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [49] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [50] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void Steamworks.SteamAPI.RunCallbacks()
+       [35] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [36] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [37] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [38] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [39] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [40] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [41] void System.Threading.Tasks.Task.RunContinuations(object)
+       [42] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [43] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [44] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetResult(TResult)
+       [45] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [46] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [47] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [48] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [49] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [50] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void Steamworks.SteamAPI.RunCallbacks()
+       [35] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [36] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [37] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [38] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [39] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [40] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [41] void System.Threading.Tasks.Task.RunContinuations(object)
+       [42] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [43] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [44] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetResult(TResult)
+       [45] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [46] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [47] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [48] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [49] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [50] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void Steamworks.SteamAPI.RunCallbacks()
+       [35] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [36] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [37] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [38] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [39] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [40] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [41] void System.Threading.Tasks.Task.RunContinuations(object)
+       [42] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [43] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [44] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetResult(TResult)
+       [45] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [46] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [47] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [48] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [49] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [50] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void Steamworks.SteamAPI.RunCallbacks()
+       [35] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [36] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [37] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [38] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [39] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [40] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [41] void System.Threading.Tasks.Task.RunContinuations(object)
+       [42] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [43] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [44] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetResult(TResult)
+       [45] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [46] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [47] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [48] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [49] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [50] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void Steamworks.SteamAPI.RunCallbacks()
+       [35] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [36] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [37] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [38] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [39] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [40] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [41] void System.Threading.Tasks.Task.RunContinuations(object)
+       [42] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [43] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [44] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetResult(TResult)
+       [45] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [46] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [47] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [48] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [49] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [50] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void Steamworks.SteamAPI.RunCallbacks()
+       [35] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [36] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [37] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [38] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [39] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [40] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [41] void System.Threading.Tasks.Task.RunContinuations(object)
+       [42] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [43] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [44] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetResult(TResult)
+       [45] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [46] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [47] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [48] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [49] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [50] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void Steamworks.SteamAPI.RunCallbacks()
+       [35] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [36] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [37] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [38] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [39] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [40] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [41] void System.Threading.Tasks.Task.RunContinuations(object)
+       [42] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [43] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [44] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetResult(TResult)
+       [45] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [46] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [47] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [48] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [49] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [50] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void Steamworks.SteamAPI.RunCallbacks()
+       [35] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [36] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [37] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [38] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [39] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [40] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [41] void System.Threading.Tasks.Task.RunContinuations(object)
+       [42] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [43] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [44] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetResult(TResult)
+       [45] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [46] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [47] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [48] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [49] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [50] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void Steamworks.SteamAPI.RunCallbacks()
+       [35] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [36] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [37] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [38] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [39] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [40] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [41] void System.Threading.Tasks.Task.RunContinuations(object)
+       [42] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [43] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [44] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetResult(TResult)
+       [45] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [46] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [47] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [48] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [49] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [50] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1291)
+   C# backtrace (most recent call first):
+       [0] Godot.GodotObject Godot.NativeCalls.godot_icall_3_1180(nint, nint, string, string, int)
+       [1] Godot.Resource Godot.ResourceLoader.Load(string, string, Godot.ResourceLoader+CacheMode)
+       [2] T Godot.ResourceLoader.Load<T>(string, string, Godot.ResourceLoader+CacheMode)
+       [3] void RegentFX.Scripts.Entry.LoadScenes()
+       [4] void RegentFX.Scripts.Entry.Init()
+       [5] object System.RuntimeMethodHandle.InvokeMethod(object, System.Void**, System.Signature, bool)
+       [6] object System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(object, System.Reflection.BindingFlags)
+       [7] object System.Reflection.RuntimeMethodInfo.Invoke(object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo)
+       [8] object System.Reflection.MethodBase.Invoke(object, System.Object[])
+       [9] bool MegaCrit.Sts2.Core.Modding.ModManager.CallModInitializer(System.Type)
+       [10] void MegaCrit.Sts2.Core.Modding.ModManager.TryLoadMod(MegaCrit.Sts2.Core.Modding.Mod)
+       [11] void MegaCrit.Sts2.Core.Modding.ModManager+<Initialize>d__29.MoveNext()
+       [12] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [13] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [14] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [15] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [16] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [17] void System.Threading.Tasks.Task.RunContinuations(object)
+       [18] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [19] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [20] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+       [21] void MegaCrit.Sts2.Core.Modding.ModManager+<CheckSteamBranchSupport>d__38.MoveNext()
+       [22] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [23] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [24] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [25] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [26] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [27] void System.Threading.Tasks.Task.RunContinuations(object)
+       [28] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [29] bool System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(TResult)
+       [30] void System.Threading.Tasks.TaskCompletionSource`1.SetResult(TResult)
+       [31] void MegaCrit.Sts2.Core.Multiplayer.Transport.Steam.SteamCallResult`1.OnCallResult(T, bool)
+       [32] void Steamworks.CallResult`1.OnRunCallResult(nint, bool, ulong)
+       [33] void Steamworks.CallbackDispatcher.RunFrame(bool)
+       [34] void Steamworks.SteamAPI.RunCallbacks()
+       [35] void MegaCrit.Sts2.Core.Platform.Steam.SteamInitializer+<RunCallbacksAsync>d__22.MoveNext()
+       [36] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [37] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [38] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [39] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [40] void System.Threading.Tasks.AwaitTaskContinuation.RunCallback(System.Threading.ContextCallback, object, System.Threading.Tasks.Task&)
+       [41] void System.Threading.Tasks.Task.RunContinuations(object)
+       [42] bool System.Threading.Tasks.Task`1.TrySetResult(TResult)
+       [43] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetExistingTaskResult(System.Threading.Tasks.Task`1[TResult], TResult)
+       [44] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.SetResult(TResult)
+       [45] void MegaCrit.Sts2.Core.Nodes.GodotExtensions.NodeUtil+<AwaitProcessFrame>d__0.MoveNext()
+       [46] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.ExecutionContextCallback(object)
+       [47] void System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, object)
+       [48] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext(System.Threading.Thread)
+       [49] void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1.MoveNext()
+       [50] void Godot.SignalAwaiter.SignalCallback(nint, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_bool*)

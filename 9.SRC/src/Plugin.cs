@@ -43,7 +43,8 @@ public static class Plugin
             return;
 
         Logger.Info(
-            $"ready. groups={CardGroups.All.Length} entries={CardGroupTable.Rows.Length} " +
+            $"ready. groups={CardGroups.Visible.Length} " +
+            $"entries={CardGroups.Visible.Sum(static group => group.Members.Length)} " +
             $"exemptions={ExclusionTable.DefaultExemptionKeys.Count} schema={ModSettings.CurrentSchema} " +
             $"patches={patcher.AppliedPatchCount}/{patcher.RegisteredPatchCount}");
     }

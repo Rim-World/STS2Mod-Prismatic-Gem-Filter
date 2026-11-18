@@ -22,7 +22,7 @@ internal enum GroupKind
 /// <param name="Kind">判定方式。</param>
 /// <param name="DefaultEnabled">首次启动时的默认勾选状态，见 SP-012。</param>
 /// <param name="MultiplayerOnly">成员是否全部为多人模式限定卡。只有这一项为真的组会在豁免页标明。</param>
-/// <param name="Members">卡牌标识，顺序与名单文件一致。</param>
+/// <param name="Members">当前游戏版本存在的卡牌标识，顺序与名单文件一致。0.111 上愚者卡池的成员已被剔除，见 SP-030。</param>
 internal sealed record CardGroup(
     string Id,
     string Section,
@@ -33,18 +33,24 @@ internal sealed record CardGroup(
 
 /// <summary>
 ///     15 个分组开关的静态定义。成员来自 <see cref="CardGroupTable" />，该表由名单 CSV 生成。
-///     <para>默认值依据 SP-012：11 项勾选、4 项不勾。</para>
+///     <para>默认值依据 SP-012：11 项勾选、4 项不勾。0.111 上愚者相关的组会被隐藏，见 SP-030。</para>
 /// </summary>
 internal static class CardGroups
 {
+    private const string FoolPool = "FoolCardPool";
+
     /// <summary>界面分节的排列顺序。前六节对应职业，末节收纳不按职业归类的组。</summary>
     public static readonly string[] Sections =
     [
         "necrobinder", "defect", "silent", "regent", "fool", "cross", "other",
     ];
 
-    /// <summary>全部分组，顺序即界面上的排列顺序。</summary>
-    public static readonly CardGroup[] All = Build();
+    /// <summary>全部分组，顺序即设置模型里的存储顺序。含当前版本不可见的组。</summary>
+    public static readonly CardGroup[] All = Build(GameFeatures.HasFool);
+
+    /// <summary>当前游戏版本要显示的分组。成员为空的组整组隐藏，见 SP-008 与 SP-030。</summary>
+    public static readonly CardGroup[] Visible =
+        All.Where(static group => group.Members.Length > 0).ToArray();
 
     private static readonly Dictionary<string, CardGroup> ById =
         All.ToDictionary(static group => group.Id, StringComparer.Ordinal);
@@ -53,11 +59,11 @@ internal static class CardGroups
 
     public static bool TryGet(string id, out CardGroup group) => ById.TryGetValue(id, out group!);
 
-    /// <summary>某分节名下的分组，按 <see cref="All" /> 的顺序。</summary>
+    /// <summary>某分节名下当前版本可见的分组，按 <see cref="All" /> 的顺序。</summary>
     public static IEnumerable<CardGroup> OfSection(string section) =>
-        All.Where(group => group.Section == section);
+        Visible.Where(group => group.Section == section);
 
-    private static CardGroup[] Build()
+    private static CardGroup[] Build(bool hasFool)
     {
         // 定义表：标识、分节、判定方式、默认勾选、是否多人专属。成员从生成表里按标识取。
         (string Id, string Section, GroupKind Kind, bool Default, bool MultiplayerOnly)[] definitions =
@@ -80,6 +86,7 @@ internal static class CardGroups
         ];
 
         var membersById = CardGroupTable.Rows
+            .Where(row => hasFool || !string.Equals(row.Pool, FoolPool, StringComparison.Ordinal))
             .GroupBy(static row => row.Group, StringComparer.Ordinal)
             .ToDictionary(
                 static group => group.Key,

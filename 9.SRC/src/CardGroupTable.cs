@@ -14,7 +14,7 @@ internal static class CardGroupTable
     /// <summary>全部行。顺序与 <see cref="CardGroups.All" /> 的分组顺序一致。</summary>
     public static readonly (string Group, string Entry, string Pool)[] Rows =
     [
-        // osty：10 张
+        // osty：11 张
         ("osty", "BONE_SHARDS", "NecrobinderCardPool"),
         ("osty", "FETCH", "NecrobinderCardPool"),
         ("osty", "FLATTEN", "NecrobinderCardPool"),
@@ -25,6 +25,7 @@ internal static class CardGroupTable
         ("osty", "SIC_EM", "NecrobinderCardPool"),
         ("osty", "SNAP", "NecrobinderCardPool"),
         ("osty", "SQUEEZE", "NecrobinderCardPool"),
+        ("osty", "CALCIFY", "NecrobinderCardPool"),
 
         // summon：8 张
         ("summon", "AFTERLIFE", "NecrobinderCardPool"),
@@ -36,7 +37,7 @@ internal static class CardGroupTable
         ("summon", "REANIMATE", "NecrobinderCardPool"),
         ("summon", "SPUR", "NecrobinderCardPool"),
 
-        // doom：13 张
+        // doom：14 张
         ("doom", "BLIGHT_STRIKE", "NecrobinderCardPool"),
         ("doom", "COUNTDOWN", "NecrobinderCardPool"),
         ("doom", "DEATHBRINGER", "NecrobinderCardPool"),
@@ -49,11 +50,11 @@ internal static class CardGroupTable
         ("doom", "REAPER_FORM", "NecrobinderCardPool"),
         ("doom", "SCOURGE", "NecrobinderCardPool"),
         ("doom", "SHROUD", "NecrobinderCardPool"),
+        ("doom", "SLEIGHT_OF_FLESH", "NecrobinderCardPool"),
         ("doom", "TIMES_UP", "NecrobinderCardPool"),
 
-        // orb：25 张
+        // orb：24 张
         ("orb", "BALL_LIGHTNING", "DefectCardPool"),
-        ("orb", "BULK_UP", "DefectCardPool"),
         ("orb", "CAPACITOR", "DefectCardPool"),
         ("orb", "CHAOS", "DefectCardPool"),
         ("orb", "CHILL", "DefectCardPool"),
@@ -78,11 +79,12 @@ internal static class CardGroupTable
         ("orb", "TESLA_COIL", "DefectCardPool"),
         ("orb", "VOLTAIC", "DefectCardPool"),
 
-        // focus：5 张
+        // focus：6 张
         ("focus", "DEFRAGMENT", "DefectCardPool"),
         ("focus", "FOCUSED_STRIKE", "DefectCardPool"),
         ("focus", "HOTFIX", "DefectCardPool"),
         ("focus", "HYPERBEAM", "DefectCardPool"),
+        ("focus", "BULK_UP", "DefectCardPool"),
         ("focus", "SYNCHRONIZE", "DefectCardPool"),
 
         // sly：9 张

@@ -8,8 +8,8 @@
   "pgf.master.desc": "关掉后和没装本模组一样。",
   "pgf.mode.name": "过滤时机",
   "pgf.mode.desc": "不确定就保持默认。",
-  "pgf.mode.gem": "只在棱彩宝石起作用时过滤",
-  "pgf.mode.any": "奖励里出现别的职业牌就过滤",
+  "pgf.mode.gem": "与棱彩宝石生效时机相同",
+  "pgf.mode.any": "当奖励中含有其他职业牌",
 
   "pgf.char.necrobinder": "亡灵契约师",
   "pgf.char.defect": "故障机器人",
@@ -31,8 +31,8 @@
   "pgf.count": "{0} 张",
   "pgf.count.one": "{0} 张",
 
-  "pgf.group.osty.name": "奥斯提牌",
-  "pgf.group.osty.desc": "靠奥斯提战斗",
+  "pgf.group.osty.name": "奥斯提攻击牌",
+  "pgf.group.osty.desc": "没有奥斯提则无效",
   "pgf.group.summon.name": "召唤牌",
   "pgf.group.summon.desc": "召唤或强化奥斯提",
   "pgf.group.doom.name": "灾厄牌",
@@ -60,7 +60,7 @@
   "pgf.group.multiplayer.name": "多人专属牌",
   "pgf.group.multiplayer.desc": "只在多人模式中出现",
   "pgf.group.bugged.name": "现版本有 bug 的牌",
-  "pgf.group.bugged.desc": "别的职业拿到它时生成不出箭矢",
+  "pgf.group.bugged.desc": "别的职业获取时效果异常",
 
   "pgf.exempt.row": "豁免清单",
   "pgf.exempt.button": "打开",

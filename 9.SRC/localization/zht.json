@@ -8,8 +8,8 @@
   "pgf.master.desc": "關掉後和沒裝本模組一樣。",
   "pgf.mode.name": "過濾時機",
   "pgf.mode.desc": "不確定就保持預設。",
-  "pgf.mode.gem": "只在稜彩寶石起作用時過濾",
-  "pgf.mode.any": "獎勵中出現其他職業牌就過濾",
+  "pgf.mode.gem": "與稜彩寶石生效時機相同",
+  "pgf.mode.any": "當獎勵中含有其他職業牌",
 
   "pgf.char.necrobinder": "縛亡者",
   "pgf.char.defect": "故障機器人",
@@ -31,8 +31,8 @@
   "pgf.count": "{0} 張",
   "pgf.count.one": "{0} 張",
 
-  "pgf.group.osty.name": "奧斯提牌",
-  "pgf.group.osty.desc": "靠奧斯提戰鬥",
+  "pgf.group.osty.name": "奧斯提攻擊牌",
+  "pgf.group.osty.desc": "沒有奧斯提則無效",
   "pgf.group.summon.name": "召喚牌",
   "pgf.group.summon.desc": "召喚或強化奧斯提",
   "pgf.group.doom.name": "惡兆牌",
@@ -60,7 +60,7 @@
   "pgf.group.multiplayer.name": "多人專屬牌",
   "pgf.group.multiplayer.desc": "只在多人遊戲中出現",
   "pgf.group.bugged.name": "現版本有 bug 的牌",
-  "pgf.group.bugged.desc": "別的職業拿到它時產生不出箭矢",
+  "pgf.group.bugged.desc": "別的職業獲得時效果異常",
 
   "pgf.exempt.row": "豁免清單",
   "pgf.exempt.button": "開啟",

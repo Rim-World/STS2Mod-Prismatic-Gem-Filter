@@ -204,8 +204,12 @@ python 8.TEST/CI-CD/check-user-prompt.py --mode show
 | `AutoSlayGate111/mod_manifest.json` | 2026-11-17 23:32 | 否 | 1 | 门模组清单。标识仍是 `AutoSlayGate`，`affects_gameplay` 为 `false` | 否 |
 | `自动测试-111-autoslay-棱彩宝石过滤生效-godot.log` | 2026-11-17 23:37 | 否 | 292 | 0.111.1 持宝石的对局日志，种子 `GEM111`，铁甲战士。6 条 `[filter] candidates=429 removed=100 kept=329`，发牌结果 `LETHALITY,BEAM_CELL,SKEWER` | 是 |
 | `自动测试-111-autoslay-对照组无宝石-godot.log` | 2026-11-17 23:41 | 否 | 312 | 0.111.1 不持宝石的对照日志，同种子 `GEM111`，`GATE_NO_GEM=1`。探针 85 张（本职业卡池全部），`[filter]` 0 条，三手奖励全为铁甲战士牌 | 是 |
+| `自检-0.0.11设置注册-godot.log` | 2026-11-18 19:24 | 否 | 125 | 0.0.11 首次无头启动日志。`[compat] fool=True`、`groups=11/15 exemptions=11 pages=16`、`ready. groups=15 entries=180 exemptions=11 schema=3` | 否 |
+| `自检-0.0.11设置注册-2-godot.log` | 2026-11-18 19:26 | 否 | 125 | 0.0.11 最终构建的无头启动日志。类型优先判定生效：`[compat] fool=True source=type`，其余计数与首次一致 | 是 |
+| `visibility-check/visibility-check.csproj` | 2026-11-18 19:28 | 否 | 1 | 0.111 可见性静态验证工程。net9.0 控制台，引用 0.0.11 DLL、0.111 `sts2.dll` 与游戏依赖 | 是 |
+| `visibility-check/Program.cs` | 2026-11-18 19:28 | 否 | 3 | 反射读取 `GameFeatures.HasFool`、`CardGroups.All`、`CardGroups.Visible` 与各组成员，断言 0.111 的可见分组为 11、多人组为 9、四个愚者组不可见；并算出默认排除数 0.113 为 121、0.111 为 99 | 是 |
 
-`AutoSlayGate111/` 下的 `bin/`、`obj/` 是 `dotnet build` 的产物，不逐个登记，可随时删除后重建。测试结束后 `mods/AutoSlayGate` 已移入回收站。
+`AutoSlayGate111/` 下的 `bin/`、`obj/` 是 `dotnet build` 的产物，不逐个登记，可随时删除后重建。`visibility-check/` 下的 `bin/`、`obj/` 同理。测试结束后 `mods/AutoSlayGate` 已移入回收站。
 
 本轮未验证项：0.111.1 上的遗物发牌入口（无场景脚本，控制台命令未驱动）；两版本的界面渲染；多人对局；0.107.1 被 `min_game_version` 挡下的表现。
 
