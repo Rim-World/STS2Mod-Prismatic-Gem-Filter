@@ -64,9 +64,9 @@
 
   "pgf.exempt.row": "豁免清单",
   "pgf.exempt.button": "打开",
-  "pgf.exempt.row.desc": "逐张指定本组要保留的牌。",
+  "pgf.exempt.row.desc": "逐张指定要保留的牌。",
   "pgf.exempt.page.title": "豁免清单",
-  "pgf.exempt.page.desc": "勾选＝本组保留这张牌。同属其他分组时，该分组仍可能排除。",
+  "pgf.exempt.page.desc": "勾选＝所有包含这张牌的分组都保留它。同一张牌在多个分组共享此开关。",
   "pgf.exempt.section": "本组的牌",
 
   "pgf.hint.multiplayer": "只在多人模式中出现。",

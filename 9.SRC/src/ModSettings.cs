@@ -426,7 +426,7 @@ internal static class ModSettings
                         Localization.Resolve("pgf.group." + id + ".name", id)),
                     ExemptionPageId(id),
                     Localization.Text("pgf.exempt.button", "Open"),
-                    Localization.Text("pgf.exempt.row.desc", "Keep the cards you select in this group."));
+                    Localization.Text("pgf.exempt.row.desc", "Choose the cards to keep."));
         }
     }
 
@@ -465,7 +465,7 @@ internal static class ModSettings
                 Localization.Resolve("pgf.exempt.page.title", "Exempt cards") + " · " +
                 Localization.Resolve("pgf.group." + id + ".name", id)))
             .WithDescription(Localization.Text("pgf.exempt.page.desc",
-                "A selected card stays. If the card is also in another group, that group can still exclude it."))
+                "A selected card stays in every group that contains it. Groups share one switch per card."))
             .AddSection("cards", section =>
             {
                 section.WithTitle(Localization.Text("pgf.exempt.section", "Cards in this group"));

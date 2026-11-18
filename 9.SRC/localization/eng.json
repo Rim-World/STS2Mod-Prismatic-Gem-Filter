@@ -64,9 +64,9 @@
 
   "pgf.exempt.row": "Exempt cards",
   "pgf.exempt.button": "Open",
-  "pgf.exempt.row.desc": "Keep the cards you select in this group.",
+  "pgf.exempt.row.desc": "Choose the cards to keep.",
   "pgf.exempt.page.title": "Exempt cards",
-  "pgf.exempt.page.desc": "A selected card stays. If the card is also in another group, that group can still exclude it.",
+  "pgf.exempt.page.desc": "A selected card stays in every group that contains it. Groups share one switch per card.",
   "pgf.exempt.section": "Cards in this group",
 
   "pgf.hint.multiplayer": "Appears only in multiplayer.",

@@ -234,6 +234,7 @@ python 8.TEST/CI-CD/check-user-prompt.py --mode show
 |---|---|---|---|---|---|
 | `自检-0.0.12-111设置注册-godot.log` | 2026-11-18 20:01 | 否 | 152 | 0.0.12 在 0.111.1 的无头启动日志。`reset. schema 3 -> 4`、`fool=False`、`groups=8/11 exemptions=10 pages=12`、`ready. groups=11 entries=143 exemptions=10 schema=4` | 是 |
 | `自动测试-111-autoslay-0.0.12-godot.log` | 2026-11-18 20:02 | 否 | 258 | 0.0.12 在 0.111.1 的对局日志。`AutoSlayGate111` 注入棱彩宝石后，3 条 `[filter] candidates=429 removed=99 kept=330 groups=8` | 是 |
+| `自动测试-111-autoslay-0.0.12-2-godot.log` | 2026-11-18 20:13 | 否 | 280 | 最终构建（含豁免页新文案）在 0.111.1 的对局日志。同样的 3 条 `[filter] candidates=429 removed=99 kept=330 groups=8` | 是 |
 
 ### 0.0.12 测试结果
 
