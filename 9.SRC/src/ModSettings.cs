@@ -44,8 +44,8 @@ internal sealed class SettingsSnapshot
 
     public required IReadOnlySet<string> ExemptionKeys { get; init; }
 
-    /// <summary>某卡在某分组下是否豁免。键是 <c>分组标识:卡牌标识</c>。</summary>
-    public bool IsExempt(string group, string entry) => ExemptionKeys.Contains(ExclusionTable.Key(group, entry));
+    /// <summary>某卡是否豁免。豁免按卡牌记录，与分组无关，见 SP-013。</summary>
+    public bool IsExempt(string entry) => ExemptionKeys.Contains(entry);
 }
 
 /// <summary>
@@ -69,8 +69,12 @@ internal static class ModSettings
     ///         0.0.11 升到 3：默认豁免新增洁净、唤起、血肉戏法，暴涨由球牌组移到集中牌组。
     ///         旧的 <c>orb:BULK_UP</c> 已无效，新的 <c>focus:BULK_UP</c> 又不在老档里，必须整份重置。
     ///     </para>
+    ///     <para>
+    ///         0.0.12 升到 4：豁免键由 <c>分组标识:卡牌标识</c> 改为裸卡牌标识，同一张牌的豁免状态跨组共享。
+    ///         旧键全部失效；暴涨也移回球牌组。见 SP-013 与 ADR-014。
+    ///     </para>
     /// </summary>
-    public const int CurrentSchema = 3;
+    public const int CurrentSchema = 4;
 
     private const string FileName = "settings.json";
 
@@ -116,7 +120,7 @@ internal static class ModSettings
                 }),
             static () => true);
 
-    /// <summary>豁免清单的父绑定。元素是 <c>分组标识:卡牌标识</c>，缺省时取默认清单。</summary>
+    /// <summary>豁免清单的父绑定。元素是卡牌标识，缺省时取默认清单。</summary>
     private static IModSettingsValueBinding<List<string>> ExemptionBinding { get; } =
         ModSettingsBindings.WithDefault(
             ModSettingsBindings.Global<SettingsModel, List<string>>(
@@ -315,21 +319,22 @@ internal static class ModSettings
                 () => defaultValue);
 
             foreach (var entry in group.Members)
-                CardBindings[ExclusionTable.Key(id, entry)] = CreateCardBinding(id, entry);
+            {
+                if (!CardBindings.ContainsKey(entry))
+                    CardBindings[entry] = CreateCardBinding(entry);
+            }
         }
     }
 
-    private static IModSettingsValueBinding<bool> CreateCardBinding(string groupId, string entry)
+    private static IModSettingsValueBinding<bool> CreateCardBinding(string entry)
     {
-        var key = ExclusionTable.Key(groupId, entry);
-
         return ModSettingsBindings.WithDefault(
             ModSettingsBindings.Project<List<string>, bool>(
                 ExemptionBinding,
-                groupId + "_" + entry,
-                list => list.Contains(key, StringComparer.Ordinal),
-                (list, exempted) => Toggle(list, key, exempted)),
-            () => ExclusionTable.IsDefaultExempt(groupId, entry));
+                entry,
+                list => list.Contains(entry, StringComparer.Ordinal),
+                (list, exempted) => Toggle(list, entry, exempted)),
+            () => ExclusionTable.IsDefaultExempt(entry));
     }
 
     /// <summary>返回改动后的新清单。不改入参，避免绕过存档。</summary>
@@ -469,7 +474,7 @@ internal static class ModSettings
                     section.AddToggle(
                         "card_" + entry,
                         Localization.CardTitle(entry),
-                        CardBindings[ExclusionTable.Key(id, entry)],
+                        CardBindings[entry],
                         BuildCardHint(group, entry));
             });
     }

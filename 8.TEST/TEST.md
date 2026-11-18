@@ -207,7 +207,7 @@ python 8.TEST/CI-CD/check-user-prompt.py --mode show
 | `自检-0.0.11设置注册-godot.log` | 2026-11-18 19:24 | 否 | 125 | 0.0.11 首次无头启动日志。`[compat] fool=True`、`groups=11/15 exemptions=11 pages=16`、`ready. groups=15 entries=180 exemptions=11 schema=3` | 否 |
 | `自检-0.0.11设置注册-2-godot.log` | 2026-11-18 19:26 | 否 | 125 | 0.0.11 最终构建的无头启动日志。类型优先判定生效：`[compat] fool=True source=type`，其余计数与首次一致 | 是 |
 | `visibility-check/visibility-check.csproj` | 2026-11-18 19:28 | 否 | 1 | 0.111 可见性静态验证工程。net9.0 控制台，引用 0.0.11 DLL、0.111 `sts2.dll` 与游戏依赖 | 是 |
-| `visibility-check/Program.cs` | 2026-11-18 19:28 | 否 | 3 | 反射读取 `GameFeatures.HasFool`、`CardGroups.All`、`CardGroups.Visible` 与各组成员，断言 0.111 的可见分组为 11、多人组为 9、四个愚者组不可见；并算出默认排除数 0.113 为 121、0.111 为 99 | 是 |
+| `visibility-check/Program.cs` | 2026-11-18 19:28 | 否 | 3 | 反射读取 `GameFeatures.HasFool`、`CardGroups.All`、`CardGroups.Visible` 与各组成员，断言 0.111 的可见分组为 11、多人组为 9、四个愚者组不可见；并算出默认排除数 0.113 为 121、0.111 为 99，默认豁免 10 条且无分组前缀 | 是 |
 
 `AutoSlayGate111/` 下的 `bin/`、`obj/` 是 `dotnet build` 的产物，不逐个登记，可随时删除后重建。`visibility-check/` 下的 `bin/`、`obj/` 同理。测试结束后 `mods/AutoSlayGate` 已移入回收站。
 
@@ -227,6 +227,29 @@ python 8.TEST/CI-CD/check-user-prompt.py --mode show
 | 不持宝石时 | 85 张，0 条过滤行 | 未做同条件对照 |
 
 100 与 122 的差额是 0.111.1 没有的 22 张愚者机制牌，逐张列在 `3.DOCS/018-T-跨版本实测-111与113.md` 第五节。
+
+### 0.0.12（2026-11-18 20:01，游戏 0.111.1）
+
+| 文件名 | 创建时间 | 是否清理 | 文件大小（KB） | 用途 | 引用和复用 |
+|---|---|---|---|---|---|
+| `自检-0.0.12-111设置注册-godot.log` | 2026-11-18 20:01 | 否 | 152 | 0.0.12 在 0.111.1 的无头启动日志。`reset. schema 3 -> 4`、`fool=False`、`groups=8/11 exemptions=10 pages=12`、`ready. groups=11 entries=143 exemptions=10 schema=4` | 是 |
+| `自动测试-111-autoslay-0.0.12-godot.log` | 2026-11-18 20:02 | 否 | 258 | 0.0.12 在 0.111.1 的对局日志。`AutoSlayGate111` 注入棱彩宝石后，3 条 `[filter] candidates=429 removed=99 kept=330 groups=8` | 是 |
+
+### 0.0.12 测试结果
+
+游戏版本 `v0.111.1`，同一份 0.0.12 DLL，默认设置。
+
+| 判据 | 数值 |
+|---|---|
+| `[compat]` | `fool=False source=type` |
+| 设置注册 | `groups=8/11 exemptions=10 pages=12` |
+| 就绪行 | `ready. groups=11 entries=143 exemptions=10 schema=4 patches=1/1` |
+| 过滤行 | `candidates=429 removed=99 kept=330 poolGate=0 otherPool=344` |
+| 过滤行次数 | 3 |
+
+`removed=99` 的推导：0.111 可见启用组共 110 行，减去跨组重复的「铸剑者」1 条，再减去 10 个豁免成员行（9 张不同卡，大爆炸在铸造与辉星各一行）。`BRIGHTEN_UP` 在 0.111 不可见，不计入。详见 `3.DOCS/020-T-豁免跨组同步与111复测.md`。
+
+未验证：双页豁免开关同步的实际界面操作、0.113.1 回归、0.111 的遗物发牌入口。
 
 ## 测试方法
 

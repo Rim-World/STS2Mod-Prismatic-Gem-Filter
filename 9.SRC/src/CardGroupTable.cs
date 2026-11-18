@@ -53,8 +53,9 @@ internal static class CardGroupTable
         ("doom", "SLEIGHT_OF_FLESH", "NecrobinderCardPool"),
         ("doom", "TIMES_UP", "NecrobinderCardPool"),
 
-        // orb：24 张
+        // orb：25 张
         ("orb", "BALL_LIGHTNING", "DefectCardPool"),
+        ("orb", "BULK_UP", "DefectCardPool"),
         ("orb", "CAPACITOR", "DefectCardPool"),
         ("orb", "CHAOS", "DefectCardPool"),
         ("orb", "CHILL", "DefectCardPool"),
@@ -79,12 +80,11 @@ internal static class CardGroupTable
         ("orb", "TESLA_COIL", "DefectCardPool"),
         ("orb", "VOLTAIC", "DefectCardPool"),
 
-        // focus：6 张
+        // focus：5 张
         ("focus", "DEFRAGMENT", "DefectCardPool"),
         ("focus", "FOCUSED_STRIKE", "DefectCardPool"),
         ("focus", "HOTFIX", "DefectCardPool"),
         ("focus", "HYPERBEAM", "DefectCardPool"),
-        ("focus", "BULK_UP", "DefectCardPool"),
         ("focus", "SYNCHRONIZE", "DefectCardPool"),
 
         // sly：9 张

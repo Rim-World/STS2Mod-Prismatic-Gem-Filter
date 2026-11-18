@@ -39,7 +39,7 @@ var defaultKeys = ((IEnumerable<string>)exclusionType
     .GetProperty("DefaultExemptionKeys", BindingFlags.Static | BindingFlags.Public)!
     .GetValue(null)!).ToArray();
 Console.WriteLine("defaultKeys=" + defaultKeys.Length);
-Console.WriteLine("staleOrbBulkUp=" + defaultKeys.Contains("orb:BULK_UP"));
+Console.WriteLine("staleGroupPrefix=" + defaultKeys.Any(key => key.Contains(':')));
 
 foreach (var flag in new[] { true, false })
 {
@@ -53,11 +53,10 @@ foreach (var flag in new[] { true, false })
         if (!(bool)groupType.GetProperty("DefaultEnabled")!.GetValue(group)!)
             continue;
 
-        var groupId = (string)groupType.GetProperty("Id")!.GetValue(group)!;
         foreach (var entry in (string[])groupType.GetProperty("Members")!.GetValue(group)!)
         {
             rows++;
-            if (!(bool)isDefaultExempt.Invoke(null, [groupId, entry])!)
+            if (!(bool)isDefaultExempt.Invoke(null, [entry])!)
                 excluded.Add(entry);
         }
     }
@@ -67,11 +66,8 @@ foreach (var flag in new[] { true, false })
 
 foreach (var key in defaultKeys)
 {
-    var parts = key.Split(':', 2);
     var groups = (Array)build.Invoke(null, [true])!;
-    var match = groups.Cast<object>().FirstOrDefault(group =>
-        (string)group.GetType().GetProperty("Id")!.GetValue(group)! == parts[0]);
-    var member = match is not null &&
-        ((string[])match.GetType().GetProperty("Members")!.GetValue(match)!).Contains(parts[1]);
+    var member = groups.Cast<object>().Any(group =>
+        ((string[])group.GetType().GetProperty("Members")!.GetValue(group)!).Contains(key));
     Console.WriteLine($"defaultKeyValid={key}:{member}");
 }

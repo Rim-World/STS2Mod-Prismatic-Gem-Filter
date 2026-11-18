@@ -74,7 +74,7 @@ internal static class FilterIndex
 
             foreach (var entry in group.Members)
             {
-                if (snapshot.IsExempt(group.Id, entry))
+                if (snapshot.IsExempt(entry))
                     continue;
 
                 excluded.Add(entry);
