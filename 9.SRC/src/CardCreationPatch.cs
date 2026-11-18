@@ -112,7 +112,7 @@ internal sealed class CardCreationPatch : IPatchMethod
     }
 
     private static string Describe(FilterMode mode, CardFilter.Stats stats) =>
-        $"[filter] mode={mode} groups={FilterIndex.EnabledGroups} candidates={stats.Candidates} " +
+        $"[filter] mode={mode} groups={FilterIndex.ActiveGroups} candidates={stats.Candidates} " +
         $"removed={stats.Removed} kept={stats.Kept} poolGate={stats.PoolGateSkipped} otherPool={stats.OtherPoolCards}";
 
     /// <summary>

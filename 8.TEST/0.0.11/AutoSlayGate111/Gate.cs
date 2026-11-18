@@ -1,6 +1,8 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Commands;
@@ -95,6 +97,8 @@ internal static class GemInjector
                     continue;
                 }
 
+                StateProbe.RunOnce();
+
                 var gem = ModelDb.AllRelics.FirstOrDefault(relic => relic.Id.Entry == GemId);
                 if (gem is null)
                 {
@@ -174,4 +178,137 @@ internal static class RewardProbePatch
             Log.Error($"[reward] failed: {ex.GetType().Name}: {ex.Message}");
         }
     }
+}
+
+/// <summary>
+///     设置状态探针。直接调用 PrismaticGemFilter 的绑定对象，验证分组开关与单卡开关读写同一份集合。
+///     只在 AutoSlayGate 测试中使用，修改后立即恢复原清单。
+/// </summary>
+internal static class StateProbe
+{
+    private static bool _ran;
+
+    public static void RunOnce()
+    {
+        if (_ran)
+            return;
+
+        _ran = true;
+
+        List<string>? original = null;
+        try
+        {
+            var assembly = AppDomain.CurrentDomain.GetAssemblies()
+                .FirstOrDefault(candidate => candidate.GetName().Name == "PrismaticGemFilter");
+            if (assembly is null)
+            {
+                Log.Warn("[state] PrismaticGemFilter 程序集未加载，跳过");
+                return;
+            }
+
+            var settingsType = assembly.GetType("PrismaticGemFilter.ModSettings", throwOnError: true)!;
+            var groupsType = assembly.GetType("PrismaticGemFilter.CardGroups", throwOnError: true)!;
+            var groupBindings = (IDictionary)settingsType
+                .GetField("GroupBindings", BindingFlags.Static | BindingFlags.NonPublic)!
+                .GetValue(null)!;
+            var cardBindings = (IDictionary)settingsType
+                .GetField("CardBindings", BindingFlags.Static | BindingFlags.NonPublic)!
+                .GetValue(null)!;
+            var filteredBinding = settingsType
+                .GetProperty("FilteredBinding", BindingFlags.Static | BindingFlags.NonPublic)!
+                .GetValue(null)!;
+
+            var forge = FindGroup(groupsType, "forge");
+            var star = FindGroup(groupsType, "star");
+            original = new List<string>((List<string>)Read(filteredBinding)!);
+
+            Log.Info(
+                $"[state] initial bigBangExempt={ReadBool(cardBindings, "BIG_BANG")} " +
+                $"smithExempt={ReadBool(cardBindings, "THE_SMITH")} " +
+                $"forge={ReadBool(groupBindings, "forge")} star={ReadBool(groupBindings, "star")} " +
+                $"forgeCount={Count((List<string>)Read(filteredBinding)!, forge)}/{Members(forge).Length} " +
+                $"starCount={Count((List<string>)Read(filteredBinding)!, star)}/{Members(star).Length}");
+
+            Write(cardBindings["BIG_BANG"]!, false);
+            Log.Info(
+                $"[state] bigBangFiltered bigBangExempt={ReadBool(cardBindings, "BIG_BANG")} " +
+                $"smithExempt={ReadBool(cardBindings, "THE_SMITH")} " +
+                $"forge={ReadBool(groupBindings, "forge")} star={ReadBool(groupBindings, "star")}");
+
+            Write(groupBindings["forge"]!, false);
+            Log.Info(
+                $"[state] forgeOff smithExempt={ReadBool(cardBindings, "THE_SMITH")} " +
+                $"bigBangExempt={ReadBool(cardBindings, "BIG_BANG")} " +
+                $"forge={ReadBool(groupBindings, "forge")} star={ReadBool(groupBindings, "star")} " +
+                $"forgeCount={Count((List<string>)Read(filteredBinding)!, forge)}/{Members(forge).Length} " +
+                $"starCount={Count((List<string>)Read(filteredBinding)!, star)}/{Members(star).Length}");
+
+            Write(groupBindings["forge"]!, true);
+            Log.Info(
+                $"[state] forgeOn smithExempt={ReadBool(cardBindings, "THE_SMITH")} " +
+                $"bigBangExempt={ReadBool(cardBindings, "BIG_BANG")} " +
+                $"forge={ReadBool(groupBindings, "forge")} star={ReadBool(groupBindings, "star")} " +
+                $"forgeCount={Count((List<string>)Read(filteredBinding)!, forge)}/{Members(forge).Length} " +
+                $"starCount={Count((List<string>)Read(filteredBinding)!, star)}/{Members(star).Length}");
+        }
+        catch (Exception ex)
+        {
+            Log.Error($"[state] probe failed: {ex.GetType().Name}: {ex.Message}");
+        }
+        finally
+        {
+            if (original is not null)
+            {
+                try
+                {
+                    var assembly = AppDomain.CurrentDomain.GetAssemblies()
+                        .First(candidate => candidate.GetName().Name == "PrismaticGemFilter");
+                    var settingsType = assembly.GetType("PrismaticGemFilter.ModSettings", throwOnError: true)!;
+                    var filteredBinding = settingsType
+                        .GetProperty("FilteredBinding", BindingFlags.Static | BindingFlags.NonPublic)!
+                        .GetValue(null)!;
+                    Write(filteredBinding, new List<string>(original));
+                    Save(filteredBinding);
+
+                    var cardBindings = (IDictionary)settingsType
+                        .GetField("CardBindings", BindingFlags.Static | BindingFlags.NonPublic)!
+                        .GetValue(null)!;
+                    Log.Info(
+                        $"[state] restored bigBangExempt={ReadBool(cardBindings, "BIG_BANG")} " +
+                        $"smithExempt={ReadBool(cardBindings, "THE_SMITH")} count={original.Count}");
+                }
+                catch (Exception ex)
+                {
+                    Log.Error($"[state] restore failed: {ex.GetType().Name}: {ex.Message}");
+                }
+            }
+        }
+    }
+
+    private static object FindGroup(Type groupsType, string id)
+    {
+        var all = (Array)groupsType.GetField("All", BindingFlags.Static | BindingFlags.Public)!.GetValue(null)!;
+        return all.Cast<object>().First(group =>
+            (string)group.GetType().GetProperty("Id")!.GetValue(group)! == id);
+    }
+
+    private static string[] Members(object group) =>
+        (string[])group.GetType().GetProperty("Members")!.GetValue(group)!;
+
+    private static int Count(List<string> filtered, object group) =>
+        Members(group).Count(entry => filtered.Contains(entry, StringComparer.Ordinal));
+
+    private static object? Read(object binding) =>
+        binding.GetType().GetMethod("Read", Type.EmptyTypes)!.Invoke(binding, null);
+
+    private static bool ReadBool(IDictionary bindings, string key) =>
+        (bool)Read(bindings[key]!)!;
+
+    private static void Write(object binding, object value) =>
+        binding.GetType().GetMethods()
+            .First(method => method.Name == "Write" && method.GetParameters().Length == 1)
+            .Invoke(binding, [value]);
+
+    private static void Save(object binding) =>
+        binding.GetType().GetMethod("Save", Type.EmptyTypes)!.Invoke(binding, null);
 }

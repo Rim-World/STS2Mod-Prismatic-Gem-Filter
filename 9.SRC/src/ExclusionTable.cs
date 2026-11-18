@@ -1,24 +1,31 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace PrismaticGemFilter;
 
 /// <summary>
-///     默认豁免清单。元素是卡牌标识，例如 <c>NEUROSURGE</c>。
+///     默认排除表。元素是卡牌标识，例如 <c>NEUROSURGE</c>。
 ///     <para>
-///         豁免按卡牌记录，不按分组。同一张牌同时属于两个分组时，两个豁免页共享同一个开关，
-///         见 SP-013 与 <c>4.ADR/014-豁免按卡牌跨组同步.md</c>。
+///         0.0.13 起唯一筛选状态是「已排除的卡牌标识集合」，本表负责生成首次启动的默认集合。
+///         规则：所有默认勾选分组的成员并集，减去显式默认豁免。
+///         同一张跨组卡只记一条；<c>BIG_BANG</c> 在铸造与辉星两组都出现，但默认豁免只扣一次。
+///         见 SP-021、SP-031 与 <c>4.ADR/015</c>。
+///     </para>
+///     <para>
+///         默认集合按 <see cref="CardGroups.All" /> 计算，包含当前游戏版本隐藏的愚者卡。
+///         隐藏卡不进入当前版本的可见分组，也不进入排除索引，但玩家切换游戏版本后仍能读到正确默认状态。
 ///     </para>
 ///     <para>
 ///         本文件在 0.0.3 时只有一组奥斯提牌名单。0.0.4 起成员名单改由
-///         <see cref="CardGroupTable" /> 提供，本文件改为承载默认豁免表。
-///         0.0.5 删掉了多人限定卡放行表：这类卡已从各分组移出，见 ADR-009。
-///         0.0.12 把豁免键由 <c>分组标识:卡牌标识</c> 改为裸卡牌标识，见 ADR-014。
-///         文件名保留，避免打断既有引用与提交历史。
+///         <see cref="CardGroupTable" /> 提供。0.0.5 删掉多人限定卡放行表。
+///         0.0.12 把豁免键由 <c>分组标识:卡牌标识</c> 改为裸卡牌标识。
+///         0.0.13 把「默认豁免」扩为「默认排除」，分组开关不再单独落盘。
 ///     </para>
 /// </summary>
 internal static class ExclusionTable
 {
-    private static readonly string[] DefaultExemptionKeysValue =
+    /// <summary>显式默认豁免。这些牌即使所在分组默认勾选，也默认保留。</summary>
+    private static readonly string[] ExplicitExemptionKeysValue =
     [
         // 灾厄牌组：精神过载。用户 2026-11-15 07:00 点名。
         "NEUROSURGE",
@@ -34,10 +41,10 @@ internal static class ExclusionTable
         "FUSION",
         "BULK_UP",
 
-        // 铸剑牌组与星牌组：大爆炸。按卡牌只记一条，两个分组共享，见 SP-013。
+        // 铸造牌组与辉星牌组：大爆炸。按卡牌只记一条，两个分组共享。
         "BIG_BANG",
 
-        // 星牌组：汇流。
+        // 辉星牌组：汇流。
         "CONVERGENCE",
 
         // 集中牌组：超能光束。它带集中关键词却降低集中，用户 2026-11-16 19:30 点名。
@@ -47,18 +54,42 @@ internal static class ExclusionTable
         "BRIGHTEN_UP",
     ];
 
-    /// <summary>默认豁免清单，元素是卡牌标识。见 SP-021。</summary>
-    public static IReadOnlyList<string> DefaultExemptionKeys => DefaultExemptionKeysValue;
+    private static readonly HashSet<string> DefaultExcludedSet = Build();
 
-    /// <summary>该卡是否默认为豁免状态。不区分分组。</summary>
-    public static bool IsDefaultExempt(string entry)
+    /// <summary>默认排除集合，元素是卡牌标识，按标识排序。见 SP-031。</summary>
+    public static readonly IReadOnlyList<string> DefaultExcludedKeys = BuildSortedList();
+
+    /// <summary>显式默认豁免，供文档与测试核对。</summary>
+    public static IReadOnlyList<string> ExplicitExemptionKeys => ExplicitExemptionKeysValue;
+
+    /// <summary>该卡是否默认被排除。不区分分组。</summary>
+    public static bool IsDefaultExcluded(string entry) => DefaultExcludedSet.Contains(entry);
+
+    private static HashSet<string> Build()
     {
-        foreach (var item in DefaultExemptionKeysValue)
+        // 用全表行与分组默认值求默认集合，不用 CardGroups.All 的 Members：
+        // 0.111 上 All 会剔除愚者成员，若按它计算，玩家切到 0.113 后愚者卡会缺少默认状态。
+        var defaultEnabledGroups = new HashSet<string>(
+            CardGroups.All.Where(static group => group.DefaultEnabled).Select(static group => group.Id),
+            StringComparer.Ordinal);
+
+        var set = new HashSet<string>(StringComparer.Ordinal);
+        foreach (var row in CardGroupTable.Rows)
         {
-            if (string.Equals(item, entry, StringComparison.Ordinal))
-                return true;
+            if (defaultEnabledGroups.Contains(row.Group))
+                set.Add(row.Entry);
         }
 
-        return false;
+        foreach (var entry in ExplicitExemptionKeysValue)
+            set.Remove(entry);
+
+        return set;
+    }
+
+    private static string[] BuildSortedList()
+    {
+        var list = new List<string>(DefaultExcludedSet);
+        list.Sort(StringComparer.Ordinal);
+        return list.ToArray();
     }
 }

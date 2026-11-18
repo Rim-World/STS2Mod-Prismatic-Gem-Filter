@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using STS2RitsuLib;
 using STS2RitsuLib.Data;
 using STS2RitsuLib.Settings;
@@ -11,8 +12,12 @@ namespace PrismaticGemFilter;
 ///     落盘的设置模型。必须是 <c>class</c> 且有无参构造，属性而非字段。
 ///     <para>枚举按数字落盘，成员数值不得改动，见 <see cref="FilterMode" /> 的注释。</para>
 ///     <para>
-///         <see cref="Groups" /> 与 <see cref="Exemptions" /> 为 <c>null</c> 表示该组设置从未被玩家改过，
-///         此时取代码里的默认值。这样加新分组、改默认值都不需要迁移旧存档。
+///         唯一筛选状态是 <see cref="Filtered" />：元素为已排除的卡牌标识。
+///         它同时是分组开关与单卡豁免的唯一来源。见 SP-031 与 <c>4.ADR/015</c>。
+///     </para>
+///     <para>
+///         <see cref="Filtered" /> 为 <c>null</c> 表示玩家从未改过，此时取代码里的默认集合。
+///         这样加新分组、改默认值都不需要迁移旧存档。
 ///     </para>
 ///     <para>
 ///         <see cref="SchemaVersion" /> 是架构版本。它与模组当前的架构版本不一致时，启动会整体重置为默认值，
@@ -28,9 +33,8 @@ internal sealed class SettingsModel
 
     public bool MasterEnabled { get; set; } = true;
 
-    public Dictionary<string, bool>? Groups { get; set; }
-
-    public List<string>? Exemptions { get; set; }
+    /// <summary>已排除的卡牌标识。null 表示从未改过，取默认集合。</summary>
+    public List<string>? Filtered { get; set; }
 }
 
 /// <summary>某一时刻生效的设置。判定与建索引只读这里，避免每张牌都去查数据槽。</summary>
@@ -40,12 +44,13 @@ internal sealed class SettingsSnapshot
 
     public required bool MasterEnabled { get; init; }
 
-    public required IReadOnlySet<string> EnabledGroups { get; init; }
+    public required IReadOnlySet<string> FilteredKeys { get; init; }
 
-    public required IReadOnlySet<string> ExemptionKeys { get; init; }
-
-    /// <summary>某卡是否豁免。豁免按卡牌记录，与分组无关，见 SP-013。</summary>
-    public bool IsExempt(string entry) => ExemptionKeys.Contains(entry);
+    /// <summary>
+    ///     该卡是否被排除。这是设置层的唯一卡牌状态，不含总开关、判定模式、本职业卡池门控与空结果回退。
+    ///     见 SP-031 与 SP-036。
+    /// </summary>
+    public bool IsFiltered(string entry) => FilteredKeys.Contains(entry);
 }
 
 /// <summary>
@@ -54,7 +59,7 @@ internal sealed class SettingsSnapshot
 ///         作用域取 <c>SaveScope.Global</c>。原因：<c>Profile</c> 作用域在档案就绪之前读取会抛异常，
 ///         两个已找到的样例模组都用了 <c>Global</c>。规则见 SP-018。
 ///     </para>
-///     <para>架构与求值规则见 <c>2.PLANS/004-M-分组开关与设置页.md</c>。</para>
+///     <para>架构与求值规则见 <c>2.PLANS/014-M-卡牌筛选状态唯一化.md</c> 与 <c>4.ADR/015</c>。</para>
 /// </summary>
 internal static class ModSettings
 {
@@ -69,12 +74,16 @@ internal static class ModSettings
     ///         0.0.11 升到 3：默认豁免新增洁净、唤起、血肉戏法，暴涨由球牌组移到集中牌组。
     ///         旧的 <c>orb:BULK_UP</c> 已无效，新的 <c>focus:BULK_UP</c> 又不在老档里，必须整份重置。
     ///     </para>
-    ///     <para>
+    /// <para>
     ///         0.0.12 升到 4：豁免键由 <c>分组标识:卡牌标识</c> 改为裸卡牌标识，同一张牌的豁免状态跨组共享。
     ///         旧键全部失效；暴涨也移回球牌组。见 SP-013 与 ADR-014。
     ///     </para>
+    ///     <para>
+    ///         0.0.13 升到 5：<c>Groups</c> 与 <c>Exemptions</c> 合并为 <c>Filtered</c>。
+    ///         分组开关不再单独落盘，改为排除集合的聚合视图与批量命令。旧档整份重置。见 SP-031 与 ADR-015。
+    ///     </para>
     /// </summary>
-    public const int CurrentSchema = 4;
+    public const int CurrentSchema = 5;
 
     private const string FileName = "settings.json";
 
@@ -88,11 +97,12 @@ internal static class ModSettings
     private static bool _readFailed;
     private static int _version;
     private static SettingsSnapshot? _cached;
+    private static int _cachedVersion = -1;
 
     private static ModDataStore Store => ModDataStore.For(Plugin.ModId);
 
     /// <summary>设置的版本号。每次写入自增，用来让快照与排除索引失效。</summary>
-    public static int Version => _version;
+    public static int Version => Volatile.Read(ref _version);
 
     private static IModSettingsValueBinding<FilterMode> ModeBinding { get; } =
         ModSettingsBindings.WithDefault<FilterMode>(
@@ -120,37 +130,35 @@ internal static class ModSettings
                 }),
             static () => true);
 
-    /// <summary>豁免清单的父绑定。元素是卡牌标识，缺省时取默认清单。</summary>
-    private static IModSettingsValueBinding<List<string>> ExemptionBinding { get; } =
+    /// <summary>排除集合的父绑定。元素是卡牌标识，缺省时取默认集合。</summary>
+    private static IModSettingsValueBinding<List<string>> FilteredBinding { get; } =
         ModSettingsBindings.WithDefault(
             ModSettingsBindings.Global<SettingsModel, List<string>>(
                 Plugin.ModId,
                 DataKey,
-                static model => model.Exemptions ?? new List<string>(ExclusionTable.DefaultExemptionKeys),
+                static model => model.Filtered ?? new List<string>(ExclusionTable.DefaultExcludedKeys),
                 static (model, value) =>
                 {
-                    model.Exemptions = value;
+                    model.Filtered = value;
                     Invalidate();
                 }),
-            static () => new List<string>(ExclusionTable.DefaultExemptionKeys));
+            static () => new List<string>(ExclusionTable.DefaultExcludedKeys));
 
     /// <summary>当前生效的设置。设置未注册或读取失败时返回代码里的默认值。</summary>
     public static SettingsSnapshot Current
     {
         get
         {
-            var cached = _cached;
-            if (cached is not null && _cachedVersion == _version)
+            var cached = Volatile.Read(ref _cached);
+            if (cached is not null && Volatile.Read(ref _cachedVersion) == Version)
                 return cached;
 
             var snapshot = Build();
-            _cached = snapshot;
-            _cachedVersion = _version;
+            Volatile.Write(ref _cached, snapshot);
+            Volatile.Write(ref _cachedVersion, _version);
             return snapshot;
         }
     }
-
-    private static int _cachedVersion = -1;
 
     /// <summary>注册数据槽、绑定与全部设置页面。由 <see cref="Plugin.Initialize" /> 调用。</summary>
     public static void Register()
@@ -184,17 +192,29 @@ internal static class ModSettings
         Invalidate();
 
         var snapshot = Current;
-        var visibleEnabled = CardGroups.Visible.Count(group => snapshot.EnabledGroups.Contains(group.Id));
+        var visibleFiltered = new HashSet<string>(StringComparer.Ordinal);
+        var visibleEntries = 0;
+        foreach (var group in CardGroups.Visible)
+        {
+            visibleEntries += group.Members.Length;
+            foreach (var entry in group.Members)
+            {
+                if (snapshot.IsFiltered(entry))
+                    visibleFiltered.Add(entry);
+            }
+        }
+
         Plugin.Logger.Info(
             $"[settings] registered. mode={snapshot.Mode} master={snapshot.MasterEnabled} " +
-            $"groups={visibleEnabled}/{CardGroups.Visible.Length} exemptions={snapshot.ExemptionKeys.Count} " +
-            $"pages={1 + CardGroups.Visible.Length}");
+            $"groups={CardGroups.Visible.Length} entries={visibleEntries} filtered={visibleFiltered.Count} " +
+            $"stored={snapshot.FilteredKeys.Count} pages={1 + CardGroups.Visible.Length}");
     }
 
     /// <summary>让快照与排除索引失效。所有写入路径都必须经过这里。</summary>
     private static void Invalidate()
     {
-        _version++;
+        Interlocked.Increment(ref _version);
+        Volatile.Write(ref _cached, null);
         FilterIndex.Invalidate();
     }
 
@@ -227,11 +247,7 @@ internal static class ModSettings
             {
                 model.Mode = FilterMode.PrismaticGemOnly;
                 model.MasterEnabled = true;
-                model.Groups = CardGroups.All.ToDictionary(
-                    static group => group.Id,
-                    static group => group.DefaultEnabled,
-                    StringComparer.Ordinal);
-                model.Exemptions = new List<string>(ExclusionTable.DefaultExemptionKeys);
+                model.Filtered = new List<string>(ExclusionTable.DefaultExcludedKeys);
                 model.SchemaVersion = CurrentSchema;
             });
             Store.Save(DataKey);
@@ -239,13 +255,14 @@ internal static class ModSettings
             Invalidate();
 
             Plugin.Logger.Info(
-                $"[settings] reset. schema {stored} -> {CurrentSchema}, groups=" +
-                $"{CardGroups.All.Count(static group => group.DefaultEnabled)}/{CardGroups.All.Length} " +
-                $"exemptions={ExclusionTable.DefaultExemptionKeys.Count}");
+                $"[settings] reset. schema {stored} -> {CurrentSchema}, " +
+                $"filtered={ExclusionTable.DefaultExcludedKeys.Count} " +
+                $"explicitExemptions={ExclusionTable.ExplicitExemptionKeys.Count}");
         }
         catch (Exception ex)
         {
-            Plugin.Logger.Error($"[settings] 重置设置失败，本次运行沿用存档里的值: {ex}");
+            Plugin.Logger.Error(
+                $"[settings] 重置设置失败，本次运行按默认筛选状态工作，存档仍可能是旧架构: {ex}");
         }
     }
 
@@ -256,21 +273,13 @@ internal static class ModSettings
 
         try
         {
-            var enabled = new HashSet<string>(StringComparer.Ordinal);
-            foreach (var group in CardGroups.All)
-            {
-                if (GroupBindings.TryGetValue(group.Id, out var binding) && binding.Read())
-                    enabled.Add(group.Id);
-            }
-
-            var exemptions = ExemptionBinding.Read();
+            var filtered = FilteredBinding.Read();
 
             return new SettingsSnapshot
             {
                 Mode = ModeBinding.Read(),
                 MasterEnabled = MasterBinding.Read(),
-                EnabledGroups = enabled,
-                ExemptionKeys = new HashSet<string>(exemptions, StringComparer.Ordinal),
+                FilteredKeys = new HashSet<string>(filtered, StringComparer.Ordinal),
             };
         }
         catch (Exception ex)
@@ -287,16 +296,11 @@ internal static class ModSettings
 
     private static SettingsSnapshot Defaults()
     {
-        var enabled = new HashSet<string>(
-            CardGroups.All.Where(static group => group.DefaultEnabled).Select(static group => group.Id),
-            StringComparer.Ordinal);
-
         return new SettingsSnapshot
         {
             Mode = FilterMode.PrismaticGemOnly,
             MasterEnabled = true,
-            EnabledGroups = enabled,
-            ExemptionKeys = new HashSet<string>(ExclusionTable.DefaultExemptionKeys, StringComparer.Ordinal),
+            FilteredKeys = new HashSet<string>(ExclusionTable.DefaultExcludedKeys, StringComparer.Ordinal),
         };
     }
 
@@ -305,18 +309,13 @@ internal static class ModSettings
         foreach (var group in CardGroups.All)
         {
             var id = group.Id;
-            var defaultValue = group.DefaultEnabled;
             GroupBindings[id] = ModSettingsBindings.WithDefault(
-                ModSettingsBindings.Global<SettingsModel, bool>(
-                    Plugin.ModId,
-                    DataKey,
-                    model => ReadGroup(model, id),
-                    (model, value) =>
-                    {
-                        (model.Groups ??= new Dictionary<string, bool>(StringComparer.Ordinal))[id] = value;
-                        Invalidate();
-                    }),
-                () => defaultValue);
+                ModSettingsBindings.Project<List<string>, bool>(
+                    FilteredBinding,
+                    "group_" + id,
+                    list => FilterState.IsGroupFiltered(list, group),
+                    (list, filtered) => FilterState.SetGroup(list, group, filtered)),
+                () => FilterState.IsGroupFiltered(ExclusionTable.DefaultExcludedKeys, group));
 
             foreach (var entry in group.Members)
             {
@@ -330,36 +329,11 @@ internal static class ModSettings
     {
         return ModSettingsBindings.WithDefault(
             ModSettingsBindings.Project<List<string>, bool>(
-                ExemptionBinding,
+                FilteredBinding,
                 entry,
-                list => list.Contains(entry, StringComparer.Ordinal),
-                (list, exempted) => Toggle(list, entry, exempted)),
-            () => ExclusionTable.IsDefaultExempt(entry));
-    }
-
-    /// <summary>返回改动后的新清单。不改入参，避免绕过存档。</summary>
-    private static List<string> Toggle(List<string> source, string key, bool exempted)
-    {
-        var copy = new List<string>(source);
-        if (exempted)
-        {
-            if (!copy.Contains(key, StringComparer.Ordinal))
-                copy.Add(key);
-        }
-        else
-        {
-            copy.RemoveAll(item => string.Equals(item, key, StringComparison.Ordinal));
-        }
-
-        return copy;
-    }
-
-    private static bool ReadGroup(SettingsModel model, string id)
-    {
-        if (model.Groups is not null && model.Groups.TryGetValue(id, out var value))
-            return value;
-
-        return CardGroups.TryGet(id, out var group) && group.DefaultEnabled;
+                list => !FilterState.IsFiltered(list, entry),
+                (list, exempted) => FilterState.SetExempt(list, entry, exempted)),
+            () => !ExclusionTable.IsDefaultExcluded(entry));
     }
 
     private static string ExemptionPageId(string groupId) => "exempt_" + groupId;
@@ -370,7 +344,8 @@ internal static class ModSettings
             .WithTitle(Localization.Text("pgf.page.title", "Prismatic Gem Filter"))
             .WithDescription(Localization.Text("pgf.page.desc",
                 "Prismatic Gem lets card rewards offer cards from other classes. " +
-                "The lists below group the cards that other classes almost never use."))
+                "A group switch acts on the whole group: off keeps every card, on excludes every card. " +
+                "Adjust individual cards on the group's exempt page."))
             .AddSection("effect_scope", AddEffectScopeSection);
 
         foreach (var section in CardGroups.Sections)
@@ -441,8 +416,9 @@ internal static class ModSettings
             Localization.Resolve("pgf.group." + groupId + ".name", groupId));
 
     /// <summary>
-    ///     分组开关的说明：一句短定义加本组成员张数。
+    ///     分组开关的说明：一句短定义、本组成员张数、当前已排除张数。
     ///     <para>张数由名单算出，不写死在文案里，名单变动时说明自动跟着变。</para>
+    ///     <para>状态由 <see cref="FilteredBinding" /> 派生，并通过同一个父绑定刷新。见 SP-035。</para>
     ///     <para>英语的张数分单复数两种写法，其余语言共用一条。见 SP-028 的注记。</para>
     /// </summary>
     private static ModSettingsText GroupDescription(CardGroup group) =>
@@ -451,9 +427,13 @@ internal static class ModSettings
             var count = group.Members.Length;
             var countKey = count == 1 ? "pgf.count.one" : "pgf.count";
             var countText = string.Format(Localization.Resolve(countKey, "{0} cards"), count);
+            var filtered = FilterState.CountFiltered(Current.FilteredKeys, group);
+            var stateText = string.Format(
+                Localization.Resolve("pgf.group.filtered", "{0}/{1} filtered"), filtered, count);
 
-            return Localization.Resolve("pgf.group." + group.Id + ".desc", group.Id) + " · " + countText;
-        });
+            return Localization.Resolve("pgf.group." + group.Id + ".desc", group.Id) + " · " +
+                   countText + " · " + stateText;
+        }, FilteredBinding);
 
     private static void ConfigureExemptionPage(ModSettingsPageBuilder page, CardGroup group)
     {
@@ -465,7 +445,7 @@ internal static class ModSettings
                 Localization.Resolve("pgf.exempt.page.title", "Exempt cards") + " · " +
                 Localization.Resolve("pgf.group." + id + ".name", id)))
             .WithDescription(Localization.Text("pgf.exempt.page.desc",
-                "A selected card stays in every group that contains it. Groups share one switch per card."))
+                "Checked keeps the card; unchecked excludes it. A group switch changes every card in that group."))
             .AddSection("cards", section =>
             {
                 section.WithTitle(Localization.Text("pgf.exempt.section", "Cards in this group"));

@@ -2,8 +2,8 @@
 
 ## 状态
 
-- 项目版本：0.0.12
-- 代码状态：`9.SRC` 已实现 15 个分组开关（0.111 上可见 11 个）、总开关、分组豁免清单、单集合排除索引、设置页、界面本地化、配置重置与按游戏版本能力显隐。
+- 项目版本：0.0.13
+- 代码状态：`9.SRC` 已实现 15 个分组开关（0.111 上可见 11 个）、总开关、按卡牌唯一记录的筛选状态、分组开关的聚合视图与批量命令、单集合排除索引、设置页、界面本地化、配置重置与按游戏版本能力显隐。
 - 说明：SDD 的每条设计描述都对应一个源码符号。未实现的组件只登记职责，标注「未建立」。
 
 ## 上下文与范围
@@ -23,16 +23,17 @@
 | 拦截层 | `src/CardCreationPatch.cs` 的 `CardCreationPatch.Postfix` | 在 `GetPossibleCards` 之后介入，按总开关与判定模式决定是否继续，取候选、调判定、写回结果、打日志、异常兜底 | 不解释开关含义，不做逐张判定，不建索引 |
 | 判定规则 | `src/CardFilter.cs` 的 `CardFilter.Apply` | 逐张判定保留或排除，输出统计 | 不接触游戏对象以外的状态，不读玩家遗物，不读设置，不消耗随机数 |
 | 分组定义 | `src/CardGroups.cs` 的 `CardGroups.All` 与 `CardGroups.Visible`，数据来自 `src/CardGroupTable.cs` | 登记 15 个分组的标识、所属分节、判定方式、默认勾选状态、是否多人专属与成员；按当前游戏版本剔除愚者卡池成员，另维护可见分组与界面分节顺序 `Sections` | 不保存勾选状态，不建索引，不探测版本 |
-| 固定表 | `src/ExclusionTable.cs` | 存默认豁免清单，拼豁免键 | 不判断卡池归属，不读设置，不参与判定 |
-| 排除索引 | `src/FilterIndex.cs` 的 `FilterIndex.Get` | 按当前设置与可见分组算出排除集合，设置变过则重建 | 不逐张判定，不接触 `CardModel` |
-| 设置模型 | `src/ModSettings.cs` 的 `SettingsModel`、`SettingsSnapshot` | 落盘模型、绑定、快照与写入版本号；启动时按架构版本决定是否重置为默认值 | 不建索引，不做逐张判定 |
-| 设置页 | `src/ModSettings.cs` 的 `ConfigurePage`、`AddGroupSection`、`ConfigureExemptionPage` | 渲染总开关、判定模式、当前版本可见的分组开关与豁免子页，按 `Sections` 分节，拼装开关标题与说明，把改动写回绑定 | 不执行过滤，不建索引 |
+| 固定表 | `src/ExclusionTable.cs` | 生成默认排除集合：默认勾选分组的成员并集，减去显式默认豁免。按全表行计算，含当前版本隐藏的愚者卡 | 不判断卡池归属，不读设置，不参与运行期判定 |
+| 状态代数 | `src/FilterState.cs` | 单卡读写、分组聚合、分组批量写入与张数统计；唯一状态是排除卡牌集合 | 不读写存档，不接触 `CardModel` |
+| 排除索引 | `src/FilterIndex.cs` 的 `FilterIndex.Get` | 遍历可见分组，把状态为排除的成员加入集合；设置变过则重建 | 不逐张判定，不接触 `CardModel` |
+| 设置模型 | `src/ModSettings.cs` 的 `SettingsModel`、`SettingsSnapshot` | 落盘模型、父子绑定、快照与写入版本号；启动时按架构版本决定是否重置为默认值 | 不建索引，不做逐张判定 |
+| 设置页 | `src/ModSettings.cs` 的 `ConfigurePage`、`AddGroupSection`、`ConfigureExemptionPage` | 渲染总开关、判定模式、当前版本可见的分组开关与豁免子页，按 `Sections` 分节，拼装开关标题与 `x/y` 说明，把改动写回同一父绑定 | 不执行过滤，不建索引 |
 | 本地化 | `src/Localization.cs` | 按游戏语言取界面文案，卡名转查游戏的 `cards` 表 | 不含业务规则，不决定默认值 |
 | 游戏能力探测 | `src/GameFeatures.cs` 的 `GameFeatures.HasFool` | 判断当前游戏有没有愚者内容，给分组定义提供唯一的能力输入 | 不做界面显隐，不改名单，不读设置 |
 
 ## 依赖与分层
 
-允许的依赖方向：入口 → {拦截层, 设置模型}；拦截层 → {判定规则, 排除索引, 设置模型, 分组定义}；排除索引 → {设置模型, 分组定义, 固定表}；设置页 → {设置模型, 分组定义, 固定表, 本地化}；分组定义 → 游戏能力探测。
+允许的依赖方向：入口 → {拦截层, 设置模型}；拦截层 → {判定规则, 排除索引, 设置模型, 分组定义}；排除索引 → {设置模型, 分组定义}；设置模型 → 固定表（默认集合）；设置页 → {设置模型, 状态代数, 分组定义, 本地化}；分组定义 → 游戏能力探测。
 
 禁止：判定规则 → 任何单例；游戏能力探测 → 设置模型、分组定义或任何界面组件；本地化 → 设置模型。
 
@@ -42,25 +43,26 @@
 
 ### 落盘模型
 
-`SettingsModel` 五个成员：
+`SettingsModel` 四个成员：
 
 | 成员 | 类型 | 说明 |
 |---|---|---|
 | `SchemaVersion` | `int` | 架构版本，缺省 0（旧档没有这个字段时读作 0） |
 | `Mode` | `FilterMode` | 判定模式，按数字存 |
 | `MasterEnabled` | `bool` | 总开关，缺省 `true` |
-| `Groups` | `Dictionary<string, bool>?` | 分组勾选状态，缺省 `null` |
-| `Exemptions` | `List<string>?` | 全局豁免的卡牌标识清单，缺省 `null` |
+| `Filtered` | `List<string>?` | 已排除的卡牌标识，缺省 `null` |
 
-`null` 表示玩家从未改过。此时取代码默认值：分组按 `CardGroup.DefaultEnabled`，豁免按 `ExclusionTable.DefaultExemptionKeys`。这样新增分组与调整默认值都不需要写存档迁移。
+`null` 表示玩家从未改过。此时取 `ExclusionTable.DefaultExcludedKeys`：默认勾选分组的成员并集，减去 10 张显式默认豁免。默认集合按 `CardGroupTable.Rows` 全表与 `CardGroups.All` 的默认值计算，含当前版本隐藏的愚者卡。0.111 上存储 121 条，可见分组只用到 99 条；切到 0.113 后愚者卡仍有正确默认状态。
 
-新增分组的键在旧档里不存在，`ReadGroup` 会回落到 `CardGroup.DefaultEnabled`。因此加组、改组默认值都不必递增架构版本号。0.0.7 新增第 14 组时未递增，实测见 `8.TEST/0.0.7/自检-0.0.7加载与名单-godot.log` 第 445 行的 `groups=10/14`。
+分组开关不落盘。它是 `Filtered` 的聚合视图：本组至少一张成员在集合内时为开。分组写入是批量命令：打开把全组成员加入集合，关闭把全组成员移出集合。单卡豁免写入只增删该卡。规则见 SP-031 至 SP-035，取舍见 [ADR-015](../4.ADR/015-筛选状态按卡牌唯一记录.md)。
 
-0.0.8 递增到 2。原因与「加组」不同：默认豁免清单也变了。豁免清单按全量快照落盘，老档里没有新条目时不会自动补默认值，只能整份重置，见 `2.PLANS/008-S-悲伤牌分组.md` 第四节。实测日志 `8.TEST/0.0.8/自检-0.0.8重置与名单-godot.log` 第 444 行：`[settings] reset. schema 1 -> 2, groups=11/15 exemptions=8`。
+0.0.8 递增到 2。默认豁免清单也变了，豁免清单按全量快照落盘，老档里没有新条目时不会自动补默认值，只能整份重置。实测日志 `8.TEST/0.0.8/自检-0.0.8重置与名单-godot.log` 第 444 行：`[settings] reset. schema 1 -> 2, groups=11/15 exemptions=8`。
 
 0.0.11 递增到 3。默认豁免新增血肉戏法、洁净、唤起，暴涨的键由 `orb:BULK_UP` 改为 `focus:BULK_UP`。老档里的旧键已无效，新键又不在清单里，必须重置。0.113.1 无头日志：`[compat] fool=True source=type`、`groups=11/15 exemptions=11 pages=16`、`ready. groups=15 entries=180 exemptions=11 schema=3`。
 
 0.0.12 递增到 4。豁免键由「分组标识:卡牌标识」改为裸卡牌标识，旧键全部失效；暴涨也移回球牌组。0.111.1 无头日志：`[compat] fool=False source=type`、`groups=8/11 exemptions=10 pages=12`、`ready. groups=11 entries=143 exemptions=10 schema=4`。对局内 `[filter] candidates=429 removed=99 kept=330 groups=8`。
+
+0.0.13 递增到 5。`Groups` 与 `Exemptions` 合并为 `Filtered`，分组开关不再落盘。0.111.1 无头日志：`[compat] fool=False source=type`、`[settings] reset. schema 4 -> 5, filtered=121 explicitExemptions=10`、`registered ... groups=11 entries=143 filtered=99 stored=121 pages=12`、`ready ... filtered=121 schema=5`。对局内 `[index] groups=8 filtered=99`，3 条 `[filter] removed=99`。
 
 ### 分组与分节
 
@@ -68,17 +70,27 @@
 
 `Sections` 的顺序就是设置页分节的顺序。前六节是职业标识，`other` 收纳不按职业归类的组。0.0.7 之前该数组叫 `Characters`，字段叫 `Character`；改名原因是第 14 组不属于任何职业。文案键 `pgf.char.<分节>` 与 `pgf.section.<分节>` 未改名。
 
-`CardGroups.Build(bool hasFool)` 在建表时按卡池过滤成员：`hasFool` 为假时剔除所有 `CardGroupTable` 里 `Pool == "FoolCardPool"` 的行。`All` 保留 15 个组用于存档键与默认值，`Visible` 只保留 `Members.Length > 0` 的组用于设置页与排除索引。0.111 的 `Visible` 为 11 组，「多人专属牌」由 10 张降为 9 张；0.113 为 15 组。规则见 SP-030，取舍见 [ADR-013](../4.ADR/013-设置项按游戏版本显隐.md)。
+`CardGroups.Build(bool hasFool)` 在建表时按卡池过滤成员：`hasFool` 为假时剔除所有 `CardGroupTable` 里 `Pool == "FoolCardPool"` 的行。`All` 保留 15 个组用于默认值与绑定标识，`Visible` 只保留 `Members.Length > 0` 的组用于设置页与排除索引。0.111 的 `Visible` 为 11 组，「多人专属牌」由 10 张降为 9 张；0.113 为 15 组。规则见 SP-030，取舍见 [ADR-013](../4.ADR/013-设置项按游戏版本显隐.md)。
 
 `GameFeatures.HasFool` 先查 `typeof(CardModel).Assembly.GetType("MegaCrit.Sts2.Core.Models.CardPools.FoolCardPool")`。类型探测抛异常时退回 `ReleaseInfoManager.Instance.SemVer`，`Major > 0` 或 `Minor >= 113` 视为真；两条都失败时返回 `true`。这样 0.111 不加载 Godot 文件接口也能判定，且未来版本改名时仍有版本号兜底。
 
 `SchemaVersion` 与 `ModSettings.CurrentSchema` 不一致时，`ResetIfOutdated` 把模型整体改写为默认值并落盘，见 SP-024。旧档没有该字段，因此读到 0，首次启动即触发一次重置。新建数据不走这条路径：注册时的 `defaultFactory` 直接把当前版本号写进去。
 
-### 豁免键的形式
+### 筛选状态的形式
 
-豁免项是裸卡牌标识，例如 `NEUROSURGE`。0.0.11 及以前是 `分组标识:卡牌标识`，允许同一张跨组卡在不同分组有不同状态。0.0.12 起按卡牌记录：`BIG_BANG` 只存一条，铸造与辉星两个豁免页共享 `CardBindings["BIG_BANG"]`，任一侧的开关变化会同时反映到另一侧。实现取舍见 [ADR-014](../4.ADR/014-豁免按卡牌跨组同步.md)。
+唯一状态是 `Filtered` 集合，元素是裸卡牌标识，例如 `NEUROSURGE`。0.0.11 及以前豁免项带分组前缀，允许同一张跨组卡在不同分组有不同状态；0.0.12 改为按卡牌记录；0.0.13 把分组开关也并入同一集合。
 
-`ExclusionTable.DefaultExemptionKeys` 的元素也是裸卡牌标识。默认清单共 10 条：精神过载、血肉戏法、洁净、唤起、聚变、暴涨、大爆炸、汇流、超能光束、活跃气氛。见 SP-021。
+`Filtered` 的读写都经过 `FilterState`：
+
+- `IsFiltered`：单卡是否在集合内。
+- `IsGroupFiltered`：分组是否至少有一张成员在集合内，供分组开关显示。
+- `CountFiltered`：分组当前排除张数，供 `x/y` 说明。
+- `SetExempt`：单卡加入或移出集合，返回新列表。
+- `SetGroup`：全组加入或移出集合，返回排序去重的新列表。
+
+`ExclusionTable.ExplicitExemptionKeys` 是 10 张显式默认豁免：精神过载、血肉戏法、洁净、唤起、聚变、暴涨、大爆炸、汇流、超能光束、活跃气氛。默认集合把这 10 张从默认勾选分组中扣除。见 SP-021。
+
+`BIG_BANG` 与 `THE_SMITH` 同属铸造与辉星。两者在 `Filtered` 中只有一条状态；任一页改动后，另一页与分组开关都读同一条。
 
 ### 排除名单的标识形式
 
@@ -94,11 +106,13 @@
 
 ### 排除集合
 
-一个集合，成员是「已开启的可见分组里、未被全局豁免的卡牌标识」的并集：
+一个集合，成员是可见分组里状态为排除的卡牌标识：
 
 ```
-excluded = ⋃ 已开启的可见分组（成员 − 全局豁免）
+excluded = ⋃ 可见分组（成员 ∩ Filtered）
 ```
+
+分组开关不再参与构建。分组关闭时，`SetGroup` 已把全组成员移出 `Filtered`；分组打开时已全部加入。`FilterIndex.Build` 只遍历 `CardGroups.Visible`，因此隐藏分组与当前版本不存在的卡不会进入索引。
 
 0.0.4 曾按判定方式拆成标记集合与显式集合，并减掉一张多人限定卡放行表。0.0.5 把多人限定卡从按标记判定的分组里移走，两个集合不可能相交，于是合并。理由见 [ADR-009](../4.ADR/009-多人卡只进显式名单组.md)，旧构造见 [DOCS/012](../3.DOCS/012-T-分组开关与界面本地化的落地.md) 第四节。
 
@@ -108,7 +122,9 @@ excluded = ⋃ 已开启的可见分组（成员 − 全局豁免）
 
 读取走 `ModSettingsBindings.WithDefault` 包一层默认值。未注册或读取抛异常时回落到默认快照，只记一次日志，不把异常抛进发牌链路。
 
-快照 `SettingsSnapshot` 与排除索引都按 `ModSettings.Version` 缓存。写入路径统一经过 `ModSettings.Invalidate`，它既让快照失效，也调 `FilterIndex.Invalidate`。
+分组开关与单卡开关都从 `FilteredBinding` 投影。卡牌写入会标记父绑定脏；分组开关的刷新规则通过投影关系找到父绑定，因此两张页面与说明行会一起刷新。`GroupDescription` 的动态文本显式把 `FilteredBinding` 声明为刷新依赖。
+
+快照 `SettingsSnapshot` 与排除索引都按 `ModSettings.Version` 缓存。写入路径统一经过 `ModSettings.Invalidate`，它递增版本号、清空快照，并调 `FilterIndex.Invalidate`。`_version`、`_cached`、`_cachedVersion`、`_excluded`、`_builtVersion` 与 `_activeGroups` 都用 `Volatile` 或 `Interlocked` 发布，见 [DOCS/021](../3.DOCS/021-R-隐式状态机审查.md) 的 S2 与 S3。
 
 ### 界面文案的拼装
 
@@ -117,10 +133,10 @@ excluded = ⋃ 已开启的可见分组（成员 − 全局豁免）
 | 方法 | 拼法 | 依据 |
 |---|---|---|
 | `ExcludeLabel` | `pgf.exclude.prefix` + `pgf.group.<id>.name` | SP-026 |
-| `GroupDescription` | `pgf.group.<id>.desc` + `" · "` + `pgf.count` 或 `pgf.count.one` 填入 `group.Members.Length`；成员为 1 张时取单数键 | SP-028 |
+| `GroupDescription` | `pgf.group.<id>.desc` + `" · "` + `pgf.count` 或 `pgf.count.one` 填入 `group.Members.Length` + `" · "` + `pgf.group.filtered` 填入当前排除数与总张数；成员为 1 张时取单数键 | SP-028、SP-035 |
 | 豁免子页标题与行标题 | `pgf.exempt.page.title` 或 `pgf.exempt.row` + `" · "` + 组名 | SP-016 |
 
-三者都用 `ModSettingsText.Dynamic` 包一层闭包。闭包在每次刷新时重新取词，因此切换游戏语言后整行跟着变，不需要重建页面。张数取自 `CardGroups.Visible` 的成员数组，当前版本不显示的牌不计入，名单更新时文案自动跟着变。
+三者都用 `ModSettingsText.Dynamic` 包一层闭包。闭包在每次刷新时重新取词，因此切换游戏语言后整行跟着变，不需要重建页面。`GroupDescription` 额外把 `FilteredBinding` 声明为刷新依赖，卡牌改动后 `x/y` 会跟着刷新。张数取自 `CardGroups.Visible` 的成员数组，当前版本不显示的牌不计入，名单更新时文案自动跟着变。
 
 ## 关键流程
 
@@ -144,7 +160,7 @@ excluded = ⋃ 已开启的可见分组（成员 − 全局豁免）
 - 候选集合过滤后为空时放弃过滤。规则见 `6.SPEC` 的 SP-002。
 - 补丁应用失败时由 `ApplyRequiredPatcher` 调用 `DisableMod`，本模组不生效，游戏行为与未安装时一致。
 - 设置注册失败时只记日志，发牌仍按默认快照工作。
-- 读取架构版本失败或重置写盘失败时只记日志，本次运行沿用存档里的值，不阻断启动。规则见 SP-024 的注记。
+- 读取架构版本失败或重置写盘失败时只记日志。旧档没有 `Filtered` 时本次运行按默认集合工作；若写盘失败，存档仍可能是旧架构，下次启动会再次尝试重置。规则见 SP-024 的注记。
 - 本地化资源加载失败时退回英语字面文本，不显示键名。规则见 SP-022。
 - 界面上某张牌在某语言下没有卡名时，显示卡牌标识本身。卡名来自游戏表，不属于本组件。
 - 当前版本不缺成员时照常；0.111 缺愚者卡池时，`GameFeatures.HasFool` 返回假，愚者分节与四个空组整体隐藏，「多人专属牌」只显示 9 张，其余分组照常工作。规则见 SP-008 与 SP-030。
@@ -187,6 +203,7 @@ excluded = ⋃ 已开启的可见分组（成员 − 全局豁免）
 | RQ-020 | 分组定义、固定表、设置页、本地化 |
 | RQ-021 | 游戏能力探测、分组定义、设置页、排除索引 |
 | RQ-022 | 固定表、设置模型、设置页、排除索引 |
+| RQ-023 | 状态代数、固定表、设置模型、设置页、排除索引 |
 
 ## 偏差与限制
 
@@ -196,6 +213,9 @@ excluded = ⋃ 已开启的可见分组（成员 − 全局豁免）
 - 设置作用域取 `SaveScope.Global`。`SaveScope.Profile` 在档案就绪前读取会抛异常，两个已找到的样例模组都用 Global。条款见 SP-018。
 - 多人限定卡的归属靠名单保证，不用运行期的 `MultiplayerConstraint` 属性。代价是模组读不到该属性，若某个未来版本把普通卡改成多人限定，本模组察觉不到，只能靠重新跑名单门禁发现。见 ADR-009 的代价一节。
 - 默认豁免清单是代码常量，与名单一样不随游戏版本变化。0.111.0 与 0.113.1 的稀有度与多人限制已核对一致，见 `3.DOCS/013-T`。
+- 分组开关是批量命令，不是独立策略。关闭一组会清除该组原有的单卡排除，重新打开会清除原有的单卡豁免。界面说明已写明；取舍见 [ADR-015](../4.ADR/015-筛选状态按卡牌唯一记录.md)。
+- 0.111 的设置文件存 121 条默认排除，可见分组只用到 99 条。多出的 22 条是隐藏愚者卡，保证切到 0.113 后默认状态正确。日志同时打印 `filtered=99`（可见）与 `stored=121`（落盘）。
+- 设置层状态与实际发牌可能因总开关、判定模式、本职业卡池门控与空结果回退而不同。它们是作用域覆盖，不是第二份卡牌状态，见 [DOCS/021](../3.DOCS/021-R-隐式状态机审查.md) 的 S9。
 - 模组自身的显示名与页面标题取自嵌入资源，不合并进游戏的本地化表。因此游戏模组列表里的名字仍是清单的 `name` 字段，与界面内标题可能不一致。
 
 ## 变更记录
@@ -213,3 +233,4 @@ excluded = ⋃ 已开启的可见分组（成员 − 全局豁免）
 | 2026-11-17 01:55 | 项目版本 0.0.8。分组数改为 15，名单规模改为 178 行 176 张。落盘一节补架构版本升到 2 的原因（默认豁免变化与加组的区别）。追溯表补 RQ-020 |
 | 2026-11-18 19:16 | 项目版本 0.0.11。新增游戏能力探测组件 `GameFeatures`，分组定义按 `FoolCardPool` 过滤成员并派生 `Visible`。设置页与排除索引改用可见分组。名单规模改为 180 行 178 张，默认豁免 11 条。关键流程的默认判据由五条改为四条。追溯表补 RQ-021 |
 | 2026-11-18 19:57 | 项目版本 0.0.12。豁免键改为裸卡牌标识，跨组卡共享绑定，设置架构版本升到 4。暴涨移回球牌组，默认豁免改为 10 条。补 0.111.1 实机加载与对局内过滤数据。追溯表补 RQ-022 |
+| 2026-11-18 20:22 | 项目版本 0.0.13。设置模型合并为 `Filtered` 单一卡牌状态，分组开关改为聚合视图与批量命令；新增状态代数组件与默认排除表；架构版本升到 5。分组与单卡绑定共用父绑定，`x/y` 说明行随 `FilteredBinding` 刷新。补快照与索引的 Volatile 发布。追溯表补 RQ-023，偏差登记批量命令代价与隐藏卡存储 |

@@ -1,7 +1,7 @@
 {
   "pgf.mod.name": "Prismatic Gem Filter",
   "pgf.page.title": "Prismatic Gem Filter",
-  "pgf.page.desc": "Prismatic Gem lets card rewards offer cards from other classes. The lists below group the cards that other classes almost never use.",
+  "pgf.page.desc": "Prismatic Gem lets card rewards offer cards from other classes. A group switch acts on the whole group: off keeps every card, on excludes every card. Adjust individual cards on the group's exempt page.",
 
   "pgf.section.scope": "Master switch",
   "pgf.master.name": "Enable filtering",
@@ -30,6 +30,7 @@
   "pgf.exclude.prefix": "Exclude ",
   "pgf.count": "{0} cards",
   "pgf.count.one": "{0} card",
+  "pgf.group.filtered": "{0}/{1} filtered",
 
   "pgf.group.osty.name": "Osty attack cards",
   "pgf.group.osty.desc": "No effect without Osty",
@@ -64,9 +65,9 @@
 
   "pgf.exempt.row": "Exempt cards",
   "pgf.exempt.button": "Open",
-  "pgf.exempt.row.desc": "Choose the cards to keep.",
+  "pgf.exempt.row.desc": "Checked keeps the card; unchecked excludes it.",
   "pgf.exempt.page.title": "Exempt cards",
-  "pgf.exempt.page.desc": "A selected card stays in every group that contains it. Groups share one switch per card.",
+  "pgf.exempt.page.desc": "Checked keeps; unchecked excludes. A group switch changes every card in that group.",
   "pgf.exempt.section": "Cards in this group",
 
   "pgf.hint.multiplayer": "Appears only in multiplayer.",

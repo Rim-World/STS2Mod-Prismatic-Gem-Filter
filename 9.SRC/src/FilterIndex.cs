@@ -1,12 +1,13 @@
 using System.Collections.Generic;
+using System.Threading;
 
 namespace PrismaticGemFilter;
 
 /// <summary>
 ///     排除索引。设置变更后重建一次，发牌时每张候选牌只做一次哈希查表。
 ///     <para>
-///         0.0.4 曾分两个集合，让按标记判定的组不排除多人限定卡。0.0.5 起这类卡不再出现在
-///         那些组里，两个集合不可能相交，因此合并为一个。理由见 ADR-009。
+///         0.0.13 起索引只读唯一卡牌状态：遍历当前版本可见分组，把状态为排除的成员加入集合。
+///         分组开关不再是第二层状态，见 SP-031、SP-036 与 <c>4.ADR/015</c>。
 ///     </para>
 ///     <para>构建成本模型见 <c>3.DOCS/003-E-豁免与多人卡取证.md</c> 第四节。</para>
 /// </summary>
@@ -16,15 +17,15 @@ internal static class FilterIndex
 
     private static IReadOnlySet<string> _excluded = new HashSet<string>(StringComparer.Ordinal);
     private static int _builtVersion = -1;
-    private static int _enabledGroups;
+    private static int _activeGroups;
 
-    /// <summary>上一次构建时生效的组数，供日志使用。</summary>
-    public static int EnabledGroups
+    /// <summary>上一次构建时至少排除一张牌的可见组数，供日志使用。</summary>
+    public static int ActiveGroups
     {
         get
         {
             Ensure();
-            return _enabledGroups;
+            return Volatile.Read(ref _activeGroups);
         }
     }
 
@@ -32,27 +33,24 @@ internal static class FilterIndex
     public static IReadOnlySet<string> Get()
     {
         Ensure();
-        return _excluded;
+        return Volatile.Read(ref _excluded);
     }
 
     /// <summary>作废索引。设置写入后由 <see cref="ModSettings" /> 调用。</summary>
     public static void Invalidate()
     {
-        lock (Gate)
-        {
-            _builtVersion = -1;
-        }
+        Volatile.Write(ref _builtVersion, -1);
     }
 
     private static void Ensure()
     {
         var version = ModSettings.Version;
-        if (_builtVersion == version)
+        if (Volatile.Read(ref _builtVersion) == version)
             return;
 
         lock (Gate)
         {
-            if (_builtVersion == version)
+            if (Volatile.Read(ref _builtVersion) == version)
                 return;
 
             Build(version);
@@ -63,29 +61,30 @@ internal static class FilterIndex
     {
         var snapshot = ModSettings.Current;
         var excluded = new HashSet<string>(StringComparer.Ordinal);
-        var enabled = 0;
+        var active = 0;
 
         foreach (var group in CardGroups.Visible)
         {
-            if (!snapshot.EnabledGroups.Contains(group.Id))
-                continue;
-
-            enabled++;
+            var groupActive = false;
 
             foreach (var entry in group.Members)
             {
-                if (snapshot.IsExempt(entry))
+                if (!snapshot.IsFiltered(entry))
                     continue;
 
                 excluded.Add(entry);
+                groupActive = true;
             }
+
+            if (groupActive)
+                active++;
         }
 
-        _excluded = excluded;
-        _enabledGroups = enabled;
-        _builtVersion = version;
+        Volatile.Write(ref _excluded, excluded);
+        Volatile.Write(ref _activeGroups, active);
+        Volatile.Write(ref _builtVersion, version);
 
         Plugin.Logger.Info(
-            $"[index] rebuilt. version={version} groups={enabled} excluded={excluded.Count}");
+            $"[index] rebuilt. version={version} groups={active} filtered={excluded.Count}");
     }
 }

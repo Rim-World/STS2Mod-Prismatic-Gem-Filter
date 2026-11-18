@@ -42,10 +42,11 @@ public static class Plugin
         if (!RitsuLibFramework.ApplyRequiredPatcher(patcher, DisableMod))
             return;
 
+        var snapshot = ModSettings.Current;
         Logger.Info(
             $"ready. groups={CardGroups.Visible.Length} " +
             $"entries={CardGroups.Visible.Sum(static group => group.Members.Length)} " +
-            $"exemptions={ExclusionTable.DefaultExemptionKeys.Count} schema={ModSettings.CurrentSchema} " +
+            $"filtered={snapshot.FilteredKeys.Count} schema={ModSettings.CurrentSchema} " +
             $"patches={patcher.AppliedPatchCount}/{patcher.RegisteredPatchCount}");
     }
 

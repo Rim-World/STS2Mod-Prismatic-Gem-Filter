@@ -1,7 +1,7 @@
 {
   "pgf.mod.name": "稜彩寶石過濾",
   "pgf.page.title": "稜彩寶石過濾",
-  "pgf.page.desc": "持有稜彩寶石時，卡牌獎勵會給出其他職業的牌。下面按職業列出「其他角色幾乎用不上」的牌。",
+  "pgf.page.desc": "持有稜彩寶石時，卡牌獎勵會給出其他職業的牌。分組開關作用於整組：關掉保留全組，打開排除全組。個別牌可在各組的豁免頁單獨調整。",
 
   "pgf.section.scope": "總開關",
   "pgf.master.name": "啟用過濾",
@@ -30,6 +30,7 @@
   "pgf.exclude.prefix": "排除",
   "pgf.count": "{0} 張",
   "pgf.count.one": "{0} 張",
+  "pgf.group.filtered": "{0}/{1} 已排除",
 
   "pgf.group.osty.name": "奧斯提攻擊牌",
   "pgf.group.osty.desc": "沒有奧斯提則無效",
@@ -64,9 +65,9 @@
 
   "pgf.exempt.row": "豁免清單",
   "pgf.exempt.button": "開啟",
-  "pgf.exempt.row.desc": "逐張指定要保留的牌。",
+  "pgf.exempt.row.desc": "勾選＝保留這張牌，取消＝排除。",
   "pgf.exempt.page.title": "豁免清單",
-  "pgf.exempt.page.desc": "勾選＝所有包含這張牌的分組都保留它。同一張牌在多個分組共用此開關。",
+  "pgf.exempt.page.desc": "勾選＝保留；取消＝排除。分組開關會批次改寫該組所有牌。",
   "pgf.exempt.section": "本組的牌",
 
   "pgf.hint.multiplayer": "只在多人遊戲中出現。",
