@@ -1,0 +1,25 @@
+SentryGodotInitializer: Sentry GDExtension not loaded in this process; skipping. If you see this in a running game (not during project export or IDE script analysis), check Godot's log for extension load failures.
+PASS default groups cover 15
+PASS default enabled 11
+PASS explicit exemptions 10
+PASS default pool 121
+PASS default 113 pool 121
+PASS default 111 pool 99
+PASS 0.111 visible groups 11
+PASS 0.113 visible groups 15
+PASS group switch does not mutate source
+PASS forge off disables forge
+PASS forge off leaves star on
+PASS forge off keeps cross-group card
+PASS forge off cross count 1
+PASS both off removes shared card
+PASS forge on restores shared card
+PASS forge on filters non-exempt forge cards
+PASS 13/1 group filters 12
+PASS 13/1 group off own 0
+PASS 13/1 group off still cross 1
+PASS shared card non-exempt is global
+PASS shared card exempt is global
+PASS card switch re-add sorted
+PASS source exemption list not mutated
+failures=0

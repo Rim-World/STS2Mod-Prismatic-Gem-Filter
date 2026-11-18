@@ -46,7 +46,8 @@ public static class Plugin
         Logger.Info(
             $"ready. groups={CardGroups.Visible.Length} " +
             $"entries={CardGroups.Visible.Sum(static group => group.Members.Length)} " +
-            $"filtered={snapshot.FilteredKeys.Count} schema={ModSettings.CurrentSchema} " +
+            $"filtered={FilterIndex.Get().Count} exemptions={snapshot.Exemptions.Count} " +
+            $"schema={ModSettings.CurrentSchema} " +
             $"patches={patcher.AppliedPatchCount}/{patcher.RegisteredPatchCount}");
     }
 

@@ -31,7 +31,7 @@ internal static class CardFilter
     /// </summary>
     /// <param name="candidates">待过滤的候选牌。</param>
     /// <param name="ownPoolEntries">玩家职业卡池全部卡牌的 <c>ModelId.Entry</c> 集合，即池门控的放行范围。</param>
-    /// <param name="exclusions">排除集合，已扣掉各组的豁免。</param>
+    /// <param name="exclusions">排除集合，已扣掉全局豁免。</param>
     /// <param name="stats">输出统计。</param>
     public static List<CardModel> Apply(
         IReadOnlyList<CardModel> candidates,

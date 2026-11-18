@@ -1,7 +1,7 @@
 {
   "pgf.mod.name": "棱彩宝石过滤",
   "pgf.page.title": "棱彩宝石过滤",
-  "pgf.page.desc": "持有棱彩宝石时，卡牌奖励会给出其他职业的牌。分组开关作用于整组：关掉保留全组，打开排除全组。个别牌可在各组的豁免页单独调整。",
+  "pgf.page.desc": "持有棱彩宝石时，卡牌奖励会给出其他职业的牌。分组开关只决定该组是否过滤；单卡豁免状态跨组共享。关闭分组后，组内单卡状态仍然保留。",
 
   "pgf.section.scope": "总开关",
   "pgf.master.name": "启用过滤",
@@ -30,7 +30,8 @@
   "pgf.exclude.prefix": "排除",
   "pgf.count": "{0} 张",
   "pgf.count.one": "{0} 张",
-  "pgf.group.filtered": "{0}/{1} 已排除",
+  "pgf.group.filtered": "本组过滤 {0}/{1}",
+  "pgf.group.otherFiltered": "本组仍有 {0}/{1} 在其他组被过滤",
 
   "pgf.group.osty.name": "奥斯提攻击牌",
   "pgf.group.osty.desc": "没有奥斯提则无效",
@@ -65,9 +66,9 @@
 
   "pgf.exempt.row": "豁免清单",
   "pgf.exempt.button": "打开",
-  "pgf.exempt.row.desc": "勾选＝保留这张牌，取消＝排除。",
+  "pgf.exempt.row.desc": "勾选＝保留这张牌，取消＝可过滤。状态跨组共享。",
   "pgf.exempt.page.title": "豁免清单",
-  "pgf.exempt.page.desc": "勾选＝保留；取消＝排除。分组开关会批量改写该组所有牌。",
+  "pgf.exempt.page.desc": "勾选＝保留；取消＝可过滤。同一张牌的状态在所有组共享。分组开关只决定该组是否过滤。",
   "pgf.exempt.section": "本组的牌",
 
   "pgf.hint.multiplayer": "只在多人模式中出现。",

@@ -4,10 +4,10 @@ using System.Threading;
 namespace PrismaticGemFilter;
 
 /// <summary>
-///     排除索引。设置变更后重建一次，发牌时每张候选牌只做一次哈希查表。
+///     实际过滤池。设置变更后重建一次，发牌时每张候选牌只做一次哈希查表。
 ///     <para>
-///         0.0.13 起索引只读唯一卡牌状态：遍历当前版本可见分组，把状态为排除的成员加入集合。
-///         分组开关不再是第二层状态，见 SP-031、SP-036 与 <c>4.ADR/015</c>。
+///         0.0.14 起池由两份独立状态算出：已开启且当前版本可见的分组，减去全局豁免牌。
+///         分组开关与单卡豁免都不直接写池；池只作内存缓存，见 SP-031 至 SP-039 与 <c>4.ADR/016</c>。
 ///     </para>
 ///     <para>构建成本模型见 <c>3.DOCS/003-E-豁免与多人卡取证.md</c> 第四节。</para>
 /// </summary>
@@ -29,11 +29,17 @@ internal static class FilterIndex
         }
     }
 
-    /// <summary>取当前的排除集合。设置变过则先重建。</summary>
+    /// <summary>取当前的实际过滤池。设置变过则先重建。</summary>
     public static IReadOnlySet<string> Get()
     {
         Ensure();
         return Volatile.Read(ref _excluded);
+    }
+
+    /// <summary>本组有多少成员当前位于实际过滤池。组关闭时，跨组牌仍可能被其他组计入。</summary>
+    public static int CountFilteredMembers(CardGroup group)
+    {
+        return FilterState.CountInPool(group.Members, Get());
     }
 
     /// <summary>作废索引。设置写入后由 <see cref="ModSettings" /> 调用。</summary>
@@ -60,24 +66,25 @@ internal static class FilterIndex
     private static void Build(int version)
     {
         var snapshot = ModSettings.Current;
-        var excluded = new HashSet<string>(StringComparer.Ordinal);
-        var active = 0;
+        var excluded = FilterState.BuildPool(
+            CardGroups.Visible,
+            snapshot.EnabledGroups,
+            snapshot.Exemptions);
 
+        var active = 0;
         foreach (var group in CardGroups.Visible)
         {
-            var groupActive = false;
+            if (!snapshot.IsGroupEnabled(group.Id))
+                continue;
 
             foreach (var entry in group.Members)
             {
-                if (!snapshot.IsFiltered(entry))
+                if (snapshot.IsExempt(entry))
                     continue;
 
-                excluded.Add(entry);
-                groupActive = true;
-            }
-
-            if (groupActive)
                 active++;
+                break;
+            }
         }
 
         Volatile.Write(ref _excluded, excluded);
