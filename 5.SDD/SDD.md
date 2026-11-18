@@ -62,7 +62,7 @@
 
 0.0.12 递增到 4。豁免键由「分组标识:卡牌标识」改为裸卡牌标识，旧键全部失效；暴涨也移回球牌组。0.111.1 无头日志：`[compat] fool=False source=type`、`groups=8/11 exemptions=10 pages=12`、`ready. groups=11 entries=143 exemptions=10 schema=4`。对局内 `[filter] candidates=429 removed=99 kept=330 groups=8`。
 
-0.0.13 递增到 5。`Groups` 与 `Exemptions` 合并为 `Filtered`，分组开关不再落盘。0.111.1 无头日志：`[compat] fool=False source=type`、`[settings] reset. schema 4 -> 5, filtered=121 explicitExemptions=10`、`registered ... groups=11 entries=143 filtered=99 stored=121 pages=12`、`ready ... filtered=121 schema=5`。对局内 `[index] groups=8 filtered=99`，3 条 `[filter] removed=99`。
+0.0.13 递增到 5。`Groups` 与 `Exemptions` 合并为 `Filtered`，分组开关不再落盘。0.111.1 无头日志：`[compat] fool=False source=type`、`[settings] reset. schema 4 -> 5, filtered=121 explicitExemptions=10`、`registered ... groups=11 entries=143 filtered=99 stored=121 pages=12`、`ready ... filtered=121 schema=5`。对局内 `[index] groups=8 filtered=99`，3 条 `[filter] removed=99`。0.113.1 无头日志：`[compat] fool=True source=type`、`groups=15 entries=180 filtered=121 stored=121 pages=16`、`ready ... filtered=121 schema=5`。对局内 `[index] groups=11 filtered=121`，缺陷机器人默认 3 条 `[filter] removed=94 poolGate=27`；分组关闭后 `groups=10 filtered=111`、`removed=84`。
 
 ### 分组与分节
 

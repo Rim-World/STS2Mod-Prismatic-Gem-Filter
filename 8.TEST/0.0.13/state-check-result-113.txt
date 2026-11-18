@@ -1,0 +1,42 @@
+SentryGodotInitializer: Sentry GDExtension not loaded in this process; skipping. If you see this in a running game (not during project export or IDE script analysis), check Godot's log for extension load failures.
+defaultKeys=121
+visible111=11 entries111=141 excluded111=99 active111=8
+visible113=15 entries113=178 excluded113=121 active113=11
+staleGroupPrefix=False
+defaultsContainHidden=True
+defaultsExcludeHiddenOff=True
+explicitKept=NEUROSURGE:True
+explicitKept=SLEIGHT_OF_FLESH:True
+explicitKept=CLEANSE:True
+explicitKept=INVOKE:True
+explicitKept=FUSION:True
+explicitKept=BULK_UP:True
+explicitKept=BIG_BANG:True
+explicitKept=CONVERGENCE:True
+explicitKept=HYPERBEAM:True
+explicitKept=BRIGHTEN_UP:True
+exemptShared=True:False
+forgeCount=9/11
+starCount=24/27
+forgeOffAllKept=True sharedKept=True
+forgeOffGroupRead=False
+starOnAllFiltered=True sharedFiltered=True
+sortedUnique=True
+starOffAllKept=True
+PASS default stored excludes 121 cards
+PASS 0.111 visible excludes 99 cards
+PASS 0.113 visible excludes 121 cards
+PASS 0.111 active groups 8
+PASS 0.113 active groups 11
+PASS no group-prefixed keys
+PASS hidden default card present
+PASS hidden off-group card absent
+PASS explicit defaults kept
+PASS source list not mutated
+PASS shared card exempt from both views
+PASS forge group off keeps all
+PASS star group on filters all
+PASS shared card filtered from both views
+PASS group write sorted unique
+PASS star group off keeps all
+failures=0
