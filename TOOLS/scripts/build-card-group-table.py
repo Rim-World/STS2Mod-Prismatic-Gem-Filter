@@ -6,8 +6,8 @@
     python TOOLS/scripts/build-card-group-table.py --check     # 只比对，不写盘
 
 输入：
-    TMP/0.0.1/卡牌名单/卡牌分组名单.csv   12 个按标记判定的组 + 第 14 组「有bug的牌」与第 15 组「悲伤牌」
-    TMP/0.0.1/卡牌名单/多人卡牌组.csv     第 13 组，显式名单
+    3.DOCS/024-卡牌名单/卡牌分组名单.csv   按标记判定的组 + 显式名单组（含灵魂牌）
+    3.DOCS/024-卡牌名单/多人卡牌组.csv     多人专属牌，显式名单
 
 输出：
     9.SRC/src/CardGroupTable.cs
@@ -29,7 +29,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-LIST_DIR = ROOT / "TMP" / "0.0.1" / "卡牌名单"
+LIST_DIR = ROOT / "3.DOCS" / "024-卡牌名单"
 SOURCES = [LIST_DIR / "卡牌分组名单.csv", LIST_DIR / "多人卡牌组.csv"]
 OUTPUT = ROOT / "9.SRC" / "src" / "CardGroupTable.cs"
 
@@ -55,7 +55,7 @@ BANNED_RARITIES = {
 MULTIPLAYER_GROUP_CN = "多人卡牌"
 
 # 允许同时属于两个分组的卡。两者都同时属于铸剑与星，且都是按标记判定的组，见 SP-013。
-TWINS = {"BIG_BANG", "THE_SMITH"}
+TWINS = {"BIG_BANG", "THE_SMITH", "DIRGE"}
 
 RE_RARITY = re.compile(r"base\(\s*[^;]*?CardRarity\.(\w+)")
 RE_CONSTRAINT = re.compile(r"MultiplayerConstraint\s*=>\s*CardMultiplayerConstraint\.(\w+)")
@@ -65,6 +65,7 @@ GROUP_IDS = {
     "奥斯提牌": "osty",
     "召唤牌": "summon",
     "灾厄牌": "doom",
+    "灵魂牌": "soul",
     "球牌（含激发、球位）": "orb",
     "集中牌": "focus",
     "箭矢牌": "arrow",
@@ -81,7 +82,7 @@ GROUP_IDS = {
 
 # 输出顺序。按职业排，便于设置页按职业分节。
 GROUP_ORDER = [
-    "osty", "summon", "doom",
+    "osty", "summon", "doom", "soul",
     "orb", "focus",
     "sly", "shiv", "poison",
     "forge", "star",
@@ -121,7 +122,7 @@ def render(rows):
 
     lines = [
         "// 本文件由 TOOLS/scripts/build-card-group-table.py 生成，不要手改。",
-        "// 输入：TMP/0.0.1/卡牌名单/卡牌分组名单.csv、多人卡牌组.csv",
+        "// 输入：3.DOCS/024-卡牌名单/卡牌分组名单.csv、多人卡牌组.csv",
         "",
         "namespace PrismaticGemFilter;",
         "",

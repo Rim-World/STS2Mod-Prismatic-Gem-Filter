@@ -19,7 +19,7 @@
   "pgf.char.cross": "跨職業",
   "pgf.char.other": "其他",
 
-  "pgf.section.necrobinder": "奧斯提、召喚、惡兆屬於縛亡者。",
+  "pgf.section.necrobinder": "奧斯提、召喚、惡兆、靈魂屬於縛亡者。",
   "pgf.section.defect": "充能球、集中屬於故障機器人。",
   "pgf.section.silent": "奇巧、小刀、中毒屬於寂靜獵手。",
   "pgf.section.regent": "鑄造、輝星屬於儲君。",
@@ -39,6 +39,8 @@
   "pgf.group.summon.desc": "召喚或強化奧斯提",
   "pgf.group.doom.name": "惡兆牌",
   "pgf.group.doom.desc": "施加或消耗惡兆",
+  "pgf.group.soul.name": "靈魂牌",
+  "pgf.group.soul.desc": "產生或利用靈魂",
   "pgf.group.orb.name": "充能球牌",
   "pgf.group.orb.desc": "產生、激發充能球，或增加欄位",
   "pgf.group.focus.name": "集中牌",

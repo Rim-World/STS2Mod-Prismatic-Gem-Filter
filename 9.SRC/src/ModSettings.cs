@@ -88,12 +88,15 @@ internal static class ModSettings
     ///         0.0.13 升到 5：<c>Groups</c> 与 <c>Exemptions</c> 合并为 <c>Filtered</c>。
     ///         分组开关不再单独落盘，改为排除集合的聚合视图与批量命令。旧档整份重置。见 SP-031 与 ADR-015。
     ///     </para>
-    ///     <para>
+    /// <para>
     ///         0.0.14 升到 6：恢复独立的分组开关与全局豁免名单；分组开关不再改写豁免名单，
     ///         实际过滤池由两者重算。旧档整份重置。见 SP-031 至 SP-039 与 ADR-016。
     ///     </para>
+    ///     <para>
+    ///         0.0.15 升到 7：新增灵魂牌组与 3 张默认豁免；旧档整份重置。见 SP-040 与 SP-041。
+    ///     </para>
     /// </summary>
-    public const int CurrentSchema = 6;
+    public const int CurrentSchema = 7;
 
     private const string FileName = "settings.json";
 
@@ -140,7 +143,7 @@ internal static class ModSettings
                 }),
             static () => true);
 
-    /// <summary>分组开关的父绑定。缺省时取 15 个分组的默认值。</summary>
+    /// <summary>分组开关的父绑定。缺省时取 16 个分组的默认值。</summary>
     private static IModSettingsValueBinding<Dictionary<string, bool>> GroupsBinding { get; } =
         ModSettingsBindings.WithDefault(
             ModSettingsBindings.Global<SettingsModel, Dictionary<string, bool>>(
@@ -154,7 +157,7 @@ internal static class ModSettings
                 }),
             FilterState.DefaultGroups);
 
-    /// <summary>全局豁免名单的父绑定。缺省时取 SP-021 的 10 张默认豁免。</summary>
+    /// <summary>全局豁免名单的父绑定。缺省时取 SP-021 的 13 张默认豁免。</summary>
     private static IModSettingsValueBinding<List<string>> ExemptionsBinding { get; } =
         ModSettingsBindings.WithDefault(
             ModSettingsBindings.Global<SettingsModel, List<string>>(

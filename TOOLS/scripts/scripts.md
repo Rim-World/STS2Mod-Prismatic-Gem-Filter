@@ -5,7 +5,8 @@
 | 文件名 | 放入时间 | 用途 | 依赖 | 输入 | 输出 | 版本 |
 |---|---|---|---|---|---|---|
 | `build-multiplayer-card-list.py` | 2026-11-15 07:38 | 从反编译源码与本地化文件生成多人模式限定卡牌的中文清单 | Python 3.14 | 反编译单文件 `sts2.decompiled.cs`、`card-index-eng-zhs.json`、`localization/zhs` | Markdown 表格 | 1.0 |
-| `build-card-group-table.py` | 2026-11-15 23:10 | 把 13 个分组的卡牌名单 CSV 转成源码里的数据表，并可核对源码与 CSV 是否同步；生成前跑四道名单门禁 | Python 3.14，无第三方库 | `TMP/0.0.1/卡牌名单/卡牌分组名单.csv`、`多人卡牌组.csv`；核对用参考库 `4.STS2-113.1Reference` | `9.SRC/src/CardGroupTable.cs` | 2.0 |
+| `build-card-group-table.py` | 2026-11-15 23:10 | 把卡牌名单 CSV 转成源码里的数据表，并可核对源码与 CSV 是否同步；生成前跑四道名单门禁 | Python 3.14，无第三方库 | `3.DOCS/024-卡牌名单/卡牌分组名单.csv`、`多人卡牌组.csv`；核对用参考库 `4.STS2-113.1Reference` | `9.SRC/src/CardGroupTable.cs` | 3.0 |
+| `render-card-list-doc.py` | 2026-11-24 00:49 | 从名单 CSV 与 `ExclusionTable.cs` 生成带「默认豁免」列的 Markdown 名单 | Python 3.14，无第三方库 | `3.DOCS/024-卡牌名单/*.csv`、`9.SRC/src/ExclusionTable.cs` | `3.DOCS/024-T-卡牌过滤名单.md` | 1.0 |
 | `check-localization-keys.py` | 2026-11-15 23:20 | 检查三份界面文案 JSON 的键集合是否一致，以及源码引用的键是否齐全、有无多余 | Python 3.14，无第三方库 | `9.SRC/localization/*.json`、`9.SRC/src/*.cs` | 控制台结论，退出码非零表示失败 | 1.0 |
 
 ## build-card-group-table.py
@@ -43,6 +44,28 @@ python TOOLS\scripts\build-card-group-table.py --check  # 只比对，不写盘
 - 第 4 条的允许集合写成脚本里的常量 `TWINS`。新增允许双组的卡要同时改那里，否则生成被拦下。
 - 第 2、3 条读的是参考库里的 0.113.1 反编译源码。换游戏版本后必须重跑，否则门禁结论还是旧版本的。
 - 参考库缺失时脚本照常生成，只是三道核对跳过。输出里会有一行「跳过…核对」。
+
+## render-card-list-doc.py
+
+### 用法
+
+```powershell
+python TOOLS\scripts\render-card-list-doc.py          # 生成并写盘
+python TOOLS\scripts\render-card-list-doc.py --check  # 只比对，不写盘
+```
+
+### 做法
+
+1. 读 `3.DOCS/024-卡牌名单/` 的两份名单 CSV 与 Token 附表。
+2. 从 `9.SRC/src/ExclusionTable.cs` 的 `ExplicitExemptionKeysValue` 解析默认豁免集合。
+3. 按 16 个分组的固定顺序生成汇总表与逐张表；每行写入「默认豁免」为「是」或「否」。
+4. 计算 0.113.1 与 0.111.1 的可见分组、可见成员与默认池，用于文档注记。
+5. 校验每张默认豁免都能在名单中找到，分组内部没有重复。
+
+### 已知限制
+
+- 分组顺序、界面名与判据写在脚本里。新增分组时要同时改脚本与 `CardGroups.cs`。
+- 脚本只读 `ExclusionTable.cs` 的字符串数组，不执行 C# 代码。
 
 ## check-localization-keys.py
 

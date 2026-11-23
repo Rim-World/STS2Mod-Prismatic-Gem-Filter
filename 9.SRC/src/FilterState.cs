@@ -65,7 +65,7 @@ internal static class FilterState
         return group.DefaultEnabled;
     }
 
-    /// <summary>15 个分组的默认开关值。包含当前版本不可见的分组。</summary>
+    /// <summary>16 个分组的默认开关值。包含当前版本不可见的分组。</summary>
     public static Dictionary<string, bool> DefaultGroups()
     {
         var result = new Dictionary<string, bool>(CardGroups.All.Length, StringComparer.Ordinal);

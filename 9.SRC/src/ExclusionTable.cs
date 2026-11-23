@@ -21,6 +21,7 @@ namespace PrismaticGemFilter;
 ///         <see cref="CardGroupTable" /> 提供。0.0.5 删掉多人限定卡放行表。
 ///         0.0.12 把豁免键由 <c>分组标识:卡牌标识</c> 改为裸卡牌标识。
 ///         0.0.13 曾把默认豁免扩为默认排除集合；0.0.14 恢复为「默认豁免 + 默认组开关」。
+///         0.0.15 新增灵魂牌组，默认豁免守墓人、捕捉灵魂、降灵。
 ///     </para>
 /// </summary>
 internal static class ExclusionTable
@@ -53,6 +54,11 @@ internal static class ExclusionTable
 
         // 悲伤牌组：活跃气氛。它同时给悲伤与喜悦，用户 2026-11-17 01:42 点名默认不过滤。
         "BRIGHTEN_UP",
+
+        // 灵魂牌组：守墓人、捕捉灵魂、降灵。用户 2026-11-24 00:49 点名默认豁免。
+        "GRAVE_WARDEN",
+        "CAPTURE_SPIRIT",
+        "SEANCE",
     ];
 
     private static readonly HashSet<string> ExplicitExemptionSet =

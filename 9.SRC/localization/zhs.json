@@ -19,7 +19,7 @@
   "pgf.char.cross": "跨职业",
   "pgf.char.other": "其他",
 
-  "pgf.section.necrobinder": "奥斯提、召唤、灾厄属于亡灵契约师。",
+  "pgf.section.necrobinder": "奥斯提、召唤、灾厄、灵魂属于亡灵契约师。",
   "pgf.section.defect": "充能球、集中属于故障机器人。",
   "pgf.section.silent": "奇巧、小刀、中毒属于静默猎手。",
   "pgf.section.regent": "铸造、辉星属于储君。",
@@ -39,6 +39,8 @@
   "pgf.group.summon.desc": "召唤或强化奥斯提",
   "pgf.group.doom.name": "灾厄牌",
   "pgf.group.doom.desc": "施加或消耗灾厄",
+  "pgf.group.soul.name": "灵魂牌",
+  "pgf.group.soul.desc": "生成或利用灵魂",
   "pgf.group.orb.name": "充能球牌",
   "pgf.group.orb.desc": "生成、激发充能球，或增加栏位",
   "pgf.group.focus.name": "集中牌",

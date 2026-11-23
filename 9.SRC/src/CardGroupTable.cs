@@ -1,5 +1,5 @@
 // 本文件由 TOOLS/scripts/build-card-group-table.py 生成，不要手改。
-// 输入：TMP/0.0.1/卡牌名单/卡牌分组名单.csv、多人卡牌组.csv
+// 输入：3.DOCS/024-卡牌名单/卡牌分组名单.csv、多人卡牌组.csv
 
 namespace PrismaticGemFilter;
 
@@ -52,6 +52,17 @@ internal static class CardGroupTable
         ("doom", "SHROUD", "NecrobinderCardPool"),
         ("doom", "SLEIGHT_OF_FLESH", "NecrobinderCardPool"),
         ("doom", "TIMES_UP", "NecrobinderCardPool"),
+
+        // soul：9 张
+        ("soul", "CAPTURE_SPIRIT", "NecrobinderCardPool"),
+        ("soul", "DEVOUR_LIFE", "NecrobinderCardPool"),
+        ("soul", "DIRGE", "NecrobinderCardPool"),
+        ("soul", "GRAVE_WARDEN", "NecrobinderCardPool"),
+        ("soul", "HAUNT", "NecrobinderCardPool"),
+        ("soul", "REAVE", "NecrobinderCardPool"),
+        ("soul", "SEANCE", "NecrobinderCardPool"),
+        ("soul", "SEVERANCE", "NecrobinderCardPool"),
+        ("soul", "SOUL_STORM", "NecrobinderCardPool"),
 
         // orb：25 张
         ("orb", "BALL_LIGHTNING", "DefectCardPool"),
@@ -195,7 +206,7 @@ internal static class CardGroupTable
         ("impale", "WAH_HAMMER", "FoolCardPool"),
         ("impale", "WREST", "FoolCardPool"),
 
-        // multiplayer：10 张
+        // multiplayer：12 张
         ("multiplayer", "LEGION_OF_BONE", "NecrobinderCardPool"),
         ("multiplayer", "UNDERWORLD", "NecrobinderCardPool"),
         ("multiplayer", "HIBERNATE", "DefectCardPool"),
@@ -206,6 +217,8 @@ internal static class CardGroupTable
         ("multiplayer", "CONSTELLATION", "RegentCardPool"),
         ("multiplayer", "HAMMER_TIME", "RegentCardPool"),
         ("multiplayer", "COVERING_FIRE", "FoolCardPool"),
+        ("multiplayer", "GLIMPSE_BEYOND", "NecrobinderCardPool"),
+        ("multiplayer", "SOULBOUND", "NecrobinderCardPool"),
 
         // bugged：1 张
         ("bugged", "BLOT_OUT_THE_SKY", "FoolCardPool"),

@@ -19,7 +19,7 @@
   "pgf.char.cross": "Cross-class",
   "pgf.char.other": "Other",
 
-  "pgf.section.necrobinder": "Osty, Summon, and Doom are Necrobinder mechanics.",
+  "pgf.section.necrobinder": "Osty, Summon, Doom, and Soul are Necrobinder mechanics.",
   "pgf.section.defect": "Orbs and Focus are Defect mechanics.",
   "pgf.section.silent": "Sly, Shiv, and Poison are Silent mechanics.",
   "pgf.section.regent": "Forge and Stars are Regent mechanics.",
@@ -39,6 +39,8 @@
   "pgf.group.summon.desc": "Cards that summon or strengthen Osty",
   "pgf.group.doom.name": "Doom cards",
   "pgf.group.doom.desc": "Cards that apply or consume Doom",
+  "pgf.group.soul.name": "Soul cards",
+  "pgf.group.soul.desc": "Cards that create or use Souls",
   "pgf.group.orb.name": "Orb cards",
   "pgf.group.orb.desc": "Cards that channel or evoke orbs, or add orb slots",
   "pgf.group.focus.name": "Focus cards",
