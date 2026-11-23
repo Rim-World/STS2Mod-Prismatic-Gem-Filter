@@ -8,7 +8,9 @@
 
 2026-11-19 01:30 至 01:48 完成 0.0.14 的分层状态验证。数据级 23 项全过；0.113.1 无头启动显示 `schema=6`、默认池 121；默认场景 3 条 `removed=121`；forge 关闭与 `BIG_BANG` 取消豁免的跨组场景 `filtered=112`、3 条 `removed=112`。最终构建 DLL SHA-256 `d7ff0752...c304e7d` 的默认场景复测也通过。设置文件已恢复，测试门已移入回收站。界面渲染仍未验证。
 
-2026-11-24 01:02 至 01:12 完成 0.0.15 的 0.111.1 验证。数据级 30 项全过；无头启动 `schema=7`、`groups=9/12`、`entries=154`、`filtered=104`、`exemptions=13`；首轮对局 3 条 `[filter] candidates=429 removed=70`。候选集合保留了守墓人、捕捉灵魂、降灵，未包含 6 张未豁免灵魂牌；彼岸一瞥与灵魂绑定因多人组默认关闭而未出现。自动局在 300 秒超时被终止，未完整跑完。0.113.1 同场景与界面渲染仍未验证。
+2026-11-24 01:02 至 01:12 完成 0.0.15 的 0.111.1 验证。数据级 30 项全过；无头启动 `schema=7`、`groups=9/12`、`entries=154`、`filtered=104`、`exemptions=13`；首轮对局 3 条 `[filter] candidates=429 removed=70`。候选集合保留了守墓人、捕捉灵魂、降灵，未包含 6 张未豁免灵魂牌；彼岸一瞥与灵魂绑定因多人组默认关闭而未出现。自动局在 300 秒超时被终止，未完整跑完。
+
+2026-11-24 01:37 至 01:38 完成 0.0.15 的 0.113.1 场景验证。无头启动 `schema=7`、`groups=12/16`、`entries=191`、`filtered=126`、`pages=17`；默认场景 3 条 `[filter] candidates=678 removed=126`；3 次候选探针均为 466 张，保留 3 张默认豁免灵魂牌，未包含 6 张未豁免灵魂牌。场景退出码 0。设置文件已按测试前副本恢复，测试门已移出游戏目录。0.113.1 界面渲染与多人对局仍未验证。
 
 ## 本地门禁
 
@@ -362,7 +364,7 @@ python 8.TEST/CI-CD/check-user-prompt.py --mode show
 
 详细结论与踩坑见 `3.DOCS/023-T-分组开关与卡牌豁免分层.md`。
 
-### 0.0.15（2026-11-24 01:02 至 01:12）
+### 0.0.15（2026-11-24 01:02 至 01:38）
 
 | 文件名 | 创建时间 | 是否清理 | 文件大小（KB） | 用途 | 引用和复用 |
 |---|---|---|---|---|---|
@@ -371,23 +373,31 @@ python 8.TEST/CI-CD/check-user-prompt.py --mode show
 | `state-check-result.txt` | 2026-11-24 01:02 | 否 | 2 | 数据级测试输出，30 项 PASS，`failures=0` | 是 |
 | `自检-0.0.15-111设置注册-godot.log` | 2026-11-24 01:04 | 否 | 394 | 0.0.15 在 0.111.1 的无头启动日志。`reset. schema 6 -> 7, groups=12/16 exemptions=13 filtered=126`、`registered ... groups=9/12 entries=154 filtered=104 exemptions=13 schema=7 pages=13`、`ready ... groups=12 entries=154 filtered=104` | 是 |
 | `自动测试-111-autoslay-0.0.15-灵魂牌-godot.log` | 2026-11-24 01:11 | 否 | 910 | 0.111.1 对局日志，种子 `SOUL15`，铁甲战士。3 条 `[filter] candidates=429 removed=70`；候选保留 3 张默认豁免灵魂牌，6 张未豁免灵魂牌不在；自动局 300 秒超时终止 | 是 |
+| `场景-113-0.0.15-灵魂牌-godot.log` | 2026-11-24 01:38 | 否 | 474 | 0.113.1 场景日志，种子 `GEMTEST1`，铁甲战士。`Release Version: v0.113.1`、`reset. schema 6 -> 7 ... filtered=126`、`registered ... groups=12/16 entries=191 filtered=126 pages=17`；3 条 `[filter] candidates=678 removed=126`；3 次探针均 466 张，灵魂牌结果与 0.111.1 一致；场景成功退出 0 | 是 |
+| `场景-113-console.log` | 2026-11-24 01:38 | 否 | 478 | 0.113.1 场景的控制台输出。退出码 0；结尾的字体、ObjectDB、资源泄漏警告来自游戏退出清理 | 否 |
 
 ### 0.0.15 测试结果
 
 | 判据 | 数值 |
 |---|---|
 | 数据级测试 | 30 项 PASS，`failures=0`；默认池 126、0.111 可见池 104、灵魂组 9 张、默认豁免 3 张 |
-| 无头重置 | `reset. schema 6 -> 7, groups=12/16 exemptions=13 filtered=126` |
-| 无头注册 | `groups=9/12 entries=154 filtered=104 exemptions=13 schema=7 pages=13` |
-| 就绪行 | `ready. groups=12 entries=154 filtered=104 exemptions=13 schema=7 patches=1/1` |
-| 对局过滤 | `[filter] groups=9 candidates=429 removed=70 kept=359 poolGate=34 otherPool=343`，3 次 |
+| 0.111.1 无头重置 | `reset. schema 6 -> 7, groups=12/16 exemptions=13 filtered=126` |
+| 0.111.1 无头注册 | `groups=9/12 entries=154 filtered=104 exemptions=13 schema=7 pages=13` |
+| 0.111.1 就绪行 | `ready. groups=12 entries=154 filtered=104 exemptions=13 schema=7 patches=1/1` |
+| 0.111.1 对局过滤 | `[filter] groups=9 candidates=429 removed=70 kept=359 poolGate=34 otherPool=343`，3 次 |
+| 0.113.1 无头重置 | `reset. schema 6 -> 7, groups=12/16 exemptions=13 filtered=126` |
+| 0.113.1 无头注册 | `groups=12/16 entries=191 filtered=126 exemptions=13 schema=7 pages=17` |
+| 0.113.1 就绪行 | `ready. groups=16 entries=191 filtered=126 exemptions=13 schema=7 patches=1/1` |
+| 0.113.1 对局过滤 | `[filter] groups=12 candidates=678 removed=126 kept=552 poolGate=0 otherPool=593`，3 次 |
+| 0.113.1 候选探针 | 3 次均为 466 张；3 张默认豁免灵魂牌在集合中，6 张未豁免灵魂牌不在 |
+| 0.113.1 场景结果 | `Scenario completed successfully`；退出码 0 |
 | 默认豁免灵魂牌 | `GRAVE_WARDEN`、`CAPTURE_SPIRIT`、`SEANCE` 在候选集合中 |
 | 未豁免灵魂牌 | `DEVOUR_LIFE`、`DIRGE`、`HAUNT`、`REAVE`、`SEVERANCE`、`SOUL_STORM` 不在候选集合中 |
 | 多人灵魂牌 | `GLIMPSE_BEYOND`、`SOULBOUND` 不在候选集合中；多人组默认关闭 |
 | 自动局状态 | 300 秒超时终止，未完整跑完；过滤证据已取得 |
 | 设置恢复 | 测试前与恢复后 SHA-256 均为 `0aeccaee47fc69da98fd92b65d7db4d58a91b8dca73a1a2874442d48ab2ddc1f` |
 
-`removed=70` 小于默认池 126，是因为 0.111.1 的候选集合不包含过滤池全部卡牌，且本职业门控排除了部分候选。不能用 `removed=104` 作为对局期望值；应检查具体灵魂牌是否在候选集合中。
+`removed=70` 小于默认池 126，是因为 0.111.1 的候选集合不包含过滤池全部卡牌，且本职业门控排除了部分候选。不能用 `removed=104` 作为对局期望值；应检查具体灵魂牌是否在候选集合中。`0.113.1` 的 `removed=126` 与默认池一致，因为铁甲战士候选集合包含全部默认排除池。
 
 ## 测试方法
 
