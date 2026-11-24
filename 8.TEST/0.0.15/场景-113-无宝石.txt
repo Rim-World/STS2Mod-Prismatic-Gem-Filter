@@ -1,0 +1,7 @@
+# 场景：对照组，不持有棱彩宝石。验证 RQ-005 在 0.113.1 上的边界。
+# 角色固定铁甲战士。期望：无 [filter] 行，候选保持本职业池，奖励不出现其他职业牌。
+
+fight CULTISTS_NORMAL
+wait combat-started
+kill all
+wait 3
