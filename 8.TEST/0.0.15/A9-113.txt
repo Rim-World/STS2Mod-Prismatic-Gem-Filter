@@ -1,0 +1,9 @@
+# 场景：A9 过滤行为验收。角色固定铁甲战士。
+# 用途：持棱彩宝石取得一次战斗奖励，供 RNG、耗时、索引缓存与空候选回退探针记录。
+# 期望：出现 [filter] 与 [rng] 行；候选非空；奖励 3 张。
+
+relic PRISMATIC_GEM
+fight CULTISTS_NORMAL
+wait combat-started
+kill all
+wait 3

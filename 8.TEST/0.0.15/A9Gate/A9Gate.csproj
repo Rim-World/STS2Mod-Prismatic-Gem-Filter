@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    A8/A9 测试门。只在测试期间放进游戏 mods 目录。
+    作用：
+    ① 把 NGame.IsReleaseGame 改成 false，让 autoslay 与 scenario 参数生效；
+    ② 自动局开始时注入棱彩宝石；
+    ③ A9 探针：空候选回退、随机数计数、索引缓存与过滤耗时。
+    它不是项目成品的一部分，测试完成后必须从游戏目录移除。
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <AssemblyName>AutoSlayGate</AssemblyName>
+    <RootNamespace>AutoSlayGate</RootNamespace>
+    <Version>0.0.1</Version>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Sts2Dir Condition="'$(Sts2Dir)' == ''">C:\Game\Steam\steamapps\common\Slay the Spire 2</Sts2Dir>
+    <Sts2DataDir Condition="'$(Sts2DataDir)' == ''">$(Sts2Dir)\data_sts2_windows_x86_64</Sts2DataDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="sts2" HintPath="$(Sts2DataDir)\sts2.dll" Private="false" />
+    <Reference Include="0Harmony" HintPath="$(Sts2DataDir)\0Harmony.dll" Private="false" />
+    <Reference Include="GodotSharp" HintPath="$(Sts2DataDir)\GodotSharp.dll" Private="false" />
+  </ItemGroup>
+
+</Project>

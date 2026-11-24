@@ -1,0 +1,18 @@
+# A8 完整自动局结果
+
+- 时间：2026-11-24 23:22 至 23:30
+- 游戏：v0.113.1
+- 命令：`SteamAppId=2868840 ./SlayTheSpire2.exe --headless --autoslay --seed=A8GEM113 --mode=standard --fast-mode=Instant`
+- 用时：506.26 秒
+- 退出码：0
+- 结果：victory；角色 `CHARACTER.SILENT`；3/3 章；48 层
+- 测试门：注入 `PRISMATIC_GEM` 成功
+- 索引：`[index] rebuilt. version=2 groups=12 filtered=126`，整局 1 次重建
+- 过滤：74 条 `[filter]`；候选 513 或 567，`removed=117`；`filter abandoned` 0 条；`filter failed` 0 条
+- 模组补丁加载：`1 applied, 0 ignored, 0 failed`
+- 结束行：`Run completed successfully with seed=A8GEM113`
+
+## 备注
+
+- 日志中另有 `OstyAnime` 补丁目标缺失、`BetterAnimation2` 资源加载失败。这两项来自其他模组，与本模组的候选过滤无关。
+- 自动局开始时设置从 schema 6 迁移到 schema 7。原 15 个分组值保留；新增 `soul=true`；豁免从 10 条增加到 13 条，新增 3 张灵魂牌默认豁免。

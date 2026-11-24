@@ -1,0 +1,35 @@
+# A9 安全与性能边界结果
+
+- 时间：2026-11-24 23:34 至 23:39
+- 游戏：v0.113.1
+- 场景：`8.TEST/0.0.15/A9-113.txt`；种子 `A9GEM113`；角色 `CHARACTER.IRONCLAD`
+
+## 正常过滤
+
+- 命令：`GATE_A9=1 ./SlayTheSpire2.exe --headless --scenario=... --seed=A9GEM113 --fast-mode=Fast`
+- 退出码：0；用时 53.75 秒
+- 过滤：3 条 `[filter]`；`candidates=678 removed=126 kept=552`
+- 随机数：3 条 `[rng]`，`before=4/7/10`，`after=4/7/10`，`delta=0`；覆盖 3 次候选枚举
+- 索引：`[index] rebuilt. version=1 groups=12 filtered=126`，仅 1 次
+- 缓存：`cached_reference=True`；10,000 次 `FilterIndex.Get` 平均 573.5 ns（含反射）
+- 单次过滤：10,000 次 `CardFilter.Apply` 平均 69.23 µs（含反射，466 张候选）
+- 端到端：`getpossible_us=6480.4 / 1060.6 / 1003.9`；首次数值包含首次调用开销
+- 结束行：`Scenario completed successfully: A9-113`
+
+## 空候选回退
+
+- 命令：`GATE_A9=1 GATE_EMPTY=1 ./SlayTheSpire2.exe --headless --scenario=... --seed=A9EMPTY113 --fast-mode=Fast`
+- 退出码：0；用时 56.99 秒
+- 回退：3 条 `[filter] candidates=678 removed=126 -> empty, filter abandoned`
+- 放行：3 次候选探针均为 592 张，等于过滤前集合
+- 随机数：3 条 `[rng]`，`delta=0`
+- 索引：仅 1 次重建；`cached_reference=True`
+- 结束行：`Scenario completed successfully: A9-113`
+
+## 首次空候选尝试
+
+- 文件：`A9-113-empty-godot.log`。
+- 现象：没有 `[filter]` 与 `filter abandoned`，候选仍为 592 张。
+- 原因：测试门用 `CardFilter.Apply` 的 prefix 跳过原方法；`out Stats` 未初始化，`Removed=0` 走了“无需过滤”分支。
+- 处置：改为 postfix 覆盖 `Apply` 的真实返回值；保留原方法统计。重跑得到 `A9-113-empty2-godot.log`。
+- 本项是测试门缺陷，不是模组缺陷。
