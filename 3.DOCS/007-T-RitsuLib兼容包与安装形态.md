@@ -177,4 +177,4 @@ if (mod2 == null || mod2.state != ModLoadState.Loaded)
 | 工坊内容来源 | `STS2-RitsuLib-v0.6.13\scripts\release_lib\workshop.py:168-171` |
 | 游戏侧依赖判定 | `TMP/0.0.1/调研-反编译/game/ModManager.cs:716-786` |
 
-源码目录：`C:\Users\13167\Desktop\Mod\STS2-Reference\7.Mod-Sources\STS2-RitsuLib-v0.6.13`。
+源码目录：`C:\Users\13167\Desktop\Mod\STS2-Reference\8.Mod-Sources\STS2-RitsuLib-v0.6.13`。
